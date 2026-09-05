@@ -129,7 +129,5 @@ Waiting on an external event, not on us:
 - **Decision 5 — accommodations beyond WCAG 2.1 AA** (TTS, reduced-motion as hard
   default). Deferred to Phase 9+ backlog. *Caveat: if reduced-motion becomes a hard
   default it is a Phase 2 token-system decision, not a retrofit — revisit before Phase 2.*
-- **Project naming** — "SOC Academy" (Build Plan) vs `SEIMAcademy/` (derived plans) vs
-  `SEIM-Academy` (this repo). Settle before Phase 1 creates directories.
 - **Differentiators 1, 3, 4, 5** — stretch scope layered onto Workstream C components;
   not scheduled, not launch-blocking.

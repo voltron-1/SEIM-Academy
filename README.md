@@ -1,6 +1,6 @@
 # SEIM-Academy
 
-Planning repository for **SOC Academy** — an interactive, dark-cyber-themed learning
+Planning repository for **SEIM-Academy** — an interactive, dark-cyber-themed learning
 module that turns a SOC knowledge-base repo into a Tier 1 / Tier 2 analyst training
 track, with an embedded Socratic copilot agent.
 
@@ -61,13 +61,6 @@ Phase 1 pilot module is confirmed as **Windows Event ID triage**, backed by the 
 audit (88 KB / 612 table rows of dense, uniformly structured source — nearly twice the
 body text of all 58 `Tactics/*.md` files combined). **Nothing is currently blocked.**
 The remaining three decisions have working defaults and can be resolved opportunistically.
-
-## A note on naming
-
-The seed Build Plan calls the project *SOC Academy* and its subtree `Academy/`; the
-derived plans call it `SEIMAcademy/`; this repo is `SEIM-Academy`. Three names for one
-thing. Worth settling before Phase 1 creates directories under any of them — tracked as
-an open item in `planned_execution.md`.
 
 ## License
 

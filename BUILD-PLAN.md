@@ -1,7 +1,9 @@
-# SOC Academy — Build Plan
+# SEIM-Academy — Build Plan
 
 > **Provenance.** Converted verbatim from `docs/source/SEIMAcademyBuildPlan.docx`
-> (the seed Build Plan). The text below is the source of truth for *what* to build;
+> (the seed Build Plan). Its original filename and internal title read "SOC Academy" —
+> that name is stale and was never updated; the project is SEIM-Academy throughout.
+> The text below is the source of truth for *what* to build;
 > `IMPLEMENTATION-PLAN.md` sequences it and `execution.md` tracks it task by task.
 > The original `.docx` is retained under `docs/source/` — edit that and re-convert,
 > or promote this Markdown to canonical, but do not let the two drift silently.
