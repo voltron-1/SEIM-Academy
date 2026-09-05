@@ -1,6 +1,9 @@
 # Curriculum Map — verified
 
-**Phase 0 deliverable.** *(Tier 1 Module 4 reframed per audit finding 3, approved 2026-09-04.)* Every source path in the Build Plan's Curriculum Map, resolved
+**Phase 0 deliverable.** *(Tier 1 Module 4 reframed per audit finding 3, approved 2026-09-04. Modules 4 and 5
+swapped the same day — the tactic taxonomy names eight detection methods that
+`Detection-Methods.md` is what actually teaches, so alarm-algorithm vocabulary must come
+first or the `requires` ⊆ `teaches` gate rejects it.)* Every source path in the Build Plan's Curriculum Map, resolved
 against the source knowledge base and verified to exist and be non-empty.
 
 - **Source repo:** [`TonyPhipps/SIEM`](https://github.com/TonyPhipps/SIEM) — GPL-3.0,
@@ -19,9 +22,9 @@ at the format the Build Plan specifies, see findings.
 | 1 | SOC orientation & what you're protecting | `Orientation/crown-jewels.md`, `README.md` | 2 | reading atom + quiz | Ready |
 | 2 | Logging fundamentals | `Logging/Logging.md`, `Logging/Logging-Windows.md` | 2 | flashcards | Ready |
 | 3 | **Windows Event ID triage** — ✅ **CONFIRMED Phase 1 pilot** | `Logging/Notable-Event-IDs-Sigma.md`, `Logging/Notable-Event-IDs-Risk.md`, `Logging/Notable-Event-IDs-Forensics.md` | 3 | SRS flashcards, drag-to-classify | **Ready** — 88 KB, 612 table rows |
-| 4a | Tactic taxonomy — how tactics are analyzed | `Tactics/*.md` (heading skeleton) | 58 | classify: tactic → applicable detection methods | Ready — structure carries the lesson |
-| 4b | Worked tactic depth | `Tactics/*.md` (16 substantive files) | 16 | matching: tactic → data source → field | Ready — scoped to files with content |
-| 5 | Reading an alert: alarm algorithm vocabulary | `Detection-Methods.md` | 1 | fill-in-blank + spot the algorithm | Ready |
+| 4 | Reading an alert: alarm algorithm vocabulary | `Detection-Methods.md` | 1 | fill-in-blank + spot the algorithm | Ready |
+| 5a | Tactic taxonomy — how tactics are analyzed | `Tactics/*.md` (heading skeleton) | 58 | classify: tactic → applicable detection methods | Ready — structure carries the lesson |
+| 5b | Worked tactic depth | `Tactics/*.md` (16 substantive files) | 16 | matching: tactic → data source → field | Ready — scoped to files with content |
 | 6 | MITRE ATT&CK mapping literacy | `Detection-Tactics.md` | 1 | drag tactic-row → ATT&CK column | Ready |
 | 7 | Field kit & note-taking discipline | `field-kit.md` | 1 | checklist atom | Ready |
 | 8 | Escalation basics & documentation | `Documentation-Templates/Incident-Response-Policy.md`, `Metrics.md` | 2 | scenario: triage, escalate/close | Ready |

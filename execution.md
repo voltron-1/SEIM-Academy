@@ -106,14 +106,19 @@ Status legend: `Not started` / `In progress` / `Blocked` / `Done`
 - [ ] Run pipeline: SOC orientation & what you're protecting
 - [ ] Run pipeline: Logging fundamentals
 - [ ] Run pipeline: Windows Event ID triage (pilot — already done in Phase 1, confirm integrated)
-- [ ] Run pipeline: Tactic taxonomy (Module 4a — all 58 `Tactics/*.md`, generated from the
+- [ ] Run pipeline: Reading an alert / alarm algorithm vocabulary (Module 4)
+- [ ] Run pipeline: Tactic taxonomy (Module 5a — all 58 `Tactics/*.md`, generated from the
       uniform heading skeleton: which detection methods apply to which tactic)
-- [ ] Run pipeline: Worked tactic depth (Module 4b — the 16 substantive `Tactics/*.md`
+- [ ] Run pipeline: Worked tactic depth (Module 5b — the 16 substantive `Tactics/*.md`
       files only; tactic → data source → field matching)
   - Reframed 2026-09-04 per `findings/20260904-phase0-content-audit.md` finding 3:
     28/58 tactic files contain no authored content, so the original single-module
     "tactic → data source → field" format was not generatable at stated scope.
-- [ ] Run pipeline: Reading an alert / alarm algorithm vocabulary
+  - Reordered 2026-09-04: the tactic modules moved after "Reading an alert" because the
+    taxonomy names eight detection methods (Shannon Entropy, Levenshtein, Rolling
+    Whitelist, …) that `Detection-Methods.md` is what teaches. In the original order the
+    tactic module would have required vocabulary no preceding atom taught — a
+    prerequisite-completeness violation the Phase 8 CI gate is built to reject.
 - [ ] Run pipeline: MITRE ATT&CK mapping literacy
 - [ ] Run pipeline: Field kit & note-taking discipline
 - [ ] Run pipeline: Escalation basics & documentation
@@ -257,4 +262,5 @@ Status legend: `Not started` / `In progress` / `Blocked` / `Done`
 | Date | Change |
 |---|---|
 | 2026-09-04 | Initial execution plan generated from `SEIMAcademyBuildPlan.docx` and `IMPLEMENTATION-PLAN.md` |
+| 2026-09-04 | Tier 1 Modules 4 and 5 swapped: alarm-algorithm vocabulary now precedes the tactic modules, which depend on it. |
 | 2026-09-04 | Phase 0 audit: source repo identified (`TonyPhipps/SIEM` @ `4adb971`), 177 files verified, curriculum map committed. Decisions 3 and 4 resolved. Module 4 split into 4a/4b. Top risk in `IMPLEMENTATION-PLAN.md` §8 retired; content sparsity logged in its place. |

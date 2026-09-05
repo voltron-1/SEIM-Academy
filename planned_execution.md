@@ -94,6 +94,12 @@ From `findings/20260904-phase0-content-audit.md`:
       in only 21/58 files. Now split into **4a — tactic taxonomy** (all 58 files,
       generated from the uniform heading skeleton) and **4b — worked tactic depth** (the
       16 substantive files only). Applied to `curriculum-map.md` and `execution.md`.
+- [x] **Tier 1 Modules 4 and 5 swapped.** Approved 2026-09-04. "Reading an alert: alarm
+      algorithm vocabulary" (`Detection-Methods.md`) is now Module 4; the tactic modules
+      become 5a/5b. The taxonomy names eight detection methods that `Detection-Methods.md`
+      is what actually teaches, so the original order would have put an exercise ahead of
+      its prerequisite — the exact failure the anxiety-safe design principle and the
+      Phase 8 `requires` ⊆ `teaches` gate exist to prevent.
 - [ ] **Tier 2 Module 7 is lopsided.** `Lookups/o365-principalappid.csv` has 306 rows vs.
       9 and 12 in the other two. Treat the large one as a lookup drill, not an SRS deck,
       or it floods the review queue with low-value cards.
