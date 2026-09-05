@@ -1,0 +1,19 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Word/Office lock + temp files (docs/source/ holds real .docx)
+~$*
+*.tmp
+
+# Node (Phase 2+)
+node_modules/
+dist/
+build/
+.cache/
+*.log
+.env
+.env.local
