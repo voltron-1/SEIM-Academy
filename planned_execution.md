@@ -10,15 +10,24 @@ Status markers: `[ ]` todo · `[~]` in-progress · `[x]` done · `[!]` blocked
 
 ## NEXT UP
 
-**Phase 0 — Content audit** (not started; depends on nothing; blocks everything else)
+**Phase 0 — Content audit** `[~]` in progress (unblocked 2026-09-04)
 
-**Next unstarted item:** Enumerate every source path referenced in the Curriculum Map
-(both Tier 1 and Tier 2 tables) into a single manifest list.
+Source knowledge base identified: [`TonyPhipps/SIEM`](https://github.com/TonyPhipps/SIEM)
+@ `4adb971`, GPL-3.0.
 
-**Immediate prerequisite that is not yet satisfied:** Phase 0 audits a *source
-knowledge-base repo* that this planning repo does not contain and does not name. That
-repo has to be identified and available locally before the first item can start. See
-Blocked, below.
+**Done this session:** path manifest built and verified (31 specs → 177 files, 0 missing,
+0 empty); `Tactics/*.md` structural spot-check completed; curriculum map committed as
+[`curriculum-map.md`](curriculum-map.md); audit recorded in
+[`findings/20260904-phase0-content-audit.md`](findings/20260904-phase0-content-audit.md).
+
+**Next unstarted item:** Cross-check the module list against 5–10 current Tier 1/Tier 2
+SOC analyst job postings, then against Security+ and GCIH exam objectives. Needs external
+research rather than repo inspection — the last work before Phase 0's exit check is met.
+
+**Then Phase 1 (unblocked).** Decision 4 is resolved — the pilot is **Windows Event ID
+triage**. First task: draft `app-data-schema.md` (lesson/atom/quiz JSON schema with the
+`teaches`/`requires`/`source` fields), then scaffold `scripts/build-content.*` to parse
+the three `Logging/Notable-Event-IDs-*.md` tables into lesson JSON.
 
 ---
 
@@ -27,14 +36,18 @@ Blocked, below.
 **2026-09-04** — Repository created (private, `voltron-1/SEIM-Academy`). Seed Build Plan
 converted from `.docx` to `BUILD-PLAN.md`; `IMPLEMENTATION-PLAN.md` and `execution.md`
 imported verbatim; README and this execution view written. **Decision 3 resolved:**
-GPL-3.0 applied to the repo, AGPL-3.0 still reserved for a future hosted-copilot backend
-only. No implementation work started.
+GPL-3.0 applied, AGPL-3.0 still reserved for a future hosted-copilot backend only.
+**Phase 0 unblocked and largely completed:** source repo identified as `TonyPhipps/SIEM`,
+all 177 source files verified, curriculum map committed, content audit recorded. Two
+findings changed the plan — see Findings that alter the plan, below. **Decision 4
+resolved:** Windows Event ID triage confirmed as the Phase 1 pilot; Phase 1 unblocked.
+**Module 4 reframed** into 4a/4b.
 
 ---
 
 ## Phases
 
-- [ ] **Phase 0 — Content audit** — finalize curriculum map, verify every source path
+- [~] **Phase 0 — Content audit** — finalize curriculum map, verify every source path
       resolves, cross-check modules against real Tier 1/2 job postings and
       Security+/GCIH objectives. *Exit: curriculum map committed, every source path
       verified.*
@@ -61,18 +74,38 @@ reflects it.
 
 ## Blocked
 
-- [!] **Phase 0, all items** — the source knowledge-base repo that the Curriculum Map
-      cites (`Tactics/*.md`, `Notable-Event-IDs-*.md`, `Signatures/Splunk/*.md`,
-      `Matrix/*.md`, `Lookups/*.csv`, …) is not identified in any of the three planning
-      documents and is not present here. Blocked until that repo is named and cloned
-      locally, or its paths are confirmed to live in this repo.
-- [!] **Phase 1 start** — Decision 4 (pilot module) unresolved. "Windows Event ID
-      triage" is proposed and recommended; needs an explicit confirm.
+_Nothing is currently blocked._
+
+---
+
+## Findings that alter the plan
+
+From `findings/20260904-phase0-content-audit.md`:
+
+- [x] **Retire top risk in `IMPLEMENTATION-PLAN.md` §8.** "Parsing 58 `Tactics/*.md`
+      produces inconsistent atom quality" is false — 7 of 11 sections appear in 58/58
+      files and only 4 files deviate at all, all cosmetically. Phase 4's time budget can
+      be reduced.
+- [ ] **New risk replacing it: content sparsity.** 28 of 58 `Tactics/*.md` files contain
+      zero authored content — headings and a boilerplate line. Median file is 422 bytes;
+      45% of all body text sits in 2 files.
+- [x] **Tier 1 Module 4 reframed.** Approved 2026-09-04. Its specified format
+      ("matching: tactic → data source → field") drew on `Log Source Examples`, populated
+      in only 20/57 files. Now split into **4a — tactic taxonomy** (all 58 files,
+      generated from the uniform heading skeleton) and **4b — worked tactic depth** (the
+      16 substantive files only). Applied to `curriculum-map.md` and `execution.md`.
+- [ ] **Tier 2 Module 7 is lopsided.** `Lookups/o365-principalappid.csv` has 306 rows vs.
+      9 and 12 in the other two. Treat the large one as a lookup drill, not an SRS deck,
+      or it floods the review queue with low-value cards.
 
 ---
 
 ## Resolved decisions
 
+- [x] **Decision 4 — Phase 1 pilot module.** Resolved 2026-09-04: confirmed as
+      **"Windows Event ID triage"** (`Logging/Notable-Event-IDs-Sigma.md`, `-Risk.md`,
+      `-Forensics.md` — 88 KB, 612 table rows, the densest structured source in the repo).
+      Phase 1 is unblocked.
 - [x] **Decision 3 — GPL-3.0 vs AGPL-3.0.** Resolved 2026-09-04: GPL-3.0 applied
       (`LICENSE`). AGPL-3.0 reserved for a future managed-copilot backend only — plain
       GPL does not reach software run as a network service.

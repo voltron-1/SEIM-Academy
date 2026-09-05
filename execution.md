@@ -8,16 +8,16 @@ Status legend: `Not started` / `In progress` / `Blocked` / `Done`
 
 ## Phase 0 — Content audit
 
-**Depends on:** none | **Status:** Not started | **Owner:** _unassigned_
+**Depends on:** none | **Status:** In progress | **Owner:** _unassigned_
 
-- [ ] Enumerate every source path referenced in the Curriculum Map (both Tier 1 and Tier 2 tables) into a single manifest list
-- [ ] Verify each path resolves in the source repo (script this — don't check by hand across 58+ files)
-- [ ] Spot-check heading/list structure across a spread of `Tactics/*.md` files (not just the pilot module's docs) to catch parsing-inconsistency risk before Phase 1 design locks in
+- [x] Enumerate every source path referenced in the Curriculum Map (both Tier 1 and Tier 2 tables) into a single manifest list
+- [x] Verify each path resolves in the source repo (script this — don't check by hand across 58+ files)
+- [x] Spot-check heading/list structure across a spread of `Tactics/*.md` files (not just the pilot module's docs) to catch parsing-inconsistency risk before Phase 1 design locks in
 - [ ] Cross-check the module list against 5–10 current real Tier 1/Tier 2 SOC analyst job postings
 - [ ] Cross-check the module list against Security+ and GCIH exam objectives
-- [ ] Write up any curriculum gaps found and decide whether to fold them into the map now or backlog them
-- [ ] Commit the finalized curriculum map (this becomes the input to Phase 1)
-- [ ] Resolve Open Decision 4 (pilot module) — confirm "Windows Event ID triage" or pick an alternative
+- [x] Write up any curriculum gaps found and decide whether to fold them into the map now or backlog them
+- [x] Commit the finalized curriculum map (this becomes the input to Phase 1)
+- [x] Resolve Open Decision 4 (pilot module) — confirm "Windows Event ID triage" or pick an alternative
 
 **Exit check:** finalized curriculum map is committed and every listed source path has been verified to exist.
 
@@ -25,7 +25,7 @@ Status legend: `Not started` / `In progress` / `Blocked` / `Done`
 
 ## Phase 1 — Schema & pipeline
 
-**Depends on:** Phase 0 | **Status:** Not started | **Owner:** _unassigned_
+**Depends on:** Phase 0 | **Status:** Not started (unblocked — Decision 4 resolved) | **Owner:** _unassigned_
 
 - [ ] Draft `SEIMAcademy/app-data-schema.md` — lesson/atom/quiz JSON schema
   - [ ] Include `teaches` tag field (content/instructions atoms)
@@ -106,7 +106,13 @@ Status legend: `Not started` / `In progress` / `Blocked` / `Done`
 - [ ] Run pipeline: SOC orientation & what you're protecting
 - [ ] Run pipeline: Logging fundamentals
 - [ ] Run pipeline: Windows Event ID triage (pilot — already done in Phase 1, confirm integrated)
-- [ ] Run pipeline: Detection tactic categories (58 `Tactics/*.md` files — budget the most time here)
+- [ ] Run pipeline: Tactic taxonomy (Module 4a — all 58 `Tactics/*.md`, generated from the
+      uniform heading skeleton: which detection methods apply to which tactic)
+- [ ] Run pipeline: Worked tactic depth (Module 4b — the 16 substantive `Tactics/*.md`
+      files only; tactic → data source → field matching)
+  - Reframed 2026-09-04 per `findings/20260904-phase0-content-audit.md` finding 3:
+    28/58 tactic files contain no authored content, so the original single-module
+    "tactic → data source → field" format was not generatable at stated scope.
 - [ ] Run pipeline: Reading an alert / alarm algorithm vocabulary
 - [ ] Run pipeline: MITRE ATT&CK mapping literacy
 - [ ] Run pipeline: Field kit & note-taking discipline
@@ -235,10 +241,13 @@ Status legend: `Not started` / `In progress` / `Blocked` / `Done`
 
 ## Open decisions to resolve (not phase-blocking except where noted)
 
-- [ ] **Decision 4 (blocks Phase 1 start):** confirm pilot module — "Windows Event ID triage" or alternative
+- [x] **Decision 4 (blocked Phase 1 start):** RESOLVED 2026-09-04 — pilot module confirmed as
+      **"Windows Event ID triage"** (`Logging/Notable-Event-IDs-Sigma.md`, `-Risk.md`,
+      `-Forensics.md`; 88 KB, 612 table rows). Phase 1 is unblocked.
 - [ ] Decision 1: static hosting target (default: GitHub Pages)
 - [ ] Decision 2: paid tier scope, if any (default: none for v1; free/self-hosted only)
-- [ ] Decision 3: GPL-3.0 vs. AGPL-3.0 for app code / future hosted-copilot backend (default: GPL-3.0 app, AGPL-3.0 reserved for hosted-copilot backend)
+- [x] Decision 3: RESOLVED 2026-09-04 — GPL-3.0 applied to the repo (`LICENSE`); AGPL-3.0
+      reserved for a future managed-copilot backend only
 - [ ] Decision 5: accommodation scope beyond WCAG 2.1 AA baseline — TTS, reduced-motion-as-default (default: backlog to Phase 9+, not launch-blocking)
 
 ---
@@ -248,3 +257,4 @@ Status legend: `Not started` / `In progress` / `Blocked` / `Done`
 | Date | Change |
 |---|---|
 | 2026-09-04 | Initial execution plan generated from `SEIMAcademyBuildPlan.docx` and `IMPLEMENTATION-PLAN.md` |
+| 2026-09-04 | Phase 0 audit: source repo identified (`TonyPhipps/SIEM` @ `4adb971`), 177 files verified, curriculum map committed. Decisions 3 and 4 resolved. Module 4 split into 4a/4b. Top risk in `IMPLEMENTATION-PLAN.md` §8 retired; content sparsity logged in its place. |

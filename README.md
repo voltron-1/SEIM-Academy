@@ -4,9 +4,10 @@ Planning repository for **SOC Academy** — an interactive, dark-cyber-themed le
 module that turns a SOC knowledge-base repo into a Tier 1 / Tier 2 analyst training
 track, with an embedded Socratic copilot agent.
 
-**Status: planning only. Nothing is implemented yet.** This repo currently holds the
-three planning documents and no application code. Phase 0 (content audit) has not
-started — see `planned_execution.md`.
+**Status: Phase 0 (content audit) in progress. No application code yet.**
+The source knowledge base is [`TonyPhipps/SIEM`](https://github.com/TonyPhipps/SIEM)
+(GPL-3.0). All 31 Curriculum Map path specs have been verified — 177 files, none
+missing. See [`curriculum-map.md`](curriculum-map.md) and `planned_execution.md`.
 
 ## What's here
 
@@ -16,6 +17,8 @@ started — see `planned_execution.md`.
 | [`IMPLEMENTATION-PLAN.md`](IMPLEMENTATION-PLAN.md) | **How and in what order** | Workstreams, per-phase technical approach + definition of done, staffing, timeline, risks, decision gates |
 | [`execution.md`](execution.md) | **Task-level tracker** | Day-to-day checklist per phase, with exit checks |
 | [`planned_execution.md`](planned_execution.md) | **Sequenced execution view** | Current phase, next unstarted item, what closed last session |
+| [`curriculum-map.md`](curriculum-map.md) | **Verified** module → source mapping | Phase 0 deliverable: every source path resolved against the real repo, with a build-viability rating per module |
+| [`findings/`](findings/) | Audit records | Phase 0 content audit — what the source repo can and cannot support |
 | [`docs/source/`](docs/source/) | Provenance | The original `.docx` that `BUILD-PLAN.md` was converted from |
 | [`LICENSE`](LICENSE) | Terms | GPL-3.0 (Open Decision 3, resolved) |
 
@@ -53,9 +56,11 @@ has severe ADHD and the plan treats anxiety-safety as the tiebreaker rule:
 ## Open decisions
 
 Five carried forward from the Build Plan (see `IMPLEMENTATION-PLAN.md` §7).
-**Decision 3 (licensing) is resolved** — GPL-3.0, applied. Of the remaining four, one
-blocks work: **Decision 4 — confirm the Phase 1 pilot module** ("Windows Event ID
-triage" is proposed). The rest have working defaults and can be resolved opportunistically.
+**Decisions 3 and 4 are resolved.** Decision 3 — GPL-3.0, applied. Decision 4 — the
+Phase 1 pilot module is confirmed as **Windows Event ID triage**, backed by the Phase 0
+audit (88 KB / 612 table rows of dense, uniformly structured source — nearly twice the
+body text of all 58 `Tactics/*.md` files combined). **Nothing is currently blocked.**
+The remaining three decisions have working defaults and can be resolved opportunistically.
 
 ## A note on naming
 
