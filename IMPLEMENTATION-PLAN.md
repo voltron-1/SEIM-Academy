@@ -2,6 +2,7 @@
 
 Derived from: `SEIMAcademyBuildPlan.docx` (seed Build Plan, nothing implemented yet)
 Prepared: 2026-09-04
+Revised: 2026-09-04 — Section 8 risk register amended following the Phase 0 content audit (`findings/20260904-phase0-content-audit.md`)
 Companion document: `execution.md` (task-level tracker — use that day-to-day; use this document for scope, sequencing, staffing, and risk decisions)
 
 ## 1. Purpose and how to use this pair of documents
@@ -44,6 +45,8 @@ Each entry maps to the source plan's Build Phases table and adds a technical app
 
 **Definition of done:** finalized curriculum map committed (module → source doc(s) → interactive format, matching the source plan's two tables); every listed source path verified to exist; a short written note on job-posting/cert alignment, including any additions/removals from the current list.
 
+> **Status 2026-09-04:** source repo identified as [`TonyPhipps/SIEM`](https://github.com/TonyPhipps/SIEM) @ `4adb971` (GPL-3.0). Curriculum map committed as `curriculum-map.md`; 31 path specs verified to 177 files, 0 missing, 0 empty; seven paths corrected for missing directory prefixes; `Tactics/*.md` structure spot-checked across all 58 files. **Outstanding:** the job-posting and Security+/GCIH cross-checks, which need external research rather than repo inspection.
+
 **Depends on:** none. **Blocks:** everything else.
 
 ### Phase 1 — Schema & pipeline (Workstream A; depends on: Phase 0)
@@ -72,7 +75,9 @@ Each entry maps to the source plan's Build Phases table and adds a technical app
 
 ### Phase 4 — Tier 1 complete (Workstreams A + C; depends on: Phases 1–3)
 
-**Approach:** Run the Phase 1 pipeline across all ten Tier 1 modules (SOC orientation through Investigating a user profile). Author Capstone 1 (timed-optional full triage simulation, 3 alerts) by chaining existing components — no new component type needed. This is where the 58 `Tactics/*.md` files get processed at scale for the "Detection tactic categories" module, so budget the most pipeline-hardening time here.
+**Approach:** Run the Phase 1 pipeline across all ten Tier 1 modules (SOC orientation through Investigating a user profile). Author Capstone 1 (timed-optional full triage simulation, 3 alerts) by chaining existing components — no new component type needed. This is where the 58 `Tactics/*.md` files get processed at scale.
+
+> **Amended 2026-09-04 (Phase 0 audit).** This paragraph originally directed the most pipeline-hardening time here, on the assumption that 58 files would parse inconsistently. They do not — see Section 8, Retired risks — so that budget should come down. The real work at this step is content-shaped, not parser-shaped: the "Detection tactic categories" module is now **4a — tactic taxonomy** (all 58 files, generated from the uniform heading skeleton) and **4b — worked tactic depth** (the 16 files with substantive content). See `curriculum-map.md` for the verified module → source mapping.
 
 **Definition of done:** all ten Tier 1 modules render end-to-end through the app shell; Capstone 1 completes with the timed-mode consent gate functioning; source-link "from /path" citations resolve for every generated atom.
 
@@ -162,13 +167,30 @@ Decision 4 is the only one that should be resolved before Phase 1 begins; the re
 
 ## 8. Top risks and mitigations
 
+Amended 2026-09-04 after the Phase 0 content audit. The audit measured the source
+corpus directly rather than assuming its shape, and the result inverted this register's
+original top entry: the risk that was ranked first turned out not to exist, and a
+different one — invisible until the corpus was measured — took its place.
+
+Retired risks are kept rather than deleted, matching the Build Plan's own Gap Analysis
+convention, so a later reader can see what was considered and why it was dropped.
+
+### Active risks
+
 | Risk | Impact | Mitigation |
 |---|---|---|
-| Automated parsing of 58 `Tactics/*.md` files produces inconsistent atom quality (headings/lists don't parse uniformly across all files) | Delays Phase 4, degrades content quality | Phase 0's audit should sample-check heading structure across a spread of tactic files, not just the pilot module's docs, before Phase 1 pipeline design locks in |
-| Prerequisite-completeness CI check is built late (Phase 8) after content already violates it | Expensive rework across Phases 4/6 content | Consider a lightweight version of the `requires`/`teaches` check as a local pre-commit script starting in Phase 1, ahead of the full Phase 8 CI build |
+| **Content sparsity in `Tactics/*.md`.** 28 of 58 files contain zero authored content — a title, one boilerplate line, and nine or ten empty section headings. Median file is 422 bytes; 45% of all body text sits in two files. `Log Source Examples` is populated in only 21/58. | Tier 1 Module 4 was not buildable at its specified format ("matching: tactic → data source → field"). Two thirds of tactics have no data source to match against. Worse, atoms generated from empty files teach nothing, so exercises depending on them would fail the Phase 8 `requires` ⊆ `teaches` gate — the project's own merge gate would reject content built to the original spec. | **Resolved for Module 4** (approved 2026-09-04): split into **4a — tactic taxonomy**, generated from the uniform heading skeleton across all 58 files, and **4b — worked tactic depth**, scoped to the 16 substantive files. No hand-authoring, so the "generated, never hand-duplicated" rule holds. **Still live for Tier 2 Module 9** (`hardening/*.md` vs `Tactics/*.md`), which inherits the same sparsity through its cross-reference — re-scope it against 4b's 16-file set when Phase 6 reaches it. An upstream contribution to `TonyPhipps/SIEM` filling the empty files is the clean long-term fix but is not on this project's critical path. |
+| Prerequisite-completeness CI check is built late (Phase 8) after content already violates it | Expensive rework across Phases 4/6 content | Consider a lightweight version of the `requires`/`teaches` check as a local pre-commit script starting in Phase 1, ahead of the full Phase 8 CI build. **Raised in priority by the audit** — the sparsity finding above is precisely a case this check would have caught automatically, and Module 4 was specified for two documents' worth of planning before anyone measured whether its source could support it. |
 | Local-model copilot quality/latency untested until Phase 7 | Could force a late pivot on the "local-first by default" commitment | Do a throwaway spike with the target local-model stack (Ollama or WebLLM) during Phase 2, in parallel, purely to validate feasibility before Phase 7 architecture locks in |
 | Accessibility retrofitted instead of built-in (keyboard-drag, contrast) | Rework across Workstream C components, possible Phase 9 findings that require Phase 3/5 rework | Enforce axe-core check (Phase 8 item) as a per-PR gate starting in Phase 2, not deferred to Phase 8 |
 | Scope creep from the five Differentiators pulled into required v1 scope | Timeline blows past Section 6 estimate | Treat Differentiators 1/3/4/5 as explicitly stretch/Phase 6+ scope (Section 3) unless the requester states otherwise |
+| **`Lookups/*.csv` is lopsided.** `o365-principalappid.csv` holds 306 rows; `windows-logon-type.csv` has 9 and `windows-status-code.csv` has 12. | Generating flashcards uniformly across all three would flood the SRS queue with 306 low-value recall cards, degrading the review experience that Tier 2 Module 7 depends on. | Route the two small tables to SRS flashcards (logon types and status codes are genuine memorize-this facts); treat the O365 table as a "how to use a lookup table" drill, not a recall deck. Encode the split in the Phase 1 schema so the pipeline cannot generate cards from a reference-sized table by default. |
+
+### Retired risks
+
+| Risk | Why it was retired |
+|---|---|
+| ~~Automated parsing of 58 `Tactics/*.md` files produces inconsistent atom quality (headings/lists don't parse uniformly across all files)~~ | **Measured false, 2026-09-04.** The corpus is close to machine-generated in its uniformity: **nine sections appear in all 58 files** (`Aggregate Count`, `Blacklist Alert`, `Whitelist Alert`, `Levenshtein Score Alert`, `Rolling Whitelist Alert`, `Shannon Entropy Score Alert`, `Threshold Alert`, `Log Source Examples`, `Possible False Positives`), with `Match Alert` present in 34/58 as an optional section by design. Every file carries between 9 and 12 section headings. Only four files deviate at all, and every deviation is cosmetic and normalizes to the same section vocabulary: `Commandline-Activity.md` wraps two headings in Markdown links, `Process-Execution.md` reads "Match Alarm" for "Match Alert", `Log-Clearing.md` puts "LogSource Examples" at H2 rather than H1, and `DNS-Request.md` adds one extra section ("Deviation from Baseline Alarm"). The Phase 1 parser can rely on a fixed section vocabulary. **Consequence: Phase 4's pipeline-hardening budget should come down** — see the note in Section 4, Phase 4. |
 
 ## 9. Definition of done for v1 launch
 

@@ -29,16 +29,20 @@ the consistent choice rather than an elective one.
 
 | Section | Files containing it |
 |---|---|
-| Aggregate Count, Whitelist Alert, Levenshtein Score Alert, Rolling Whitelist Alert, Shannon Entropy Score Alert, Threshold Alert | 58 / 58 |
-| Blacklist Alert | 57 / 58 |
-| Match Alert | 33 / 58 (optional by design) |
+| Aggregate Count, Blacklist Alert, Whitelist Alert, Levenshtein Score Alert, Rolling Whitelist Alert, Shannon Entropy Score Alert, Threshold Alert, Log Source Examples, Possible False Positives | 58 / 58 |
+| Match Alert | 34 / 58 (optional by design) |
+
+Every file carries between 9 and 12 section headings. Counts are normalized for the four
+cosmetic variants below — `[Blacklist Alert](…)` and `Blacklist Alert` are the same
+section, as are `Match Alarm`/`Match Alert` and `LogSource Examples`/`Log Source Examples`.
 
 Only 4 files deviate at all, and every deviation is cosmetic and trivially normalized:
 
 - `Commandline-Activity.md` — two headings are Markdown links rather than plain text
 - `Process-Execution.md` — "Match **Alarm**" instead of "Match **Alert**"
-- `DNS-Request.md` — one extra section, "Deviation from Baseline Alarm"
 - `Log-Clearing.md` — "LogSource Examples" at H2 rather than the usual H1 "Log Source Examples"
+- `DNS-Request.md` — one extra section, "Deviation from Baseline Alarm" (the only
+  deviation that adds content rather than renaming it)
 
 **Consequence:** the Phase 1 parser can rely on a fixed section vocabulary. This risk
 should be struck from §8 and the Phase 4 time budget reduced accordingly.
@@ -49,7 +53,8 @@ The problem is not that the Tactics files parse badly. It is that **most of them
 empty scaffolding.**
 
 - **28 of 58 files contain zero authored content** — a title, the boilerplate line
-  `Grouped by [Detection Method](/Detection-Methods.md)`, and eleven empty headings.
+  `Grouped by [Detection Method](/Detection-Methods.md)`, and nine or ten empty section
+  headings.
 - Median file: **422 bytes**. 29 of 58 are under 400 bytes.
 - Total body text across all 58 files: **~47 KB (~7,800 words)** — and **45% of that
   sits in just two files** (`Commandline-Activity.md`, `Process-Execution.md`).
@@ -59,14 +64,14 @@ Per-section fill rate across the corpus:
 | Section | Files with any content |
 |---|---|
 | Blacklist Alert | 22/58 (38%) |
-| Log Source Examples | 20/57 (35%) |
+| Log Source Examples | 21/58 (36%) |
 | Rolling Whitelist Alert | 19/58 (33%) |
 | Aggregate Count | 16/58 (28%) |
 | Whitelist Alert | 16/58 (28%) |
 | Threshold Alert | 14/58 (24%) |
 | Levenshtein Score Alert | 8/58 (14%) |
 | Shannon Entropy Score Alert | 7/58 (12%) |
-| Match Alert | 4/33 (12%) |
+| Match Alert | 5/34 (15%) |
 | Possible False Positives | 3/58 (5%) |
 
 **The 28 empty files, for the record:** DHCP-Request, Domain-Replication-Request,
@@ -80,8 +85,8 @@ Registry-Deletion, SQL-Command, USB-Device-Attached, WMI-Activity.
 ### Why this breaks Tier 1 Module 4 as specified
 
 The Build Plan specifies the format as **"matching game: tactic → data source → field."**
-The data-source half comes from `Log Source Examples`, which is populated in **20 of 57
-files (35%)**. Two thirds of the tactics have no data source to match to. The exercise
+The data-source half comes from `Log Source Examples`, which is populated in **21 of 58
+files (36%)**. Two thirds of the tactics have no data source to match to. The exercise
 cannot be generated at the stated scope.
 
 This also violates an anxiety-safe design principle structurally, not just cosmetically:

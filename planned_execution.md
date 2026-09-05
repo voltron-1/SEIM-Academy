@@ -83,15 +83,15 @@ _Nothing is currently blocked._
 From `findings/20260904-phase0-content-audit.md`:
 
 - [x] **Retire top risk in `IMPLEMENTATION-PLAN.md` §8.** "Parsing 58 `Tactics/*.md`
-      produces inconsistent atom quality" is false — 7 of 11 sections appear in 58/58
-      files and only 4 files deviate at all, all cosmetically. Phase 4's time budget can
-      be reduced.
+      produces inconsistent atom quality" is false — nine sections appear in all 58
+      files, and only 4 files deviate at all, every deviation cosmetic and normalizing
+      to the same section vocabulary. Phase 4's time budget can be reduced.
 - [ ] **New risk replacing it: content sparsity.** 28 of 58 `Tactics/*.md` files contain
-      zero authored content — headings and a boilerplate line. Median file is 422 bytes;
-      45% of all body text sits in 2 files.
+      zero authored content — nine or ten empty section headings and a boilerplate line.
+      Median file is 422 bytes; 45% of all body text sits in 2 files.
 - [x] **Tier 1 Module 4 reframed.** Approved 2026-09-04. Its specified format
       ("matching: tactic → data source → field") drew on `Log Source Examples`, populated
-      in only 20/57 files. Now split into **4a — tactic taxonomy** (all 58 files,
+      in only 21/58 files. Now split into **4a — tactic taxonomy** (all 58 files,
       generated from the uniform heading skeleton) and **4b — worked tactic depth** (the
       16 substantive files only). Applied to `curriculum-map.md` and `execution.md`.
 - [ ] **Tier 2 Module 7 is lopsided.** `Lookups/o365-principalappid.csv` has 306 rows vs.
