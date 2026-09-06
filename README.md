@@ -17,13 +17,14 @@ missing. See [`curriculum-map.md`](curriculum-map.md) and `planned_execution.md`
 | [`IMPLEMENTATION-PLAN.md`](IMPLEMENTATION-PLAN.md) | **How and in what order** | Workstreams, per-phase technical approach + definition of done, staffing, timeline, risks, decision gates |
 | [`execution.md`](execution.md) | **Task-level tracker** | Day-to-day checklist per phase, with exit checks |
 | [`planned_execution.md`](planned_execution.md) | **Sequenced execution view** | Current phase, next unstarted item, what closed last session |
+| [`project-board.md`](project-board.md) | **Kanban board** | At-a-glance agile view — Backlog / Ready / In Progress / Blocked / Done columns, one card per phase, plus a Current Sprint lane with task-level cards for the active phase |
 | [`curriculum-map.md`](curriculum-map.md) | **Verified** module → source mapping | Phase 0 deliverable: every source path resolved against the real repo, with a build-viability rating per module |
 | [`findings/`](findings/) | Audit records | Phase 0 content audit — what the source repo can and cannot support |
 | [`docs/source/`](docs/source/) | Provenance | The original `.docx` that `BUILD-PLAN.md` was converted from |
 | [`LICENSE`](LICENSE) | Terms | GPL-3.0 (Open Decision 3, resolved) |
 
-`planned_execution.md` never competes with `execution.md` for completion state — it
-derives from it and stays a sequenced view.
+`planned_execution.md` and `project-board.md` never compete with `execution.md` for
+completion state — both derive from it and stay views (sequenced, and Kanban respectively).
 
 ## The shape of the build
 
