@@ -10,49 +10,61 @@ Status markers: `[ ]` todo · `[~]` in-progress · `[x]` done · `[!]` blocked
 
 ## NEXT UP
 
-**Phase 0 — Content audit** `[~]` in progress (unblocked 2026-09-04)
+**Phase 0 — Content audit** `[x]` **complete** (2026-09-06). All four exit criteria met —
+see the exit check in
+[`findings/20260906-phase0-external-crosscheck.md`](findings/20260906-phase0-external-crosscheck.md).
 
-Source knowledge base identified: [`TonyPhipps/SIEM`](https://github.com/TonyPhipps/SIEM)
-@ `4adb971`, GPL-3.0.
+**Phase 1 — Schema & pipeline** `[ ]` is next and unblocked. First task: draft
+`app-data-schema.md` (lesson/atom/quiz JSON schema with the `teaches`/`requires`/`source`
+fields), then scaffold `scripts/build-content.*` to parse the three
+`Logging/Notable-Event-IDs-*.md` tables into lesson JSON.
 
-**Done this session:** path manifest built and verified (31 specs → 177 files, 0 missing,
-0 empty); `Tactics/*.md` structural spot-check completed; curriculum map committed as
-[`curriculum-map.md`](curriculum-map.md); audit recorded in
-[`findings/20260904-phase0-content-audit.md`](findings/20260904-phase0-content-audit.md).
+**Gate before Phase 1 starts — four curriculum decisions await approval.** Two of them
+change what `app-data-schema.md` must represent, so they are cheaper to settle now than
+to retrofit:
 
-**Next unstarted item:** Cross-check the module list against 5–10 current Tier 1/Tier 2
-SOC analyst job postings, then against Security+ and GCIH exam objectives. Needs external
-research rather than repo inspection — the last work before Phase 0's exit check is met.
+- **A. Expand Tier 1 Module 8 to the full PICERL lifecycle.** Only ~10% of the 52 KB
+  `Incident-Response-Policy.md` is currently mapped. *Affects the schema — containment
+  and eradication atoms need a lifecycle-stage field.*
+- **B. Map `Lab/Generate-Suspicious-Activity*.ps1` as labeled exercise data** for Module 3
+  and Capstone 1. *Affects the schema and adds a parser branch to `build-content`.*
+- **C. Replace GCIH with CySA+** as the Tier 2 certification alignment target. Docs only.
+- **D. State Security+ coverage precisely** (~35–40%, Security Operations domain) rather
+  than implying whole-exam prep. Docs only.
 
-**Then Phase 1 (unblocked).** Decision 4 is resolved — the pilot is **Windows Event ID
-triage**. First task: draft `app-data-schema.md` (lesson/atom/quiz JSON schema with the
-`teaches`/`requires`/`source` fields), then scaffold `scripts/build-content.*` to parse
-the three `Logging/Notable-Event-IDs-*.md` tables into lesson JSON.
+Two further proposals (a new cloud/identity Tier 1 module; README non-goals for
+networking, EDR, phishing and scripting) can follow Phase 1 without rework.
 
 ---
 
 ## LAST SESSION
+
+**2026-09-06** — **Phase 0 closed.** Ran the final audit item: cross-checked all 20
+modules against 2026 Tier 1/Tier 2 SOC hiring requirements and against Security+ SY0-701
+and GCIH objectives. Recorded in
+[`findings/20260906-phase0-external-crosscheck.md`](findings/20260906-phase0-external-crosscheck.md).
+Six findings, four of which change the plan (see below); nothing blocked. No source or
+curriculum files were modified — all changes are proposals pending the Phase 1 gate.
 
 **2026-09-04** — Repository created (private, `voltron-1/SEIM-Academy`). Seed Build Plan
 converted from `.docx` to `BUILD-PLAN.md`; `IMPLEMENTATION-PLAN.md` and `execution.md`
 imported verbatim; README and this execution view written. **Decision 3 resolved:**
 GPL-3.0 applied, AGPL-3.0 still reserved for a future hosted-copilot backend only.
 **Phase 0 unblocked and largely completed:** source repo identified as `TonyPhipps/SIEM`,
-all 177 source files verified, curriculum map committed, content audit recorded. Two
-findings changed the plan — see Findings that alter the plan, below. **Decision 4
-resolved:** Windows Event ID triage confirmed as the Phase 1 pilot; Phase 1 unblocked.
-**Module 4 reframed** into 4a/4b.
+all 177 source files verified, curriculum map committed, content audit recorded.
+**Decision 4 resolved:** Windows Event ID triage confirmed as the Phase 1 pilot.
+**Module 4 reframed** into 4a/4b; **Modules 4 and 5 swapped.**
 
 ---
 
 ## Phases
 
-- [~] **Phase 0 — Content audit** — finalize curriculum map, verify every source path
-      resolves, cross-check modules against real Tier 1/2 job postings and
-      Security+/GCIH objectives. *Exit: curriculum map committed, every source path
-      verified.*
+- [x] **Phase 0 — Content audit** — curriculum map finalized, every source path verified,
+      modules cross-checked against job postings and Security+/GCIH objectives.
+      *Exit met 2026-09-06 — [audit](findings/20260904-phase0-content-audit.md),
+      [cross-check](findings/20260906-phase0-external-crosscheck.md).*
 - [ ] **Phase 1 — Schema & pipeline** — `app-data-schema.md`, `build-content` script,
-      generated lessons for the pilot module. *Gated on Decision 4.*
+      generated lessons for the pilot module. *Unblocked; gated on decisions A–D above.*
 - [ ] **Phase 2 — App shell** — theme tokens, left rail, HUD, atom renderer, local
       persistence, offline/degraded states, PWA shell.
 - [ ] **Phase 3 — Core components** — Instructions atom, Flashcard+SRS, MC/fill-blank,
@@ -79,6 +91,27 @@ _Nothing is currently blocked._
 ---
 
 ## Findings that alter the plan
+
+From [`findings/20260906-phase0-external-crosscheck.md`](findings/20260906-phase0-external-crosscheck.md):
+
+- [ ] **`Incident-Response-Policy.md` is 52 KB and Module 8 uses a sliver of it.** The
+      full PICERL lifecycle is present and verified (Preparation, Identification,
+      Containment, Eradication, Recovery, Lessons Learned). Containment actions are a
+      named Tier 2 hiring requirement. Closing this needs no new authoring. *Decision A.*
+- [ ] **`Lab/Generate-Suspicious-Activity*.ps1` is unmapped and is the missing exercise-data
+      source.** Three generators, self-labeled by Event ID, covering exactly what the
+      Phase 1 pilot teaches. Parse-only — the pipeline must never execute them.
+      *Decision B.*
+- [ ] **GCIH is the wrong alignment target.** ~2.5 of 15 official objectives are covered;
+      the exam is offense-weighted while this curriculum is detection-weighted. CySA+ is
+      the shape-matched substitute and is named as the Tier 2 landing cert. *Decision C.*
+- [ ] **Security+ coverage is ~35–40%, concentrated in Domain 4.** Domains 1, 3 and 5
+      (50% of the exam) are essentially untouched. Positioning must say "Security
+      Operations domain, taught deeply," not "Security+ prep." *Decision D.*
+- [ ] **Six Tier 1 requirements have no module** — networking fundamentals, EDR/XDR,
+      phishing triage, identity, cloud telemetry, scripting. Only identity and cloud are
+      buildable from the licensed source; the rest should be disclosed as prerequisites
+      or non-goals rather than faked.
 
 From `findings/20260904-phase0-content-audit.md`:
 
@@ -111,7 +144,8 @@ From `findings/20260904-phase0-content-audit.md`:
 - [x] **Decision 4 — Phase 1 pilot module.** Resolved 2026-09-04: confirmed as
       **"Windows Event ID triage"** (`Logging/Notable-Event-IDs-Sigma.md`, `-Risk.md`,
       `-Forensics.md` — 88 KB, 612 table rows, the densest structured source in the repo).
-      Phase 1 is unblocked.
+      Validated against the job market 2026-09-06 — Windows Event IDs are named
+      explicitly in Tier 1 requirements. Phase 1 is unblocked.
 - [x] **Decision 3 — GPL-3.0 vs AGPL-3.0.** Resolved 2026-09-04: GPL-3.0 applied
       (`LICENSE`). AGPL-3.0 reserved for a future managed-copilot backend only — plain
       GPL does not reach software run as a network service.
