@@ -49,42 +49,58 @@ the order (see the phase graph in `README.md`).
 
 Unblocked, queued to start next.
 
-| Phase | Epic | Issue | Workstream | Note |
-|---|---|---|---|---|
-| 1 | Schema & pipeline | [#3](https://github.com/voltron-1/SEIM-Academy/issues/3) | A | Decision 4 resolved 2026-09-04 (pilot = Windows Event ID triage) — unblocked |
+_Empty — Phase 1 has moved to In Progress and every remaining phase depends on it._
 
 ### 🔧 In Progress
 
-| Phase | Epic | Issue | Workstream | Owner |
-|---|---|---|---|---|
-| 0 | Content audit | [#2](https://github.com/voltron-1/SEIM-Academy/issues/2) | F | _unassigned_ |
+| Phase | Epic | Issue | Milestone | Workstream | Owner |
+|---|---|---|---|---|---|
+| 1 | Schema & pipeline | [#3](https://github.com/voltron-1/SEIM-Academy/issues/3) | Phase 1 — Schema & pipeline | A | _unassigned_ |
 
 ### 🏁 Done
 
-_Empty — no phase has reached its exit check yet. Phase 0 is close (see Current Sprint)._
+| Phase | Epic | Issue | Milestone | Closed | Evidence |
+|---|---|---|---|---|---|
+| 0 | Content audit | [#2](https://github.com/voltron-1/SEIM-Academy/issues/2) | Phase 0 — Content audit (closed) | 2026-09-06 | [audit](findings/20260904-phase0-content-audit.md) · [cross-check](findings/20260906-phase0-external-crosscheck.md) |
 
 ---
 
-## Current Sprint — Phase 0 (Content audit) — [#2](https://github.com/voltron-1/SEIM-Academy/issues/2)
+## Current Sprint — Phase 1 (Schema & pipeline) — [#3](https://github.com/voltron-1/SEIM-Academy/issues/3)
 
 Task-level cards for the one phase actively in progress, pulled directly from
-`execution.md`.
+`execution.md`. Nothing is checked yet — the sprint opened 2026-09-06 when the Phase 1
+decision gate cleared.
 
-**Done this session/prior:**
-- [x] Enumerate every source path in the Curriculum Map into a manifest
-- [x] Verify each path resolves in the source repo
-- [x] Spot-check heading/list structure across a spread of `Tactics/*.md` files
-- [x] Write up curriculum gaps found
-- [x] Commit the finalized curriculum map
-- [x] Resolve Open Decision 4 (pilot module → Windows Event ID triage)
+**Gate cleared 2026-09-06.** Decisions A–D approved (see Decisions board). Two of them
+constrain the first deliverable and must be reflected in `app-data-schema.md` as it is
+written, not retrofitted:
 
-**To Do (blocks Phase 0 exit check):**
-- [ ] Cross-check the module list against 5–10 current real Tier 1/Tier 2 SOC analyst job postings
-- [ ] Cross-check the module list against Security+ and GCIH exam objectives
+- **A** adds a `lifecycle_stage` field to the atom schema (PICERL stages for T1-8).
+- **B** adds a parser branch for `Lab/Generate-Suspicious-Activity*.ps1` as labeled
+  exercise data. **Parse-only — `build-content` must never execute them or shell out to
+  PowerShell.** This constraint belongs in the schema doc and in the script itself.
 
-**Exit check:** finalized curriculum map is committed and every listed source path has
-been verified to exist. *(Map + path verification: done. Cross-checks: outstanding — the
-only thing keeping this card out of Done.)*
+**To Do:**
+- [ ] Draft `SEIMAcademy/app-data-schema.md` — lesson/atom/quiz JSON schema
+  - [ ] `teaches` tag field (content/instructions atoms)
+  - [ ] `requires` tag field (exercise atoms)
+  - [ ] `source` field (repo-relative path, optional `#heading`)
+  - [ ] Atom types: reading, quiz, flashcard, instructions, exercise, scenario, predict, capstone-step
+  - [ ] Body-length cap per atom (per ADHD principle 1)
+  - [ ] `lifecycle_stage` field *(Decision A)*
+- [ ] Scaffold `SEIMAcademy/scripts/build-content.*`
+  - [ ] Markdown heading/list parser for the pilot module's source docs
+  - [ ] Atom normalizer → emits `SEIMAcademy/content/lessons/*.json`
+  - [ ] `teaches`/`requires` derivation from parsed headings/terms
+  - [ ] Idempotency check (re-run without source changes → identical output)
+  - [ ] PowerShell-comment parser branch for the Lab generators *(Decision B, parse-only)*
+- [ ] Generate flashcard/quiz content directly from `Notable-Event-IDs-*.md` tables (no hand-copied answer keys)
+- [ ] Validate generated pilot-module JSON against the schema
+- [ ] Confirm re-running after a deliberate source edit regenerates only the affected lesson
+- [ ] *(Optional, recommended)* stub a local pre-commit check for `requires` ⊆ `teaches` ahead of the full Phase 8 CI build
+
+**Exit check:** pipeline runs against the pilot module end-to-end; output validates
+against the schema; regeneration is correctly scoped to changed files only.
 
 ---
 
@@ -100,6 +116,10 @@ into the phase board would hide which one is actually blocking something.
 | 1 — Static hosting target | Deferred to first deploy (Phase 2+) | Backlog |
 | 2 — Paid tier scope | Deferred indefinitely (v1 free/self-hosted only) | Backlog |
 | 5 — Accommodation scope beyond WCAG 2.1 AA | Deferred to Phase 9+ backlog | Backlog |
+| A — Tier 1 Module 8 → full PICERL lifecycle | Resolved 2026-09-06 (approved) | Done |
+| B — Lab generators as labeled exercise data (parse-only) | Resolved 2026-09-06 (approved) | Done |
+| C — Replace GCIH with CySA+ as Tier 2 alignment target | Resolved 2026-09-06 (approved) | Done |
+| D — State Security+ coverage precisely (SecOps domain) | Resolved 2026-09-06 (approved) | Done |
 
 ---
 
@@ -121,13 +141,26 @@ Not scheduled, not launch-blocking, layered onto Workstream C components once th
 This file is the git-tracked source; nothing here requires GitHub Issues to work, but the
 epic-level issues now exist ([#2](https://github.com/voltron-1/SEIM-Academy/issues/2)–[#11](https://github.com/voltron-1/SEIM-Academy/issues/11), one per phase, title `Phase N — <name>`,
 body = that phase's checklist from `execution.md`; checkboxes render as sub-tasks GitHub
-tracks automatically). If you'd rather have an interactive drag-and-drop board:
+tracks automatically).
+
+**Every epic issue carries a matching milestone** (`Phase N — <name>`), assigned
+2026-09-06. This is not cosmetic: an unmilestoned open issue is invisible to
+`planned_execution.md` and rots until someone audits the tracker by hand. Any follow-up
+issue gets its milestone assigned *in the same action that creates it* — never filed
+first and milestoned later. The Phase 0 milestone is closed alongside [#2](https://github.com/voltron-1/SEIM-Academy/issues/2).
+
+Note that **Decisions A–D were deliberately not filed as issues.** They are approved
+scope changes whose work folds into the Phase 1 and Phase 4 epics; four issues closed by
+the same commits would be tracker noise. They are recorded on the Decisions board above
+and in `planned_execution.md` § Resolved decisions.
+
+If you'd rather have an interactive drag-and-drop board:
 
 1. Repo → **Projects** tab → **New project** → **Board** layout. This gives you a
    built-in `Status` field (Todo / In Progress / Done) for free — no custom field setup
    needed for a first pass.
 2. Add issues [#2](https://github.com/voltron-1/SEIM-Academy/issues/2)–[#11](https://github.com/voltron-1/SEIM-Academy/issues/11) to the project and set each one's `Status` to match its column
-   above (#2 → In Progress, #3 → Todo, #4–#11 → Backlog/Todo).
+   above (#2 → Done/closed, #3 → In Progress, #4–#11 → Backlog/Todo).
 3. Optionally add a single-select `Workstream` field (A–F, matching
    `IMPLEMENTATION-PLAN.md` §3) if you want to filter/group the board by workstream
    instead of just phase.

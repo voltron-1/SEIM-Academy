@@ -2,7 +2,10 @@
 
 Sequenced execution view for the whole project. Derived from `execution.md` (the
 task-level source of truth) and `IMPLEMENTATION-PLAN.md` (sequencing and gates) — it
-never competes with them for completion state.
+never competes with them for completion state. [`project-board.md`](project-board.md)
+re-slices the same data into Kanban form; GitHub epics
+[#2](https://github.com/voltron-1/SEIM-Academy/issues/2)–[#11](https://github.com/voltron-1/SEIM-Academy/issues/11)
+mirror it one issue per phase, each on a matching `Phase N` milestone.
 
 Status markers: `[ ]` todo · `[~]` in-progress · `[x]` done · `[!]` blocked
 
@@ -10,41 +13,51 @@ Status markers: `[ ]` todo · `[~]` in-progress · `[x]` done · `[!]` blocked
 
 ## NEXT UP
 
-**Phase 0 — Content audit** `[x]` **complete** (2026-09-06). All four exit criteria met —
-see the exit check in
-[`findings/20260906-phase0-external-crosscheck.md`](findings/20260906-phase0-external-crosscheck.md).
+**Phase 1 — Schema & pipeline** `[~]` **in progress** (opened 2026-09-06) —
+[#3](https://github.com/voltron-1/SEIM-Academy/issues/3), milestone *Phase 1 — Schema &
+pipeline*. The decision gate cleared; nothing blocks it.
 
-**Phase 1 — Schema & pipeline** `[ ]` is next and unblocked. First task: draft
-`app-data-schema.md` (lesson/atom/quiz JSON schema with the `teaches`/`requires`/`source`
-fields), then scaffold `scripts/build-content.*` to parse the three
+**Next unstarted item:** draft `SEIMAcademy/app-data-schema.md` — the lesson/atom/quiz
+JSON schema carrying the `teaches` / `requires` / `source` fields, the eight atom types,
+the per-atom body-length cap, and the `lifecycle_stage` field that Decision A adds. Then
+scaffold `SEIMAcademy/scripts/build-content.*` to parse the three
 `Logging/Notable-Event-IDs-*.md` tables into lesson JSON.
 
-**Gate before Phase 1 starts — four curriculum decisions await approval.** Two of them
-change what `app-data-schema.md` must represent, so they are cheaper to settle now than
-to retrofit:
+**Two approved decisions constrain that first deliverable** — cheaper to build in than to
+retrofit:
 
-- **A. Expand Tier 1 Module 8 to the full PICERL lifecycle.** Only ~10% of the 52 KB
-  `Incident-Response-Policy.md` is currently mapped. *Affects the schema — containment
-  and eradication atoms need a lifecycle-stage field.*
-- **B. Map `Lab/Generate-Suspicious-Activity*.ps1` as labeled exercise data** for Module 3
-  and Capstone 1. *Affects the schema and adds a parser branch to `build-content`.*
-- **C. Replace GCIH with CySA+** as the Tier 2 certification alignment target. Docs only.
-- **D. State Security+ coverage precisely** (~35–40%, Security Operations domain) rather
-  than implying whole-exam prep. Docs only.
+- **Decision A** adds `lifecycle_stage` to the atom schema (PICERL stages for Tier 1
+  Module 8).
+- **Decision B** adds a parser branch for `Lab/Generate-Suspicious-Activity*.ps1`.
+  **Hard constraint: parse-only.** These are live telemetry generators for a lab domain —
+  `build-content` reads their inline Event ID comments as text and must never execute them
+  or shell out to PowerShell. The constraint belongs in the schema doc *and* in the script.
 
-Two further proposals (a new cloud/identity Tier 1 module; README non-goals for
-networking, EDR, phishing and scripting) can follow Phase 1 without rework.
+Decisions C and D are docs-only (README, `curriculum-map.md`) and can land alongside
+Phase 1 without gating it. Two further cross-check proposals — a new cloud/identity Tier 1
+module, and README non-goals for networking, EDR, phishing and scripting — remain
+unapproved proposals and can follow Phase 1 without rework.
 
 ---
 
 ## LAST SESSION
 
-**2026-09-06** — **Phase 0 closed.** Ran the final audit item: cross-checked all 20
-modules against 2026 Tier 1/Tier 2 SOC hiring requirements and against Security+ SY0-701
-and GCIH objectives. Recorded in
-[`findings/20260906-phase0-external-crosscheck.md`](findings/20260906-phase0-external-crosscheck.md).
-Six findings, four of which change the plan (see below); nothing blocked. No source or
-curriculum files were modified — all changes are proposals pending the Phase 1 gate.
+**2026-09-06** — **Phase 0 closed; Phase 1 opened.** Ran the final audit item:
+cross-checked all 20 modules against 2026 Tier 1/Tier 2 SOC hiring requirements and
+against Security+ SY0-701 and GCIH objectives
+([findings](findings/20260906-phase0-external-crosscheck.md), commit `6c4a08d`). Six
+findings, four of which changed the plan. **Decisions A–D approved** at the Phase 1 gate
+and recorded as resolved — deliberately not filed as issues, since the work folds into the
+Phase 1 and Phase 4 epics. Issue [#2](https://github.com/voltron-1/SEIM-Academy/issues/2)
+closed.
+
+**Tracker hygiene fixed the same session.** A parallel session had filed epics
+[#2](https://github.com/voltron-1/SEIM-Academy/issues/2)–[#11](https://github.com/voltron-1/SEIM-Academy/issues/11)
+and added [`project-board.md`](project-board.md) (PRs #1 and #12) but created no
+milestones — all ten epics were unmilestoned and therefore invisible to this file.
+Milestones `Phase 0`–`Phase 9` created and assigned; the Phase 0 milestone is closed.
+`project-board.md` re-derived: Phase 0 → Done, Phase 1 → In Progress, Current Sprint
+switched to Phase 1.
 
 **2026-09-04** — Repository created (private, `voltron-1/SEIM-Academy`). Seed Build Plan
 converted from `.docx` to `BUILD-PLAN.md`; `IMPLEMENTATION-PLAN.md` and `execution.md`
@@ -63,8 +76,10 @@ all 177 source files verified, curriculum map committed, content audit recorded.
       modules cross-checked against job postings and Security+/GCIH objectives.
       *Exit met 2026-09-06 — [audit](findings/20260904-phase0-content-audit.md),
       [cross-check](findings/20260906-phase0-external-crosscheck.md).*
-- [ ] **Phase 1 — Schema & pipeline** — `app-data-schema.md`, `build-content` script,
-      generated lessons for the pilot module. *Unblocked; gated on decisions A–D above.*
+      [#2](https://github.com/voltron-1/SEIM-Academy/issues/2) closed.
+- [~] **Phase 1 — Schema & pipeline** — `app-data-schema.md`, `build-content` script,
+      generated lessons for the pilot module. *In progress since 2026-09-06; decision gate
+      cleared.* [#3](https://github.com/voltron-1/SEIM-Academy/issues/3)
 - [ ] **Phase 2 — App shell** — theme tokens, left rail, HUD, atom renderer, local
       persistence, offline/degraded states, PWA shell.
 - [ ] **Phase 3 — Core components** — Instructions atom, Flashcard+SRS, MC/fill-blank,
@@ -94,20 +109,23 @@ _Nothing is currently blocked._
 
 From [`findings/20260906-phase0-external-crosscheck.md`](findings/20260906-phase0-external-crosscheck.md):
 
-- [ ] **`Incident-Response-Policy.md` is 52 KB and Module 8 uses a sliver of it.** The
+- [x] **`Incident-Response-Policy.md` is 52 KB and Module 8 uses a sliver of it.** The
       full PICERL lifecycle is present and verified (Preparation, Identification,
       Containment, Eradication, Recovery, Lessons Learned). Containment actions are a
-      named Tier 2 hiring requirement. Closing this needs no new authoring. *Decision A.*
-- [ ] **`Lab/Generate-Suspicious-Activity*.ps1` is unmapped and is the missing exercise-data
+      named Tier 2 hiring requirement. Closing this needs no new authoring.
+      *Decision A — approved 2026-09-06.*
+- [x] **`Lab/Generate-Suspicious-Activity*.ps1` is unmapped and is the missing exercise-data
       source.** Three generators, self-labeled by Event ID, covering exactly what the
       Phase 1 pilot teaches. Parse-only — the pipeline must never execute them.
-      *Decision B.*
-- [ ] **GCIH is the wrong alignment target.** ~2.5 of 15 official objectives are covered;
+      *Decision B — approved 2026-09-06.*
+- [x] **GCIH is the wrong alignment target.** ~2.5 of 15 official objectives are covered;
       the exam is offense-weighted while this curriculum is detection-weighted. CySA+ is
-      the shape-matched substitute and is named as the Tier 2 landing cert. *Decision C.*
-- [ ] **Security+ coverage is ~35–40%, concentrated in Domain 4.** Domains 1, 3 and 5
+      the shape-matched substitute and is named as the Tier 2 landing cert.
+      *Decision C — approved 2026-09-06.*
+- [x] **Security+ coverage is ~35–40%, concentrated in Domain 4.** Domains 1, 3 and 5
       (50% of the exam) are essentially untouched. Positioning must say "Security
-      Operations domain, taught deeply," not "Security+ prep." *Decision D.*
+      Operations domain, taught deeply," not "Security+ prep."
+      *Decision D — approved 2026-09-06.*
 - [ ] **Six Tier 1 requirements have no module** — networking fundamentals, EDR/XDR,
       phishing triage, identity, cloud telemetry, scripting. Only identity and cloud are
       buildable from the licensed source; the rest should be disclosed as prerequisites
@@ -141,6 +159,51 @@ From `findings/20260904-phase0-content-audit.md`:
 
 ## Resolved decisions
 
+Decisions A–D came out of the Phase 0 external cross-check and were approved at the
+Phase 1 gate on 2026-09-06. They are recorded here and on `project-board.md`'s Decisions
+board only — **deliberately not filed as issues**, since each is closed by the same
+commits that deliver the Phase 1 and Phase 4 epics, and four issues closed by other work
+would be tracker noise rather than signal.
+
+- [x] **Decision A — Tier 1 Module 8 scope.** Approved 2026-09-06. Expands from
+      "escalation basics & documentation" to the full PICERL lifecycle — *Incident
+      lifecycle: identify → contain → eradicate → recover → learn* — sourced from the
+      unused ~90% of `Documentation-Templates/Incident-Response-Policy.md` (headings
+      verified in the cross-check). Escalation becomes one beat inside it. **Schema
+      impact:** adds a `lifecycle_stage` field to the atom schema. Picks up Security+ 4.8
+      and the one GCIH objective genuinely in this curriculum's lane. No new authoring —
+      the content is already licensed, in-repo, and verified.
+- [x] **Decision B — Lab generators as exercise data.** Approved 2026-09-06.
+      `Lab/Generate-Suspicious-Activity*.ps1` is mapped as labeled exercise-data input for
+      Tier 1 Module 3 and Capstone 1. Each block is self-labeled with the Event ID it
+      emits (`# Create Local User (Security 4720)`, `# Create a Service (Security 4697)`,
+      …), giving ground-truth *action → event* pairs — the artifact Module 3's
+      drag-to-classify exercises and Capstone 1's three-alert triage sim both need.
+      **Schema and pipeline impact:** one parser branch in `build-content`, absorbed while
+      that script is being written rather than retrofitted.
+      **Hard safety constraint: parse-only.** These are live telemetry generators intended
+      for a lab domain. Nothing in SEIM-Academy executes them; `build-content` reads their
+      comments as text and must not shell out to PowerShell. This constraint is recorded in
+      `app-data-schema.md` and in the script itself, not only here.
+- [x] **Decision C — Tier 2 certification alignment.** Approved 2026-09-06. GCIH dropped
+      entirely; **CySA+** named as the Tier 2 landing cert. GCIH covers ~2.5 of its 15
+      official objectives here, and tests hacker tradecraft while this curriculum teaches
+      telemetry and detection — complementary disciplines, not overlapping ones.
+      Docs-only: README, `curriculum-map.md`.
+- [x] **Decision D — Security+ positioning.** Approved 2026-09-06. Positioning states
+      coverage precisely — "teaches the Security Operations domain (28% of SY0-701)
+      deeply; a complement to Security+ study, not a substitute" — rather than implying
+      whole-exam prep. Weighted coverage is ~35–40%, concentrated in Domain 4; Domains 1,
+      3 and 5 (50% of the exam) are essentially untouched. Docs-only. An implied-prep claim
+      is the kind of thing learners test and resent.
+
+*Note on C and D:* neither has existing copy to correct — as of 2026-09-06 `README.md`
+and `curriculum-map.md` make **no certification claims at all**. The only GCIH/Security+
+mentions in the repo are in `IMPLEMENTATION-PLAN.md` and `BUILD-PLAN.md`, and those
+describe the Phase 0 *audit task*, which is what actually happened and stays accurate.
+So C and D are **constraints on copy not yet written** rather than edits to make now.
+They bind whoever writes the README positioning section, the landing copy, and the Tier 2
+module intros — enforce them there, not by hunting for text to change today.
 - [x] **Decision 4 — Phase 1 pilot module.** Resolved 2026-09-04: confirmed as
       **"Windows Event ID triage"** (`Logging/Notable-Event-IDs-Sigma.md`, `-Risk.md`,
       `-Forensics.md` — 88 KB, 612 table rows, the densest structured source in the repo).

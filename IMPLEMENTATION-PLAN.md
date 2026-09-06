@@ -45,7 +45,7 @@ Each entry maps to the source plan's Build Phases table and adds a technical app
 
 **Definition of done:** finalized curriculum map committed (module → source doc(s) → interactive format, matching the source plan's two tables); every listed source path verified to exist; a short written note on job-posting/cert alignment, including any additions/removals from the current list.
 
-> **Status 2026-09-04:** source repo identified as [`TonyPhipps/SIEM`](https://github.com/TonyPhipps/SIEM) @ `4adb971` (GPL-3.0). Curriculum map committed as `curriculum-map.md`; 31 path specs verified to 177 files, 0 missing, 0 empty; seven paths corrected for missing directory prefixes; `Tactics/*.md` structure spot-checked across all 58 files. **Outstanding:** the job-posting and Security+/GCIH cross-checks, which need external research rather than repo inspection.
+> **Status 2026-09-06 — COMPLETE.** Source repo identified as [`TonyPhipps/SIEM`](https://github.com/TonyPhipps/SIEM) @ `4adb971` (GPL-3.0). Curriculum map committed as `curriculum-map.md`; 31 path specs verified to 177 files, 0 missing, 0 empty; seven paths corrected for missing directory prefixes; `Tactics/*.md` structure spot-checked across all 58 files. The job-posting and Security+/GCIH cross-checks are done and written up in [`findings/20260906-phase0-external-crosscheck.md`](findings/20260906-phase0-external-crosscheck.md) — all three definition-of-done clauses are met. Four resulting decisions (A–D) were approved at the Phase 1 gate; see `planned_execution.md` § Resolved decisions.
 
 **Depends on:** none. **Blocks:** everything else.
 
