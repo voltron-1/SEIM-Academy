@@ -34,30 +34,30 @@ _Empty — nothing is currently blocked (`planned_execution.md` § Blocked)._
 Not started, not next in line. Ordered by phase sequence, not priority — dependencies fix
 the order (see the phase graph in `README.md`).
 
-| Phase | Epic | Workstream | Depends on |
-|---|---|---|---|
-| 2 | App shell | B | Phase 1 |
-| 3 | Core components | C | Phase 2 |
-| 4 | Tier 1 complete | A + C | Phases 1–3 |
-| 5 | Advanced components | C | Phase 3 (parallel w/ Phase 4) |
-| 6 | Tier 2 complete | A + C | Phases 4–5 |
-| 7 | Socratic Copilot | D | Phase 2 (parallel w/ Phase 4/6) |
-| 8 | Validation / CI tie-in | E | Phases 1, 4, 6 |
-| 9 | Usability pass (standing, does not close) | F | Phase 7 |
+| Phase | Epic | Issue | Workstream | Depends on |
+|---|---|---|---|---|
+| 2 | App shell | [#4](https://github.com/voltron-1/SEIM-Academy/issues/4) | B | Phase 1 |
+| 3 | Core components | [#5](https://github.com/voltron-1/SEIM-Academy/issues/5) | C | Phase 2 |
+| 4 | Tier 1 complete | [#6](https://github.com/voltron-1/SEIM-Academy/issues/6) | A + C | Phases 1–3 |
+| 5 | Advanced components | [#7](https://github.com/voltron-1/SEIM-Academy/issues/7) | C | Phase 3 (parallel w/ Phase 4) |
+| 6 | Tier 2 complete | [#8](https://github.com/voltron-1/SEIM-Academy/issues/8) | A + C | Phases 4–5 |
+| 7 | Socratic Copilot | [#9](https://github.com/voltron-1/SEIM-Academy/issues/9) | D | Phase 2 (parallel w/ Phase 4/6) |
+| 8 | Validation / CI tie-in | [#10](https://github.com/voltron-1/SEIM-Academy/issues/10) | E | Phases 1, 4, 6 |
+| 9 | Usability pass (standing, does not close) | [#11](https://github.com/voltron-1/SEIM-Academy/issues/11) | F | Phase 7 |
 
 ### ✅ Ready
 
 Unblocked, queued to start next.
 
-| Phase | Epic | Workstream | Note |
-|---|---|---|---|
-| 1 | Schema & pipeline | A | Decision 4 resolved 2026-09-04 (pilot = Windows Event ID triage) — unblocked |
+| Phase | Epic | Issue | Workstream | Note |
+|---|---|---|---|---|
+| 1 | Schema & pipeline | [#3](https://github.com/voltron-1/SEIM-Academy/issues/3) | A | Decision 4 resolved 2026-09-04 (pilot = Windows Event ID triage) — unblocked |
 
 ### 🔧 In Progress
 
-| Phase | Epic | Workstream | Owner |
-|---|---|---|---|
-| 0 | Content audit | F | _unassigned_ |
+| Phase | Epic | Issue | Workstream | Owner |
+|---|---|---|---|---|
+| 0 | Content audit | [#2](https://github.com/voltron-1/SEIM-Academy/issues/2) | F | _unassigned_ |
 
 ### 🏁 Done
 
@@ -65,7 +65,7 @@ _Empty — no phase has reached its exit check yet. Phase 0 is close (see Curren
 
 ---
 
-## Current Sprint — Phase 0 (Content audit)
+## Current Sprint — Phase 0 (Content audit) — [#2](https://github.com/voltron-1/SEIM-Academy/issues/2)
 
 Task-level cards for the one phase actively in progress, pulled directly from
 `execution.md`.
@@ -118,19 +118,20 @@ Not scheduled, not launch-blocking, layered onto Workstream C components once th
 
 ## Wiring this to a live GitHub Projects board (optional)
 
-This file is the git-tracked source; nothing here requires GitHub Issues to work. If
-you'd rather have an interactive drag-and-drop board:
+This file is the git-tracked source; nothing here requires GitHub Issues to work, but the
+epic-level issues now exist ([#2](https://github.com/voltron-1/SEIM-Academy/issues/2)–[#11](https://github.com/voltron-1/SEIM-Academy/issues/11), one per phase, title `Phase N — <name>`,
+body = that phase's checklist from `execution.md`; checkboxes render as sub-tasks GitHub
+tracks automatically). If you'd rather have an interactive drag-and-drop board:
 
 1. Repo → **Projects** tab → **New project** → **Board** layout. This gives you a
    built-in `Status` field (Todo / In Progress / Done) for free — no custom field setup
    needed for a first pass.
-2. File one GitHub Issue per epic-level card above (title `Phase N — <name>`, body =
-   that phase's checklist from `execution.md`), and add each to the project. Issue
-   checkboxes render as sub-tasks GitHub tracks automatically.
+2. Add issues [#2](https://github.com/voltron-1/SEIM-Academy/issues/2)–[#11](https://github.com/voltron-1/SEIM-Academy/issues/11) to the project and set each one's `Status` to match its column
+   above (#2 → In Progress, #3 → Todo, #4–#11 → Backlog/Todo).
 3. Optionally add a single-select `Workstream` field (A–F, matching
    `IMPLEMENTATION-PLAN.md` §3) if you want to filter/group the board by workstream
    instead of just phase.
 
-Ask if you want these issues filed — that's a repo-visible action (creates 10 public
-issues) so it's worth an explicit go-ahead rather than doing it silently alongside a doc
-commit.
+As phase status changes, keep this file, `execution.md`, and each issue's checkboxes in
+sync — update `execution.md` first, then re-derive this file and check off the matching
+issue items.
