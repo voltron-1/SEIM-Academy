@@ -8,24 +8,30 @@ Status legend: `Not started` / `In progress` / `Blocked` / `Done`
 
 ## Phase 0 — Content audit
 
-**Depends on:** none | **Status:** In progress | **Owner:** _unassigned_
+**Depends on:** none | **Status:** **Complete 2026-09-06** | **Owner:** _unassigned_ | **Issue:** [#2](https://github.com/voltron-1/SEIM-Academy/issues/2) (closed)
 
 - [x] Enumerate every source path referenced in the Curriculum Map (both Tier 1 and Tier 2 tables) into a single manifest list
 - [x] Verify each path resolves in the source repo (script this — don't check by hand across 58+ files)
 - [x] Spot-check heading/list structure across a spread of `Tactics/*.md` files (not just the pilot module's docs) to catch parsing-inconsistency risk before Phase 1 design locks in
-- [ ] Cross-check the module list against 5–10 current real Tier 1/Tier 2 SOC analyst job postings
-- [ ] Cross-check the module list against Security+ and GCIH exam objectives
+- [x] Cross-check the module list against 5–10 current real Tier 1/Tier 2 SOC analyst job postings
+- [x] Cross-check the module list against Security+ and GCIH exam objectives
 - [x] Write up any curriculum gaps found and decide whether to fold them into the map now or backlog them
 - [x] Commit the finalized curriculum map (this becomes the input to Phase 1)
 - [x] Resolve Open Decision 4 (pilot module) — confirm "Windows Event ID triage" or pick an alternative
 
-**Exit check:** finalized curriculum map is committed and every listed source path has been verified to exist.
+**Exit check:** finalized curriculum map is committed and every listed source path has been verified to exist. *Met 2026-09-06 — [content audit](findings/20260904-phase0-content-audit.md), [external cross-check](findings/20260906-phase0-external-crosscheck.md).*
 
 ---
 
 ## Phase 1 — Schema & pipeline
 
-**Depends on:** Phase 0 | **Status:** Not started (unblocked — Decision 4 resolved) | **Owner:** _unassigned_
+**Depends on:** Phase 0 | **Status:** **In progress (opened 2026-09-06)** | **Owner:** _unassigned_ | **Issue:** [#3](https://github.com/voltron-1/SEIM-Academy/issues/3)
+
+**Decision gate cleared 2026-09-06.** Decisions A and B constrain the first deliverable and
+must be written into `app-data-schema.md` as it is drafted, not retrofitted afterwards.
+**Decision B carries a hard safety constraint:** the Lab generators are live telemetry
+generators for a lab domain. `build-content` parses their comments as text and must never
+execute them or shell out to PowerShell.
 
 - [ ] Draft `SEIMAcademy/app-data-schema.md` — lesson/atom/quiz JSON schema
   - [ ] Include `teaches` tag field (content/instructions atoms)
@@ -33,11 +39,13 @@ Status legend: `Not started` / `In progress` / `Blocked` / `Done`
   - [ ] Include `source` field (repo-relative path, optional `#heading`)
   - [ ] Define atom types: reading, quiz, flashcard, instructions, exercise, scenario, predict, capstone-step
   - [ ] Define body-length cap per atom (per ADHD principle 1)
+  - [ ] Include `lifecycle_stage` field for PICERL-stage atoms — *Decision A*
 - [ ] Scaffold `SEIMAcademy/scripts/build-content.*`
   - [ ] Markdown heading/list parser for the pilot module's source doc(s)
   - [ ] Atom normalizer → emits `SEIMAcademy/content/lessons/*.json`
   - [ ] `teaches`/`requires` tag derivation from parsed headings/terms
   - [ ] Idempotency check (re-run without source changes produces identical output)
+  - [ ] Parser branch for `Lab/Generate-Suspicious-Activity*.ps1` inline Event ID comments → labeled `action → event` exercise data — *Decision B, parse-only, never execute*
 - [ ] Generate flashcard/quiz content directly from `Notable-Event-IDs-*.md` tables (no hand-copied answer keys)
 - [ ] Validate generated pilot-module JSON against the schema
 - [ ] Confirm re-running after a deliberate source edit regenerates only the affected lesson
@@ -255,6 +263,29 @@ Status legend: `Not started` / `In progress` / `Blocked` / `Done`
       reserved for a future managed-copilot backend only
 - [ ] Decision 5: accommodation scope beyond WCAG 2.1 AA baseline — TTS, reduced-motion-as-default (default: backlog to Phase 9+, not launch-blocking)
 
+Decisions raised by the Phase 0 external cross-check and resolved at the Phase 1 gate.
+Recorded here only — deliberately not filed as issues, since the work folds into the
+Phase 1 and Phase 4 epics:
+
+- [x] **Decision A:** RESOLVED 2026-09-06 (approved) — Tier 1 Module 8 expands from
+      "escalation basics & documentation" to the full PICERL lifecycle
+      (*Incident lifecycle: identify → contain → eradicate → recover → learn*), sourced
+      from the unused ~90% of `Documentation-Templates/Incident-Response-Policy.md`.
+      Escalation becomes one beat inside it. Adds a `lifecycle_stage` field to the atom
+      schema. No new authoring required — the content is already licensed and verified.
+- [x] **Decision B:** RESOLVED 2026-09-06 (approved) — `Lab/Generate-Suspicious-Activity*.ps1`
+      is mapped as labeled exercise data for Tier 1 Module 3 and Capstone 1. The blocks
+      are self-labeling by Event ID, giving ground-truth *action → event* pairs.
+      **Parse-only: the pipeline must never execute them or shell out to PowerShell.**
+- [x] **Decision C:** RESOLVED 2026-09-06 (approved) — GCIH dropped as the Tier 2
+      certification alignment target (~2.5 of 15 objectives covered; the exam is
+      offense-weighted while this curriculum is detection-weighted). **CySA+** replaces it.
+      Docs-only change.
+- [x] **Decision D:** RESOLVED 2026-09-06 (approved) — Security+ positioning stated
+      precisely: "teaches the Security Operations domain (28% of SY0-701) deeply; a
+      complement to Security+ study, not a substitute." Weighted coverage is ~35–40%,
+      concentrated in Domain 4. Docs-only change.
+
 ---
 
 ## Change log
@@ -263,4 +294,5 @@ Status legend: `Not started` / `In progress` / `Blocked` / `Done`
 |---|---|
 | 2026-09-04 | Initial execution plan generated from `SEIMAcademyBuildPlan.docx` and `IMPLEMENTATION-PLAN.md` |
 | 2026-09-04 | Tier 1 Modules 4 and 5 swapped: alarm-algorithm vocabulary now precedes the tactic modules, which depend on it. |
+| 2026-09-06 | Phase 0 closed — external cross-check against Tier 1/2 hiring requirements and Security+/GCIH objectives ([findings](findings/20260906-phase0-external-crosscheck.md)). Decisions A–D resolved at the Phase 1 gate; Phase 1 opened. Milestones created for Phases 0–9 and assigned to epics [#2](https://github.com/voltron-1/SEIM-Academy/issues/2)–[#11](https://github.com/voltron-1/SEIM-Academy/issues/11). |
 | 2026-09-04 | Phase 0 audit: source repo identified (`TonyPhipps/SIEM` @ `4adb971`), 177 files verified, curriculum map committed. Decisions 3 and 4 resolved. Module 4 split into 4a/4b. Top risk in `IMPLEMENTATION-PLAN.md` §8 retired; content sparsity logged in its place. |
