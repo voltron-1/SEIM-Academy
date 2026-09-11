@@ -13,13 +13,20 @@ Status markers: `[ ]` todo · `[~]` in-progress · `[x]` done · `[!]` blocked
 
 ## NEXT UP
 
-**Phase 2 — App shell** `[ ]` **not started** —
+**Phase 2 — App shell** `[~]` **in progress** (opened 2026-09-10) —
 [#4](https://github.com/voltron-1/SEIM-Academy/issues/4), milestone *Phase 2 — App shell*
-(**15 open task issues**). Phase 1 is merged and closed, so nothing blocks it.
+(**4 of 15 closed**). Running in four gated units; Unit 1 landed in PR
+[#112](https://github.com/voltron-1/SEIM-Academy/pull/112).
 
-**Next unstarted item:** initialize the SPA project (TypeScript + Preact or vanilla Web
-Components — explicitly not Next.js/React), then build the dark theme token system to WCAG
-2.1 AA contrast from day one rather than as a retrofit.
+**Next unstarted item:** Unit 2 — shell chrome. Left rail (Today / Tier 1 / Tier 2 /
+Copilot / Review) [#24](https://github.com/voltron-1/SEIM-Academy/issues/24), persistent HUD
+[#25](https://github.com/voltron-1/SEIM-Academy/issues/25), persistent exit affordances
+[#29](https://github.com/voltron-1/SEIM-Academy/issues/29), Focus mode
+[#30](https://github.com/voltron-1/SEIM-Academy/issues/30).
+
+**Unit 1 resolved both open Phase 2 decisions:** the view layer is Preact + TypeScript via
+Vite, and **Decision 5 is closed — reduced motion is a hard default**, enforced through a
+single token so a component cannot hardcode its way back into motion.
 
 **Two constraints Phase 1 hands forward** — cheaper to honour than to retrofit:
 
@@ -124,9 +131,10 @@ all 177 source files verified, curriculum map committed, content audit recorded.
       [#110](https://github.com/voltron-1/SEIM-Academy/pull/110); task issues
       [#14](https://github.com/voltron-1/SEIM-Academy/issues/14)–[#19](https://github.com/voltron-1/SEIM-Academy/issues/19)
       closed; milestone closed 8/8.
-- [ ] **Phase 2 — App shell** — theme tokens, left rail, HUD, atom renderer, local
-      persistence, offline/degraded states, PWA shell. *Next up; unblocked 2026-09-10.*
-      [#4](https://github.com/voltron-1/SEIM-Academy/issues/4), 15 open task issues.
+- [~] **Phase 2 — App shell** — theme tokens, left rail, HUD, atom renderer, local
+      persistence, offline/degraded states, PWA shell. *In progress since 2026-09-10;
+      Unit 1 of 4 done (4 of 15 issues closed).*
+      [#4](https://github.com/voltron-1/SEIM-Academy/issues/4)
 - [ ] **Phase 3 — Core components** — Instructions atom, Flashcard+SRS, MC/fill-blank,
       matching/drag with keyboard equivalent, test-out check.
 - [ ] **Phase 4 — Tier 1 complete** — pipeline across ten Tier 1 modules; Capstone 1.
