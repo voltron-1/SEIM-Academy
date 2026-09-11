@@ -15,14 +15,16 @@ Status markers: `[ ]` todo · `[~]` in-progress · `[x]` done · `[!]` blocked
 
 **Phase 2 — App shell** `[~]` **in progress** (opened 2026-09-10) —
 [#4](https://github.com/voltron-1/SEIM-Academy/issues/4), milestone *Phase 2 — App shell*
-(**4 of 15 closed**). Running in four gated units; Unit 1 landed in PR
-[#112](https://github.com/voltron-1/SEIM-Academy/pull/112).
+(**8 of 15 closed**). Running in four gated units; Units 1–2 landed in PRs
+[#112](https://github.com/voltron-1/SEIM-Academy/pull/112) and
+[#113](https://github.com/voltron-1/SEIM-Academy/pull/113).
 
-**Next unstarted item:** Unit 2 — shell chrome. Left rail (Today / Tier 1 / Tier 2 /
-Copilot / Review) [#24](https://github.com/voltron-1/SEIM-Academy/issues/24), persistent HUD
-[#25](https://github.com/voltron-1/SEIM-Academy/issues/25), persistent exit affordances
-[#29](https://github.com/voltron-1/SEIM-Academy/issues/29), Focus mode
-[#30](https://github.com/voltron-1/SEIM-Academy/issues/30).
+**Next unstarted item:** Unit 3 — the atom renderer
+[#26](https://github.com/voltron-1/SEIM-Academy/issues/26), local persistence
+[#27](https://github.com/voltron-1/SEIM-Academy/issues/27) and the "flag this" affordance
+[#31](https://github.com/voltron-1/SEIM-Academy/issues/31). This is the unit that makes the
+shell real: 707 atoms across six types get rendered, the streak stops reading 0, and
+Skip/Hint stop being inert.
 
 **Unit 1 resolved both open Phase 2 decisions:** the view layer is Preact + TypeScript via
 Vite, and **Decision 5 is closed — reduced motion is a hard default**, enforced through a
@@ -133,7 +135,7 @@ all 177 source files verified, curriculum map committed, content audit recorded.
       closed; milestone closed 8/8.
 - [~] **Phase 2 — App shell** — theme tokens, left rail, HUD, atom renderer, local
       persistence, offline/degraded states, PWA shell. *In progress since 2026-09-10;
-      Unit 1 of 4 done (4 of 15 issues closed).*
+      Units 1–2 of 4 done (8 of 15 issues closed).*
       [#4](https://github.com/voltron-1/SEIM-Academy/issues/4)
 - [ ] **Phase 3 — Core components** — Instructions atom, Flashcard+SRS, MC/fill-blank,
       matching/drag with keyboard equivalent, test-out check.
