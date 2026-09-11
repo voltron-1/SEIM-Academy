@@ -25,7 +25,7 @@ Status legend: `Not started` / `In progress` / `Blocked` / `Done`
 
 ## Phase 1 — Schema & pipeline
 
-**Depends on:** Phase 0 | **Status:** **Complete 2026-09-10** (PR [#110](https://github.com/voltron-1/SEIM-Academy/pull/110) open; closes [#3](https://github.com/voltron-1/SEIM-Academy/issues/3) on merge) | **Owner:** _unassigned_ | **Issue:** [#3](https://github.com/voltron-1/SEIM-Academy/issues/3)
+**Depends on:** Phase 0 | **Status:** **Complete 2026-09-10** — PR [#110](https://github.com/voltron-1/SEIM-Academy/pull/110) merged; [#3](https://github.com/voltron-1/SEIM-Academy/issues/3) and task issues [#14](https://github.com/voltron-1/SEIM-Academy/issues/14)–[#19](https://github.com/voltron-1/SEIM-Academy/issues/19) closed; milestone closed 8/8 | **Owner:** _unassigned_ | **Issue:** [#3](https://github.com/voltron-1/SEIM-Academy/issues/3)
 
 **Decision gate cleared 2026-09-06.** Decisions A and B constrain the first deliverable and
 must be written into `app-data-schema.md` as it is drafted, not retrofitted afterwards.
@@ -33,23 +33,23 @@ must be written into `app-data-schema.md` as it is drafted, not retrofitted afte
 generators for a lab domain. `build-content` parses their comments as text and must never
 execute them or shell out to PowerShell.
 
-- [x] Draft `SEIMAcademy/app-data-schema.md` — lesson/atom/quiz JSON schema
+- [x] Draft `SEIMAcademy/app-data-schema.md` — lesson/atom/quiz JSON schema — [#14](https://github.com/voltron-1/SEIM-Academy/issues/14)
   - [x] Include `teaches` tag field (content/instructions atoms)
   - [x] Include `requires` tag field (exercise atoms)
   - [x] Include `source` field (repo-relative path, optional `#heading`)
   - [x] Define atom types: reading, quiz, flashcard, instructions, exercise, scenario, predict, capstone-step
   - [x] Define body-length cap per atom (per ADHD principle 1)
   - [x] Include `lifecycle_stage` field for PICERL-stage atoms — *Decision A*
-- [x] Scaffold `SEIMAcademy/scripts/build-content.*`
+- [x] Scaffold `SEIMAcademy/scripts/build-content.*` — [#15](https://github.com/voltron-1/SEIM-Academy/issues/15)
   - [x] Markdown heading/list parser for the pilot module's source doc(s)
   - [x] Atom normalizer → emits `SEIMAcademy/content/lessons/*.json`
   - [x] `teaches`/`requires` tag derivation from parsed headings/terms
   - [x] Idempotency check (re-run without source changes produces identical output)
   - [x] Parser branch for `Lab/Generate-Suspicious-Activity*.ps1` inline Event ID comments → labeled `action → event` exercise data — *Decision B, parse-only, never execute*
-- [x] Generate flashcard/quiz content directly from `Notable-Event-IDs-*.md` tables (no hand-copied answer keys)
-- [x] Validate generated pilot-module JSON against the schema
-- [x] Confirm re-running after a deliberate source edit regenerates only the affected lesson
-- [x] (Optional, recommended) stub a lightweight local pre-commit check for `requires`⊆`teaches` ahead of the full Phase 8 CI build, to avoid late rework
+- [x] Generate flashcard/quiz content directly from `Notable-Event-IDs-*.md` tables (no hand-copied answer keys) — [#16](https://github.com/voltron-1/SEIM-Academy/issues/16)
+- [x] Validate generated pilot-module JSON against the schema — [#17](https://github.com/voltron-1/SEIM-Academy/issues/17)
+- [x] Confirm re-running after a deliberate source edit regenerates only the affected lesson — [#18](https://github.com/voltron-1/SEIM-Academy/issues/18). **Not met as first built**; see the exit-check note below.
+- [x] (Optional, recommended) stub a lightweight local pre-commit check for `requires`⊆`teaches` ahead of the full Phase 8 CI build, to avoid late rework — [#19](https://github.com/voltron-1/SEIM-Academy/issues/19)
 
 **Exit check:** pipeline runs against the pilot module end-to-end; output validates against the schema; regeneration is correctly scoped to changed files only. *Met 2026-09-10.*
 
