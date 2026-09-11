@@ -1,0 +1,63 @@
+/*
+ * Type system.
+ *
+ * Humanist sans for prose; monospace for anything a learner will also see in a SIEM —
+ * Event IDs, log lines, SPL, field names. Reading `4624` in the same face as body copy
+ * makes it prose; reading it in mono makes it data, which is what it is.
+ *
+ * System stacks only: no webfont in the critical path, nothing to fetch offline, no
+ * third-party request from a tool that is meant to work with the network cut.
+ */
+
+:root {
+  --font-prose: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue',
+    'Noto Sans', sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, 'SF Mono', 'Cascadia Mono', 'Roboto Mono',
+    Menlo, Consolas, 'Liberation Mono', monospace;
+
+  --size-xs: 0.8125rem;
+  --size-sm: 0.9375rem;
+  --size-base: 1.0625rem;
+  --size-lg: 1.3125rem;
+  --size-xl: 1.625rem;
+
+  --leading-tight: 1.25;
+  --leading-body: 1.6;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-prose);
+  font-size: var(--size-base);
+  line-height: var(--leading-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+code,
+kbd,
+samp,
+pre,
+.data {
+  font-family: var(--font-mono);
+  font-size: 0.94em;
+  font-variant-numeric: tabular-nums;
+}
+
+h1, h2, h3 {
+  line-height: var(--leading-tight);
+  font-weight: 600;
+  margin: 0 0 var(--gap);
+}
+
+h1 { font-size: var(--size-xl); }
+h2 { font-size: var(--size-lg); }
+h3 { font-size: var(--size-base); }
+
+p { margin: 0 0 var(--gap); max-width: var(--measure); }
