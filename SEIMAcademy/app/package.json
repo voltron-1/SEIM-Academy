@@ -11,11 +11,14 @@
     "preview": "vite preview",
     "check:contrast": "node scripts/check-contrast.mjs",
     "check": "npm run check:contrast && npm run check:types && tsc --noEmit && npm test",
-    "predev": "node scripts/sync-content.mjs",
-    "prebuild": "node scripts/sync-content.mjs",
+    "predev": "node scripts/sync-content.mjs && node scripts/make-icons.mjs",
+    "prebuild": "node scripts/sync-content.mjs && node scripts/make-icons.mjs",
     "sync:content": "node scripts/sync-content.mjs",
     "check:types": "node scripts/check-types.mjs",
-    "test": "node scripts/run-tests.mjs"
+    "test": "node scripts/run-tests.mjs",
+    "make:icons": "node scripts/make-icons.mjs",
+    "check:pwa": "node scripts/check-pwa.mjs",
+    "verify": "npm run check && npm run build && npm run check:pwa"
   },
   "dependencies": {
     "preact": "^10.24.3"
