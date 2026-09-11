@@ -3,23 +3,19 @@
   "compilerOptions": {
     "noEmit": false,
     "outDir": ".tmp-test",
-    "module": "NodeNext",
-    "moduleResolution": "nodenext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
     "types": [
-      "node"
+      "node",
+      "vite/client"
     ],
-    "rootDir": "src"
+    "rootDir": "src",
+    "jsx": "react-jsx",
+    "jsxImportSource": "preact"
   },
   "include": [
-    "src/state/session-core.ts",
-    "src/state/session-core.test.ts",
-    "src/content/markdown.ts",
-    "src/content/markdown.test.ts",
-    "src/state/persistence.ts",
-    "src/state/persistence.test.ts",
-    "src/state/resume.test.ts",
-    "src/content/fetch-json.ts",
-    "src/content/fetch-json.test.ts"
+    "src/**/*.ts",
+    "src/**/*.tsx"
   ],
   "exclude": []
 }

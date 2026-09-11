@@ -1,6 +1,7 @@
 import { useState } from 'preact/hooks';
-import type { Atom } from '../content/types';
+import type { Atom, Difficulty } from '../content/types';
 import { Markdown } from './Markdown';
+import { Instructions as InstructionsAtom } from './Instructions';
 import './atoms.css';
 
 /**
@@ -20,6 +21,8 @@ interface AtomProps {
   atom: Atom;
   /** Set by the shell's Hint button — reveals whatever this atom type hides. */
   hint?: boolean;
+  /** Difficulty of the exercise an instructions atom introduces; passed down by the player. */
+  nextDifficulty?: Difficulty;
 }
 
 const str = (payload: Record<string, unknown>, key: string): string =>
@@ -102,19 +105,8 @@ function Quiz({ atom, hint }: AtomProps) {
   );
 }
 
-function Instructions({ atom }: AtomProps) {
-  const notice = str(atom.payload, 'step_up_notice');
-  return (
-    <dl class="instructions">
-      {notice && <p class="atom__stepup">{notice}</p>}
-      <dt>Goal</dt>
-      <dd>{str(atom.payload, 'goal')}</dd>
-      <dt>What you'll use</dt>
-      <dd>{str(atom.payload, 'what_youll_use')}</dd>
-      <dt>How you'll know you're done</dt>
-      <dd>{str(atom.payload, 'done_when')}</dd>
-    </dl>
-  );
+function Instructions({ atom, nextDifficulty }: AtomProps) {
+  return <InstructionsAtom atom={atom} nextDifficulty={nextDifficulty} />;
 }
 
 function Exercise({ atom, hint }: AtomProps) {
@@ -200,7 +192,7 @@ const RENDERERS: Partial<Record<Atom['type'], (props: AtomProps) => preact.JSX.E
   exercise: Exercise,
 };
 
-export function AtomView({ atom, hint }: AtomProps) {
+export function AtomView({ atom, hint, nextDifficulty }: AtomProps) {
   const Renderer = RENDERERS[atom.type] ?? Unsupported;
   return (
     <article class="atom" aria-labelledby={`${atom.id}-title`}>
@@ -209,7 +201,7 @@ export function AtomView({ atom, hint }: AtomProps) {
         {atom.difficulty === 'step-up' && <span class="atom__badge">a step up</span>}
       </p>
       <h2 id={`${atom.id}-title`}>{atom.title}</h2>
-      <Renderer atom={atom} hint={hint} />
+      <Renderer atom={atom} hint={hint} nextDifficulty={nextDifficulty} />
       <p class="atom__source">
         from <code>{atom.source.path}</code>
         {atom.source.heading ? <code>#{atom.source.heading}</code> : null}

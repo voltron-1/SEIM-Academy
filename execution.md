@@ -115,9 +115,16 @@ Verify with `npm run verify` in `SEIMAcademy/app`: 20 contrast pairings, type-dr
 
 ## Phase 3 — Core components
 
-**Depends on:** Phase 2 | **Status:** Not started | **Owner:** _unassigned_
+**Depends on:** Phase 2 | **Status:** **In progress (opened 2026-09-11)** | **Owner:** _unassigned_ | **Issue:** [#5](https://github.com/voltron-1/SEIM-Academy/issues/5)
 
-- [ ] Instructions atom (fixed anatomy: Goal → What you'll use → How you'll know you're done); schema-enforced to precede every exercise atom
+**Decision taken at the phase gate 2026-09-11:** this phase's exit check needs
+keyboard/screen-reader verification, which nothing in Phases 1–2 could do — every test was
+state-level and there is no browser in the build environment. **happy-dom + Testing Library
++ axe-core** added as devDependencies, and the harness built *before* any component, so the
+phase cannot end with five components and no way to check them. See
+[plan](plans/20260911-phase3-core-components.md).
+
+- [x] Instructions atom (fixed anatomy: Goal → What you'll use → How you'll know you're done); schema-enforced to precede every exercise atom — [#34](https://github.com/voltron-1/SEIM-Academy/issues/34)
 - [ ] Flashcard (SRS)
   - [ ] SM-2 scheduler implementation
   - [ ] Unit tests against known SM-2 interval sequences
@@ -133,7 +140,7 @@ Verify with `npm run verify` in `SEIMAcademy/app`: 20 contrast pairings, type-dr
   - [ ] 3–5 generation-format questions per module
   - [ ] Pass → skip ahead; anything else → normal queue, no penalty, no failure record
   - [ ] Gates correctly on the module's `teaches` tags
-- [ ] Difficulty tag surfaced in Instructions atom for a meaningfully harder exercise
+- [x] Difficulty tag surfaced in Instructions atom for a meaningfully harder exercise — [#34](https://github.com/voltron-1/SEIM-Academy/issues/34). Shape plus text, never colour alone.
 - [ ] Keyboard-only and screen-reader smoke test across all five components above
 
 **Exit check:** all core components pass keyboard/screen-reader smoke tests; SRS unit tests pass; test-out correctly gates against tags.

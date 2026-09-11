@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "license": "GPL-3.0-or-later",
-  "description": "SEIM-Academy app shell \u2014 static-first SPA, Preact + TypeScript.",
+  "description": "SEIM-Academy app shell — static-first SPA, Preact + TypeScript.",
   "scripts": {
     "dev": "vite",
     "build": "tsc --noEmit && vite build",
@@ -24,8 +24,13 @@
     "preact": "^10.24.3"
   },
   "devDependencies": {
+    "@happy-dom/global-registrator": "^20.14.3",
     "@preact/preset-vite": "^2.9.1",
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/preact": "^3.2.4",
     "@types/node": "^22.20.2",
+    "axe-core": "^4.13.0",
+    "happy-dom": "^20.14.3",
     "typescript": "^5.6.3",
     "vite": "^5.4.10"
   }

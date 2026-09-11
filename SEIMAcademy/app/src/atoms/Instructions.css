@@ -1,0 +1,28 @@
+.instructions__anatomy { margin: 0; }
+
+.instructions__anatomy dt {
+  font-size: var(--size-xs);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-top: var(--gap);
+}
+
+.instructions__anatomy dt:first-child { margin-top: 0; }
+.instructions__anatomy dd { margin: 2px 0 0; }
+
+.difficulty,
+.instructions__notice {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin: 0 0 var(--gap);
+  font-size: var(--size-sm);
+}
+
+.difficulty { color: var(--text-muted); }
+.difficulty--step-up { color: var(--accent); }
+.instructions__notice { color: var(--accent); max-width: var(--measure); }
+
+.difficulty__shape,
+.instructions__shape { font-size: 0.8em; flex: none; }

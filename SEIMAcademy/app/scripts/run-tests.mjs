@@ -18,7 +18,7 @@ import path from 'node:path';
 
 const APP = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const OUT = path.join(APP, '.tmp-test');
-const MIN_TEST_FILES = 4;
+const MIN_TEST_FILES = 6;
 
 const run = (cmd, args) => spawnSync(cmd, args, { cwd: APP, stdio: 'inherit', shell: process.platform === 'win32' });
 
@@ -43,5 +43,7 @@ if (files.length < MIN_TEST_FILES) {
   process.exit(1);
 }
 
-const tested = run('node', ['--test', ...files]);
+// --import loads the DOM environment and the resolve hooks before any test module is
+// evaluated. It points at src/, not the build output: .mjs files are not compiled by tsc.
+const tested = run('node', ['--import', './src/test/setup.mjs', '--test', ...files]);
 process.exit(tested.status ?? 1);
