@@ -36,7 +36,6 @@ the order (see the phase graph in `README.md`).
 
 | Phase | Epic | Issue | Workstream | Depends on |
 |---|---|---|---|---|
-| 3 | Core components | [#5](https://github.com/voltron-1/SEIM-Academy/issues/5) | C | Phase 2 |
 | 4 | Tier 1 complete | [#6](https://github.com/voltron-1/SEIM-Academy/issues/6) | A + C | Phases 1–3 |
 | 5 | Advanced components | [#7](https://github.com/voltron-1/SEIM-Academy/issues/7) | C | Phase 3 (parallel w/ Phase 4) |
 | 6 | Tier 2 complete | [#8](https://github.com/voltron-1/SEIM-Academy/issues/8) | A + C | Phases 4–5 |
@@ -48,47 +47,46 @@ the order (see the phase graph in `README.md`).
 
 Unblocked, queued to start next.
 
-_Empty — Phase 2 is in progress; Phase 3 depends on it._
+| Phase | Epic | Issue | Workstream | Unblocked by |
+|---|---|---|---|---|
+| 3 | Core components | [#5](https://github.com/voltron-1/SEIM-Academy/issues/5) | C | Phase 2 closed 2026-09-10 (7 open task issues) |
 
 | Phase | Epic | Issue | Workstream | Unblocked by |
 |---|---|---|---|---|
 
 ### 🔧 In Progress
 
-| Phase | Epic | Issue | Milestone | Workstream | Progress |
-|---|---|---|---|---|---|
-| 2 | App shell | [#4](https://github.com/voltron-1/SEIM-Academy/issues/4) | Phase 2 — App shell | B | Units 1–3 of 4 · 11 of 15 issues closed |
+_Empty — Phase 2 is closed; Phase 3 is Ready and not yet started._
 
 ### 🏁 Done
 
 | Phase | Epic | Issue | Milestone | Closed | Evidence |
 |---|---|---|---|---|---|
 | 0 | Content audit | [#2](https://github.com/voltron-1/SEIM-Academy/issues/2) | Phase 0 — Content audit (closed) | 2026-09-06 | [audit](findings/20260904-phase0-content-audit.md) · [cross-check](findings/20260906-phase0-external-crosscheck.md) |
+| 2 | App shell | [#4](https://github.com/voltron-1/SEIM-Academy/issues/4) | Phase 2 — App shell (closed 15/15) | 2026-09-10 (PRs [#112](https://github.com/voltron-1/SEIM-Academy/pull/112)–[#115](https://github.com/voltron-1/SEIM-Academy/pull/115)) | [spike](findings/20260910-phase2-local-model-spike.md) |
 | 1 | Schema & pipeline | [#3](https://github.com/voltron-1/SEIM-Academy/issues/3) + [#14](https://github.com/voltron-1/SEIM-Academy/issues/14)–[#19](https://github.com/voltron-1/SEIM-Academy/issues/19) | Phase 1 — Schema & pipeline (closed 8/8) | 2026-09-10 (PR [#110](https://github.com/voltron-1/SEIM-Academy/pull/110) merged) | [remediation](findings/20260910-phase1-remediation.md) · [security](findings/20260910-phase1-security-audit.md) · [code review](findings/20260910-phase1-code-review.md) · [tests](findings/20260910-phase1-test-report.md) |
 
 ---
 
-## Next Sprint — Phase 2 (App shell) — [#4](https://github.com/voltron-1/SEIM-Academy/issues/4)
+## Next Sprint — Phase 3 (Core components) — [#5](https://github.com/voltron-1/SEIM-Academy/issues/5)
 
-Unblocked 2026-09-10 when PR [#110](https://github.com/voltron-1/SEIM-Academy/pull/110)
-merged. The milestone carries **15 open task issues**; task-level cards live in
-`execution.md` § Phase 2 and are pulled in here when the sprint starts.
+Unblocked 2026-09-10 when Phase 2 closed. 7 open task issues.
 
-**Phase 1 closed 2026-09-10.** All exit-gate clauses met; the scoping clause was
-demonstrably *not* met as first built and was fixed before the PR
-([remediation](findings/20260910-phase1-remediation.md)). Five commands reproduce the gate:
-`build-content.mjs --prune`, `validate-content.mjs`, `check-prereqs.mjs`,
-`test-pipeline.mjs`, `verify-against-source.py`.
+**Build the Instructions atom first.** It is a schema-enforced prerequisite of every
+exercise atom, so every other component in this phase depends on its shape being settled.
 
-**Carried into Phase 2 as a constraint, not a task:** `app-data-schema.md` §7 makes the
-renderer's raw-HTML obligation normative. Content comes from a third-party source repo;
-the build-time markup check is a backstop, not a substitute for a renderer that cannot be
-made to execute markup. `innerHTML`, `dangerouslySetInnerHTML` and a permissive Markdown
-parser are out of contract.
+**Carried in as constraints, not tasks:**
 
-**Open question for Phase 4, surfaced by Phase 1:** the pilot module generated 64 lessons
-(~6 hours) from 449 source rows. Faithful, but whether Module 3 should be scoped down is a
-curriculum decision, not a pipeline change.
+- The renderer contract `AtomView({ atom, hint })` should not need to change. Phase 2 built
+  the shell around it deliberately.
+- `chromeFor()` is where anxiety-safe chrome rules are asserted and tested. A component
+  that needs to hide something belongs there, not in its own CSS.
+- Reduced motion is a hard default (Decision 5, closed). Route any animation through
+  `--motion-duration`.
+- Raw HTML stays disabled in the renderer (`app-data-schema.md` §7). No Markdown library
+  entered the critical path in Phase 2.
+- The matching/drag component ships its **keyboard equivalent in the same PR**, per the
+  accessibility baseline — not as a follow-up.
 
 ---
 

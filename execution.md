@@ -75,7 +75,7 @@ before the PR — [remediation](findings/20260910-phase1-remediation.md),
 
 ## Phase 2 — App shell
 
-**Depends on:** Phase 1 | **Status:** **In progress (opened 2026-09-10)** | **Owner:** _unassigned_ | **Issue:** [#4](https://github.com/voltron-1/SEIM-Academy/issues/4)
+**Depends on:** Phase 1 | **Status:** **Complete 2026-09-10** — epic [#4](https://github.com/voltron-1/SEIM-Academy/issues/4) closed; milestone closed 15/15 | **Owner:** _unassigned_ | **Issue:** [#4](https://github.com/voltron-1/SEIM-Academy/issues/4)
 
 **Decisions taken at the phase gate 2026-09-10:** view layer is **Preact + TypeScript via
 Vite** (~4 KB, MIT, no usage pricing — satisfies the BUILD-PLAN dependency policy; not
@@ -91,16 +91,25 @@ added across Phases 3–7. See [plan](plans/20260910-phase2-app-shell.md).
 - [x] Build persistent HUD: session progress bar, streak count, "N left today" — [#25](https://github.com/voltron-1/SEIM-Academy/issues/25). Streak reads 0 until Unit 3 persists day boundaries.
 - [x] Build generic atom renderer (one shared renderer per atom type, one atom per screen) — [#26](https://github.com/voltron-1/SEIM-Academy/issues/26), PR [#114](https://github.com/voltron-1/SEIM-Academy/pull/114). Markdown parsed in-house, no `innerHTML` and no Markdown library — §7 as code rather than a parser setting.
 - [x] Implement local persistence (localStorage/IndexedDB) — autosave position per atom, resume-exactly-here on load — [#27](https://github.com/voltron-1/SEIM-Academy/issues/27). localStorage; storage that throws resets rather than breaking startup, and a failed write is reported to the learner.
-- [ ] Implement offline/degraded render for every async boundary
-  - [ ] Failed content load → last-known-good cached lesson + calm retry (no bare error)
-  - [ ] Unreachable copilot backend → "offline — here's the source doc" panel state
+- [x] Implement offline/degraded render for every async boundary — [#28](https://github.com/voltron-1/SEIM-Academy/issues/28), PR [#115](https://github.com/voltron-1/SEIM-Academy/pull/115)
+  - [x] Failed content load → last-known-good cached lesson + calm retry (no bare error). Three failure kinds told apart — a static host answers an unknown path with **200 and `index.html`**, so a deleted lesson is not a 404.
+  - [x] Unreachable copilot backend → "offline — here's the source doc" panel state
 - [x] Implement persistent exit affordances (Skip / Hint / Pause / Exit to Today) rendered once by the app shell, never hidden — [#29](https://github.com/voltron-1/SEIM-Academy/issues/29). Enforced structurally: the exit bar is a shell grid row, and `chromeFor()` asserts it survives Focus mode.
 - [x] Implement Focus mode toggle (hides left rail + HUD chrome except progress bar) — [#30](https://github.com/voltron-1/SEIM-Academy/issues/30)
 - [x] Implement "flag this" affordance on every atom (one click, optional one-line note, writes to local storage) — [#31](https://github.com/voltron-1/SEIM-Academy/issues/31)
-- [ ] Wire PWA shell: service worker, app manifest, offline app-shell caching
-- [ ] (Parallel spike, not blocking) throwaway local-model feasibility check (Ollama or WebLLM) to de-risk Phase 7 before its architecture locks in
+- [x] Wire PWA shell: service worker, app manifest, offline app-shell caching — [#32](https://github.com/voltron-1/SEIM-Academy/issues/32). 24 static installability checks; Lighthouse itself needs a browser and is carried to Phase 8.
+- [x] (Parallel spike, not blocking) throwaway local-model feasibility check (Ollama or WebLLM) to de-risk Phase 7 before its architecture locks in — [#33](https://github.com/voltron-1/SEIM-Academy/issues/33), [findings](findings/20260910-phase2-local-model-spike.md). **Local-first is viable; retrieval is the bottleneck, not the model.**
 
-**Exit check:** pilot module plays start-to-finish through the shell; reload resumes exactly where the learner left off; killing network mid-session shows no error state; Lighthouse PWA installability passes.
+**Exit check:** pilot module plays start-to-finish through the shell; reload resumes exactly where the learner left off; killing network mid-session shows no error state; Lighthouse PWA installability passes. *Met 2026-09-10, with one clause partially verified.*
+
+| Clause | Evidence |
+|---|---|
+| Pilot plays start to finish | 707 atoms across six types, one per screen |
+| Reload resumes exactly | `resume.test.ts` plays real lessons through the player's own transitions and discards in-memory state the way closing a tab does |
+| No error state on failure | stale-while-revalidate content cache plus a page-side last-known-good fallback |
+| Lighthouse installability | **Partial** — 24 static checks pass; Lighthouse needs a browser the build environment lacks, carried to Phase 8 ([#98](https://github.com/voltron-1/SEIM-Academy/issues/98), [#99](https://github.com/voltron-1/SEIM-Academy/issues/99)) |
+
+Verify with `npm run verify` in `SEIMAcademy/app`: 20 contrast pairings, type-drift check, `tsc`, 46 tests, 24 PWA checks.
 
 ---
 
