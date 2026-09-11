@@ -14,9 +14,8 @@ Status markers: `[ ]` todo · `[~]` in-progress · `[x]` done · `[!]` blocked
 ## NEXT UP
 
 **Phase 2 — App shell** `[ ]` **not started** —
-[#4](https://github.com/voltron-1/SEIM-Academy/issues/4), milestone *Phase 2 — App shell*.
-Opens when PR [#110](https://github.com/voltron-1/SEIM-Academy/pull/110) merges. Nothing
-blocks it.
+[#4](https://github.com/voltron-1/SEIM-Academy/issues/4), milestone *Phase 2 — App shell*
+(**15 open task issues**). Phase 1 is merged and closed, so nothing blocks it.
 
 **Next unstarted item:** initialize the SPA project (TypeScript + Preact or vanilla Web
 Components — explicitly not Next.js/React), then build the dark theme token system to WCAG
@@ -41,9 +40,10 @@ module's play order and per-artifact dependencies.
 
 ## LAST SESSION
 
-**2026-09-10** — **Phase 1 built and closed.** The pipeline, schema and generated pilot
-module landed in PR [#110](https://github.com/voltron-1/SEIM-Academy/pull/110) (closes
-[#3](https://github.com/voltron-1/SEIM-Academy/issues/3) on merge). Pilot module t1-m03
+**2026-09-10** — **Phase 1 built, reviewed, merged and closed.** The pipeline, schema and
+generated pilot module landed in PR
+[#110](https://github.com/voltron-1/SEIM-Academy/pull/110), closing
+[#3](https://github.com/voltron-1/SEIM-Academy/issues/3). Pilot module t1-m03
 (Windows Event ID triage): 449 source rows plus 50 ground-truth `action → event` pairs →
 **64 lessons, 707 atoms, 36 SRS cards**. Decisions A and B are built in from schema
 version 1.0.0 rather than retrofitted, and Decision B's parse-only constraint is enforced
@@ -70,6 +70,13 @@ and should be run after any parser change.
 EventID of `*` turned out to be a directive to collect a channel wholesale, not malformed
 data, and is now taught as a channel instead of silently dropping it. The build emits zero
 warnings.
+
+**Tracker reconciled on close.** Six task-level issues
+([#14](https://github.com/voltron-1/SEIM-Academy/issues/14)–[#19](https://github.com/voltron-1/SEIM-Academy/issues/19))
+had been filed against the Phase 1 milestone by a parallel session and were not referenced
+by this file. All six are delivered by #110 and were closed with their specific evidence;
+the milestone is closed 8/8. A full audit found **no unmilestoned open issues** anywhere in
+the tracker — the failure mode called out on 2026-09-06 has not recurred.
 
 **Structure for Phases 4 and 6:** generator profiles live under
 `SEIMAcademy/scripts/lib/profiles/`. Adding a module with the same source shape is a
@@ -113,11 +120,13 @@ all 177 source files verified, curriculum map committed, content audit recorded.
 - [x] **Phase 1 — Schema & pipeline** — `app-data-schema.md`, `build-content` script,
       generated lessons for the pilot module. *Exit met 2026-09-10 — 64 lessons, 707 atoms;
       [remediation](findings/20260910-phase1-remediation.md).*
-      [#3](https://github.com/voltron-1/SEIM-Academy/issues/3),
-      PR [#110](https://github.com/voltron-1/SEIM-Academy/pull/110).
+      [#3](https://github.com/voltron-1/SEIM-Academy/issues/3) closed via PR
+      [#110](https://github.com/voltron-1/SEIM-Academy/pull/110); task issues
+      [#14](https://github.com/voltron-1/SEIM-Academy/issues/14)–[#19](https://github.com/voltron-1/SEIM-Academy/issues/19)
+      closed; milestone closed 8/8.
 - [ ] **Phase 2 — App shell** — theme tokens, left rail, HUD, atom renderer, local
-      persistence, offline/degraded states, PWA shell. *Next up; opens on PR #110 merge.*
-      [#4](https://github.com/voltron-1/SEIM-Academy/issues/4)
+      persistence, offline/degraded states, PWA shell. *Next up; unblocked 2026-09-10.*
+      [#4](https://github.com/voltron-1/SEIM-Academy/issues/4), 15 open task issues.
 - [ ] **Phase 3 — Core components** — Instructions atom, Flashcard+SRS, MC/fill-blank,
       matching/drag with keyboard equivalent, test-out check.
 - [ ] **Phase 4 — Tier 1 complete** — pipeline across ten Tier 1 modules; Capstone 1.

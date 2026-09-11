@@ -50,25 +50,26 @@ Unblocked, queued to start next.
 
 | Phase | Epic | Issue | Workstream | Unblocked by |
 |---|---|---|---|---|
-| 2 | App shell | [#4](https://github.com/voltron-1/SEIM-Academy/issues/4) | B | Phase 1 exit gate met 2026-09-10 |
+| 2 | App shell | [#4](https://github.com/voltron-1/SEIM-Academy/issues/4) | B | Phase 1 merged 2026-09-10 (15 open task issues) |
 
 ### 🔧 In Progress
 
-_Empty — Phase 1's exit gate is met and its PR is open; Phase 2 opens on merge._
+_Empty — Phase 1 is merged and closed; Phase 2 is Ready and not yet started._
 
 ### 🏁 Done
 
 | Phase | Epic | Issue | Milestone | Closed | Evidence |
 |---|---|---|---|---|---|
 | 0 | Content audit | [#2](https://github.com/voltron-1/SEIM-Academy/issues/2) | Phase 0 — Content audit (closed) | 2026-09-06 | [audit](findings/20260904-phase0-content-audit.md) · [cross-check](findings/20260906-phase0-external-crosscheck.md) |
-| 1 | Schema & pipeline | [#3](https://github.com/voltron-1/SEIM-Academy/issues/3) | Phase 1 — Schema & pipeline | 2026-09-10 (PR [#110](https://github.com/voltron-1/SEIM-Academy/pull/110) open) | [remediation](findings/20260910-phase1-remediation.md) · [security](findings/20260910-phase1-security-audit.md) · [code review](findings/20260910-phase1-code-review.md) · [tests](findings/20260910-phase1-test-report.md) |
+| 1 | Schema & pipeline | [#3](https://github.com/voltron-1/SEIM-Academy/issues/3) + [#14](https://github.com/voltron-1/SEIM-Academy/issues/14)–[#19](https://github.com/voltron-1/SEIM-Academy/issues/19) | Phase 1 — Schema & pipeline (closed 8/8) | 2026-09-10 (PR [#110](https://github.com/voltron-1/SEIM-Academy/pull/110) merged) | [remediation](findings/20260910-phase1-remediation.md) · [security](findings/20260910-phase1-security-audit.md) · [code review](findings/20260910-phase1-code-review.md) · [tests](findings/20260910-phase1-test-report.md) |
 
 ---
 
 ## Next Sprint — Phase 2 (App shell) — [#4](https://github.com/voltron-1/SEIM-Academy/issues/4)
 
-Opens when PR [#110](https://github.com/voltron-1/SEIM-Academy/pull/110) merges. Task-level
-cards live in `execution.md` § Phase 2 and are pulled in here when the sprint starts.
+Unblocked 2026-09-10 when PR [#110](https://github.com/voltron-1/SEIM-Academy/pull/110)
+merged. The milestone carries **15 open task issues**; task-level cards live in
+`execution.md` § Phase 2 and are pulled in here when the sprint starts.
 
 **Phase 1 closed 2026-09-10.** All exit-gate clauses met; the scoping clause was
 demonstrably *not* met as first built and was fixed before the PR
