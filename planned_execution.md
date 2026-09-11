@@ -15,16 +15,16 @@ Status markers: `[ ]` todo · `[~]` in-progress · `[x]` done · `[!]` blocked
 
 **Phase 2 — App shell** `[~]` **in progress** (opened 2026-09-10) —
 [#4](https://github.com/voltron-1/SEIM-Academy/issues/4), milestone *Phase 2 — App shell*
-(**8 of 15 closed**). Running in four gated units; Units 1–2 landed in PRs
-[#112](https://github.com/voltron-1/SEIM-Academy/pull/112) and
-[#113](https://github.com/voltron-1/SEIM-Academy/pull/113).
+(**11 of 15 closed**). Running in four gated units; Units 1–3 landed in PRs
+[#112](https://github.com/voltron-1/SEIM-Academy/pull/112),
+[#113](https://github.com/voltron-1/SEIM-Academy/pull/113) and
+[#114](https://github.com/voltron-1/SEIM-Academy/pull/114). The pilot module already plays
+start to finish and resumes where it was left.
 
-**Next unstarted item:** Unit 3 — the atom renderer
-[#26](https://github.com/voltron-1/SEIM-Academy/issues/26), local persistence
-[#27](https://github.com/voltron-1/SEIM-Academy/issues/27) and the "flag this" affordance
-[#31](https://github.com/voltron-1/SEIM-Academy/issues/31). This is the unit that makes the
-shell real: 707 atoms across six types get rendered, the streak stops reading 0, and
-Skip/Hint stop being inert.
+**Next unstarted item:** Unit 4 — offline/degraded render for every async boundary
+[#28](https://github.com/voltron-1/SEIM-Academy/issues/28) and the PWA shell
+[#32](https://github.com/voltron-1/SEIM-Academy/issues/32). This closes the phase: the exit
+check requires that killing the network mid-session shows no error state anywhere.
 
 **Unit 1 resolved both open Phase 2 decisions:** the view layer is Preact + TypeScript via
 Vite, and **Decision 5 is closed — reduced motion is a hard default**, enforced through a
@@ -135,7 +135,7 @@ all 177 source files verified, curriculum map committed, content audit recorded.
       closed; milestone closed 8/8.
 - [~] **Phase 2 — App shell** — theme tokens, left rail, HUD, atom renderer, local
       persistence, offline/degraded states, PWA shell. *In progress since 2026-09-10;
-      Units 1–2 of 4 done (8 of 15 issues closed).*
+      Units 1–3 of 4 done (11 of 15 issues closed).*
       [#4](https://github.com/voltron-1/SEIM-Academy/issues/4)
 - [ ] **Phase 3 — Core components** — Instructions atom, Flashcard+SRS, MC/fill-blank,
       matching/drag with keyboard equivalent, test-out check.

@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'preact/hooks';
-import { loadLesson } from '../content';
+import { loadLesson, ContentUnavailable } from '../content';
 import type { Lesson } from '../content/types';
 import { AtomView } from '../atoms';
 import { useSession } from '../state/session';
+import { Degraded, StaleNotice } from './index';
 import './lesson.css';
 
 /**
@@ -16,7 +17,9 @@ import './lesson.css';
 export function LessonPlayer({ lessonId }: { lessonId: string }) {
   const session = useSession();
   const [lesson, setLesson] = useState<Lesson | null>(null);
-  const [error, setError] = useState<string | null>(null);
+  const [stale, setStale] = useState(false);
+  const [error, setError] = useState<'offline' | 'missing' | 'malformed' | null>(null);
+  const [attempt, setAttempt] = useState(0);
   const [index, setIndex] = useState(
     session.position?.lessonId === lessonId ? session.position.atomIndex : 0
   );
@@ -28,12 +31,19 @@ export function LessonPlayer({ lessonId }: { lessonId: string }) {
     setLesson(null);
     setError(null);
     loadLesson(lessonId)
-      .then((l) => live && setLesson(l))
-      .catch((e: unknown) => live && setError(e instanceof Error ? e.message : String(e)));
+      .then((r) => {
+        if (!live) return;
+        setLesson(r.data);
+        setStale(r.stale);
+      })
+      .catch((e: unknown) => {
+        if (!live) return;
+        setError(e instanceof ContentUnavailable ? e.reason : 'offline');
+      });
     return () => {
       live = false;
     };
-  }, [lessonId]);
+  }, [lessonId, attempt]);
 
   const atoms = lesson?.atoms ?? [];
   const atom = atoms[Math.min(index, Math.max(0, atoms.length - 1))];
@@ -63,14 +73,15 @@ export function LessonPlayer({ lessonId }: { lessonId: string }) {
 
   if (error) {
     return (
-      <div class="panel panel--quiet">
-        <p>This lesson is not loading right now.</p>
-        <p class="muted"><code>{error}</code></p>
-        <button type="button" class="cta" onClick={() => session.exitLesson()}>
-          Back to Today
-        </button>
-        <p class="note">Unit 4 (#28) replaces this with last-known-good cached content and a calm retry.</p>
-      </div>
+      <>
+        <Degraded reason={error} retry={() => setAttempt((n) => n + 1)} />
+        <p class="note">
+          <button type="button" class="linkish" onClick={() => session.exitLesson()}>
+            Back to Today
+          </button>{' '}
+          — your place in this lesson is saved either way.
+        </p>
+      </>
     );
   }
   if (!lesson || !atom) return <p class="muted">Loading…</p>;
@@ -84,6 +95,7 @@ export function LessonPlayer({ lessonId }: { lessonId: string }) {
 
   return (
     <div class="lesson">
+      {stale && <StaleNotice />}
       <p class="lesson__crumb">
         <button type="button" class="linkish" onClick={() => session.exitLesson()}>
           {lesson.title}

@@ -57,7 +57,7 @@ _Empty — Phase 2 is in progress; Phase 3 depends on it._
 
 | Phase | Epic | Issue | Milestone | Workstream | Progress |
 |---|---|---|---|---|---|
-| 2 | App shell | [#4](https://github.com/voltron-1/SEIM-Academy/issues/4) | Phase 2 — App shell | B | Units 1–2 of 4 · 8 of 15 issues closed |
+| 2 | App shell | [#4](https://github.com/voltron-1/SEIM-Academy/issues/4) | Phase 2 — App shell | B | Units 1–3 of 4 · 11 of 15 issues closed |
 
 ### 🏁 Done
 

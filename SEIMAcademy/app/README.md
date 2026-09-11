@@ -15,6 +15,9 @@ npm run check:contrast   # WCAG 2.1 AA across every token pairing
 npm run check:types      # src/content/types.ts vs the JSON Schema
 npm test                 # session logic
 npm run sync:content     # copy ../content into public/ (runs before dev and build)
+npm run make:icons       # regenerate PWA icons from the theme tokens
+npm run check:pwa        # installability checks against dist/ (after build)
+npm run verify           # check + build + check:pwa — the whole gate
 ```
 
 ## Content
@@ -112,13 +115,55 @@ in-memory state away the way closing a tab does, and asserts the resume point. I
 round-trips all 707 atom ids through storage, because an id that does not survive
 serialisation would silently orphan a learner's progress.
 
+## Offline
+
+Three caching strategies, one per kind of request, in `public/sw.js`:
+
+| Request | Strategy | Why |
+|---|---|---|
+| navigation | network first, cached shell second | opening offline gives the app, not the browser's error page |
+| asset | cache first, refreshed behind | hashed filenames mean a cached asset is never the wrong one |
+| content | stale-while-revalidate | the cached lesson is the "last-known-good" the anxiety-safe rule asks for |
+
+Hand-written, no Workbox — the routing is about forty lines, and a precache-manifest
+generator would be more machinery than the thing it generates.
+
+The page keeps its own fallback in `content/fetch-json.ts` for the cases the worker cannot
+cover: first visit, no service worker support, or a reload that outruns activation. It
+returns `{ data, stale }` rather than throwing, so the degraded case is the same call with
+a different result — there is no separate offline path to forget to write.
+
+Failures are told apart because they need different things said:
+
+- **offline** — nothing cached and the network is gone. "Nothing is lost."
+- **missing** — the lesson was renamed or retired by a content rebuild. Retrying will never
+  help, so the copy does not suggest it.
+- **malformed** — the server answered with something unreadable. Retrying usually clears it.
+
+That distinction is not theoretical. A static host answers an unknown path with
+`index.html` and a **200** — confirmed against `vite preview` — so a deleted lesson arrives
+as HTML, not a 404. Parsing the body as text first is what lets "this is the app's own HTML"
+be told from "this JSON is truncated".
+
+## Icons
+
+`scripts/make-icons.mjs` generates the PWA icons with a hand-rolled PNG encoder — zlib from
+Node core plus four chunk headers. The mark is a flat fill, so it needs no anti-aliasing, no
+font and no image library. Colours are read from `tokens.css`, so the icon cannot drift from
+the theme, and the output is gitignored because it is derived.
+
 ## Status
 
-Units 1–3 of 4 done (#20–#27, #29–#31). The pilot module plays start to finish: 707 atoms
+Units 1–4 of 4 done (#20–#32). The pilot module plays start to finish: 707 atoms
 across six types render, progress and streak persist, resume lands on the atom you left,
 and every atom can be flagged with an optional note.
 
-Not yet built, and deliberately not faked: the offline/degraded render and the PWA shell
-(Unit 4, #28/#32). Answering, grading, SRS scheduling and drag interaction are **Phase 3** —
-quiz and exercise atoms render faithfully and reveal their answers so a lesson reads end to
-end, but nothing here scores anything.
+Answering, grading, SRS scheduling and drag interaction are **Phase 3** — quiz and exercise
+atoms render faithfully and reveal their answers so a lesson reads end to end, but nothing
+here scores anything.
+
+**Not verified in this environment:** Lighthouse installability, that the worker actually
+registers, and a real offline boot. Those need a browser, which is not available here.
+`npm run check:pwa` covers everything checkable without one — 24 static checks including
+icon headers matching their declared sizes and every precached URL resolving in `dist/`.
+The browser-dependent half belongs to Phase 8 (#98 axe-core, #99 e2e smoke).
