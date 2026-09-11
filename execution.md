@@ -89,14 +89,14 @@ added across Phases 3–7. See [plan](plans/20260910-phase2-app-shell.md).
   - [x] Monospace type for log/SPL/event data, humanist sans for prose — [#23](https://github.com/voltron-1/SEIM-Academy/issues/23)
 - [x] Build left rail: Today / Tier 1 / Tier 2 / Copilot / Review — [#24](https://github.com/voltron-1/SEIM-Academy/issues/24), PR [#113](https://github.com/voltron-1/SEIM-Academy/pull/113)
 - [x] Build persistent HUD: session progress bar, streak count, "N left today" — [#25](https://github.com/voltron-1/SEIM-Academy/issues/25). Streak reads 0 until Unit 3 persists day boundaries.
-- [ ] Build generic atom renderer (one shared renderer per atom type, one atom per screen)
-- [ ] Implement local persistence (localStorage/IndexedDB) — autosave position per atom, resume-exactly-here on load
+- [x] Build generic atom renderer (one shared renderer per atom type, one atom per screen) — [#26](https://github.com/voltron-1/SEIM-Academy/issues/26), PR [#114](https://github.com/voltron-1/SEIM-Academy/pull/114). Markdown parsed in-house, no `innerHTML` and no Markdown library — §7 as code rather than a parser setting.
+- [x] Implement local persistence (localStorage/IndexedDB) — autosave position per atom, resume-exactly-here on load — [#27](https://github.com/voltron-1/SEIM-Academy/issues/27). localStorage; storage that throws resets rather than breaking startup, and a failed write is reported to the learner.
 - [ ] Implement offline/degraded render for every async boundary
   - [ ] Failed content load → last-known-good cached lesson + calm retry (no bare error)
   - [ ] Unreachable copilot backend → "offline — here's the source doc" panel state
 - [x] Implement persistent exit affordances (Skip / Hint / Pause / Exit to Today) rendered once by the app shell, never hidden — [#29](https://github.com/voltron-1/SEIM-Academy/issues/29). Enforced structurally: the exit bar is a shell grid row, and `chromeFor()` asserts it survives Focus mode.
 - [x] Implement Focus mode toggle (hides left rail + HUD chrome except progress bar) — [#30](https://github.com/voltron-1/SEIM-Academy/issues/30)
-- [ ] Implement "flag this" affordance on every atom (one click, optional one-line note, writes to local storage)
+- [x] Implement "flag this" affordance on every atom (one click, optional one-line note, writes to local storage) — [#31](https://github.com/voltron-1/SEIM-Academy/issues/31)
 - [ ] Wire PWA shell: service worker, app manifest, offline app-shell caching
 - [ ] (Parallel spike, not blocking) throwaway local-model feasibility check (Ollama or WebLLM) to de-risk Phase 7 before its architecture locks in
 
