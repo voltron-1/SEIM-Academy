@@ -1,0 +1,28 @@
+.hud {
+  grid-area: hud;
+  min-height: var(--hud-height);
+  display: flex;
+  align-items: center;
+  gap: var(--gap-lg);
+  padding: 0 var(--gap-lg);
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.hud--focus { min-height: 8px; padding: 0; border-bottom: 0; background: transparent; }
+
+.hud__bar {
+  flex: 1;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--surface-raised);
+  overflow: hidden;
+}
+
+.hud--focus .hud__bar { border-radius: 0; }
+
+.hud__fill { height: 100%; background: var(--accent); }
+
+.hud__stats { display: flex; align-items: center; gap: var(--gap); font-size: var(--size-sm); white-space: nowrap; }
+.hud__stat--muted { color: var(--text-muted); }
+.hud__sep { width: 1px; height: 18px; background: var(--border); }

@@ -1,0 +1,58 @@
+.exitbar {
+  grid-area: exit;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px var(--gap-lg);
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.exitbar__spacer { flex: 1; }
+
+.exitbar__btn {
+  font: inherit;
+  font-size: var(--size-sm);
+  color: var(--text);
+  background: var(--surface-raised);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  padding: 7px 13px;
+  cursor: pointer;
+}
+
+.exitbar__btn:hover { border-color: var(--accent); }
+
+.exitbar__btn[aria-pressed='true'] {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* aria-disabled, not disabled: still focusable, still announced, visibly inert. */
+.exitbar__btn[aria-disabled='true'] {
+  color: var(--text-muted);
+  border-color: var(--border);
+  cursor: default;
+}
+
+.exitbar__btn--ghost { background: transparent; }
+
+.pause {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  z-index: 10;
+}
+
+.pause__card {
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  padding: var(--gap-lg);
+  max-width: 42ch;
+  text-align: center;
+}
+
+.pause__body { color: var(--text-muted); }
