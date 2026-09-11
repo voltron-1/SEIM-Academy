@@ -48,13 +48,16 @@ the order (see the phase graph in `README.md`).
 
 Unblocked, queued to start next.
 
+_Empty — Phase 2 is in progress; Phase 3 depends on it._
+
 | Phase | Epic | Issue | Workstream | Unblocked by |
 |---|---|---|---|---|
-| 2 | App shell | [#4](https://github.com/voltron-1/SEIM-Academy/issues/4) | B | Phase 1 merged 2026-09-10 (15 open task issues) |
 
 ### 🔧 In Progress
 
-_Empty — Phase 1 is merged and closed; Phase 2 is Ready and not yet started._
+| Phase | Epic | Issue | Milestone | Workstream | Progress |
+|---|---|---|---|---|---|
+| 2 | App shell | [#4](https://github.com/voltron-1/SEIM-Academy/issues/4) | Phase 2 — App shell | B | Unit 1 of 4 · 4 of 15 issues closed |
 
 ### 🏁 Done
 

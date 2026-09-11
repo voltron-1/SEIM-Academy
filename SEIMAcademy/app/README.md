@@ -10,9 +10,25 @@ npm install
 npm run dev              # dev server
 npm run build            # typecheck + static bundle into dist/
 npm run preview          # serve the built bundle
-npm run check            # contrast + typecheck (what CI will run)
+npm run check            # contrast + type drift + typecheck + tests (what CI will run)
 npm run check:contrast   # WCAG 2.1 AA across every token pairing
+npm run check:types      # src/content/types.ts vs the JSON Schema
+npm test                 # session logic
+npm run sync:content     # copy ../content into public/ (runs before dev and build)
 ```
+
+## Content
+
+`public/content/` is a **generated copy** of `SEIMAcademy/content/`, synced automatically
+before `dev` and `build`. It is gitignored. Never edit it — regenerate with
+`node SEIMAcademy/scripts/build-content.mjs` and it will re-sync.
+
+Play order comes from `build-manifest.json` → `modules[].lesson_order`, never from a
+filename sort.
+
+`src/content/types.ts` is a third view of the schema contract, after the normative document
+and the JSON Schema mirror. Three views drift, so `npm run check:types` compares them —
+Phase 1 already had a schema document describe a mechanism that existed in no code.
 
 ## Theme tokens
 
@@ -57,8 +73,24 @@ is a backstop, not a substitute.
 are out of contract. The permitted Markdown subset is small enough to render directly, so
 it is — no Markdown library in the critical path.
 
+## Shell contract
+
+The exit affordances (Skip / Hint / Pause / Exit to Today) are a grid row of the shell, not
+something a view renders. That is structural on purpose: a view cannot omit them, and Focus
+mode cannot collapse them. BUILD-PLAN calls them "rendered once by the app shell, never
+hidden", so `chromeFor()` in `state/session-core.ts` states it as an assertion and
+`npm test` checks it.
+
+Skip and Hint are `aria-disabled` rather than `disabled` until an atom is on screen: still
+reachable by keyboard, still announced, visibly inert — discoverable rather than absent.
+
 ## Status
 
-Unit 1 of 4 (#20–#23). `src/app.tsx` is a **theme specimen**, not a mock shell — the left
-rail, HUD and atom renderer are Units 2 and 3. Fake versions here would make the shell look
-further along than it is.
+Units 1–2 of 4 done (#20–#25, #29, #30). The rail, HUD, exit bar and Focus mode are real
+and read real numbers from the build manifest.
+
+Not yet built, and deliberately not faked: the atom renderer and local persistence
+(Unit 3, #26/#27/#31) and the offline/degraded render and PWA shell (Unit 4, #28/#32).
+Views that depend on them say so rather than showing a plausible-looking placeholder — the
+streak reads 0 because nothing persists day boundaries yet, and Review names the Phase 3
+scheduler rather than showing an empty queue.

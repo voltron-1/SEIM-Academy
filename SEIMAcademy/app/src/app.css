@@ -1,48 +1,60 @@
-.specimen {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: var(--gap-lg);
-}
-
-.lede { color: var(--text-muted); }
-.muted { color: var(--text-muted); }
-
-.swatches {
+/*
+ * Shell layout.
+ *
+ * The exit bar is its own grid row rather than something the main view renders, which is
+ * how "rendered once by the app shell, never hidden" is enforced structurally: a view
+ * cannot omit it, and Focus mode cannot collapse it.
+ */
+.shell {
+  min-height: 100vh;
+  min-height: 100dvh;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  gap: var(--gap);
-  margin-bottom: var(--gap-lg);
+  grid-template-areas:
+    'rail hud'
+    'rail main'
+    'rail exit';
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr auto;
 }
 
-.swatch__chip {
-  height: 56px;
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--border-strong);
+.shell--focus {
+  grid-template-areas:
+    'hud'
+    'main'
+    'exit';
+  grid-template-columns: 1fr;
 }
 
-.swatch__name {
-  display: block;
-  margin-top: 6px;
-  color: var(--text-muted);
-  font-size: var(--size-xs);
-}
-
-.card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
+.main {
+  grid-area: main;
+  overflow-y: auto;
   padding: var(--gap-lg);
-  margin-bottom: var(--gap-lg);
 }
 
-pre {
-  background: var(--bg);
-  border: 1px solid var(--border);
+.main:focus { outline: none; }
+
+.main__inner { max-width: 860px; margin: 0 auto; }
+
+.skiplink {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--surface-raised);
+  color: var(--text);
+  padding: 10px 14px;
   border-radius: var(--radius-sm);
-  padding: var(--gap);
-  overflow-x: auto;
-  margin: 0;
+  z-index: 20;
 }
 
-code { color: var(--accent); }
-pre code { color: var(--text); }
+.skiplink:focus { left: var(--gap); top: var(--gap); }
+
+@media (max-width: 720px) {
+  .shell {
+    grid-template-areas:
+      'rail'
+      'hud'
+      'main'
+      'exit';
+    grid-template-columns: 1fr;
+  }
+}

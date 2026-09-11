@@ -75,12 +75,18 @@ before the PR — [remediation](findings/20260910-phase1-remediation.md),
 
 ## Phase 2 — App shell
 
-**Depends on:** Phase 1 | **Status:** Not started | **Owner:** _unassigned_
+**Depends on:** Phase 1 | **Status:** **In progress (opened 2026-09-10)** | **Owner:** _unassigned_ | **Issue:** [#4](https://github.com/voltron-1/SEIM-Academy/issues/4)
 
-- [ ] Initialize SPA project (TypeScript + Preact or vanilla Web Components — no Next.js/React)
-- [ ] Build dark theme token system: `--bg`, `--surface`, `--text`, `--accent`, `--danger`, `--success`
-  - [ ] Verify WCAG 2.1 AA contrast (4.5:1 body, 3:1 large text/UI) for every token pairing including accent-on-background
-  - [ ] Monospace type for log/SPL/event data, humanist sans for prose
+**Decisions taken at the phase gate 2026-09-10:** view layer is **Preact + TypeScript via
+Vite** (~4 KB, MIT, no usage pricing — satisfies the BUILD-PLAN dependency policy; not
+Next.js/React). **Decision 5 resolved: reduced motion is a hard default**, not an
+OS-preference opt-out — deciding it in Phase 9 would have meant auditing every animation
+added across Phases 3–7. See [plan](plans/20260910-phase2-app-shell.md).
+
+- [x] Initialize SPA project (TypeScript + Preact or vanilla Web Components — no Next.js/React) — [#20](https://github.com/voltron-1/SEIM-Academy/issues/20), PR [#112](https://github.com/voltron-1/SEIM-Academy/pull/112)
+- [x] Build dark theme token system: `--bg`, `--surface`, `--text`, `--accent`, `--danger`, `--success` — [#21](https://github.com/voltron-1/SEIM-Academy/issues/21)
+  - [x] Verify WCAG 2.1 AA contrast (4.5:1 body, 3:1 large text/UI) for every token pairing including accent-on-background — [#22](https://github.com/voltron-1/SEIM-Academy/issues/22). Computed by `app/scripts/check-contrast.mjs`, 20 pairings; it caught `--border-strong` at 1.93:1 on first run.
+  - [x] Monospace type for log/SPL/event data, humanist sans for prose — [#23](https://github.com/voltron-1/SEIM-Academy/issues/23)
 - [ ] Build left rail: Today / Tier 1 / Tier 2 / Copilot / Review
 - [ ] Build persistent HUD: session progress bar, streak count, "N left today"
 - [ ] Build generic atom renderer (one shared renderer per atom type, one atom per screen)
