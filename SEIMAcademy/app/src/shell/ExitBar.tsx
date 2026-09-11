@@ -8,13 +8,14 @@ import './ExitBar.css';
  * That includes Focus mode — the rail and HUD chrome collapse, this bar does not. A
  * learner must always be able to leave without hunting for the way out.
  *
- * Skip and Hint need an atom on screen, which arrives in Unit 3. Until then they are
- * `aria-disabled` rather than `disabled`: still reachable by keyboard and still announced,
- * so the affordance is discoverable and says why it is inert, instead of vanishing from
- * the tab order.
+ * Skip and Hint act on whatever atom is on screen, through monotonic signals the player
+ * watches — the shell never needs to know what kind of atom it is. With no lesson open
+ * they are `aria-disabled` rather than `disabled`: still reachable by keyboard and still
+ * announced, so the affordance stays discoverable instead of vanishing from the tab order.
  */
 export function ExitBar() {
-  const { activeAtomId, paused, setPaused, navigate, focusMode, toggleFocus } = useSession();
+  const { activeAtomId, paused, setPaused, navigate, focusMode, toggleFocus, requestSkip, requestHint, exitLesson } =
+    useSession();
   const noAtom = activeAtomId === null;
   const inertReason = 'Available once a lesson is on screen';
 
@@ -27,7 +28,7 @@ export function ExitBar() {
         title={noAtom ? inertReason : 'Skip this atom — no penalty, it returns to the queue'}
         onClick={() => {
           if (noAtom) return;
-          /* Unit 3 wires this to the atom queue. */
+          requestSkip();
         }}
       >
         Skip
@@ -40,7 +41,7 @@ export function ExitBar() {
         title={noAtom ? inertReason : 'Show a hint — never counts against you'}
         onClick={() => {
           if (noAtom) return;
-          /* Unit 3 wires this to the atom renderer. */
+          requestHint();
         }}
       >
         Hint
@@ -55,7 +56,14 @@ export function ExitBar() {
         {paused ? 'Resume' : 'Pause'}
       </button>
 
-      <button type="button" class="exitbar__btn" onClick={() => navigate('today')}>
+      <button
+        type="button"
+        class="exitbar__btn"
+        onClick={() => {
+          exitLesson();
+          navigate('today');
+        }}
+      >
         Exit to Today
       </button>
 

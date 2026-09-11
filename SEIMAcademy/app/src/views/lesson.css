@@ -1,0 +1,64 @@
+.lesson { max-width: var(--measure); }
+.lesson__crumb { font-size: var(--size-sm); margin-bottom: var(--gap-lg); }
+
+.linkish {
+  font: inherit;
+  color: var(--accent);
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.lesson__controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: var(--gap-lg);
+  padding-top: var(--gap);
+  border-top: 1px solid var(--border);
+}
+
+.lesson__spacer { flex: 1; }
+
+.ghost {
+  font: inherit;
+  font-size: var(--size-sm);
+  color: var(--text);
+  background: transparent;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  padding: 8px 14px;
+  cursor: pointer;
+}
+
+.ghost:hover:not(:disabled) { border-color: var(--accent); }
+.ghost:disabled { color: var(--text-muted); border-color: var(--border); cursor: default; }
+.ghost--on { color: var(--accent); border-color: var(--accent); }
+
+.lesson__note {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: var(--gap);
+}
+
+.lesson__note input {
+  font: inherit;
+  font-size: var(--size-sm);
+  color: var(--text);
+  background: var(--surface-raised);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  padding: 8px 10px;
+  flex: 1;
+  min-width: 200px;
+}
+
+.lesson__warn {
+  margin-top: var(--gap-lg);
+  color: var(--danger);
+  font-size: var(--size-sm);
+}

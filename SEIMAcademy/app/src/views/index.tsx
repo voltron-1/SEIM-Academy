@@ -49,7 +49,7 @@ function ModuleCard({ module }: { module: ModuleReport }) {
 
 export function Today() {
   const load = useManifest();
-  const { atomsLeftToday, completedToday } = useSession();
+  const { atomsLeftToday, completedToday, position, startLesson, streakDays, flagCount } = useSession();
 
   if (load.status === 'loading') return <p class="muted">Loading…</p>;
   if (load.status === 'error') return <LoadError message={load.message} />;
@@ -66,15 +66,32 @@ export function Today() {
 
       {first && (
         <section class="panel">
-          <p class="panel__kicker">Up next</p>
+          <p class="panel__kicker">{position ? 'Pick up where you left off' : 'Up next'}</p>
           <ModuleCard module={first} />
-          <button type="button" class="cta" aria-disabled="true" title="The atom queue arrives in Unit 3">
-            Continue
+          <button
+            type="button"
+            class="cta"
+            onClick={() =>
+              position
+                ? startLesson(position.lessonId, position.atomIndex)
+                : startLesson(first.lesson_order[0]!)
+            }
+          >
+            {position ? 'Resume' : 'Start'}
           </button>
-          <p class="note">
-            The atom renderer is Unit 3 (#26). This card reads real numbers from{' '}
-            <code>build-manifest.json</code> — it is not placeholder text.
-          </p>
+          {position && (
+            <p class="note">
+              <code>{position.lessonId}</code>, atom{' '}
+              <span class="data">{position.atomIndex + 1}</span> — one click from where you
+              stopped, with nothing to re-read.
+            </p>
+          )}
+          {(streakDays > 0 || flagCount > 0) && (
+            <p class="note">
+              {streakDays > 0 && <>Streak: <span class="data">{streakDays}</span> day{streakDays === 1 ? '' : 's'}. </>}
+              {flagCount > 0 && <><span class="data">{flagCount}</span> flagged for later.</>}
+            </p>
+          )}
         </section>
       )}
     </>

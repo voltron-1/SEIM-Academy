@@ -1,50 +1,99 @@
 import { createContext } from 'preact';
-import { useContext, useEffect, useMemo, useReducer } from 'preact/hooks';
+import { useCallback, useContext, useEffect, useMemo, useReducer, useState } from 'preact/hooks';
 import type { ComponentChildren } from 'preact';
 import {
-  reducer,
-  initialState,
-  routeFromHash,
-  atomsLeftToday,
-  completedToday,
-  type Route,
-  type SessionState,
+  reducer, initialState, routeFromHash, type Route, type SessionState,
 } from './session-core';
+import {
+  load as loadPersisted, save as savePersisted, emptyState, dayKey,
+  completeAtom as completeAtomIn, setPosition as setPositionIn,
+  addFlag, removeFlag, isFlagged as isFlaggedIn, completedOn,
+  type PersistedState, type Position,
+} from './persistence';
+import { DAILY_TARGET_ATOMS } from './session-core';
 
 export { ROUTES, DAILY_TARGET_ATOMS, chromeFor } from './session-core';
 export type { Route, SessionState, ChromeVisibility } from './session-core';
 
 /**
- * Preact binding for the session state.
+ * Preact binding for session state.
  *
- * All the logic lives in session-core.ts, which has no Preact and no JSX and is covered by
- * `npm test`. This file is the wiring: context, the hash listener, and the memoised API.
+ * Two stores, deliberately separate: `session-core` holds what is true about this tab
+ * (route, focus, pause) and `persistence` holds what is true about this learner (progress,
+ * streak, resume point, flags). Only the second survives a reload, and only the second has
+ * to be defensible against a hand-edited or truncated payload.
  *
- * Unit 3 (#27) swaps the in-memory state for localStorage/IndexedDB behind this same
- * interface — the shell contract does not change, which is the same split as Phase 3
- * filling in the exercise internals without changing the renderer contract.
+ * Both are pure modules with their own tests. This file is wiring.
  */
 
 export interface SessionApi extends SessionState {
   navigate: (route: Route) => void;
   toggleFocus: () => void;
   setPaused: (paused: boolean) => void;
-  completeAtom: (atomId: string) => void;
   setActiveAtom: (atomId: string | null) => void;
-  atomsLeftToday: number;
+
+  /** Persisted learner state. */
+  streakDays: number;
   completedToday: number;
+  atomsLeftToday: number;
+  completeAtom: (atomId: string) => void;
+  position: Position | null;
+  setPosition: (position: Position | null) => void;
+  isFlagged: (atomId: string) => boolean;
+  toggleFlag: (atomId: string, note?: string) => void;
+  flagCount: number;
+  /** False when the browser refused to store — private mode, quota, blocked cookies. */
+  storageWorks: boolean;
+
+  /** Lesson currently being played, if any. */
+  activeLessonId: string | null;
+  startLesson: (lessonId: string, atomIndex?: number) => void;
+  exitLesson: () => void;
+
+  /**
+   * Skip and Hint are rendered once by the shell (#29), so they act on whatever atom is on
+   * screen without the shell knowing its type. Monotonic counters rather than callbacks:
+   * nothing to register, nothing to leak, and a missed signal is impossible.
+   */
+  skipSignal: number;
+  hintSignal: number;
+  requestSkip: () => void;
+  requestHint: () => void;
 }
 
 const SessionContext = createContext<SessionApi | null>(null);
 
+const storage = (): Storage | null => {
+  try {
+    return globalThis.localStorage ?? null;
+  } catch {
+    return null; // blocked entirely by browser settings
+  }
+};
+
 export function SessionProvider({ children }: { children: ComponentChildren }) {
-  const [state, dispatch] = useReducer(reducer, initialState, (base) => ({
+  const [ui, dispatch] = useReducer(reducer, initialState, (base) => ({
     ...base,
     route: routeFromHash(globalThis.location?.hash ?? ''),
   }));
 
-  // Hash routing rather than a routing framework — BUILD-PLAN rules one out, and deep
-  // links still have to work.
+  const [persisted, setPersisted] = useState<PersistedState>(emptyState);
+  const [storageWorks, setStorageWorks] = useState(true);
+  const [activeLessonId, setActiveLessonId] = useState<string | null>(null);
+  const [skipSignal, setSkipSignal] = useState(0);
+  const [hintSignal, setHintSignal] = useState(0);
+
+  // Read once, synchronously enough that the first paint can already be the resumed
+  // screen rather than a flash of the wrong one.
+  useEffect(() => {
+    setPersisted(loadPersisted(storage()));
+  }, []);
+
+  const commit = useCallback((next: PersistedState) => {
+    setPersisted(next);
+    setStorageWorks(savePersisted(storage(), next));
+  }, []);
+
   useEffect(() => {
     const onHashChange = () =>
       dispatch({ type: 'navigate', route: routeFromHash(globalThis.location.hash) });
@@ -52,22 +101,52 @@ export function SessionProvider({ children }: { children: ComponentChildren }) {
     return () => globalThis.removeEventListener('hashchange', onHashChange);
   }, []);
 
-  const api = useMemo<SessionApi>(
-    () => ({
-      ...state,
-      completedToday: completedToday(state),
-      atomsLeftToday: atomsLeftToday(state),
+  const api = useMemo<SessionApi>(() => {
+    const today = dayKey();
+    const completedToday = completedOn(persisted, today);
+    return {
+      ...ui,
+      streakDays: persisted.streakDays,
+      completedToday,
+      atomsLeftToday: Math.max(0, DAILY_TARGET_ATOMS - completedToday),
+      position: persisted.position,
+      flagCount: persisted.flags.length,
+      storageWorks,
+      activeLessonId,
+      skipSignal,
+      hintSignal,
+
       navigate: (route) => {
         globalThis.location.hash = `#/${route}`;
         dispatch({ type: 'navigate', route });
       },
       toggleFocus: () => dispatch({ type: 'toggleFocus' }),
       setPaused: (paused) => dispatch({ type: 'setPaused', paused }),
-      completeAtom: (atomId) => dispatch({ type: 'completeAtom', atomId }),
       setActiveAtom: (atomId) => dispatch({ type: 'setActiveAtom', atomId }),
-    }),
-    [state]
-  );
+
+      completeAtom: (atomId) => commit(completeAtomIn(persisted, atomId, today)),
+      setPosition: (position) => commit(setPositionIn(persisted, position)),
+      isFlagged: (atomId) => isFlaggedIn(persisted, atomId),
+      toggleFlag: (atomId, note) =>
+        commit(
+          isFlaggedIn(persisted, atomId)
+            ? removeFlag(persisted, atomId)
+            : addFlag(persisted, atomId, today, note)
+        ),
+
+      startLesson: (lessonId, atomIndex = 0) => {
+        setActiveLessonId(lessonId);
+        commit(setPositionIn(persisted, { lessonId, atomIndex }));
+      },
+      exitLesson: () => {
+        setActiveLessonId(null);
+        dispatch({ type: 'setActiveAtom', atomId: null });
+      },
+
+      requestSkip: () => setSkipSignal((n) => n + 1),
+      requestHint: () => setHintSignal((n) => n + 1),
+    };
+  }, [ui, persisted, storageWorks, activeLessonId, skipSignal, hintSignal, commit]);
 
   return <SessionContext.Provider value={api}>{children}</SessionContext.Provider>;
 }

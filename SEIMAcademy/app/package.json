@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "license": "GPL-3.0-or-later",
-  "description": "SEIM-Academy app shell — static-first SPA, Preact + TypeScript.",
+  "description": "SEIM-Academy app shell \u2014 static-first SPA, Preact + TypeScript.",
   "scripts": {
     "dev": "vite",
     "build": "tsc --noEmit && vite build",
@@ -15,7 +15,7 @@
     "prebuild": "node scripts/sync-content.mjs",
     "sync:content": "node scripts/sync-content.mjs",
     "check:types": "node scripts/check-types.mjs",
-    "test": "tsc -p tsconfig.test.json && node --test .tmp-test/"
+    "test": "node scripts/run-tests.mjs"
   },
   "dependencies": {
     "preact": "^10.24.3"

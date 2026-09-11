@@ -84,13 +84,41 @@ hidden", so `chromeFor()` in `state/session-core.ts` states it as an assertion a
 Skip and Hint are `aria-disabled` rather than `disabled` until an atom is on screen: still
 reachable by keyboard, still announced, visibly inert — discoverable rather than absent.
 
+## Rendering atom bodies
+
+`content/markdown.ts` parses the permitted subset into a small AST; `atoms/Markdown.tsx`
+turns that AST into Preact nodes. **There is no `innerHTML` in the path and no Markdown
+library behind it** — text reaches the DOM as text nodes, which is the §7 obligation stated
+as code rather than as a parser setting someone can flip later.
+
+Links are repo-relative only. A target with a scheme — `javascript:`, `data:`, `http:` — or
+a protocol-relative `//host` renders as literal text and is never followed. The content
+pipeline should already have rejected such a string; this is the second lock on the door.
+
+## Tests
+
+`npm test` compiles the pure modules and runs them under `node --test`. No test runner
+dependency, no DOM harness.
+
+The suite refuses to report success if it compiled fewer than four test files. That guard
+is there because this suite already failed silently once: the base tsconfig excludes
+`*.test.ts`, `exclude` is inherited through `extends`, zero tests compiled, and
+`node --test` reported `# pass 0 / # fail 0` and exited 0. A suite that can pass by being
+empty is not a gate.
+
+`state/resume.test.ts` runs against the **real** generated lessons rather than a fixture:
+it plays a lesson through the same state transitions the player performs, throws the
+in-memory state away the way closing a tab does, and asserts the resume point. It also
+round-trips all 707 atom ids through storage, because an id that does not survive
+serialisation would silently orphan a learner's progress.
+
 ## Status
 
-Units 1–2 of 4 done (#20–#25, #29, #30). The rail, HUD, exit bar and Focus mode are real
-and read real numbers from the build manifest.
+Units 1–3 of 4 done (#20–#27, #29–#31). The pilot module plays start to finish: 707 atoms
+across six types render, progress and streak persist, resume lands on the atom you left,
+and every atom can be flagged with an optional note.
 
-Not yet built, and deliberately not faked: the atom renderer and local persistence
-(Unit 3, #26/#27/#31) and the offline/degraded render and PWA shell (Unit 4, #28/#32).
-Views that depend on them say so rather than showing a plausible-looking placeholder — the
-streak reads 0 because nothing persists day boundaries yet, and Review names the Phase 3
-scheduler rather than showing an empty queue.
+Not yet built, and deliberately not faked: the offline/degraded render and the PWA shell
+(Unit 4, #28/#32). Answering, grading, SRS scheduling and drag interaction are **Phase 3** —
+quiz and exercise atoms render faithfully and reveal their answers so a lesson reads end to
+end, but nothing here scores anything.
