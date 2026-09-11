@@ -5,14 +5,15 @@
  * cache and make every change look like it did not apply — a debugging tax with no
  * benefit, since the offline path is verified against a built bundle anyway.
  */
+import { BASE_URL, IS_PROD } from './env';
 
 export function registerServiceWorker(): void {
-  if (!import.meta.env.PROD) return;
+  if (!IS_PROD) return;
   if (!('serviceWorker' in navigator)) return;
   globalThis.addEventListener('load', () => {
     // A registration failure is not the learner's problem: the app works without it, it
     // just will not work offline. Nothing is shown.
-    void navigator.serviceWorker.register(`${import.meta.env.BASE_URL}sw.js`).catch(() => {});
+    void navigator.serviceWorker.register(`${BASE_URL}sw.js`).catch(() => {});
   });
 }
 

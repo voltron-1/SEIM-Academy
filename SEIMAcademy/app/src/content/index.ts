@@ -7,8 +7,9 @@
  */
 import type { BuildManifest, Lesson } from './types';
 import { fetchJson, ContentUnavailable, type JsonResult } from './fetch-json';
+import { BASE_URL } from '../env';
 
-const BASE = `${import.meta.env.BASE_URL}content`;
+const BASE = `${BASE_URL}content`;
 
 export { ContentUnavailable };
 export type { JsonResult };

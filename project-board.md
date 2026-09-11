@@ -47,16 +47,16 @@ the order (see the phase graph in `README.md`).
 
 Unblocked, queued to start next.
 
-| Phase | Epic | Issue | Workstream | Unblocked by |
-|---|---|---|---|---|
-| 3 | Core components | [#5](https://github.com/voltron-1/SEIM-Academy/issues/5) | C | Phase 2 closed 2026-09-10 (7 open task issues) |
+_Empty — Phase 3 is in progress; Phase 4 depends on it._
 
 | Phase | Epic | Issue | Workstream | Unblocked by |
 |---|---|---|---|---|
 
 ### 🔧 In Progress
 
-_Empty — Phase 2 is closed; Phase 3 is Ready and not yet started._
+| Phase | Epic | Issue | Milestone | Workstream | Progress |
+|---|---|---|---|---|---|
+| 3 | Core components | [#5](https://github.com/voltron-1/SEIM-Academy/issues/5) | Phase 3 — Core components | C | Unit 1 of 4 · harness + Instructions atom |
 
 ### 🏁 Done
 

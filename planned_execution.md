@@ -13,17 +13,26 @@ Status markers: `[ ]` todo · `[~]` in-progress · `[x]` done · `[!]` blocked
 
 ## NEXT UP
 
-**Phase 3 — Core components** `[ ]` **not started** —
+**Phase 3 — Core components** `[~]` **in progress** (opened 2026-09-11) —
 [#5](https://github.com/voltron-1/SEIM-Academy/issues/5), milestone *Phase 3 — Core
-components* (7 open task issues). Phase 2 is closed, so nothing blocks it.
+components*. Running in four gated units; Unit 1 (test harness + Instructions atom) is
+done.
 
-**Next unstarted item:** the Instructions atom. Build it first — it is a schema-enforced
-prerequisite of every exercise atom, so every other component in this phase depends on its
-shape being settled.
+**Next unstarted item:** Unit 2 — Flashcard + SRS
+[#35](https://github.com/voltron-1/SEIM-Academy/issues/35). SM-2 scheduler as a pure
+module, unit-tested against known interval sequences, plus the enforced
+topic-diversity/interleaving window. It is the one piece in this phase with a correct
+answer checkable against a specification rather than an opinion.
 
-Then, in order: Flashcard + SRS (SM-2 with the topic-interleaving window),
-multiple-choice/fill-in-the-blank with inline feedback, matching/drag-classify **with its
-keyboard equivalent shipped in the same PR**, and the test-out check.
+Then: multiple-choice/fill-in-the-blank with inline feedback
+[#36](https://github.com/voltron-1/SEIM-Academy/issues/36), matching/drag-classify **with
+its keyboard equivalent in the same PR** [#37](https://github.com/voltron-1/SEIM-Academy/issues/37),
+the test-out check [#38](https://github.com/voltron-1/SEIM-Academy/issues/38), and the
+cross-component accessibility sweep [#39](https://github.com/voltron-1/SEIM-Academy/issues/39).
+
+**Unit 1 settled the thing that would have blocked the exit check.** Phase 3 requires
+keyboard/screen-reader verification and nothing in Phases 1–2 could do it. The harness was
+built before any component rather than after five of them.
 
 **What Phase 2 hands forward:**
 
@@ -129,9 +138,10 @@ all 177 source files verified, curriculum map committed, content audit recorded.
       installability partially verified, carried to Phase 8.*
       [#4](https://github.com/voltron-1/SEIM-Academy/issues/4) closed, milestone 15/15,
       PRs [#112](https://github.com/voltron-1/SEIM-Academy/pull/112)–[#115](https://github.com/voltron-1/SEIM-Academy/pull/115).
-- [ ] **Phase 3 — Core components** — Instructions atom, Flashcard+SRS, MC/fill-blank,
-      matching/drag with keyboard equivalent, test-out check. *Next up; unblocked
-      2026-09-10.* [#5](https://github.com/voltron-1/SEIM-Academy/issues/5)
+- [~] **Phase 3 — Core components** — Instructions atom, Flashcard+SRS, MC/fill-blank,
+      matching/drag with keyboard equivalent, test-out check. *In progress since
+      2026-09-11; Unit 1 of 4 done.*
+      [#5](https://github.com/voltron-1/SEIM-Academy/issues/5)
 - [ ] **Phase 4 — Tier 1 complete** — pipeline across ten Tier 1 modules; Capstone 1.
 - [ ] **Phase 5 — Advanced components** — calculators, SPL sandbox, structured editor,
       scenario + evidence board. *Runs parallel with Phase 4.*

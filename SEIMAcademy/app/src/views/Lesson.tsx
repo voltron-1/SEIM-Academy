@@ -106,7 +106,12 @@ export function LessonPlayer({ lessonId }: { lessonId: string }) {
         </span>
       </p>
 
-      <AtomView atom={atom} hint={hintAt === index} />
+      <AtomView
+        atom={atom}
+        hint={hintAt === index}
+        /* A harder exercise is announced by the atom before it, never discovered mid-struggle. */
+        nextDifficulty={atom.type === 'instructions' ? atoms[index + 1]?.difficulty : undefined}
+      />
 
       <div class="lesson__controls">
         <button type="button" class="ghost" disabled={index === 0} onClick={() => setIndex(index - 1)}>
