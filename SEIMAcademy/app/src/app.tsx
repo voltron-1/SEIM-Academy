@@ -3,10 +3,14 @@ import { LeftRail } from './shell/LeftRail';
 import { Hud } from './shell/Hud';
 import { ExitBar, PauseOverlay } from './shell/ExitBar';
 import { Today, Tier, Copilot, Review } from './views';
+import { LessonPlayer } from './views/Lesson';
 import './app.css';
 
 function CurrentView() {
-  const { route } = useSession();
+  const { route, activeLessonId } = useSession();
+  // A lesson in progress outranks the route: "Exit to Today" is how you leave it, which is
+  // exactly what that affordance is for.
+  if (activeLessonId) return <LessonPlayer lessonId={activeLessonId} />;
   switch (route) {
     case 'tier1':
       return <Tier tier={1} />;

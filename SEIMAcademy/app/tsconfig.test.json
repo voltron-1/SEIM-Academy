@@ -7,10 +7,17 @@
     "moduleResolution": "nodenext",
     "types": [
       "node"
-    ]
+    ],
+    "rootDir": "src"
   },
   "include": [
     "src/state/session-core.ts",
-    "src/state/session-core.test.ts"
-  ]
+    "src/state/session-core.test.ts",
+    "src/content/markdown.ts",
+    "src/content/markdown.test.ts",
+    "src/state/persistence.ts",
+    "src/state/persistence.test.ts",
+    "src/state/resume.test.ts"
+  ],
+  "exclude": []
 }
