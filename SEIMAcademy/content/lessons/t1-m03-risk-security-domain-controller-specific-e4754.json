@@ -1,0 +1,428 @@
+{
+  "schema_version": "1.0.0",
+  "id": "t1-m03-risk-security-domain-controller-specific-e4754",
+  "tier": 1,
+  "module": "3",
+  "part": 3,
+  "title": "Security (Domain Controller Specific) (risk) — part 3",
+  "summary": "10 notable Event IDs from the Security (Domain Controller Specific) channel on the risk list.",
+  "estimated_seconds": 320,
+  "teaches": [
+    "channel:security-domain-controller-specific",
+    "concept:corpus-purpose",
+    "corpus:risk",
+    "event:security-domain-controller-specific:4754",
+    "event:security-domain-controller-specific:4755",
+    "event:security-domain-controller-specific:4756",
+    "event:security-domain-controller-specific:4757",
+    "event:security-domain-controller-specific:4758",
+    "event:security-domain-controller-specific:4759",
+    "event:security-domain-controller-specific:4760",
+    "event:security-domain-controller-specific:4761",
+    "event:security-domain-controller-specific:4762",
+    "event:security-domain-controller-specific:4763"
+  ],
+  "requires": [],
+  "sources": [
+    {
+      "path": "Logging/Notable-Event-IDs-Risk.md",
+      "heading": "Security (Domain Controller Specific)"
+    }
+  ],
+  "generated": {
+    "generator": "build-content",
+    "generator_version": "1.0.0",
+    "source_repo": "TonyPhipps/SIEM",
+    "source_commit": "4adb971",
+    "source_license": "GPL-3.0",
+    "profile": "event-id-tables",
+    "content_hash": "00af4cb7c3a3b8a0377a5133633f01f93511cbde1852016eb96b648b268604b1"
+  },
+  "atoms": [
+    {
+      "id": "t1-m03-risk-security-domain-controller-specific-intro-e4754",
+      "type": "reading",
+      "title": "Security (Domain Controller Specific)",
+      "body": "The **Security (Domain Controller Specific)** channel appears on the risk list with 41 notable Event IDs. This sitting covers 10 of them.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security (Domain Controller Specific)"
+      },
+      "teaches": [
+        "channel:security-domain-controller-specific",
+        "corpus:risk"
+      ],
+      "estimated_seconds": 45,
+      "graded": false,
+      "payload": {}
+    },
+    {
+      "id": "t1-m03-risk-security-domain-controller-specific-fc-4754",
+      "type": "flashcard",
+      "title": "Security (Domain Controller Specific) 4754",
+      "body": "Log channel: Security (Domain Controller Specific) · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security (Domain Controller Specific)"
+      },
+      "teaches": [
+        "channel:security-domain-controller-specific",
+        "corpus:risk",
+        "event:security-domain-controller-specific:4754"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security-domain-controller-specific",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security (Domain Controller Specific) — Event ID 4754",
+        "back": "A security-enabled universal group was created."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-domain-controller-specific-fc-4755",
+      "type": "flashcard",
+      "title": "Security (Domain Controller Specific) 4755",
+      "body": "Log channel: Security (Domain Controller Specific) · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security (Domain Controller Specific)"
+      },
+      "teaches": [
+        "channel:security-domain-controller-specific",
+        "corpus:risk",
+        "event:security-domain-controller-specific:4755"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security-domain-controller-specific",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security (Domain Controller Specific) — Event ID 4755",
+        "back": "A security-enabled universal group was changed."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-domain-controller-specific-fc-4756",
+      "type": "flashcard",
+      "title": "Security (Domain Controller Specific) 4756",
+      "body": "Log channel: Security (Domain Controller Specific) · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security (Domain Controller Specific)"
+      },
+      "teaches": [
+        "channel:security-domain-controller-specific",
+        "corpus:risk",
+        "event:security-domain-controller-specific:4756"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security-domain-controller-specific",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security (Domain Controller Specific) — Event ID 4756",
+        "back": "A member was added to a security-enabled universal group."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-domain-controller-specific-fc-4757",
+      "type": "flashcard",
+      "title": "Security (Domain Controller Specific) 4757",
+      "body": "Log channel: Security (Domain Controller Specific) · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security (Domain Controller Specific)"
+      },
+      "teaches": [
+        "channel:security-domain-controller-specific",
+        "corpus:risk",
+        "event:security-domain-controller-specific:4757"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security-domain-controller-specific",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security (Domain Controller Specific) — Event ID 4757",
+        "back": "A member was removed from a security-enabled universal group."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-domain-controller-specific-fc-4758",
+      "type": "flashcard",
+      "title": "Security (Domain Controller Specific) 4758",
+      "body": "Log channel: Security (Domain Controller Specific) · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security (Domain Controller Specific)"
+      },
+      "teaches": [
+        "channel:security-domain-controller-specific",
+        "corpus:risk",
+        "event:security-domain-controller-specific:4758"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security-domain-controller-specific",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security (Domain Controller Specific) — Event ID 4758",
+        "back": "A security-enabled universal group was deleted."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-domain-controller-specific-fc-4759",
+      "type": "flashcard",
+      "title": "Security (Domain Controller Specific) 4759",
+      "body": "Log channel: Security (Domain Controller Specific) · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security (Domain Controller Specific)"
+      },
+      "teaches": [
+        "channel:security-domain-controller-specific",
+        "corpus:risk",
+        "event:security-domain-controller-specific:4759"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security-domain-controller-specific",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security (Domain Controller Specific) — Event ID 4759",
+        "back": "A security-disabled universal group was created"
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-domain-controller-specific-fc-4760",
+      "type": "flashcard",
+      "title": "Security (Domain Controller Specific) 4760",
+      "body": "Log channel: Security (Domain Controller Specific) · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security (Domain Controller Specific)"
+      },
+      "teaches": [
+        "channel:security-domain-controller-specific",
+        "corpus:risk",
+        "event:security-domain-controller-specific:4760"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security-domain-controller-specific",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security (Domain Controller Specific) — Event ID 4760",
+        "back": "A security-disabled universal group was changed"
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-domain-controller-specific-fc-4761",
+      "type": "flashcard",
+      "title": "Security (Domain Controller Specific) 4761",
+      "body": "Log channel: Security (Domain Controller Specific) · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security (Domain Controller Specific)"
+      },
+      "teaches": [
+        "channel:security-domain-controller-specific",
+        "corpus:risk",
+        "event:security-domain-controller-specific:4761"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security-domain-controller-specific",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security (Domain Controller Specific) — Event ID 4761",
+        "back": "A member was added to a security-disabled universal group"
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-domain-controller-specific-fc-4762",
+      "type": "flashcard",
+      "title": "Security (Domain Controller Specific) 4762",
+      "body": "Log channel: Security (Domain Controller Specific) · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security (Domain Controller Specific)"
+      },
+      "teaches": [
+        "channel:security-domain-controller-specific",
+        "corpus:risk",
+        "event:security-domain-controller-specific:4762"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security-domain-controller-specific",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security (Domain Controller Specific) — Event ID 4762",
+        "back": "A member was removed from a security-disabled universal group"
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-domain-controller-specific-fc-4763",
+      "type": "flashcard",
+      "title": "Security (Domain Controller Specific) 4763",
+      "body": "Log channel: Security (Domain Controller Specific) · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security (Domain Controller Specific)"
+      },
+      "teaches": [
+        "channel:security-domain-controller-specific",
+        "corpus:risk",
+        "event:security-domain-controller-specific:4763"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security-domain-controller-specific",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security (Domain Controller Specific) — Event ID 4763",
+        "back": "A security-disabled universal group was deleted"
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-domain-controller-specific-quiz-e4754",
+      "type": "quiz",
+      "title": "Recall: Security (Domain Controller Specific)",
+      "body": "Inline feedback, no results page.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security (Domain Controller Specific)"
+      },
+      "requires": [
+        "event:security-domain-controller-specific:4754"
+      ],
+      "estimated_seconds": 35,
+      "graded": true,
+      "payload": {
+        "format": "multiple-choice",
+        "question": "In the Security (Domain Controller Specific) channel, which Event ID records: “A security-enabled universal group was created.”",
+        "choices": [
+          "4754",
+          "4755",
+          "4756",
+          "4757"
+        ],
+        "answer_index": 0,
+        "rationale": "Logging/Notable-Event-IDs-Risk.md#Security (Domain Controller Specific) lists 4754 as “A security-enabled universal group was created.”."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-domain-controller-specific-instr-e4754",
+      "type": "instructions",
+      "title": "Before you start: Security (Domain Controller Specific)",
+      "body": "",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security (Domain Controller Specific)"
+      },
+      "teaches": [
+        "concept:corpus-purpose"
+      ],
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "goal": "Match each Security (Domain Controller Specific) Event ID to what it records.",
+        "what_youll_use": "The 10 cards you just reviewed — nothing outside them.",
+        "done_when": "Every ID on the left has a description on the right."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-domain-controller-specific-match-e4754",
+      "type": "exercise",
+      "title": "Match: Security (Domain Controller Specific) IDs to what they record",
+      "body": "Every ID below was on the cards you just saw.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security (Domain Controller Specific)"
+      },
+      "requires": [
+        "channel:security-domain-controller-specific",
+        "event:security-domain-controller-specific:4754",
+        "event:security-domain-controller-specific:4755",
+        "event:security-domain-controller-specific:4756",
+        "event:security-domain-controller-specific:4757",
+        "event:security-domain-controller-specific:4758",
+        "event:security-domain-controller-specific:4759",
+        "event:security-domain-controller-specific:4760",
+        "event:security-domain-controller-specific:4761"
+      ],
+      "estimated_seconds": 60,
+      "difficulty": "standard",
+      "graded": true,
+      "payload": {
+        "format": "match",
+        "pairs": [
+          {
+            "left": "4754",
+            "right": "A security-enabled universal group was created."
+          },
+          {
+            "left": "4755",
+            "right": "A security-enabled universal group was changed."
+          },
+          {
+            "left": "4756",
+            "right": "A member was added to a security-enabled universal group."
+          },
+          {
+            "left": "4757",
+            "right": "A member was removed from a security-enabled universal group."
+          },
+          {
+            "left": "4758",
+            "right": "A security-enabled universal group was deleted."
+          },
+          {
+            "left": "4759",
+            "right": "A security-disabled universal group was created"
+          },
+          {
+            "left": "4760",
+            "right": "A security-disabled universal group was changed"
+          },
+          {
+            "left": "4761",
+            "right": "A member was added to a security-disabled universal group"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,245 @@
+{
+  "schema_version": "1.0.0",
+  "id": "t1-m03-risk-microsoft-windows-codeintegrity-operational-e3002",
+  "tier": 1,
+  "module": "3",
+  "title": "Microsoft-Windows-CodeIntegrity/Operational (risk)",
+  "summary": "4 notable Event IDs from the Microsoft-Windows-CodeIntegrity/Operational channel on the risk list.",
+  "estimated_seconds": 230,
+  "teaches": [
+    "channel:microsoft-windows-codeintegrity-operational",
+    "concept:corpus-purpose",
+    "corpus:risk",
+    "event:microsoft-windows-codeintegrity-operational:3002",
+    "event:microsoft-windows-codeintegrity-operational:3003",
+    "event:microsoft-windows-codeintegrity-operational:3004",
+    "event:microsoft-windows-codeintegrity-operational:3010"
+  ],
+  "requires": [],
+  "sources": [
+    {
+      "path": "Logging/Notable-Event-IDs-Risk.md",
+      "heading": "Microsoft-Windows-CodeIntegrity/Operational"
+    }
+  ],
+  "generated": {
+    "generator": "build-content",
+    "generator_version": "1.0.0",
+    "source_repo": "TonyPhipps/SIEM",
+    "source_commit": "4adb971",
+    "source_license": "GPL-3.0",
+    "profile": "event-id-tables",
+    "content_hash": "01ab89297f525e8af4f524953c14cd674decfb74cbb90233c03c64b09fcbc67b"
+  },
+  "atoms": [
+    {
+      "id": "t1-m03-risk-microsoft-windows-codeintegrity-operational-intro-e3002",
+      "type": "reading",
+      "title": "Microsoft-Windows-CodeIntegrity/Operational",
+      "body": "The **Microsoft-Windows-CodeIntegrity/Operational** channel appears on the risk list with 4 notable Event IDs. This sitting covers 4 of them.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-CodeIntegrity/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-codeintegrity-operational",
+        "corpus:risk"
+      ],
+      "estimated_seconds": 45,
+      "graded": false,
+      "payload": {}
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-codeintegrity-operational-fc-3002",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-CodeIntegrity/Operational 3002",
+      "body": "Log channel: Microsoft-Windows-CodeIntegrity/Operational · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-CodeIntegrity/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-codeintegrity-operational",
+        "corpus:risk",
+        "event:microsoft-windows-codeintegrity-operational:3002"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-codeintegrity-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-CodeIntegrity/Operational — Event ID 3002",
+        "back": "Code Integrity is unable to verify the image integrity of the file %2 because the set of per-page image hashes could not be found on the system."
+      }
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-codeintegrity-operational-fc-3003",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-CodeIntegrity/Operational 3003",
+      "body": "Log channel: Microsoft-Windows-CodeIntegrity/Operational · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-CodeIntegrity/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-codeintegrity-operational",
+        "corpus:risk",
+        "event:microsoft-windows-codeintegrity-operational:3003"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-codeintegrity-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-CodeIntegrity/Operational — Event ID 3003",
+        "back": "Code Integrity is unable to verify the image integrity of the file %2 because the set of per-page image hashes could not be found on the system. The image is allowed to load because kernel mode debugger is attached."
+      }
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-codeintegrity-operational-fc-3004",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-CodeIntegrity/Operational 3004",
+      "body": "Log channel: Microsoft-Windows-CodeIntegrity/Operational · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-CodeIntegrity/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-codeintegrity-operational",
+        "corpus:risk",
+        "event:microsoft-windows-codeintegrity-operational:3004"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-codeintegrity-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-CodeIntegrity/Operational — Event ID 3004",
+        "back": "Windows is unable to verify the image integrity of the file %2 because file hash could not be found on the system. A recent hardware or software change might have installed a file that is signed incorrectly or damaged, or that might be malicious software from an unknown source."
+      }
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-codeintegrity-operational-fc-3010",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-CodeIntegrity/Operational 3010",
+      "body": "Log channel: Microsoft-Windows-CodeIntegrity/Operational · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-CodeIntegrity/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-codeintegrity-operational",
+        "corpus:risk",
+        "event:microsoft-windows-codeintegrity-operational:3010"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-codeintegrity-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-CodeIntegrity/Operational — Event ID 3010",
+        "back": "Code Integrity was unable to load the %2 catalog."
+      }
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-codeintegrity-operational-quiz-e3002",
+      "type": "quiz",
+      "title": "Recall: Microsoft-Windows-CodeIntegrity/Operational",
+      "body": "Inline feedback, no results page.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-CodeIntegrity/Operational"
+      },
+      "requires": [
+        "event:microsoft-windows-codeintegrity-operational:3002"
+      ],
+      "estimated_seconds": 35,
+      "graded": true,
+      "payload": {
+        "format": "multiple-choice",
+        "question": "In the Microsoft-Windows-CodeIntegrity/Operational channel, which Event ID records: “Code Integrity is unable to verify the image integrity of the file %2 because the set of per-page image hashes could not be found on the system.”",
+        "choices": [
+          "3002",
+          "3003",
+          "3004",
+          "3010"
+        ],
+        "answer_index": 0,
+        "rationale": "Logging/Notable-Event-IDs-Risk.md#Microsoft-Windows-CodeIntegrity/Operational lists 3002 as “Code Integrity is unable to verify the image integrity of the file %2 because the set of per-page image hashes could not be found on the system.”."
+      }
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-codeintegrity-operational-instr-e3002",
+      "type": "instructions",
+      "title": "Before you start: Microsoft-Windows-CodeIntegrity/Operational",
+      "body": "",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-CodeIntegrity/Operational"
+      },
+      "teaches": [
+        "concept:corpus-purpose"
+      ],
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "goal": "Match each Microsoft-Windows-CodeIntegrity/Operational Event ID to what it records.",
+        "what_youll_use": "The 4 cards you just reviewed — nothing outside them.",
+        "done_when": "Every ID on the left has a description on the right."
+      }
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-codeintegrity-operational-match-e3002",
+      "type": "exercise",
+      "title": "Match: Microsoft-Windows-CodeIntegrity/Operational IDs to what they record",
+      "body": "Every ID below was on the cards you just saw.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-CodeIntegrity/Operational"
+      },
+      "requires": [
+        "channel:microsoft-windows-codeintegrity-operational",
+        "event:microsoft-windows-codeintegrity-operational:3002",
+        "event:microsoft-windows-codeintegrity-operational:3003",
+        "event:microsoft-windows-codeintegrity-operational:3004",
+        "event:microsoft-windows-codeintegrity-operational:3010"
+      ],
+      "estimated_seconds": 60,
+      "difficulty": "standard",
+      "graded": true,
+      "payload": {
+        "format": "match",
+        "pairs": [
+          {
+            "left": "3002",
+            "right": "Code Integrity is unable to verify the image integrity of the file %2 because the set of per-page image hashes could not be found on the system."
+          },
+          {
+            "left": "3003",
+            "right": "Code Integrity is unable to verify the image integrity of the file %2 because the set of per-page image hashes could not be found on the system. The image is allowed to load because kernel mode debugger is attached."
+          },
+          {
+            "left": "3004",
+            "right": "Windows is unable to verify the image integrity of the file %2 because file hash could not be found on the system. A recent hardware or software change might have installed a file that is signed incorrectly or damaged, or that might be malicious software from an unknown source."
+          },
+          {
+            "left": "3010",
+            "right": "Code Integrity was unable to load the %2 catalog."
+          }
+        ]
+      }
+    }
+  ]
+}

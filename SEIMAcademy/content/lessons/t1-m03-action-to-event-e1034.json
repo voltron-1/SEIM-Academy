@@ -1,0 +1,172 @@
+{
+  "schema_version": "1.0.0",
+  "id": "t1-m03-action-to-event-e1034",
+  "tier": 1,
+  "module": "3",
+  "part": 1,
+  "title": "Action → Event ID — part 1",
+  "summary": "Ground-truth pairs from the lab telemetry generators: what someone did, and what the log recorded.",
+  "estimated_seconds": 205,
+  "teaches": [
+    "concept:action-to-event"
+  ],
+  "requires": [
+    "event:application:1034",
+    "event:application:11724",
+    "event:security-domain-controller-specific:4741",
+    "event:security:4720",
+    "event:security:4727",
+    "event:security:4731"
+  ],
+  "sources": [
+    {
+      "path": "Lab/Generate-Suspicious-Activity.ps1"
+    }
+  ],
+  "generated": {
+    "generator": "build-content",
+    "generator_version": "1.0.0",
+    "source_repo": "TonyPhipps/SIEM",
+    "source_commit": "4adb971",
+    "source_license": "GPL-3.0",
+    "profile": "event-id-tables",
+    "content_hash": "afa367852349a243135076a66f420088d054c186b4838b663e58408eedee2232"
+  },
+  "atoms": [
+    {
+      "id": "t1-m03-action-event-intro-e1034",
+      "type": "reading",
+      "title": "What the attacker did, what the log said",
+      "body": "These pairs come from the lab telemetry generators in the source knowledge base. Each block there is labelled with the action it performs and the Event ID that action produces — ground truth, written by whoever wrote the generator.\n\nReading an alert backwards, from Event ID to action, is the whole job on a triage queue.",
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity.ps1",
+        "lines": [
+          54,
+          54
+        ]
+      },
+      "teaches": [
+        "concept:action-to-event"
+      ],
+      "estimated_seconds": 50,
+      "graded": false,
+      "payload": {}
+    },
+    {
+      "id": "t1-m03-lab-action-to-event-instr-e1034",
+      "type": "instructions",
+      "title": "Before you start: action to event",
+      "body": "",
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity.ps1",
+        "lines": [
+          54,
+          54
+        ]
+      },
+      "teaches": [
+        "concept:action-to-event"
+      ],
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "goal": "Drop each action onto the Event ID it produces.",
+        "what_youll_use": "The Event ID cards you have already reviewed, plus the ground-truth pairs in t1-m03-lab-action-event-pairs.",
+        "done_when": "Every action sits under an Event ID."
+      }
+    },
+    {
+      "id": "t1-m03-action-event-drag-e1034",
+      "type": "exercise",
+      "title": "Action → Event ID",
+      "body": "Ground truth from the lab generators. No trick answers.",
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity.ps1",
+        "lines": [
+          54,
+          84
+        ]
+      },
+      "requires": [
+        "concept:action-to-event",
+        "event:application:1034",
+        "event:application:11724",
+        "event:security-domain-controller-specific:4741",
+        "event:security:4720",
+        "event:security:4727",
+        "event:security:4731"
+      ],
+      "estimated_seconds": 90,
+      "difficulty": "standard",
+      "graded": true,
+      "payload": {
+        "format": "drag-classify",
+        "buckets": [
+          "Application 1034, 11724",
+          "Security 4731",
+          "Security 4720",
+          "Security (Domain Controller Specific) 4741",
+          "Security 4727"
+        ],
+        "items": [
+          {
+            "label": "Application Uninstalled",
+            "bucket": "Application 1034, 11724"
+          },
+          {
+            "label": "Create a Local Group",
+            "bucket": "Security 4731"
+          },
+          {
+            "label": "Create Local User",
+            "bucket": "Security 4720"
+          },
+          {
+            "label": "Create a Computer Object (on a domain controller)",
+            "bucket": "Security (Domain Controller Specific) 4741"
+          },
+          {
+            "label": "Create AD User Object (on a domain controller)",
+            "bucket": "Security 4720"
+          },
+          {
+            "label": "Create AD Group (on a domain controller)",
+            "bucket": "Security 4727"
+          }
+        ]
+      }
+    },
+    {
+      "id": "t1-m03-action-event-quiz-e1034",
+      "type": "quiz",
+      "title": "Read it backwards",
+      "body": "Inline feedback, no results page.",
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity.ps1",
+        "lines": [
+          54,
+          54
+        ]
+      },
+      "requires": [
+        "concept:action-to-event",
+        "event:application:1034",
+        "event:application:11724"
+      ],
+      "estimated_seconds": 35,
+      "graded": true,
+      "payload": {
+        "format": "multiple-choice",
+        "question": "Application 1034, 11724 just fired. Which action produced it?",
+        "choices": [
+          "Application Uninstalled",
+          "Create a Computer Object",
+          "Create a Local Group",
+          "Create Local User"
+        ],
+        "answer_index": 0,
+        "rationale": "Lab/Generate-Suspicious-Activity.ps1:54 labels this block “Application Uninstalled”."
+      }
+    }
+  ]
+}

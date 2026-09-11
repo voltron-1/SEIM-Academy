@@ -1,0 +1,172 @@
+{
+  "schema_version": "1.0.0",
+  "id": "t1-m03-action-to-event-e4720",
+  "tier": 1,
+  "module": "3",
+  "part": 6,
+  "title": "Action → Event ID — part 6",
+  "summary": "Ground-truth pairs from the lab telemetry generators: what someone did, and what the log recorded.",
+  "estimated_seconds": 205,
+  "teaches": [
+    "concept:action-to-event"
+  ],
+  "requires": [
+    "event:security:4657",
+    "event:security:4663",
+    "event:security:4719",
+    "event:security:4720",
+    "event:security:4781",
+    "event:security:5038"
+  ],
+  "sources": [
+    {
+      "path": "Lab/Generate-Suspicious-Activity-Sigma.ps1"
+    }
+  ],
+  "generated": {
+    "generator": "build-content",
+    "generator_version": "1.0.0",
+    "source_repo": "TonyPhipps/SIEM",
+    "source_commit": "4adb971",
+    "source_license": "GPL-3.0",
+    "profile": "event-id-tables",
+    "content_hash": "49b3d111d25e2c01249d19d600aaf5f6fe88df281df19a063e931140fd83e703"
+  },
+  "atoms": [
+    {
+      "id": "t1-m03-action-event-intro-e4720",
+      "type": "reading",
+      "title": "What the attacker did, what the log said",
+      "body": "These pairs come from the lab telemetry generators in the source knowledge base. Each block there is labelled with the action it performs and the Event ID that action produces — ground truth, written by whoever wrote the generator.\n\nReading an alert backwards, from Event ID to action, is the whole job on a triage queue.",
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "lines": [
+          129,
+          129
+        ]
+      },
+      "teaches": [
+        "concept:action-to-event"
+      ],
+      "estimated_seconds": 50,
+      "graded": false,
+      "payload": {}
+    },
+    {
+      "id": "t1-m03-lab-action-to-event-instr-e4720",
+      "type": "instructions",
+      "title": "Before you start: action to event",
+      "body": "",
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "lines": [
+          129,
+          129
+        ]
+      },
+      "teaches": [
+        "concept:action-to-event"
+      ],
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "goal": "Drop each action onto the Event ID it produces.",
+        "what_youll_use": "The Event ID cards you have already reviewed, plus the ground-truth pairs in t1-m03-lab-action-event-pairs.",
+        "done_when": "Every action sits under an Event ID."
+      }
+    },
+    {
+      "id": "t1-m03-action-event-drag-e4720",
+      "type": "exercise",
+      "title": "Action → Event ID",
+      "body": "Ground truth from the lab generators. No trick answers.",
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "lines": [
+          129,
+          188
+        ]
+      },
+      "requires": [
+        "concept:action-to-event",
+        "event:security:4657",
+        "event:security:4663",
+        "event:security:4719",
+        "event:security:4720",
+        "event:security:4781",
+        "event:security:5038"
+      ],
+      "estimated_seconds": 90,
+      "difficulty": "standard",
+      "graded": true,
+      "payload": {
+        "format": "drag-classify",
+        "buckets": [
+          "Security 4720, 4781",
+          "Security 5038",
+          "Security 4719",
+          "Security 4657",
+          "Security 4663"
+        ],
+        "items": [
+          {
+            "label": "New or Renamed User Account with '$' Character",
+            "bucket": "Security 4720, 4781"
+          },
+          {
+            "label": "Failed Code Integrity Checks",
+            "bucket": "Security 5038"
+          },
+          {
+            "label": "Windows Event Auditing Disabled",
+            "bucket": "Security 4719"
+          },
+          {
+            "label": "Important Windows Event Auditing Disabled",
+            "bucket": "Security 4719"
+          },
+          {
+            "label": "ETW Logging Disabled In .NET Processes - Registry",
+            "bucket": "Security 4657"
+          },
+          {
+            "label": "ISO Image Mounted",
+            "bucket": "Security 4663"
+          }
+        ]
+      }
+    },
+    {
+      "id": "t1-m03-action-event-quiz-e4720",
+      "type": "quiz",
+      "title": "Read it backwards",
+      "body": "Inline feedback, no results page.",
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "lines": [
+          129,
+          129
+        ]
+      },
+      "requires": [
+        "concept:action-to-event",
+        "event:security:4720",
+        "event:security:4781"
+      ],
+      "estimated_seconds": 35,
+      "graded": true,
+      "payload": {
+        "format": "multiple-choice",
+        "question": "Security 4720, 4781 just fired. Which action produced it?",
+        "choices": [
+          "Failed Code Integrity Checks",
+          "Important Windows Event Auditing Disabled",
+          "New or Renamed User Account with '$' Character",
+          "Windows Event Auditing Disabled"
+        ],
+        "answer_index": 2,
+        "rationale": "Lab/Generate-Suspicious-Activity-Sigma.ps1:129 labels this block “New or Renamed User Account with '$' Character”."
+      }
+    }
+  ]
+}

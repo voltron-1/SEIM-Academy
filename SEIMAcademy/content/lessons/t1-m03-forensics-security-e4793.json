@@ -1,0 +1,401 @@
+{
+  "schema_version": "1.0.0",
+  "id": "t1-m03-forensics-security-e4793",
+  "tier": 1,
+  "module": "3",
+  "part": 2,
+  "title": "Security (forensics) — part 2",
+  "summary": "9 notable Event IDs from the Security channel on the forensics list.",
+  "estimated_seconds": 305,
+  "teaches": [
+    "channel:security",
+    "concept:corpus-purpose",
+    "corpus:forensics",
+    "event:security:4793",
+    "event:security:4801",
+    "event:security:4802",
+    "event:security:4803",
+    "event:security:4817",
+    "event:security:4885",
+    "event:security:4890",
+    "event:security:4906",
+    "event:security:4907"
+  ],
+  "requires": [],
+  "sources": [
+    {
+      "path": "Logging/Notable-Event-IDs-Forensics.md",
+      "heading": "Security"
+    }
+  ],
+  "generated": {
+    "generator": "build-content",
+    "generator_version": "1.0.0",
+    "source_repo": "TonyPhipps/SIEM",
+    "source_commit": "4adb971",
+    "source_license": "GPL-3.0",
+    "profile": "event-id-tables",
+    "content_hash": "e38de34f7b904b3bec8e64bee3fe4b5496410bc44a101b75b0d295260a071ed5"
+  },
+  "atoms": [
+    {
+      "id": "t1-m03-forensics-security-intro-e4793",
+      "type": "reading",
+      "title": "Security",
+      "body": "The **Security** channel appears on the forensics list with 37 notable Event IDs. This sitting covers 9 of them.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:forensics"
+      ],
+      "estimated_seconds": 45,
+      "graded": false,
+      "payload": {}
+    },
+    {
+      "id": "t1-m03-forensics-security-fc-4793",
+      "type": "flashcard",
+      "title": "Security 4793",
+      "body": "Log channel: Security · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:forensics",
+        "event:security:4793"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4793",
+        "back": "The Password Policy Checking API was called."
+      }
+    },
+    {
+      "id": "t1-m03-forensics-security-fc-4801",
+      "type": "flashcard",
+      "title": "Security 4801",
+      "body": "Log channel: Security · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:forensics",
+        "event:security:4801"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4801",
+        "back": "The workstation was unlocked."
+      }
+    },
+    {
+      "id": "t1-m03-forensics-security-fc-4802",
+      "type": "flashcard",
+      "title": "Security 4802",
+      "body": "Log channel: Security · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:forensics",
+        "event:security:4802"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4802",
+        "back": "The screen saver was invoked"
+      }
+    },
+    {
+      "id": "t1-m03-forensics-security-fc-4803",
+      "type": "flashcard",
+      "title": "Security 4803",
+      "body": "Log channel: Security · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:forensics",
+        "event:security:4803"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4803",
+        "back": "The screen saver was dismissed."
+      }
+    },
+    {
+      "id": "t1-m03-forensics-security-fc-4817",
+      "type": "flashcard",
+      "title": "Security 4817",
+      "body": "Log channel: Security · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:forensics",
+        "event:security:4817"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4817",
+        "back": "Auditing settings on object were changed."
+      }
+    },
+    {
+      "id": "t1-m03-forensics-security-fc-4885",
+      "type": "flashcard",
+      "title": "Security 4885",
+      "body": "Log channel: Security · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:forensics",
+        "event:security:4885"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4885",
+        "back": "The audit filter for Certificate Services changed."
+      }
+    },
+    {
+      "id": "t1-m03-forensics-security-fc-4890",
+      "type": "flashcard",
+      "title": "Security 4890",
+      "body": "Log channel: Security · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:forensics",
+        "event:security:4890"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4890",
+        "back": "The certificate manager settings for Certificate Services changed."
+      }
+    },
+    {
+      "id": "t1-m03-forensics-security-fc-4906",
+      "type": "flashcard",
+      "title": "Security 4906",
+      "body": "Log channel: Security · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:forensics",
+        "event:security:4906"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4906",
+        "back": "The CrashOnAuditFail value has changed."
+      }
+    },
+    {
+      "id": "t1-m03-forensics-security-fc-4907",
+      "type": "flashcard",
+      "title": "Security 4907",
+      "body": "Log channel: Security · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:forensics",
+        "event:security:4907"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4907",
+        "back": "Auditing settings on object changed"
+      }
+    },
+    {
+      "id": "t1-m03-forensics-security-quiz-e4793",
+      "type": "quiz",
+      "title": "Recall: Security",
+      "body": "Inline feedback, no results page.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Security"
+      },
+      "requires": [
+        "event:security:4793"
+      ],
+      "estimated_seconds": 35,
+      "graded": true,
+      "payload": {
+        "format": "multiple-choice",
+        "question": "In the Security channel, which Event ID records: “The Password Policy Checking API was called.”",
+        "choices": [
+          "4793",
+          "4801",
+          "4802",
+          "4803"
+        ],
+        "answer_index": 0,
+        "rationale": "Logging/Notable-Event-IDs-Forensics.md#Security lists 4793 as “The Password Policy Checking API was called.”."
+      }
+    },
+    {
+      "id": "t1-m03-forensics-security-instr-e4793",
+      "type": "instructions",
+      "title": "Before you start: Security",
+      "body": "",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "concept:corpus-purpose"
+      ],
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "goal": "Match each Security Event ID to what it records.",
+        "what_youll_use": "The 9 cards you just reviewed — nothing outside them.",
+        "done_when": "Every ID on the left has a description on the right."
+      }
+    },
+    {
+      "id": "t1-m03-forensics-security-match-e4793",
+      "type": "exercise",
+      "title": "Match: Security IDs to what they record",
+      "body": "Every ID below was on the cards you just saw.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Security"
+      },
+      "requires": [
+        "channel:security",
+        "event:security:4793",
+        "event:security:4801",
+        "event:security:4802",
+        "event:security:4803",
+        "event:security:4817",
+        "event:security:4885",
+        "event:security:4890",
+        "event:security:4906"
+      ],
+      "estimated_seconds": 60,
+      "difficulty": "standard",
+      "graded": true,
+      "payload": {
+        "format": "match",
+        "pairs": [
+          {
+            "left": "4793",
+            "right": "The Password Policy Checking API was called."
+          },
+          {
+            "left": "4801",
+            "right": "The workstation was unlocked."
+          },
+          {
+            "left": "4802",
+            "right": "The screen saver was invoked"
+          },
+          {
+            "left": "4803",
+            "right": "The screen saver was dismissed."
+          },
+          {
+            "left": "4817",
+            "right": "Auditing settings on object were changed."
+          },
+          {
+            "left": "4885",
+            "right": "The audit filter for Certificate Services changed."
+          },
+          {
+            "left": "4890",
+            "right": "The certificate manager settings for Certificate Services changed."
+          },
+          {
+            "left": "4906",
+            "right": "The CrashOnAuditFail value has changed."
+          }
+        ]
+      }
+    }
+  ]
+}

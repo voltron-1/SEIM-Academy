@@ -1,0 +1,245 @@
+{
+  "schema_version": "1.0.0",
+  "id": "t1-m03-risk-application-e1002",
+  "tier": 1,
+  "module": "3",
+  "title": "Application (risk)",
+  "summary": "4 notable Event IDs from the Application channel on the risk list.",
+  "estimated_seconds": 230,
+  "teaches": [
+    "channel:application",
+    "concept:corpus-purpose",
+    "corpus:risk",
+    "event:application:1002",
+    "event:application:1003",
+    "event:application:11707",
+    "event:application:11724"
+  ],
+  "requires": [],
+  "sources": [
+    {
+      "path": "Logging/Notable-Event-IDs-Risk.md",
+      "heading": "Application"
+    }
+  ],
+  "generated": {
+    "generator": "build-content",
+    "generator_version": "1.0.0",
+    "source_repo": "TonyPhipps/SIEM",
+    "source_commit": "4adb971",
+    "source_license": "GPL-3.0",
+    "profile": "event-id-tables",
+    "content_hash": "d089c30e5aa87cf6dcff6fee2350f794d3997661409293f5828428dc1519de19"
+  },
+  "atoms": [
+    {
+      "id": "t1-m03-risk-application-intro-e1002",
+      "type": "reading",
+      "title": "Application",
+      "body": "The **Application** channel appears on the risk list with 4 notable Event IDs. This sitting covers 4 of them.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Application"
+      },
+      "teaches": [
+        "channel:application",
+        "corpus:risk"
+      ],
+      "estimated_seconds": 45,
+      "graded": false,
+      "payload": {}
+    },
+    {
+      "id": "t1-m03-risk-application-fc-1002",
+      "type": "flashcard",
+      "title": "Application 1002",
+      "body": "Log channel: Application · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Application"
+      },
+      "teaches": [
+        "channel:application",
+        "corpus:risk",
+        "event:application:1002"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-application",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Application — Event ID 1002",
+        "back": "Application Hang"
+      }
+    },
+    {
+      "id": "t1-m03-risk-application-fc-1003",
+      "type": "flashcard",
+      "title": "Application 1003",
+      "body": "Log channel: Application · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Application"
+      },
+      "teaches": [
+        "channel:application",
+        "corpus:risk",
+        "event:application:1003"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-application",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Application — Event ID 1003",
+        "back": "Application Error"
+      }
+    },
+    {
+      "id": "t1-m03-risk-application-fc-11707",
+      "type": "flashcard",
+      "title": "Application 11707",
+      "body": "Log channel: Application · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Application"
+      },
+      "teaches": [
+        "channel:application",
+        "corpus:risk",
+        "event:application:11707"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-application",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Application — Event ID 11707",
+        "back": "Product: [1] -- Installation operation completed successfully."
+      }
+    },
+    {
+      "id": "t1-m03-risk-application-fc-11724",
+      "type": "flashcard",
+      "title": "Application 11724",
+      "body": "Log channel: Application · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Application"
+      },
+      "teaches": [
+        "channel:application",
+        "corpus:risk",
+        "event:application:11724"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": true,
+        "deck": "t1-m03-application",
+        "reason": "evidence-set"
+      },
+      "payload": {
+        "front": "Application — Event ID 11724",
+        "back": "Product: [1] -- Removal completed successfully."
+      }
+    },
+    {
+      "id": "t1-m03-risk-application-quiz-e1002",
+      "type": "quiz",
+      "title": "Recall: Application",
+      "body": "Inline feedback, no results page.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Application"
+      },
+      "requires": [
+        "event:application:1002"
+      ],
+      "estimated_seconds": 35,
+      "graded": true,
+      "payload": {
+        "format": "multiple-choice",
+        "question": "In the Application channel, which Event ID records: “Application Hang”",
+        "choices": [
+          "1002",
+          "1003",
+          "11707",
+          "11724"
+        ],
+        "answer_index": 0,
+        "rationale": "Logging/Notable-Event-IDs-Risk.md#Application lists 1002 as “Application Hang”."
+      }
+    },
+    {
+      "id": "t1-m03-risk-application-instr-e1002",
+      "type": "instructions",
+      "title": "Before you start: Application",
+      "body": "",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Application"
+      },
+      "teaches": [
+        "concept:corpus-purpose"
+      ],
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "goal": "Match each Application Event ID to what it records.",
+        "what_youll_use": "The 4 cards you just reviewed — nothing outside them.",
+        "done_when": "Every ID on the left has a description on the right."
+      }
+    },
+    {
+      "id": "t1-m03-risk-application-match-e1002",
+      "type": "exercise",
+      "title": "Match: Application IDs to what they record",
+      "body": "Every ID below was on the cards you just saw.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Application"
+      },
+      "requires": [
+        "channel:application",
+        "event:application:1002",
+        "event:application:1003",
+        "event:application:11707",
+        "event:application:11724"
+      ],
+      "estimated_seconds": 60,
+      "difficulty": "standard",
+      "graded": true,
+      "payload": {
+        "format": "match",
+        "pairs": [
+          {
+            "left": "1002",
+            "right": "Application Hang"
+          },
+          {
+            "left": "1003",
+            "right": "Application Error"
+          },
+          {
+            "left": "11707",
+            "right": "Product: [1] -- Installation operation completed successfully."
+          },
+          {
+            "left": "11724",
+            "right": "Product: [1] -- Removal completed successfully."
+          }
+        ]
+      }
+    }
+  ]
+}

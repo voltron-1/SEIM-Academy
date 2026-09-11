@@ -1,0 +1,172 @@
+{
+  "schema_version": "1.0.0",
+  "id": "t1-m03-list-membership-e32867",
+  "tier": 1,
+  "module": "3",
+  "part": 2,
+  "title": "Which list is it on? — part 2",
+  "summary": "Sort Event IDs by whether the SIEM alerts on them, scores them, or only keeps them for forensics.",
+  "estimated_seconds": 204,
+  "teaches": [
+    "concept:corpus-membership"
+  ],
+  "requires": [
+    "concept:corpus-purpose",
+    "event:application:1033",
+    "event:application:1034",
+    "event:application:1040",
+    "event:application:11724",
+    "event:microsoft-windows-applocker-exe-and-dll:8003",
+    "event:microsoft-windows-powershell-analytic:32867",
+    "event:microsoft-windows-powershell-analytic:32868",
+    "event:microsoft-windows-powershell-operational:24577"
+  ],
+  "sources": [
+    {
+      "path": "Logging/Notable-Event-IDs-Forensics.md",
+      "heading": "Microsoft-Windows-PowerShell/Analytic"
+    },
+    {
+      "path": "Logging/Notable-Event-IDs-Sigma.md"
+    }
+  ],
+  "generated": {
+    "generator": "build-content",
+    "generator_version": "1.0.0",
+    "source_repo": "TonyPhipps/SIEM",
+    "source_commit": "4adb971",
+    "source_license": "GPL-3.0",
+    "profile": "event-id-tables",
+    "content_hash": "032b720d8d1b93362441753cf81496527a45a79f30cbd0cd37812fd8c996a597"
+  },
+  "atoms": [
+    {
+      "id": "t1-m03-classify-intro-e32867",
+      "type": "reading",
+      "title": "Which list is it on?",
+      "body": "Knowing an Event ID is half of it. The other half is knowing whether your SIEM already alerts on it, merely scores it, or only keeps it for the reconstruction afterwards — because that decides whether the alert in front of you is the whole story.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md"
+      },
+      "teaches": [
+        "concept:corpus-membership"
+      ],
+      "estimated_seconds": 45,
+      "graded": false,
+      "payload": {}
+    },
+    {
+      "id": "t1-m03-classify-list-membership-instr-e32867",
+      "type": "instructions",
+      "title": "Before you start: list membership",
+      "body": "",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md"
+      },
+      "teaches": [
+        "concept:corpus-membership"
+      ],
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "goal": "Drop each Event ID onto the list it belongs to.",
+        "what_youll_use": "The three list descriptions from the opening sitting, and the cards you have reviewed since.",
+        "done_when": "Every ID sits under one of the three lists.",
+        "step_up_notice": "This one pulls from every channel you have seen so far, not just the last sitting."
+      }
+    },
+    {
+      "id": "t1-m03-classify-drag-e32867",
+      "type": "exercise",
+      "title": "Sort Event IDs onto their list",
+      "body": "Sigma alerts on it, Risk scores it, Forensics keeps it.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md"
+      },
+      "requires": [
+        "concept:corpus-membership",
+        "concept:corpus-purpose",
+        "event:application:1033",
+        "event:application:1034",
+        "event:application:1040",
+        "event:application:11724",
+        "event:microsoft-windows-applocker-exe-and-dll:8003",
+        "event:microsoft-windows-powershell-analytic:32867",
+        "event:microsoft-windows-powershell-analytic:32868",
+        "event:microsoft-windows-powershell-operational:24577"
+      ],
+      "estimated_seconds": 94,
+      "difficulty": "step-up",
+      "graded": true,
+      "payload": {
+        "format": "drag-classify",
+        "buckets": [
+          "The sigma list",
+          "The risk list",
+          "The forensics list"
+        ],
+        "items": [
+          {
+            "label": "Microsoft-Windows-PowerShell/Analytic 32867",
+            "bucket": "The forensics list"
+          },
+          {
+            "label": "Application 1033",
+            "bucket": "The sigma list"
+          },
+          {
+            "label": "Application 11724",
+            "bucket": "The risk list"
+          },
+          {
+            "label": "Microsoft-Windows-PowerShell/Analytic 32868",
+            "bucket": "The forensics list"
+          },
+          {
+            "label": "Application 1034",
+            "bucket": "The sigma list"
+          },
+          {
+            "label": "Microsoft-Windows-AppLocker/EXE and DLL 8003",
+            "bucket": "The risk list"
+          },
+          {
+            "label": "Microsoft-Windows-Powershell/Operational 24577",
+            "bucket": "The forensics list"
+          },
+          {
+            "label": "Application 1040",
+            "bucket": "The sigma list"
+          }
+        ]
+      }
+    },
+    {
+      "id": "t1-m03-classify-quiz-e32867",
+      "type": "quiz",
+      "title": "List membership",
+      "body": "Inline feedback, no results page.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Microsoft-Windows-PowerShell/Analytic"
+      },
+      "requires": [
+        "concept:corpus-membership",
+        "event:microsoft-windows-powershell-analytic:32867"
+      ],
+      "estimated_seconds": 35,
+      "graded": true,
+      "payload": {
+        "format": "multiple-choice",
+        "question": "Microsoft-Windows-PowerShell/Analytic Event ID 32867 — which list is it on?",
+        "choices": [
+          "The sigma list",
+          "The risk list",
+          "The forensics list"
+        ],
+        "answer_index": 2,
+        "rationale": "Logging/Notable-Event-IDs-Forensics.md#Microsoft-Windows-PowerShell/Analytic is where this ID is listed."
+      }
+    }
+  ]
+}

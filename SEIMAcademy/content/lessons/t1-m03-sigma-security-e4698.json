@@ -1,0 +1,428 @@
+{
+  "schema_version": "1.0.0",
+  "id": "t1-m03-sigma-security-e4698",
+  "tier": 1,
+  "module": "3",
+  "part": 3,
+  "title": "Security (sigma) — part 3",
+  "summary": "10 notable Event IDs from the Security channel on the sigma list.",
+  "estimated_seconds": 320,
+  "teaches": [
+    "channel:security",
+    "concept:corpus-purpose",
+    "corpus:sigma",
+    "event:security:4698",
+    "event:security:4699",
+    "event:security:4701",
+    "event:security:4702",
+    "event:security:4704",
+    "event:security:4719",
+    "event:security:4720",
+    "event:security:4727",
+    "event:security:4728",
+    "event:security:4730"
+  ],
+  "requires": [],
+  "sources": [
+    {
+      "path": "Logging/Notable-Event-IDs-Sigma.md",
+      "heading": "Security"
+    }
+  ],
+  "generated": {
+    "generator": "build-content",
+    "generator_version": "1.0.0",
+    "source_repo": "TonyPhipps/SIEM",
+    "source_commit": "4adb971",
+    "source_license": "GPL-3.0",
+    "profile": "event-id-tables",
+    "content_hash": "4ca97e5171774ef492ae58f120f55087e5fc524552daee035f2302c5e0591d8c"
+  },
+  "atoms": [
+    {
+      "id": "t1-m03-sigma-security-intro-e4698",
+      "type": "reading",
+      "title": "Security",
+      "body": "The **Security** channel appears on the sigma list with 50 notable Event IDs. This sitting covers 10 of them.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:sigma"
+      ],
+      "estimated_seconds": 45,
+      "graded": false,
+      "payload": {}
+    },
+    {
+      "id": "t1-m03-sigma-security-fc-4698",
+      "type": "flashcard",
+      "title": "Security 4698",
+      "body": "Log channel: Security · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:sigma",
+        "event:security:4698"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": true,
+        "deck": "t1-m03-security",
+        "reason": "evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4698",
+        "back": "A scheduled task was created."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-fc-4699",
+      "type": "flashcard",
+      "title": "Security 4699",
+      "body": "Log channel: Security · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:sigma",
+        "event:security:4699"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": true,
+        "deck": "t1-m03-security",
+        "reason": "evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4699",
+        "back": "A scheduled task was deleted."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-fc-4701",
+      "type": "flashcard",
+      "title": "Security 4701",
+      "body": "Log channel: Security · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:sigma",
+        "event:security:4701"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4701",
+        "back": "A scheduled task was disabled."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-fc-4702",
+      "type": "flashcard",
+      "title": "Security 4702",
+      "body": "Log channel: Security · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:sigma",
+        "event:security:4702"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": true,
+        "deck": "t1-m03-security",
+        "reason": "evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4702",
+        "back": "A scheduled task was updated."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-fc-4704",
+      "type": "flashcard",
+      "title": "Security 4704",
+      "body": "Log channel: Security · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:sigma",
+        "event:security:4704"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4704",
+        "back": "A user right was assigned."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-fc-4719",
+      "type": "flashcard",
+      "title": "Security 4719",
+      "body": "Log channel: Security · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:sigma",
+        "event:security:4719"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": true,
+        "deck": "t1-m03-security",
+        "reason": "evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4719",
+        "back": "System audit policy was changed."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-fc-4720",
+      "type": "flashcard",
+      "title": "Security 4720",
+      "body": "Log channel: Security · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:sigma",
+        "event:security:4720"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": true,
+        "deck": "t1-m03-security",
+        "reason": "evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4720",
+        "back": "A user account was created."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-fc-4727",
+      "type": "flashcard",
+      "title": "Security 4727",
+      "body": "Log channel: Security · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:sigma",
+        "event:security:4727"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": true,
+        "deck": "t1-m03-security",
+        "reason": "evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4727",
+        "back": "A security-enabled global group was created."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-fc-4728",
+      "type": "flashcard",
+      "title": "Security 4728",
+      "body": "Log channel: Security · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:sigma",
+        "event:security:4728"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4728",
+        "back": "A member was added to a security-enabled global group."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-fc-4730",
+      "type": "flashcard",
+      "title": "Security 4730",
+      "body": "Log channel: Security · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:sigma",
+        "event:security:4730"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": true,
+        "deck": "t1-m03-security",
+        "reason": "evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4730",
+        "back": "A security-enabled global group was deleted."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-quiz-e4698",
+      "type": "quiz",
+      "title": "Recall: Security",
+      "body": "Inline feedback, no results page.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "requires": [
+        "event:security:4698"
+      ],
+      "estimated_seconds": 35,
+      "graded": true,
+      "payload": {
+        "format": "multiple-choice",
+        "question": "In the Security channel, which Event ID records: “A scheduled task was created.”",
+        "choices": [
+          "4698",
+          "4699",
+          "4701",
+          "4702"
+        ],
+        "answer_index": 0,
+        "rationale": "Logging/Notable-Event-IDs-Sigma.md#Security lists 4698 as “A scheduled task was created.”."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-instr-e4698",
+      "type": "instructions",
+      "title": "Before you start: Security",
+      "body": "",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "concept:corpus-purpose"
+      ],
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "goal": "Match each Security Event ID to what it records.",
+        "what_youll_use": "The 10 cards you just reviewed — nothing outside them.",
+        "done_when": "Every ID on the left has a description on the right."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-match-e4698",
+      "type": "exercise",
+      "title": "Match: Security IDs to what they record",
+      "body": "Every ID below was on the cards you just saw.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "requires": [
+        "channel:security",
+        "event:security:4698",
+        "event:security:4699",
+        "event:security:4701",
+        "event:security:4702",
+        "event:security:4704",
+        "event:security:4719",
+        "event:security:4720",
+        "event:security:4727"
+      ],
+      "estimated_seconds": 60,
+      "difficulty": "standard",
+      "graded": true,
+      "payload": {
+        "format": "match",
+        "pairs": [
+          {
+            "left": "4698",
+            "right": "A scheduled task was created."
+          },
+          {
+            "left": "4699",
+            "right": "A scheduled task was deleted."
+          },
+          {
+            "left": "4701",
+            "right": "A scheduled task was disabled."
+          },
+          {
+            "left": "4702",
+            "right": "A scheduled task was updated."
+          },
+          {
+            "left": "4704",
+            "right": "A user right was assigned."
+          },
+          {
+            "left": "4719",
+            "right": "System audit policy was changed."
+          },
+          {
+            "left": "4720",
+            "right": "A user account was created."
+          },
+          {
+            "left": "4727",
+            "right": "A security-enabled global group was created."
+          }
+        ]
+      }
+    }
+  ]
+}

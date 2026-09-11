@@ -1,0 +1,455 @@
+{
+  "schema_version": "1.0.0",
+  "id": "t1-m03-sigma-microsoft-windows-sysmon-operational-e1",
+  "tier": 1,
+  "module": "3",
+  "part": 1,
+  "title": "Microsoft-Windows-Sysmon/Operational (sigma) — part 1",
+  "summary": "11 notable Event IDs from the Microsoft-Windows-Sysmon/Operational channel on the sigma list.",
+  "estimated_seconds": 335,
+  "teaches": [
+    "channel:microsoft-windows-sysmon-operational",
+    "concept:corpus-purpose",
+    "corpus:sigma",
+    "event:microsoft-windows-sysmon-operational:1",
+    "event:microsoft-windows-sysmon-operational:10",
+    "event:microsoft-windows-sysmon-operational:11",
+    "event:microsoft-windows-sysmon-operational:12",
+    "event:microsoft-windows-sysmon-operational:3",
+    "event:microsoft-windows-sysmon-operational:4",
+    "event:microsoft-windows-sysmon-operational:5",
+    "event:microsoft-windows-sysmon-operational:6",
+    "event:microsoft-windows-sysmon-operational:7",
+    "event:microsoft-windows-sysmon-operational:8",
+    "event:microsoft-windows-sysmon-operational:9"
+  ],
+  "requires": [],
+  "sources": [
+    {
+      "path": "Logging/Notable-Event-IDs-Sigma.md",
+      "heading": "Microsoft-Windows-Sysmon/Operational"
+    }
+  ],
+  "generated": {
+    "generator": "build-content",
+    "generator_version": "1.0.0",
+    "source_repo": "TonyPhipps/SIEM",
+    "source_commit": "4adb971",
+    "source_license": "GPL-3.0",
+    "profile": "event-id-tables",
+    "content_hash": "06520c3d4ec1425c41ad0296db593eca7ee6cbf12b40b756d6e0ce0f5b9662d2"
+  },
+  "atoms": [
+    {
+      "id": "t1-m03-sigma-microsoft-windows-sysmon-operational-intro-e1",
+      "type": "reading",
+      "title": "Microsoft-Windows-Sysmon/Operational",
+      "body": "The **Microsoft-Windows-Sysmon/Operational** channel appears on the sigma list with 22 notable Event IDs. This sitting covers 11 of them.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Sysmon/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-sysmon-operational",
+        "corpus:sigma"
+      ],
+      "estimated_seconds": 45,
+      "graded": false,
+      "payload": {}
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-sysmon-operational-fc-1",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Sysmon/Operational 1",
+      "body": "Log channel: Microsoft-Windows-Sysmon/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Sysmon/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-sysmon-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-sysmon-operational:1"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-sysmon-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Sysmon/Operational — Event ID 1",
+        "back": "Process creation"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-sysmon-operational-fc-3",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Sysmon/Operational 3",
+      "body": "Log channel: Microsoft-Windows-Sysmon/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Sysmon/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-sysmon-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-sysmon-operational:3"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-sysmon-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Sysmon/Operational — Event ID 3",
+        "back": "Network connection"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-sysmon-operational-fc-4",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Sysmon/Operational 4",
+      "body": "Log channel: Microsoft-Windows-Sysmon/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Sysmon/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-sysmon-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-sysmon-operational:4"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-sysmon-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Sysmon/Operational — Event ID 4",
+        "back": "Sysmon service state changed"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-sysmon-operational-fc-5",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Sysmon/Operational 5",
+      "body": "Log channel: Microsoft-Windows-Sysmon/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Sysmon/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-sysmon-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-sysmon-operational:5"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-sysmon-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Sysmon/Operational — Event ID 5",
+        "back": "Process terminated"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-sysmon-operational-fc-6",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Sysmon/Operational 6",
+      "body": "Log channel: Microsoft-Windows-Sysmon/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Sysmon/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-sysmon-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-sysmon-operational:6"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-sysmon-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Sysmon/Operational — Event ID 6",
+        "back": "Driver loaded"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-sysmon-operational-fc-7",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Sysmon/Operational 7",
+      "body": "Log channel: Microsoft-Windows-Sysmon/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Sysmon/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-sysmon-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-sysmon-operational:7"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-sysmon-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Sysmon/Operational — Event ID 7",
+        "back": "Image loaded"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-sysmon-operational-fc-8",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Sysmon/Operational 8",
+      "body": "Log channel: Microsoft-Windows-Sysmon/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Sysmon/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-sysmon-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-sysmon-operational:8"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-sysmon-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Sysmon/Operational — Event ID 8",
+        "back": "CreateRemoteThread"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-sysmon-operational-fc-9",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Sysmon/Operational 9",
+      "body": "Log channel: Microsoft-Windows-Sysmon/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Sysmon/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-sysmon-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-sysmon-operational:9"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-sysmon-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Sysmon/Operational — Event ID 9",
+        "back": "RawAccessRead"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-sysmon-operational-fc-10",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Sysmon/Operational 10",
+      "body": "Log channel: Microsoft-Windows-Sysmon/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Sysmon/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-sysmon-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-sysmon-operational:10"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-sysmon-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Sysmon/Operational — Event ID 10",
+        "back": "ProcessAccess"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-sysmon-operational-fc-11",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Sysmon/Operational 11",
+      "body": "Log channel: Microsoft-Windows-Sysmon/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Sysmon/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-sysmon-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-sysmon-operational:11"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-sysmon-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Sysmon/Operational — Event ID 11",
+        "back": "FileCreate"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-sysmon-operational-fc-12",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Sysmon/Operational 12",
+      "body": "Log channel: Microsoft-Windows-Sysmon/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Sysmon/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-sysmon-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-sysmon-operational:12"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-sysmon-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Sysmon/Operational — Event ID 12",
+        "back": "RegistryEvent (Object create and delete)"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-sysmon-operational-quiz-e1",
+      "type": "quiz",
+      "title": "Recall: Microsoft-Windows-Sysmon/Operational",
+      "body": "Inline feedback, no results page.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Sysmon/Operational"
+      },
+      "requires": [
+        "event:microsoft-windows-sysmon-operational:1"
+      ],
+      "estimated_seconds": 35,
+      "graded": true,
+      "payload": {
+        "format": "multiple-choice",
+        "question": "In the Microsoft-Windows-Sysmon/Operational channel, which Event ID records: “Process creation”",
+        "choices": [
+          "1",
+          "3",
+          "4",
+          "5"
+        ],
+        "answer_index": 0,
+        "rationale": "Logging/Notable-Event-IDs-Sigma.md#Microsoft-Windows-Sysmon/Operational lists 1 as “Process creation”."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-sysmon-operational-instr-e1",
+      "type": "instructions",
+      "title": "Before you start: Microsoft-Windows-Sysmon/Operational",
+      "body": "",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Sysmon/Operational"
+      },
+      "teaches": [
+        "concept:corpus-purpose"
+      ],
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "goal": "Match each Microsoft-Windows-Sysmon/Operational Event ID to what it records.",
+        "what_youll_use": "The 11 cards you just reviewed — nothing outside them.",
+        "done_when": "Every ID on the left has a description on the right."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-sysmon-operational-match-e1",
+      "type": "exercise",
+      "title": "Match: Microsoft-Windows-Sysmon/Operational IDs to what they record",
+      "body": "Every ID below was on the cards you just saw.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Sysmon/Operational"
+      },
+      "requires": [
+        "channel:microsoft-windows-sysmon-operational",
+        "event:microsoft-windows-sysmon-operational:1",
+        "event:microsoft-windows-sysmon-operational:3",
+        "event:microsoft-windows-sysmon-operational:4",
+        "event:microsoft-windows-sysmon-operational:5",
+        "event:microsoft-windows-sysmon-operational:6",
+        "event:microsoft-windows-sysmon-operational:7",
+        "event:microsoft-windows-sysmon-operational:8",
+        "event:microsoft-windows-sysmon-operational:9"
+      ],
+      "estimated_seconds": 60,
+      "difficulty": "standard",
+      "graded": true,
+      "payload": {
+        "format": "match",
+        "pairs": [
+          {
+            "left": "1",
+            "right": "Process creation"
+          },
+          {
+            "left": "3",
+            "right": "Network connection"
+          },
+          {
+            "left": "4",
+            "right": "Sysmon service state changed"
+          },
+          {
+            "left": "5",
+            "right": "Process terminated"
+          },
+          {
+            "left": "6",
+            "right": "Driver loaded"
+          },
+          {
+            "left": "7",
+            "right": "Image loaded"
+          },
+          {
+            "left": "8",
+            "right": "CreateRemoteThread"
+          },
+          {
+            "left": "9",
+            "right": "RawAccessRead"
+          }
+        ]
+      }
+    }
+  ]
+}

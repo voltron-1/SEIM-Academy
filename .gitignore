@@ -17,3 +17,6 @@ build/
 *.log
 .env
 .env.local
+
+# Pipeline run logs (regenerable; plans/ and findings/ are tracked)
+logs/

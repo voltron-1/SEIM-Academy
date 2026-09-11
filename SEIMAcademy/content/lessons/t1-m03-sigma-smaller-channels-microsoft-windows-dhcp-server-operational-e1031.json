@@ -1,0 +1,463 @@
+{
+  "schema_version": "1.0.0",
+  "id": "t1-m03-sigma-smaller-channels-microsoft-windows-dhcp-server-operational-e1031",
+  "tier": 1,
+  "module": "3",
+  "part": 2,
+  "title": "Smaller channels (sigma) — part 2",
+  "summary": "10 Event IDs swept from 7 low-volume channels on the sigma list.",
+  "estimated_seconds": 320,
+  "teaches": [
+    "channel:microsoft-windows-dhcp-server-operational",
+    "channel:microsoft-windows-diagnosis-dps-operational",
+    "channel:microsoft-windows-dns-client-operational",
+    "channel:microsoft-windows-dnsserver-audit",
+    "channel:microsoft-windows-kernel-pnp-device-configuration",
+    "channel:microsoft-windows-ldap-client-operational",
+    "channel:microsoft-windows-lsa-server-operational",
+    "concept:corpus-purpose",
+    "corpus:sigma",
+    "event:microsoft-windows-dhcp-server-operational:1031",
+    "event:microsoft-windows-dhcp-server-operational:1033",
+    "event:microsoft-windows-diagnosis-dps-operational:101",
+    "event:microsoft-windows-dns-client-operational:3008",
+    "event:microsoft-windows-dnsserver-audit:150",
+    "event:microsoft-windows-dnsserver-audit:6004",
+    "event:microsoft-windows-kernel-pnp-device-configuration:400",
+    "event:microsoft-windows-kernel-pnp-device-configuration:410",
+    "event:microsoft-windows-ldap-client-operational:30",
+    "event:microsoft-windows-lsa-server-operational:300"
+  ],
+  "requires": [],
+  "sources": [
+    {
+      "path": "Logging/Notable-Event-IDs-Sigma.md"
+    },
+    {
+      "path": "Logging/Notable-Event-IDs-Sigma.md",
+      "heading": "Microsoft-Windows-DHCP-Server/Operational"
+    },
+    {
+      "path": "Logging/Notable-Event-IDs-Sigma.md",
+      "heading": "Microsoft-Windows-Diagnosis-DPS/Operational"
+    },
+    {
+      "path": "Logging/Notable-Event-IDs-Sigma.md",
+      "heading": "Microsoft-Windows-DNS-Client/Operational"
+    },
+    {
+      "path": "Logging/Notable-Event-IDs-Sigma.md",
+      "heading": "Microsoft-Windows-DNSServer/Audit"
+    },
+    {
+      "path": "Logging/Notable-Event-IDs-Sigma.md",
+      "heading": "Microsoft-Windows-Kernel-PnP/Device Configuration"
+    },
+    {
+      "path": "Logging/Notable-Event-IDs-Sigma.md",
+      "heading": "Microsoft-Windows-LDAP-Client/Operational"
+    },
+    {
+      "path": "Logging/Notable-Event-IDs-Sigma.md",
+      "heading": "Microsoft-Windows-LSA-Server/Operational"
+    }
+  ],
+  "generated": {
+    "generator": "build-content",
+    "generator_version": "1.0.0",
+    "source_repo": "TonyPhipps/SIEM",
+    "source_commit": "4adb971",
+    "source_license": "GPL-3.0",
+    "profile": "event-id-tables",
+    "content_hash": "fe54c670809fca8ea4d485e75d6bad54fe7f21f4fb9eed2acf67331c40641525"
+  },
+  "atoms": [
+    {
+      "id": "t1-m03-sigma-small-intro-microsoft-windows-dhcp-server-operational-e1031",
+      "type": "reading",
+      "title": "Smaller channels",
+      "body": "Most Windows log channels contribute only a handful of notable Event IDs. This sitting sweeps 10 of them across 7 channels on the sigma list.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md"
+      },
+      "teaches": [
+        "channel:microsoft-windows-dhcp-server-operational",
+        "channel:microsoft-windows-diagnosis-dps-operational",
+        "channel:microsoft-windows-dns-client-operational",
+        "channel:microsoft-windows-dnsserver-audit",
+        "channel:microsoft-windows-kernel-pnp-device-configuration",
+        "channel:microsoft-windows-ldap-client-operational",
+        "channel:microsoft-windows-lsa-server-operational",
+        "corpus:sigma"
+      ],
+      "estimated_seconds": 45,
+      "graded": false,
+      "payload": {}
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-dhcp-server-operational-fc-1031",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-DHCP-Server/Operational 1031",
+      "body": "Log channel: Microsoft-Windows-DHCP-Server/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-DHCP-Server/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-dhcp-server-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-dhcp-server-operational:1031"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-dhcp-server-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-DHCP-Server/Operational — Event ID 1031",
+        "back": "DHCP service has successfully registered its Service Principal Name (SPN) in Active Directory."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-dhcp-server-operational-fc-1033",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-DHCP-Server/Operational 1033",
+      "body": "Log channel: Microsoft-Windows-DHCP-Server/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-DHCP-Server/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-dhcp-server-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-dhcp-server-operational:1033"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-dhcp-server-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-DHCP-Server/Operational — Event ID 1033",
+        "back": "DHCP service has successfully updated a client's DNS resource record."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-dns-client-operational-fc-3008",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-DNS-Client/Operational 3008",
+      "body": "Log channel: Microsoft-Windows-DNS-Client/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-DNS-Client/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-dns-client-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-dns-client-operational:3008"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-dns-client-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-DNS-Client/Operational — Event ID 3008",
+        "back": "DNS Client events Query Completed"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-dnsserver-audit-fc-150",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-DNSServer/Audit 150",
+      "body": "Log channel: Microsoft-Windows-DNSServer/Audit · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-DNSServer/Audit"
+      },
+      "teaches": [
+        "channel:microsoft-windows-dnsserver-audit",
+        "corpus:sigma",
+        "event:microsoft-windows-dnsserver-audit:150"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-dnsserver-audit",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-DNSServer/Audit — Event ID 150",
+        "back": "DNS Server could not load or initialize the plug-in DLL"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-dnsserver-audit-fc-6004",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-DNSServer/Audit 6004",
+      "body": "Log channel: Microsoft-Windows-DNSServer/Audit · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-DNSServer/Audit"
+      },
+      "teaches": [
+        "channel:microsoft-windows-dnsserver-audit",
+        "corpus:sigma",
+        "event:microsoft-windows-dnsserver-audit:6004"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-dnsserver-audit",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-DNSServer/Audit — Event ID 6004",
+        "back": "A DNS resource record was successfully modified."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-diagnosis-dps-operational-fc-101",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Diagnosis-DPS/Operational 101",
+      "body": "Log channel: Microsoft-Windows-Diagnosis-DPS/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Diagnosis-DPS/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-diagnosis-dps-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-diagnosis-dps-operational:101"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-diagnosis-dps-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Diagnosis-DPS/Operational — Event ID 101",
+        "back": "A Diagnostic Scenario has completed."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-kernel-pnp-device-configuration-fc-400",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Kernel-PnP/Device Configuration 400",
+      "body": "Log channel: Microsoft-Windows-Kernel-PnP/Device Configuration · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Kernel-PnP/Device Configuration"
+      },
+      "teaches": [
+        "channel:microsoft-windows-kernel-pnp-device-configuration",
+        "corpus:sigma",
+        "event:microsoft-windows-kernel-pnp-device-configuration:400"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-kernel-pnp-device-configuration",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Kernel-PnP/Device Configuration — Event ID 400",
+        "back": "New Mass Storage Installation"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-kernel-pnp-device-configuration-fc-410",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Kernel-PnP/Device Configuration 410",
+      "body": "Log channel: Microsoft-Windows-Kernel-PnP/Device Configuration · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Kernel-PnP/Device Configuration"
+      },
+      "teaches": [
+        "channel:microsoft-windows-kernel-pnp-device-configuration",
+        "corpus:sigma",
+        "event:microsoft-windows-kernel-pnp-device-configuration:410"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-kernel-pnp-device-configuration",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Kernel-PnP/Device Configuration — Event ID 410",
+        "back": "New Mass Storage Installation"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-ldap-client-operational-fc-30",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-LDAP-Client/Operational 30",
+      "body": "Log channel: Microsoft-Windows-LDAP-Client/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-LDAP-Client/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-ldap-client-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-ldap-client-operational:30"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-ldap-client-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-LDAP-Client/Operational — Event ID 30",
+        "back": "Start of an LDAP request."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-lsa-server-operational-fc-300",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-LSA-Server/Operational 300",
+      "body": "Log channel: Microsoft-Windows-LSA-Server/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-LSA-Server/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-lsa-server-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-lsa-server-operational:300"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-lsa-server-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-LSA-Server/Operational — Event ID 300",
+        "back": "A Protected Process Light (PPL) protection policy was applied to the Local Security Authority (LSA) process"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-dhcp-server-operational-quiz-small-microsoft-windows-dhcp-server-operational-e1031",
+      "type": "quiz",
+      "title": "Recall: Microsoft-Windows-DHCP-Server/Operational",
+      "body": "Inline feedback, no results page.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-DHCP-Server/Operational"
+      },
+      "requires": [
+        "event:microsoft-windows-dhcp-server-operational:1031"
+      ],
+      "estimated_seconds": 35,
+      "graded": true,
+      "payload": {
+        "format": "multiple-choice",
+        "question": "In the Microsoft-Windows-DHCP-Server/Operational channel, which Event ID records: “DHCP service has successfully registered its Service Principal Name (SPN) in Active Directory.”",
+        "choices": [
+          "150",
+          "1031",
+          "1033",
+          "3008"
+        ],
+        "answer_index": 1,
+        "rationale": "Logging/Notable-Event-IDs-Sigma.md#Microsoft-Windows-DHCP-Server/Operational lists 1031 as “DHCP service has successfully registered its Service Principal Name (SPN) in Active Directory.”."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-smaller-channels-instr-microsoft-windows-dhcp-server-operational-e1031",
+      "type": "instructions",
+      "title": "Before you start: smaller channels",
+      "body": "",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md"
+      },
+      "teaches": [
+        "concept:corpus-purpose"
+      ],
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "goal": "Match each Event ID to what it records.",
+        "what_youll_use": "The 10 cards from this sitting.",
+        "done_when": "Every ID on the left has a description on the right."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-small-match-microsoft-windows-dhcp-server-operational-e1031",
+      "type": "exercise",
+      "title": "Match: smaller-channel IDs",
+      "body": "Every ID below was on the cards you just saw.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md"
+      },
+      "requires": [
+        "event:microsoft-windows-dhcp-server-operational:1031",
+        "event:microsoft-windows-dhcp-server-operational:1033",
+        "event:microsoft-windows-diagnosis-dps-operational:101",
+        "event:microsoft-windows-dns-client-operational:3008",
+        "event:microsoft-windows-dnsserver-audit:150",
+        "event:microsoft-windows-dnsserver-audit:6004",
+        "event:microsoft-windows-kernel-pnp-device-configuration:400",
+        "event:microsoft-windows-kernel-pnp-device-configuration:410"
+      ],
+      "estimated_seconds": 60,
+      "difficulty": "standard",
+      "graded": true,
+      "payload": {
+        "format": "match",
+        "pairs": [
+          {
+            "left": "Microsoft-Windows-DHCP-Server/Operational 1031",
+            "right": "DHCP service has successfully registered its Service Principal Name (SPN) in Active Directory."
+          },
+          {
+            "left": "Microsoft-Windows-DHCP-Server/Operational 1033",
+            "right": "DHCP service has successfully updated a client's DNS resource record."
+          },
+          {
+            "left": "Microsoft-Windows-DNS-Client/Operational 3008",
+            "right": "DNS Client events Query Completed"
+          },
+          {
+            "left": "Microsoft-Windows-DNSServer/Audit 150",
+            "right": "DNS Server could not load or initialize the plug-in DLL"
+          },
+          {
+            "left": "Microsoft-Windows-DNSServer/Audit 6004",
+            "right": "A DNS resource record was successfully modified."
+          },
+          {
+            "left": "Microsoft-Windows-Diagnosis-DPS/Operational 101",
+            "right": "A Diagnostic Scenario has completed."
+          },
+          {
+            "left": "Microsoft-Windows-Kernel-PnP/Device Configuration 400",
+            "right": "New Mass Storage Installation"
+          },
+          {
+            "left": "Microsoft-Windows-Kernel-PnP/Device Configuration 410",
+            "right": "New Mass Storage Installation"
+          }
+        ]
+      }
+    }
+  ]
+}

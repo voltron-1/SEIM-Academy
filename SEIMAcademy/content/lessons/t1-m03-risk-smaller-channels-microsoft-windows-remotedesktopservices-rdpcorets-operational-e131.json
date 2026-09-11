@@ -1,0 +1,333 @@
+{
+  "schema_version": "1.0.0",
+  "id": "t1-m03-risk-smaller-channels-microsoft-windows-remotedesktopservices-rdpcorets-operational-e131",
+  "tier": 1,
+  "module": "3",
+  "part": 2,
+  "title": "Smaller channels (risk) — part 2",
+  "summary": "6 Event IDs swept from 5 low-volume channels on the risk list.",
+  "estimated_seconds": 260,
+  "teaches": [
+    "channel:microsoft-windows-remotedesktopservices-rdpcorets-operational",
+    "channel:microsoft-windows-sysmon-operational",
+    "channel:microsoft-windows-taskscheduler-operational",
+    "channel:microsoft-windows-wininet-config-proxyconfigchanged",
+    "channel:microsoft-windows-wmi-activity-operational",
+    "concept:corpus-purpose",
+    "corpus:risk",
+    "event:microsoft-windows-remotedesktopservices-rdpcorets-operational:131",
+    "event:microsoft-windows-remotedesktopservices-rdpcorets-operational:140",
+    "event:microsoft-windows-sysmon-operational:2",
+    "event:microsoft-windows-taskscheduler-operational:140",
+    "event:microsoft-windows-wininet-config-proxyconfigchanged:5600",
+    "event:microsoft-windows-wmi-activity-operational:5860"
+  ],
+  "requires": [],
+  "sources": [
+    {
+      "path": "Logging/Notable-Event-IDs-Risk.md"
+    },
+    {
+      "path": "Logging/Notable-Event-IDs-Risk.md",
+      "heading": "Microsoft-Windows-RemoteDesktopServices-RdpCoreTS/Operational"
+    },
+    {
+      "path": "Logging/Notable-Event-IDs-Risk.md",
+      "heading": "Microsoft-Windows-Sysmon/Operational"
+    },
+    {
+      "path": "Logging/Notable-Event-IDs-Risk.md",
+      "heading": "Microsoft-Windows-TaskScheduler/Operational"
+    },
+    {
+      "path": "Logging/Notable-Event-IDs-Risk.md",
+      "heading": "Microsoft-Windows-WinINet-Config/ProxyConfigChanged"
+    },
+    {
+      "path": "Logging/Notable-Event-IDs-Risk.md",
+      "heading": "Microsoft-Windows-WMI-Activity/Operational"
+    }
+  ],
+  "generated": {
+    "generator": "build-content",
+    "generator_version": "1.0.0",
+    "source_repo": "TonyPhipps/SIEM",
+    "source_commit": "4adb971",
+    "source_license": "GPL-3.0",
+    "profile": "event-id-tables",
+    "content_hash": "db708c99192a771e0ca93bb886c86c10f334620b1432827c7737325fbeb0a0d9"
+  },
+  "atoms": [
+    {
+      "id": "t1-m03-risk-small-intro-microsoft-windows-remotedesktopservices-rdpcorets-operational-e131",
+      "type": "reading",
+      "title": "Smaller channels",
+      "body": "Most Windows log channels contribute only a handful of notable Event IDs. This sitting sweeps 6 of them across 5 channels on the risk list.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md"
+      },
+      "teaches": [
+        "channel:microsoft-windows-remotedesktopservices-rdpcorets-operational",
+        "channel:microsoft-windows-sysmon-operational",
+        "channel:microsoft-windows-taskscheduler-operational",
+        "channel:microsoft-windows-wininet-config-proxyconfigchanged",
+        "channel:microsoft-windows-wmi-activity-operational",
+        "corpus:risk"
+      ],
+      "estimated_seconds": 45,
+      "graded": false,
+      "payload": {}
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-remotedesktopservices-rdpcorets-operational-fc-131",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-RemoteDesktopServices-RdpCoreTS/Operational 131",
+      "body": "Log channel: Microsoft-Windows-RemoteDesktopServices-RdpCoreTS/Operational · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-RemoteDesktopServices-RdpCoreTS/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-remotedesktopservices-rdpcorets-operational",
+        "corpus:risk",
+        "event:microsoft-windows-remotedesktopservices-rdpcorets-operational:131"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-remotedesktopservices-rdpcorets-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-RemoteDesktopServices-RdpCoreTS/Operational — Event ID 131",
+        "back": "Accepted new TCP connection"
+      }
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-remotedesktopservices-rdpcorets-operational-fc-140",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-RemoteDesktopServices-RdpCoreTS/Operational 140",
+      "body": "Log channel: Microsoft-Windows-RemoteDesktopServices-RdpCoreTS/Operational · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-RemoteDesktopServices-RdpCoreTS/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-remotedesktopservices-rdpcorets-operational",
+        "corpus:risk",
+        "event:microsoft-windows-remotedesktopservices-rdpcorets-operational:140"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-remotedesktopservices-rdpcorets-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-RemoteDesktopServices-RdpCoreTS/Operational — Event ID 140",
+        "back": "Connection failed; bad username or password"
+      }
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-sysmon-operational-fc-2",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Sysmon/Operational 2",
+      "body": "Log channel: Microsoft-Windows-Sysmon/Operational · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-Sysmon/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-sysmon-operational",
+        "corpus:risk",
+        "event:microsoft-windows-sysmon-operational:2"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-sysmon-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Sysmon/Operational — Event ID 2",
+        "back": "A process changed a file creation time"
+      }
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-taskscheduler-operational-fc-140",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-TaskScheduler/Operational 140",
+      "body": "Log channel: Microsoft-Windows-TaskScheduler/Operational · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-TaskScheduler/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-taskscheduler-operational",
+        "corpus:risk",
+        "event:microsoft-windows-taskscheduler-operational:140"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-taskscheduler-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-TaskScheduler/Operational — Event ID 140",
+        "back": "Task Updated"
+      }
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-wininet-config-proxyconfigchanged-fc-5600",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-WinINet-Config/ProxyConfigChanged 5600",
+      "body": "Log channel: Microsoft-Windows-WinINet-Config/ProxyConfigChanged · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-WinINet-Config/ProxyConfigChanged"
+      },
+      "teaches": [
+        "channel:microsoft-windows-wininet-config-proxyconfigchanged",
+        "corpus:risk",
+        "event:microsoft-windows-wininet-config-proxyconfigchanged:5600"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-wininet-config-proxyconfigchanged",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-WinINet-Config/ProxyConfigChanged — Event ID 5600",
+        "back": "Indicates change in the proxy configuration. For example if i change my proxy configuration from the \"Internet Option\" menu. The event will get generated."
+      }
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-wmi-activity-operational-fc-5860",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-WMI-Activity/Operational 5860",
+      "body": "Log channel: Microsoft-Windows-WMI-Activity/Operational · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-WMI-Activity/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-wmi-activity-operational",
+        "corpus:risk",
+        "event:microsoft-windows-wmi-activity-operational:5860"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-wmi-activity-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-WMI-Activity/Operational — Event ID 5860",
+        "back": "Registration of Temporary Event Consumer"
+      }
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-remotedesktopservices-rdpcorets-operational-quiz-small-microsoft-windows-remotede-fb09eff5",
+      "type": "quiz",
+      "title": "Recall: Microsoft-Windows-RemoteDesktopServices-RdpCoreTS/Operational",
+      "body": "Inline feedback, no results page.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-RemoteDesktopServices-RdpCoreTS/Operational"
+      },
+      "requires": [
+        "event:microsoft-windows-remotedesktopservices-rdpcorets-operational:131"
+      ],
+      "estimated_seconds": 35,
+      "graded": true,
+      "payload": {
+        "format": "multiple-choice",
+        "question": "In the Microsoft-Windows-RemoteDesktopServices-RdpCoreTS/Operational channel, which Event ID records: “Accepted new TCP connection”",
+        "choices": [
+          "2",
+          "131",
+          "140",
+          "5600"
+        ],
+        "answer_index": 1,
+        "rationale": "Logging/Notable-Event-IDs-Risk.md#Microsoft-Windows-RemoteDesktopServices-RdpCoreTS/Operational lists 131 as “Accepted new TCP connection”."
+      }
+    },
+    {
+      "id": "t1-m03-risk-smaller-channels-instr-microsoft-windows-remotedesktopservices-rdpcorets-operational-e131",
+      "type": "instructions",
+      "title": "Before you start: smaller channels",
+      "body": "",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md"
+      },
+      "teaches": [
+        "concept:corpus-purpose"
+      ],
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "goal": "Match each Event ID to what it records.",
+        "what_youll_use": "The 6 cards from this sitting.",
+        "done_when": "Every ID on the left has a description on the right."
+      }
+    },
+    {
+      "id": "t1-m03-risk-small-match-microsoft-windows-remotedesktopservices-rdpcorets-operational-e131",
+      "type": "exercise",
+      "title": "Match: smaller-channel IDs",
+      "body": "Every ID below was on the cards you just saw.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md"
+      },
+      "requires": [
+        "event:microsoft-windows-remotedesktopservices-rdpcorets-operational:131",
+        "event:microsoft-windows-remotedesktopservices-rdpcorets-operational:140",
+        "event:microsoft-windows-sysmon-operational:2",
+        "event:microsoft-windows-taskscheduler-operational:140",
+        "event:microsoft-windows-wininet-config-proxyconfigchanged:5600",
+        "event:microsoft-windows-wmi-activity-operational:5860"
+      ],
+      "estimated_seconds": 60,
+      "difficulty": "standard",
+      "graded": true,
+      "payload": {
+        "format": "match",
+        "pairs": [
+          {
+            "left": "Microsoft-Windows-RemoteDesktopServices-RdpCoreTS/Operational 131",
+            "right": "Accepted new TCP connection"
+          },
+          {
+            "left": "Microsoft-Windows-RemoteDesktopServices-RdpCoreTS/Operational 140",
+            "right": "Connection failed; bad username or password"
+          },
+          {
+            "left": "Microsoft-Windows-Sysmon/Operational 2",
+            "right": "A process changed a file creation time"
+          },
+          {
+            "left": "Microsoft-Windows-TaskScheduler/Operational 140",
+            "right": "Task Updated"
+          },
+          {
+            "left": "Microsoft-Windows-WinINet-Config/ProxyConfigChanged 5600",
+            "right": "Indicates change in the proxy configuration. For example if i change my proxy configuration from the \"Internet Option\" menu. The event will get generated."
+          },
+          {
+            "left": "Microsoft-Windows-WMI-Activity/Operational 5860",
+            "right": "Registration of Temporary Event Consumer"
+          }
+        ]
+      }
+    }
+  ]
+}

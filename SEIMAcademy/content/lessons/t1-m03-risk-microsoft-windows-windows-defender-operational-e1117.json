@@ -1,0 +1,374 @@
+{
+  "schema_version": "1.0.0",
+  "id": "t1-m03-risk-microsoft-windows-windows-defender-operational-e1117",
+  "tier": 1,
+  "module": "3",
+  "part": 2,
+  "title": "Microsoft-Windows-Windows Defender/Operational (risk) — part 2",
+  "summary": "8 notable Event IDs from the Microsoft-Windows-Windows Defender/Operational channel on the risk list.",
+  "estimated_seconds": 290,
+  "teaches": [
+    "channel:microsoft-windows-windows-defender-operational",
+    "concept:corpus-purpose",
+    "corpus:risk",
+    "event:microsoft-windows-windows-defender-operational:1117",
+    "event:microsoft-windows-windows-defender-operational:1118",
+    "event:microsoft-windows-windows-defender-operational:1119",
+    "event:microsoft-windows-windows-defender-operational:2001",
+    "event:microsoft-windows-windows-defender-operational:2003",
+    "event:microsoft-windows-windows-defender-operational:2006",
+    "event:microsoft-windows-windows-defender-operational:2042",
+    "event:microsoft-windows-windows-defender-operational:5008"
+  ],
+  "requires": [],
+  "sources": [
+    {
+      "path": "Logging/Notable-Event-IDs-Risk.md",
+      "heading": "Microsoft-Windows-Windows Defender/Operational"
+    }
+  ],
+  "generated": {
+    "generator": "build-content",
+    "generator_version": "1.0.0",
+    "source_repo": "TonyPhipps/SIEM",
+    "source_commit": "4adb971",
+    "source_license": "GPL-3.0",
+    "profile": "event-id-tables",
+    "content_hash": "35668ace0300a58f7fd925dbffb8ec8b19243e904234c4798d87c67a9b838177"
+  },
+  "atoms": [
+    {
+      "id": "t1-m03-risk-microsoft-windows-windows-defender-operational-intro-e1117",
+      "type": "reading",
+      "title": "Microsoft-Windows-Windows Defender/Operational",
+      "body": "The **Microsoft-Windows-Windows Defender/Operational** channel appears on the risk list with 16 notable Event IDs. This sitting covers 8 of them.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-Windows Defender/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-windows-defender-operational",
+        "corpus:risk"
+      ],
+      "estimated_seconds": 45,
+      "graded": false,
+      "payload": {}
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-windows-defender-operational-fc-1117",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Windows Defender/Operational 1117",
+      "body": "Log channel: Microsoft-Windows-Windows Defender/Operational · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-Windows Defender/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-windows-defender-operational",
+        "corpus:risk",
+        "event:microsoft-windows-windows-defender-operational:1117"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-windows-defender-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Windows Defender/Operational — Event ID 1117",
+        "back": "The antimalware platform performed an action to protect your system from malware or other potentially unwanted software."
+      }
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-windows-defender-operational-fc-1118",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Windows Defender/Operational 1118",
+      "body": "Log channel: Microsoft-Windows-Windows Defender/Operational · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-Windows Defender/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-windows-defender-operational",
+        "corpus:risk",
+        "event:microsoft-windows-windows-defender-operational:1118"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-windows-defender-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Windows Defender/Operational — Event ID 1118",
+        "back": "The antimalware platform attempted to perform an action to protect your system from malware or other potentially unwanted software, but the action failed."
+      }
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-windows-defender-operational-fc-1119",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Windows Defender/Operational 1119",
+      "body": "Log channel: Microsoft-Windows-Windows Defender/Operational · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-Windows Defender/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-windows-defender-operational",
+        "corpus:risk",
+        "event:microsoft-windows-windows-defender-operational:1119"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-windows-defender-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Windows Defender/Operational — Event ID 1119",
+        "back": "The antimalware platform encountered a critical error when trying to take action on malware or other potentially unwanted software. There are more details in the event message."
+      }
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-windows-defender-operational-fc-2001",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Windows Defender/Operational 2001",
+      "body": "Log channel: Microsoft-Windows-Windows Defender/Operational · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-Windows Defender/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-windows-defender-operational",
+        "corpus:risk",
+        "event:microsoft-windows-windows-defender-operational:2001"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-windows-defender-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Windows Defender/Operational — Event ID 2001",
+        "back": "The antimalware definition update failed."
+      }
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-windows-defender-operational-fc-2003",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Windows Defender/Operational 2003",
+      "body": "Log channel: Microsoft-Windows-Windows Defender/Operational · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-Windows Defender/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-windows-defender-operational",
+        "corpus:risk",
+        "event:microsoft-windows-windows-defender-operational:2003"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-windows-defender-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Windows Defender/Operational — Event ID 2003",
+        "back": "The antimalware engine update failed."
+      }
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-windows-defender-operational-fc-2006",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Windows Defender/Operational 2006",
+      "body": "Log channel: Microsoft-Windows-Windows Defender/Operational · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-Windows Defender/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-windows-defender-operational",
+        "corpus:risk",
+        "event:microsoft-windows-windows-defender-operational:2006"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-windows-defender-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Windows Defender/Operational — Event ID 2006",
+        "back": "The platform update failed."
+      }
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-windows-defender-operational-fc-2042",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Windows Defender/Operational 2042",
+      "body": "Log channel: Microsoft-Windows-Windows Defender/Operational · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-Windows Defender/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-windows-defender-operational",
+        "corpus:risk",
+        "event:microsoft-windows-windows-defender-operational:2042"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-windows-defender-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Windows Defender/Operational — Event ID 2042",
+        "back": "The antimalware engine no longer supports this operating system, and is no longer protecting your system from malware."
+      }
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-windows-defender-operational-fc-5008",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Windows Defender/Operational 5008",
+      "body": "Log channel: Microsoft-Windows-Windows Defender/Operational · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-Windows Defender/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-windows-defender-operational",
+        "corpus:risk",
+        "event:microsoft-windows-windows-defender-operational:5008"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-windows-defender-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Windows Defender/Operational — Event ID 5008",
+        "back": "The antimalware engine encountered an error and failed."
+      }
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-windows-defender-operational-quiz-e1117",
+      "type": "quiz",
+      "title": "Recall: Microsoft-Windows-Windows Defender/Operational",
+      "body": "Inline feedback, no results page.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-Windows Defender/Operational"
+      },
+      "requires": [
+        "event:microsoft-windows-windows-defender-operational:1117"
+      ],
+      "estimated_seconds": 35,
+      "graded": true,
+      "payload": {
+        "format": "multiple-choice",
+        "question": "In the Microsoft-Windows-Windows Defender/Operational channel, which Event ID records: “The antimalware platform performed an action to protect your system from malware or other potentially unwanted software.”",
+        "choices": [
+          "1117",
+          "1118",
+          "1119",
+          "2001"
+        ],
+        "answer_index": 0,
+        "rationale": "Logging/Notable-Event-IDs-Risk.md#Microsoft-Windows-Windows Defender/Operational lists 1117 as “The antimalware platform performed an action to protect your system from malware or other potentially unwanted software.”."
+      }
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-windows-defender-operational-instr-e1117",
+      "type": "instructions",
+      "title": "Before you start: Microsoft-Windows-Windows Defender/Operational",
+      "body": "",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-Windows Defender/Operational"
+      },
+      "teaches": [
+        "concept:corpus-purpose"
+      ],
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "goal": "Match each Microsoft-Windows-Windows Defender/Operational Event ID to what it records.",
+        "what_youll_use": "The 8 cards you just reviewed — nothing outside them.",
+        "done_when": "Every ID on the left has a description on the right."
+      }
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-windows-defender-operational-match-e1117",
+      "type": "exercise",
+      "title": "Match: Microsoft-Windows-Windows Defender/Operational IDs to what they record",
+      "body": "Every ID below was on the cards you just saw.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-Windows Defender/Operational"
+      },
+      "requires": [
+        "channel:microsoft-windows-windows-defender-operational",
+        "event:microsoft-windows-windows-defender-operational:1117",
+        "event:microsoft-windows-windows-defender-operational:1118",
+        "event:microsoft-windows-windows-defender-operational:1119",
+        "event:microsoft-windows-windows-defender-operational:2001",
+        "event:microsoft-windows-windows-defender-operational:2003",
+        "event:microsoft-windows-windows-defender-operational:2006",
+        "event:microsoft-windows-windows-defender-operational:2042",
+        "event:microsoft-windows-windows-defender-operational:5008"
+      ],
+      "estimated_seconds": 60,
+      "difficulty": "standard",
+      "graded": true,
+      "payload": {
+        "format": "match",
+        "pairs": [
+          {
+            "left": "1117",
+            "right": "The antimalware platform performed an action to protect your system from malware or other potentially unwanted software."
+          },
+          {
+            "left": "1118",
+            "right": "The antimalware platform attempted to perform an action to protect your system from malware or other potentially unwanted software, but the action failed."
+          },
+          {
+            "left": "1119",
+            "right": "The antimalware platform encountered a critical error when trying to take action on malware or other potentially unwanted software. There are more details in the event message."
+          },
+          {
+            "left": "2001",
+            "right": "The antimalware definition update failed."
+          },
+          {
+            "left": "2003",
+            "right": "The antimalware engine update failed."
+          },
+          {
+            "left": "2006",
+            "right": "The platform update failed."
+          },
+          {
+            "left": "2042",
+            "right": "The antimalware engine no longer supports this operating system, and is no longer protecting your system from malware."
+          },
+          {
+            "left": "5008",
+            "right": "The antimalware engine encountered an error and failed."
+          }
+        ]
+      }
+    }
+  ]
+}

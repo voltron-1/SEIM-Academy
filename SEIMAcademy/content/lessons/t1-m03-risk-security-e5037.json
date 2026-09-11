@@ -1,0 +1,428 @@
+{
+  "schema_version": "1.0.0",
+  "id": "t1-m03-risk-security-e5037",
+  "tier": 1,
+  "module": "3",
+  "part": 4,
+  "title": "Security (risk) — part 4",
+  "summary": "10 notable Event IDs from the Security channel on the risk list.",
+  "estimated_seconds": 320,
+  "teaches": [
+    "channel:security",
+    "concept:corpus-purpose",
+    "corpus:risk",
+    "event:security:5037",
+    "event:security:5142",
+    "event:security:5143",
+    "event:security:5144",
+    "event:security:5376",
+    "event:security:5377",
+    "event:security:5378",
+    "event:security:6273",
+    "event:security:6276",
+    "event:security:6277"
+  ],
+  "requires": [],
+  "sources": [
+    {
+      "path": "Logging/Notable-Event-IDs-Risk.md",
+      "heading": "Security"
+    }
+  ],
+  "generated": {
+    "generator": "build-content",
+    "generator_version": "1.0.0",
+    "source_repo": "TonyPhipps/SIEM",
+    "source_commit": "4adb971",
+    "source_license": "GPL-3.0",
+    "profile": "event-id-tables",
+    "content_hash": "70746c079ed9c9f62093c512e96d7d7e43977efd6305ccdb348c6e52e6952a1c"
+  },
+  "atoms": [
+    {
+      "id": "t1-m03-risk-security-intro-e5037",
+      "type": "reading",
+      "title": "Security",
+      "body": "The **Security** channel appears on the risk list with 53 notable Event IDs. This sitting covers 10 of them.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:risk"
+      ],
+      "estimated_seconds": 45,
+      "graded": false,
+      "payload": {}
+    },
+    {
+      "id": "t1-m03-risk-security-fc-5037",
+      "type": "flashcard",
+      "title": "Security 5037",
+      "body": "Log channel: Security · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:risk",
+        "event:security:5037"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 5037",
+        "back": "Windows Firewall Driver detected critical runtime error Terminating"
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-fc-5142",
+      "type": "flashcard",
+      "title": "Security 5142",
+      "body": "Log channel: Security · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:risk",
+        "event:security:5142"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 5142",
+        "back": "Network share object added"
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-fc-5143",
+      "type": "flashcard",
+      "title": "Security 5143",
+      "body": "Log channel: Security · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:risk",
+        "event:security:5143"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 5143",
+        "back": "Network share object changed"
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-fc-5144",
+      "type": "flashcard",
+      "title": "Security 5144",
+      "body": "Log channel: Security · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:risk",
+        "event:security:5144"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 5144",
+        "back": "Network share object deleted"
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-fc-5376",
+      "type": "flashcard",
+      "title": "Security 5376",
+      "body": "Log channel: Security · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:risk",
+        "event:security:5376"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 5376",
+        "back": "Credential Manager credentials were backed up"
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-fc-5377",
+      "type": "flashcard",
+      "title": "Security 5377",
+      "body": "Log channel: Security · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:risk",
+        "event:security:5377"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 5377",
+        "back": "Credential Manager credentials were restored from a backup."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-fc-5378",
+      "type": "flashcard",
+      "title": "Security 5378",
+      "body": "Log channel: Security · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:risk",
+        "event:security:5378"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 5378",
+        "back": "The requested credentials delegation was disallowed by policy."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-fc-6273",
+      "type": "flashcard",
+      "title": "Security 6273",
+      "body": "Log channel: Security · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:risk",
+        "event:security:6273"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 6273",
+        "back": "Network Policy Server denied access to a user"
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-fc-6276",
+      "type": "flashcard",
+      "title": "Security 6276",
+      "body": "Log channel: Security · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:risk",
+        "event:security:6276"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 6276",
+        "back": "Network Policy Server quarantined a user"
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-fc-6277",
+      "type": "flashcard",
+      "title": "Security 6277",
+      "body": "Log channel: Security · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:risk",
+        "event:security:6277"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 6277",
+        "back": "Network Policy Server granted access to a user but put it on probation because the host did not meet the defined health policy"
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-quiz-e5037",
+      "type": "quiz",
+      "title": "Recall: Security",
+      "body": "Inline feedback, no results page.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "requires": [
+        "event:security:5037"
+      ],
+      "estimated_seconds": 35,
+      "graded": true,
+      "payload": {
+        "format": "multiple-choice",
+        "question": "In the Security channel, which Event ID records: “Windows Firewall Driver detected critical runtime error Terminating”",
+        "choices": [
+          "5037",
+          "5142",
+          "5143",
+          "5144"
+        ],
+        "answer_index": 0,
+        "rationale": "Logging/Notable-Event-IDs-Risk.md#Security lists 5037 as “Windows Firewall Driver detected critical runtime error Terminating”."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-instr-e5037",
+      "type": "instructions",
+      "title": "Before you start: Security",
+      "body": "",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "concept:corpus-purpose"
+      ],
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "goal": "Match each Security Event ID to what it records.",
+        "what_youll_use": "The 10 cards you just reviewed — nothing outside them.",
+        "done_when": "Every ID on the left has a description on the right."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-match-e5037",
+      "type": "exercise",
+      "title": "Match: Security IDs to what they record",
+      "body": "Every ID below was on the cards you just saw.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "requires": [
+        "channel:security",
+        "event:security:5037",
+        "event:security:5142",
+        "event:security:5143",
+        "event:security:5144",
+        "event:security:5376",
+        "event:security:5377",
+        "event:security:5378",
+        "event:security:6273"
+      ],
+      "estimated_seconds": 60,
+      "difficulty": "standard",
+      "graded": true,
+      "payload": {
+        "format": "match",
+        "pairs": [
+          {
+            "left": "5037",
+            "right": "Windows Firewall Driver detected critical runtime error Terminating"
+          },
+          {
+            "left": "5142",
+            "right": "Network share object added"
+          },
+          {
+            "left": "5143",
+            "right": "Network share object changed"
+          },
+          {
+            "left": "5144",
+            "right": "Network share object deleted"
+          },
+          {
+            "left": "5376",
+            "right": "Credential Manager credentials were backed up"
+          },
+          {
+            "left": "5377",
+            "right": "Credential Manager credentials were restored from a backup."
+          },
+          {
+            "left": "5378",
+            "right": "The requested credentials delegation was disallowed by policy."
+          },
+          {
+            "left": "6273",
+            "right": "Network Policy Server denied access to a user"
+          }
+        ]
+      }
+    }
+  ]
+}

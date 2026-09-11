@@ -1,0 +1,385 @@
+{
+  "schema_version": "1.0.0",
+  "id": "t1-m03-sigma-application-e1033",
+  "tier": 1,
+  "module": "3",
+  "part": 2,
+  "title": "Application (sigma) — part 2",
+  "summary": "8 notable Event IDs from the Application channel on the sigma list.",
+  "estimated_seconds": 290,
+  "teaches": [
+    "channel:application",
+    "concept:corpus-purpose",
+    "corpus:sigma",
+    "event:application:1033",
+    "event:application:1034",
+    "event:application:1040",
+    "event:application:15457",
+    "event:application:18456",
+    "event:application:200",
+    "event:application:201",
+    "event:application:33205",
+    "provider:msiinstaller",
+    "provider:mssqlserver",
+    "provider:screenconnect"
+  ],
+  "requires": [],
+  "sources": [
+    {
+      "path": "Logging/Notable-Event-IDs-Sigma.md",
+      "heading": "Application"
+    }
+  ],
+  "generated": {
+    "generator": "build-content",
+    "generator_version": "1.0.0",
+    "source_repo": "TonyPhipps/SIEM",
+    "source_commit": "4adb971",
+    "source_license": "GPL-3.0",
+    "profile": "event-id-tables",
+    "content_hash": "c4913f24ba29b3fb47f81571c7759554fea4fbae80f5a9a0bd41933ad4df2a8a"
+  },
+  "atoms": [
+    {
+      "id": "t1-m03-sigma-application-intro-e1033",
+      "type": "reading",
+      "title": "Application",
+      "body": "The **Application** channel appears on the sigma list with 16 notable Event IDs. This sitting covers 8 of them.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Application"
+      },
+      "teaches": [
+        "channel:application",
+        "corpus:sigma"
+      ],
+      "estimated_seconds": 45,
+      "graded": false,
+      "payload": {}
+    },
+    {
+      "id": "t1-m03-sigma-application-fc-1033",
+      "type": "flashcard",
+      "title": "Application 1033",
+      "body": "Log channel: Application · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Application"
+      },
+      "teaches": [
+        "channel:application",
+        "corpus:sigma",
+        "event:application:1033",
+        "provider:msiinstaller"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-application",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Application — Event ID 1033",
+        "back": "A software product was successfully installed."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-application-fc-1034",
+      "type": "flashcard",
+      "title": "Application 1034",
+      "body": "Log channel: Application · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Application"
+      },
+      "teaches": [
+        "channel:application",
+        "corpus:sigma",
+        "event:application:1034",
+        "provider:msiinstaller"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": true,
+        "deck": "t1-m03-application",
+        "reason": "evidence-set"
+      },
+      "payload": {
+        "front": "Application — Event ID 1034",
+        "back": "A software product was successfully removed (uninstalled)."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-application-fc-1040",
+      "type": "flashcard",
+      "title": "Application 1040",
+      "body": "Log channel: Application · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Application"
+      },
+      "teaches": [
+        "channel:application",
+        "corpus:sigma",
+        "event:application:1040",
+        "provider:msiinstaller"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": true,
+        "deck": "t1-m03-application",
+        "reason": "evidence-set"
+      },
+      "payload": {
+        "front": "Application — Event ID 1040",
+        "back": "The Windows Installer service has started a transaction."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-application-fc-33205",
+      "type": "flashcard",
+      "title": "Application 33205",
+      "body": "Log channel: Application · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Application"
+      },
+      "teaches": [
+        "channel:application",
+        "corpus:sigma",
+        "event:application:33205",
+        "provider:mssqlserver"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-application",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Application — Event ID 33205",
+        "back": "SQL Server Audit failure or state change."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-application-fc-18456",
+      "type": "flashcard",
+      "title": "Application 18456",
+      "body": "Log channel: Application · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Application"
+      },
+      "teaches": [
+        "channel:application",
+        "corpus:sigma",
+        "event:application:18456",
+        "provider:mssqlserver"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-application",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Application — Event ID 18456",
+        "back": "A user login attempt to SQL Server failed."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-application-fc-15457",
+      "type": "flashcard",
+      "title": "Application 15457",
+      "body": "Log channel: Application · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Application"
+      },
+      "teaches": [
+        "channel:application",
+        "corpus:sigma",
+        "event:application:15457",
+        "provider:mssqlserver"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-application",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Application — Event ID 15457",
+        "back": "A configuration option has been changed."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-application-fc-200",
+      "type": "flashcard",
+      "title": "Application 200",
+      "body": "Log channel: Application · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Application"
+      },
+      "teaches": [
+        "channel:application",
+        "corpus:sigma",
+        "event:application:200",
+        "provider:screenconnect"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-application",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Application — Event ID 200",
+        "back": "A Client Connection attempt."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-application-fc-201",
+      "type": "flashcard",
+      "title": "Application 201",
+      "body": "Log channel: Application · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Application"
+      },
+      "teaches": [
+        "channel:application",
+        "corpus:sigma",
+        "event:application:201",
+        "provider:screenconnect"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-application",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Application — Event ID 201",
+        "back": "A Client has disconnected."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-application-quiz-e1033",
+      "type": "quiz",
+      "title": "Recall: Application",
+      "body": "Inline feedback, no results page.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Application"
+      },
+      "requires": [
+        "event:application:1033"
+      ],
+      "estimated_seconds": 35,
+      "graded": true,
+      "payload": {
+        "format": "multiple-choice",
+        "question": "In the Application channel, which Event ID records: “A software product was successfully installed.”",
+        "choices": [
+          "1033",
+          "1034",
+          "1040",
+          "33205"
+        ],
+        "answer_index": 0,
+        "rationale": "Logging/Notable-Event-IDs-Sigma.md#Application lists 1033 as “A software product was successfully installed.”."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-application-instr-e1033",
+      "type": "instructions",
+      "title": "Before you start: Application",
+      "body": "",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Application"
+      },
+      "teaches": [
+        "concept:corpus-purpose"
+      ],
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "goal": "Match each Application Event ID to what it records.",
+        "what_youll_use": "The 8 cards you just reviewed — nothing outside them.",
+        "done_when": "Every ID on the left has a description on the right."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-application-match-e1033",
+      "type": "exercise",
+      "title": "Match: Application IDs to what they record",
+      "body": "Every ID below was on the cards you just saw.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Application"
+      },
+      "requires": [
+        "channel:application",
+        "event:application:1033",
+        "event:application:1034",
+        "event:application:1040",
+        "event:application:15457",
+        "event:application:18456",
+        "event:application:200",
+        "event:application:201",
+        "event:application:33205"
+      ],
+      "estimated_seconds": 60,
+      "difficulty": "standard",
+      "graded": true,
+      "payload": {
+        "format": "match",
+        "pairs": [
+          {
+            "left": "1033",
+            "right": "A software product was successfully installed."
+          },
+          {
+            "left": "1034",
+            "right": "A software product was successfully removed (uninstalled)."
+          },
+          {
+            "left": "1040",
+            "right": "The Windows Installer service has started a transaction."
+          },
+          {
+            "left": "33205",
+            "right": "SQL Server Audit failure or state change."
+          },
+          {
+            "left": "18456",
+            "right": "A user login attempt to SQL Server failed."
+          },
+          {
+            "left": "15457",
+            "right": "A configuration option has been changed."
+          },
+          {
+            "left": "200",
+            "right": "A Client Connection attempt."
+          },
+          {
+            "left": "201",
+            "right": "A Client has disconnected."
+          }
+        ]
+      }
+    }
+  ]
+}

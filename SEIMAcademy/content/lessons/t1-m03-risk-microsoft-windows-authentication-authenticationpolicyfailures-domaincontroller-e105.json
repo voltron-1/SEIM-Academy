@@ -1,0 +1,245 @@
+{
+  "schema_version": "1.0.0",
+  "id": "t1-m03-risk-microsoft-windows-authentication-authenticationpolicyfailures-domaincontroller-e105",
+  "tier": 1,
+  "module": "3",
+  "title": "Microsoft-Windows-Authentication/AuthenticationPolicyFailures-DomainController…",
+  "summary": "4 notable Event IDs from the Microsoft-Windows-Authentication/AuthenticationPolicyFailures-DomainController channel on the risk list.",
+  "estimated_seconds": 230,
+  "teaches": [
+    "channel:microsoft-windows-authentication-authenticationpolicyfailures-domaincontroller",
+    "concept:corpus-purpose",
+    "corpus:risk",
+    "event:microsoft-windows-authentication-authenticationpolicyfailures-domaincontroller:105",
+    "event:microsoft-windows-authentication-authenticationpolicyfailures-domaincontroller:106",
+    "event:microsoft-windows-authentication-authenticationpolicyfailures-domaincontroller:305",
+    "event:microsoft-windows-authentication-authenticationpolicyfailures-domaincontroller:306"
+  ],
+  "requires": [],
+  "sources": [
+    {
+      "path": "Logging/Notable-Event-IDs-Risk.md",
+      "heading": "Microsoft-Windows-Authentication/AuthenticationPolicyFailures-DomainController"
+    }
+  ],
+  "generated": {
+    "generator": "build-content",
+    "generator_version": "1.0.0",
+    "source_repo": "TonyPhipps/SIEM",
+    "source_commit": "4adb971",
+    "source_license": "GPL-3.0",
+    "profile": "event-id-tables",
+    "content_hash": "e950bd76d4bf832fb7b3ad27255f53a02cc238dd9c056c5e2ee730beafeb619e"
+  },
+  "atoms": [
+    {
+      "id": "t1-m03-risk-microsoft-windows-authentication-authenticationpolicyfailures-domaincontroller-intro-e105",
+      "type": "reading",
+      "title": "Microsoft-Windows-Authentication/AuthenticationPolicyFailures-DomainController",
+      "body": "The **Microsoft-Windows-Authentication/AuthenticationPolicyFailures-DomainController** channel appears on the risk list with 4 notable Event IDs. This sitting covers 4 of them.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-Authentication/AuthenticationPolicyFailures-DomainController"
+      },
+      "teaches": [
+        "channel:microsoft-windows-authentication-authenticationpolicyfailures-domaincontroller",
+        "corpus:risk"
+      ],
+      "estimated_seconds": 45,
+      "graded": false,
+      "payload": {}
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-authentication-authenticationpolicyfailures-domaincontroller-fc-105",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Authentication/AuthenticationPolicyFailures-DomainController…",
+      "body": "Log channel: Microsoft-Windows-Authentication/AuthenticationPolicyFailures-DomainController · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-Authentication/AuthenticationPolicyFailures-DomainController"
+      },
+      "teaches": [
+        "channel:microsoft-windows-authentication-authenticationpolicyfailures-domaincontroller",
+        "corpus:risk",
+        "event:microsoft-windows-authentication-authenticationpolicyfailures-domaincontroller:105"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-authentication-authenticationpolicyfailures-domaincontroller",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Authentication/AuthenticationPolicyFailures-DomainController — Event ID 105",
+        "back": "Kerberos authentication from a particular device was not permitted."
+      }
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-authentication-authenticationpolicyfailures-domaincontroller-fc-106",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Authentication/AuthenticationPolicyFailures-DomainController…",
+      "body": "Log channel: Microsoft-Windows-Authentication/AuthenticationPolicyFailures-DomainController · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-Authentication/AuthenticationPolicyFailures-DomainController"
+      },
+      "teaches": [
+        "channel:microsoft-windows-authentication-authenticationpolicyfailures-domaincontroller",
+        "corpus:risk",
+        "event:microsoft-windows-authentication-authenticationpolicyfailures-domaincontroller:106"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-authentication-authenticationpolicyfailures-domaincontroller",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Authentication/AuthenticationPolicyFailures-DomainController — Event ID 106",
+        "back": "The user or device was not allowed to authenticate to the server."
+      }
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-authentication-authenticationpolicyfailures-domaincontroller-fc-305",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Authentication/AuthenticationPolicyFailures-DomainController…",
+      "body": "Log channel: Microsoft-Windows-Authentication/AuthenticationPolicyFailures-DomainController · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-Authentication/AuthenticationPolicyFailures-DomainController"
+      },
+      "teaches": [
+        "channel:microsoft-windows-authentication-authenticationpolicyfailures-domaincontroller",
+        "corpus:risk",
+        "event:microsoft-windows-authentication-authenticationpolicyfailures-domaincontroller:305"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-authentication-authenticationpolicyfailures-domaincontroller",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Authentication/AuthenticationPolicyFailures-DomainController — Event ID 305",
+        "back": "Kerberos TGT request did not meet access control restrictions."
+      }
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-authentication-authenticationpolicyfailures-domaincontroller-fc-306",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Authentication/AuthenticationPolicyFailures-DomainController…",
+      "body": "Log channel: Microsoft-Windows-Authentication/AuthenticationPolicyFailures-DomainController · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-Authentication/AuthenticationPolicyFailures-DomainController"
+      },
+      "teaches": [
+        "channel:microsoft-windows-authentication-authenticationpolicyfailures-domaincontroller",
+        "corpus:risk",
+        "event:microsoft-windows-authentication-authenticationpolicyfailures-domaincontroller:306"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-authentication-authenticationpolicyfailures-domaincontroller",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Authentication/AuthenticationPolicyFailures-DomainController — Event ID 306",
+        "back": "User, device or both do not meet the access control restrictions."
+      }
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-authentication-authenticationpolicyfailures-domaincontroller-quiz-e105",
+      "type": "quiz",
+      "title": "Recall: Microsoft-Windows-Authentication/AuthenticationPolicyFailures-DomainCon…",
+      "body": "Inline feedback, no results page.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-Authentication/AuthenticationPolicyFailures-DomainController"
+      },
+      "requires": [
+        "event:microsoft-windows-authentication-authenticationpolicyfailures-domaincontroller:105"
+      ],
+      "estimated_seconds": 35,
+      "graded": true,
+      "payload": {
+        "format": "multiple-choice",
+        "question": "In the Microsoft-Windows-Authentication/AuthenticationPolicyFailures-DomainController channel, which Event ID records: “Kerberos authentication from a particular device was not permitted.”",
+        "choices": [
+          "105",
+          "106",
+          "305",
+          "306"
+        ],
+        "answer_index": 0,
+        "rationale": "Logging/Notable-Event-IDs-Risk.md#Microsoft-Windows-Authentication/AuthenticationPolicyFailures-DomainController lists 105 as “Kerberos authentication from a particular device was not permitted.”."
+      }
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-authentication-authenticationpolicyfailures-domaincontroller-instr-e105",
+      "type": "instructions",
+      "title": "Before you start: Microsoft-Windows-Authentication/AuthenticationPo…",
+      "body": "",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-Authentication/AuthenticationPolicyFailures-DomainController"
+      },
+      "teaches": [
+        "concept:corpus-purpose"
+      ],
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "goal": "Match each Microsoft-Windows-Authentication/AuthenticationPolicyFailures-DomainController Event ID to what it records.",
+        "what_youll_use": "The 4 cards you just reviewed — nothing outside them.",
+        "done_when": "Every ID on the left has a description on the right."
+      }
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-authentication-authenticationpolicyfailures-domaincontroller-match-e105",
+      "type": "exercise",
+      "title": "Match: Microsoft-Windows-Authentication/AuthenticationPolicyFailures-DomainCont…",
+      "body": "Every ID below was on the cards you just saw.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-Authentication/AuthenticationPolicyFailures-DomainController"
+      },
+      "requires": [
+        "channel:microsoft-windows-authentication-authenticationpolicyfailures-domaincontroller",
+        "event:microsoft-windows-authentication-authenticationpolicyfailures-domaincontroller:105",
+        "event:microsoft-windows-authentication-authenticationpolicyfailures-domaincontroller:106",
+        "event:microsoft-windows-authentication-authenticationpolicyfailures-domaincontroller:305",
+        "event:microsoft-windows-authentication-authenticationpolicyfailures-domaincontroller:306"
+      ],
+      "estimated_seconds": 60,
+      "difficulty": "standard",
+      "graded": true,
+      "payload": {
+        "format": "match",
+        "pairs": [
+          {
+            "left": "105",
+            "right": "Kerberos authentication from a particular device was not permitted."
+          },
+          {
+            "left": "106",
+            "right": "The user or device was not allowed to authenticate to the server."
+          },
+          {
+            "left": "305",
+            "right": "Kerberos TGT request did not meet access control restrictions."
+          },
+          {
+            "left": "306",
+            "right": "User, device or both do not meet the access control restrictions."
+          }
+        ]
+      }
+    }
+  ]
+}

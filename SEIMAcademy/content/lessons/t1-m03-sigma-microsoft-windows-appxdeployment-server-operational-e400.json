@@ -1,0 +1,277 @@
+{
+  "schema_version": "1.0.0",
+  "id": "t1-m03-sigma-microsoft-windows-appxdeployment-server-operational-e400",
+  "tier": 1,
+  "module": "3",
+  "title": "Microsoft-Windows-AppXDeployment-Server/Operational (sigma)",
+  "summary": "5 notable Event IDs from the Microsoft-Windows-AppXDeployment-Server/Operational channel on the sigma list.",
+  "estimated_seconds": 245,
+  "teaches": [
+    "channel:microsoft-windows-appxdeployment-server-operational",
+    "concept:corpus-purpose",
+    "corpus:sigma",
+    "event:microsoft-windows-appxdeployment-server-operational:400",
+    "event:microsoft-windows-appxdeployment-server-operational:401",
+    "event:microsoft-windows-appxdeployment-server-operational:412",
+    "event:microsoft-windows-appxdeployment-server-operational:441",
+    "event:microsoft-windows-appxdeployment-server-operational:854"
+  ],
+  "requires": [],
+  "sources": [
+    {
+      "path": "Logging/Notable-Event-IDs-Sigma.md",
+      "heading": "Microsoft-Windows-AppXDeployment-Server/Operational"
+    }
+  ],
+  "generated": {
+    "generator": "build-content",
+    "generator_version": "1.0.0",
+    "source_repo": "TonyPhipps/SIEM",
+    "source_commit": "4adb971",
+    "source_license": "GPL-3.0",
+    "profile": "event-id-tables",
+    "content_hash": "db97be5e17a47f8613152186849e863c5e34208cabb1b6f9a9b2e113b6165139"
+  },
+  "atoms": [
+    {
+      "id": "t1-m03-sigma-microsoft-windows-appxdeployment-server-operational-intro-e400",
+      "type": "reading",
+      "title": "Microsoft-Windows-AppXDeployment-Server/Operational",
+      "body": "The **Microsoft-Windows-AppXDeployment-Server/Operational** channel appears on the sigma list with 5 notable Event IDs. This sitting covers 5 of them.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-AppXDeployment-Server/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-appxdeployment-server-operational",
+        "corpus:sigma"
+      ],
+      "estimated_seconds": 45,
+      "graded": false,
+      "payload": {}
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-appxdeployment-server-operational-fc-400",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-AppXDeployment-Server/Operational 400",
+      "body": "Log channel: Microsoft-Windows-AppXDeployment-Server/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-AppXDeployment-Server/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-appxdeployment-server-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-appxdeployment-server-operational:400"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-appxdeployment-server-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-AppXDeployment-Server/Operational — Event ID 400",
+        "back": "An AppX (Microsoft Store) package deployment operation has started."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-appxdeployment-server-operational-fc-401",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-AppXDeployment-Server/Operational 401",
+      "body": "Log channel: Microsoft-Windows-AppXDeployment-Server/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-AppXDeployment-Server/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-appxdeployment-server-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-appxdeployment-server-operational:401"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-appxdeployment-server-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-AppXDeployment-Server/Operational — Event ID 401",
+        "back": "An AppX (Microsoft Store) package deployment operation has failed."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-appxdeployment-server-operational-fc-412",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-AppXDeployment-Server/Operational 412",
+      "body": "Log channel: Microsoft-Windows-AppXDeployment-Server/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-AppXDeployment-Server/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-appxdeployment-server-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-appxdeployment-server-operational:412"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-appxdeployment-server-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-AppXDeployment-Server/Operational — Event ID 412",
+        "back": "A deployment operation was successfully canceled."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-appxdeployment-server-operational-fc-441",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-AppXDeployment-Server/Operational 441",
+      "body": "Log channel: Microsoft-Windows-AppXDeployment-Server/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-AppXDeployment-Server/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-appxdeployment-server-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-appxdeployment-server-operational:441"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-appxdeployment-server-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-AppXDeployment-Server/Operational — Event ID 441",
+        "back": "A package (app) was successfully removed for a specific user, but its files remain on the system for other users."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-appxdeployment-server-operational-fc-854",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-AppXDeployment-Server/Operational 854",
+      "body": "Log channel: Microsoft-Windows-AppXDeployment-Server/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-AppXDeployment-Server/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-appxdeployment-server-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-appxdeployment-server-operational:854"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-appxdeployment-server-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-AppXDeployment-Server/Operational — Event ID 854",
+        "back": "A package (app) was ignored because it is already up to date."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-appxdeployment-server-operational-quiz-e400",
+      "type": "quiz",
+      "title": "Recall: Microsoft-Windows-AppXDeployment-Server/Operational",
+      "body": "Inline feedback, no results page.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-AppXDeployment-Server/Operational"
+      },
+      "requires": [
+        "event:microsoft-windows-appxdeployment-server-operational:400"
+      ],
+      "estimated_seconds": 35,
+      "graded": true,
+      "payload": {
+        "format": "multiple-choice",
+        "question": "In the Microsoft-Windows-AppXDeployment-Server/Operational channel, which Event ID records: “An AppX (Microsoft Store) package deployment operation has started.”",
+        "choices": [
+          "400",
+          "401",
+          "412",
+          "441"
+        ],
+        "answer_index": 0,
+        "rationale": "Logging/Notable-Event-IDs-Sigma.md#Microsoft-Windows-AppXDeployment-Server/Operational lists 400 as “An AppX (Microsoft Store) package deployment operation has started.”."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-appxdeployment-server-operational-instr-e400",
+      "type": "instructions",
+      "title": "Before you start: Microsoft-Windows-AppXDeployment-Server/Operation…",
+      "body": "",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-AppXDeployment-Server/Operational"
+      },
+      "teaches": [
+        "concept:corpus-purpose"
+      ],
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "goal": "Match each Microsoft-Windows-AppXDeployment-Server/Operational Event ID to what it records.",
+        "what_youll_use": "The 5 cards you just reviewed — nothing outside them.",
+        "done_when": "Every ID on the left has a description on the right."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-appxdeployment-server-operational-match-e400",
+      "type": "exercise",
+      "title": "Match: Microsoft-Windows-AppXDeployment-Server/Operational IDs to what they rec…",
+      "body": "Every ID below was on the cards you just saw.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-AppXDeployment-Server/Operational"
+      },
+      "requires": [
+        "channel:microsoft-windows-appxdeployment-server-operational",
+        "event:microsoft-windows-appxdeployment-server-operational:400",
+        "event:microsoft-windows-appxdeployment-server-operational:401",
+        "event:microsoft-windows-appxdeployment-server-operational:412",
+        "event:microsoft-windows-appxdeployment-server-operational:441",
+        "event:microsoft-windows-appxdeployment-server-operational:854"
+      ],
+      "estimated_seconds": 60,
+      "difficulty": "standard",
+      "graded": true,
+      "payload": {
+        "format": "match",
+        "pairs": [
+          {
+            "left": "400",
+            "right": "An AppX (Microsoft Store) package deployment operation has started."
+          },
+          {
+            "left": "401",
+            "right": "An AppX (Microsoft Store) package deployment operation has failed."
+          },
+          {
+            "left": "412",
+            "right": "A deployment operation was successfully canceled."
+          },
+          {
+            "left": "441",
+            "right": "A package (app) was successfully removed for a specific user, but its files remain on the system for other users."
+          },
+          {
+            "left": "854",
+            "right": "A package (app) was ignored because it is already up to date."
+          }
+        ]
+      }
+    }
+  ]
+}

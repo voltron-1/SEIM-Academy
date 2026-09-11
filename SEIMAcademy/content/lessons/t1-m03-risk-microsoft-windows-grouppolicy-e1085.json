@@ -1,0 +1,245 @@
+{
+  "schema_version": "1.0.0",
+  "id": "t1-m03-risk-microsoft-windows-grouppolicy-e1085",
+  "tier": 1,
+  "module": "3",
+  "title": "Microsoft-Windows-GroupPolicy (risk)",
+  "summary": "4 notable Event IDs from the Microsoft-Windows-GroupPolicy channel on the risk list.",
+  "estimated_seconds": 230,
+  "teaches": [
+    "channel:microsoft-windows-grouppolicy",
+    "concept:corpus-purpose",
+    "corpus:risk",
+    "event:microsoft-windows-grouppolicy:1085",
+    "event:microsoft-windows-grouppolicy:1125",
+    "event:microsoft-windows-grouppolicy:1127",
+    "event:microsoft-windows-grouppolicy:1129"
+  ],
+  "requires": [],
+  "sources": [
+    {
+      "path": "Logging/Notable-Event-IDs-Risk.md",
+      "heading": "Microsoft-Windows-GroupPolicy"
+    }
+  ],
+  "generated": {
+    "generator": "build-content",
+    "generator_version": "1.0.0",
+    "source_repo": "TonyPhipps/SIEM",
+    "source_commit": "4adb971",
+    "source_license": "GPL-3.0",
+    "profile": "event-id-tables",
+    "content_hash": "014926ee20c06d15ac00d38edb719f77d2370a9ab5826241522df614c6de0c63"
+  },
+  "atoms": [
+    {
+      "id": "t1-m03-risk-microsoft-windows-grouppolicy-intro-e1085",
+      "type": "reading",
+      "title": "Microsoft-Windows-GroupPolicy",
+      "body": "The **Microsoft-Windows-GroupPolicy** channel appears on the risk list with 4 notable Event IDs. This sitting covers 4 of them.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-GroupPolicy"
+      },
+      "teaches": [
+        "channel:microsoft-windows-grouppolicy",
+        "corpus:risk"
+      ],
+      "estimated_seconds": 45,
+      "graded": false,
+      "payload": {}
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-grouppolicy-fc-1085",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-GroupPolicy 1085",
+      "body": "Log channel: Microsoft-Windows-GroupPolicy · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-GroupPolicy"
+      },
+      "teaches": [
+        "channel:microsoft-windows-grouppolicy",
+        "corpus:risk",
+        "event:microsoft-windows-grouppolicy:1085"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-grouppolicy",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-GroupPolicy — Event ID 1085",
+        "back": "Windows failed to apply the ... settings"
+      }
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-grouppolicy-fc-1125",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-GroupPolicy 1125",
+      "body": "Log channel: Microsoft-Windows-GroupPolicy · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-GroupPolicy"
+      },
+      "teaches": [
+        "channel:microsoft-windows-grouppolicy",
+        "corpus:risk",
+        "event:microsoft-windows-grouppolicy:1125"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-grouppolicy",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-GroupPolicy — Event ID 1125",
+        "back": "The processing of Group Policy failed because of an internal system error."
+      }
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-grouppolicy-fc-1127",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-GroupPolicy 1127",
+      "body": "Log channel: Microsoft-Windows-GroupPolicy · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-GroupPolicy"
+      },
+      "teaches": [
+        "channel:microsoft-windows-grouppolicy",
+        "corpus:risk",
+        "event:microsoft-windows-grouppolicy:1127"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-grouppolicy",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-GroupPolicy — Event ID 1127",
+        "back": "The processing of Group Policy failed due to an internal error."
+      }
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-grouppolicy-fc-1129",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-GroupPolicy 1129",
+      "body": "Log channel: Microsoft-Windows-GroupPolicy · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-GroupPolicy"
+      },
+      "teaches": [
+        "channel:microsoft-windows-grouppolicy",
+        "corpus:risk",
+        "event:microsoft-windows-grouppolicy:1129"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-grouppolicy",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-GroupPolicy — Event ID 1129",
+        "back": "The processing of Group Policy failed because of lack of network connectivity to a domain controller."
+      }
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-grouppolicy-quiz-e1085",
+      "type": "quiz",
+      "title": "Recall: Microsoft-Windows-GroupPolicy",
+      "body": "Inline feedback, no results page.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-GroupPolicy"
+      },
+      "requires": [
+        "event:microsoft-windows-grouppolicy:1085"
+      ],
+      "estimated_seconds": 35,
+      "graded": true,
+      "payload": {
+        "format": "multiple-choice",
+        "question": "In the Microsoft-Windows-GroupPolicy channel, which Event ID records: “Windows failed to apply the ... settings”",
+        "choices": [
+          "1085",
+          "1125",
+          "1127",
+          "1129"
+        ],
+        "answer_index": 0,
+        "rationale": "Logging/Notable-Event-IDs-Risk.md#Microsoft-Windows-GroupPolicy lists 1085 as “Windows failed to apply the ... settings”."
+      }
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-grouppolicy-instr-e1085",
+      "type": "instructions",
+      "title": "Before you start: Microsoft-Windows-GroupPolicy",
+      "body": "",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-GroupPolicy"
+      },
+      "teaches": [
+        "concept:corpus-purpose"
+      ],
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "goal": "Match each Microsoft-Windows-GroupPolicy Event ID to what it records.",
+        "what_youll_use": "The 4 cards you just reviewed — nothing outside them.",
+        "done_when": "Every ID on the left has a description on the right."
+      }
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-grouppolicy-match-e1085",
+      "type": "exercise",
+      "title": "Match: Microsoft-Windows-GroupPolicy IDs to what they record",
+      "body": "Every ID below was on the cards you just saw.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-GroupPolicy"
+      },
+      "requires": [
+        "channel:microsoft-windows-grouppolicy",
+        "event:microsoft-windows-grouppolicy:1085",
+        "event:microsoft-windows-grouppolicy:1125",
+        "event:microsoft-windows-grouppolicy:1127",
+        "event:microsoft-windows-grouppolicy:1129"
+      ],
+      "estimated_seconds": 60,
+      "difficulty": "standard",
+      "graded": true,
+      "payload": {
+        "format": "match",
+        "pairs": [
+          {
+            "left": "1085",
+            "right": "Windows failed to apply the ... settings"
+          },
+          {
+            "left": "1125",
+            "right": "The processing of Group Policy failed because of an internal system error."
+          },
+          {
+            "left": "1127",
+            "right": "The processing of Group Policy failed due to an internal error."
+          },
+          {
+            "left": "1129",
+            "right": "The processing of Group Policy failed because of lack of network connectivity to a domain controller."
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,172 @@
+{
+  "schema_version": "1.0.0",
+  "id": "t1-m03-list-membership-e1",
+  "tier": 1,
+  "module": "3",
+  "part": 1,
+  "title": "Which list is it on? — part 1",
+  "summary": "Sort Event IDs by whether the SIEM alerts on them, scores them, or only keeps them for forensics.",
+  "estimated_seconds": 204,
+  "teaches": [
+    "concept:corpus-membership"
+  ],
+  "requires": [
+    "concept:corpus-purpose",
+    "event:application:1",
+    "event:application:1000",
+    "event:application:1001",
+    "event:application:1002",
+    "event:application:1003",
+    "event:application:11707",
+    "event:dns-server:770",
+    "event:microsoft-windows-dnsserver-audit:541"
+  ],
+  "sources": [
+    {
+      "path": "Logging/Notable-Event-IDs-Sigma.md"
+    },
+    {
+      "path": "Logging/Notable-Event-IDs-Sigma.md",
+      "heading": "Application"
+    }
+  ],
+  "generated": {
+    "generator": "build-content",
+    "generator_version": "1.0.0",
+    "source_repo": "TonyPhipps/SIEM",
+    "source_commit": "4adb971",
+    "source_license": "GPL-3.0",
+    "profile": "event-id-tables",
+    "content_hash": "2dd24026d777edc531a8fcc8c8e4aa363e8380bff0ac6bacc945bbee91ad4a3a"
+  },
+  "atoms": [
+    {
+      "id": "t1-m03-classify-intro-e1",
+      "type": "reading",
+      "title": "Which list is it on?",
+      "body": "Knowing an Event ID is half of it. The other half is knowing whether your SIEM already alerts on it, merely scores it, or only keeps it for the reconstruction afterwards — because that decides whether the alert in front of you is the whole story.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md"
+      },
+      "teaches": [
+        "concept:corpus-membership"
+      ],
+      "estimated_seconds": 45,
+      "graded": false,
+      "payload": {}
+    },
+    {
+      "id": "t1-m03-classify-list-membership-instr-e1",
+      "type": "instructions",
+      "title": "Before you start: list membership",
+      "body": "",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md"
+      },
+      "teaches": [
+        "concept:corpus-membership"
+      ],
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "goal": "Drop each Event ID onto the list it belongs to.",
+        "what_youll_use": "The three list descriptions from the opening sitting, and the cards you have reviewed since.",
+        "done_when": "Every ID sits under one of the three lists.",
+        "step_up_notice": "This one pulls from every channel you have seen so far, not just the last sitting."
+      }
+    },
+    {
+      "id": "t1-m03-classify-drag-e1",
+      "type": "exercise",
+      "title": "Sort Event IDs onto their list",
+      "body": "Sigma alerts on it, Risk scores it, Forensics keeps it.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md"
+      },
+      "requires": [
+        "concept:corpus-membership",
+        "concept:corpus-purpose",
+        "event:application:1",
+        "event:application:1000",
+        "event:application:1001",
+        "event:application:1002",
+        "event:application:1003",
+        "event:application:11707",
+        "event:dns-server:770",
+        "event:microsoft-windows-dnsserver-audit:541"
+      ],
+      "estimated_seconds": 94,
+      "difficulty": "step-up",
+      "graded": true,
+      "payload": {
+        "format": "drag-classify",
+        "buckets": [
+          "The sigma list",
+          "The risk list",
+          "The forensics list"
+        ],
+        "items": [
+          {
+            "label": "Application 1",
+            "bucket": "The sigma list"
+          },
+          {
+            "label": "Application 1002",
+            "bucket": "The risk list"
+          },
+          {
+            "label": "DNS Server 770",
+            "bucket": "The forensics list"
+          },
+          {
+            "label": "Application 1000",
+            "bucket": "The sigma list"
+          },
+          {
+            "label": "Application 1003",
+            "bucket": "The risk list"
+          },
+          {
+            "label": "Microsoft-Windows-DNSServer/Audit 541",
+            "bucket": "The forensics list"
+          },
+          {
+            "label": "Application 1001",
+            "bucket": "The sigma list"
+          },
+          {
+            "label": "Application 11707",
+            "bucket": "The risk list"
+          }
+        ]
+      }
+    },
+    {
+      "id": "t1-m03-classify-quiz-e1",
+      "type": "quiz",
+      "title": "List membership",
+      "body": "Inline feedback, no results page.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Application"
+      },
+      "requires": [
+        "concept:corpus-membership",
+        "event:application:1"
+      ],
+      "estimated_seconds": 35,
+      "graded": true,
+      "payload": {
+        "format": "multiple-choice",
+        "question": "Application Event ID 1 — which list is it on?",
+        "choices": [
+          "The sigma list",
+          "The risk list",
+          "The forensics list"
+        ],
+        "answer_index": 0,
+        "rationale": "Logging/Notable-Event-IDs-Sigma.md#Application is where this ID is listed."
+      }
+    }
+  ]
+}

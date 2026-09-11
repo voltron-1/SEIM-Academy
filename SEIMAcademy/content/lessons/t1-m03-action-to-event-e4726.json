@@ -1,0 +1,169 @@
+{
+  "schema_version": "1.0.0",
+  "id": "t1-m03-action-to-event-e4726",
+  "tier": 1,
+  "module": "3",
+  "part": 4,
+  "title": "Action → Event ID — part 4",
+  "summary": "Ground-truth pairs from the lab telemetry generators: what someone did, and what the log recorded.",
+  "estimated_seconds": 205,
+  "teaches": [
+    "concept:action-to-event"
+  ],
+  "requires": [
+    "event:security-domain-controller-specific:4743",
+    "event:security-domain-controller-specific:5141",
+    "event:security:4726",
+    "event:security:4730",
+    "event:security:4734"
+  ],
+  "sources": [
+    {
+      "path": "Lab/Generate-Suspicious-Activity.ps1"
+    }
+  ],
+  "generated": {
+    "generator": "build-content",
+    "generator_version": "1.0.0",
+    "source_repo": "TonyPhipps/SIEM",
+    "source_commit": "4adb971",
+    "source_license": "GPL-3.0",
+    "profile": "event-id-tables",
+    "content_hash": "6ec77ec82f19cb7f6f5c0fb6d475a56c00606a1753273a7560841805c2488f5f"
+  },
+  "atoms": [
+    {
+      "id": "t1-m03-action-event-intro-e4726",
+      "type": "reading",
+      "title": "What the attacker did, what the log said",
+      "body": "These pairs come from the lab telemetry generators in the source knowledge base. Each block there is labelled with the action it performs and the Event ID that action produces — ground truth, written by whoever wrote the generator.\n\nReading an alert backwards, from Event ID to action, is the whole job on a triage queue.",
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity.ps1",
+        "lines": [
+          195,
+          195
+        ]
+      },
+      "teaches": [
+        "concept:action-to-event"
+      ],
+      "estimated_seconds": 50,
+      "graded": false,
+      "payload": {}
+    },
+    {
+      "id": "t1-m03-lab-action-to-event-instr-e4726",
+      "type": "instructions",
+      "title": "Before you start: action to event",
+      "body": "",
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity.ps1",
+        "lines": [
+          195,
+          195
+        ]
+      },
+      "teaches": [
+        "concept:action-to-event"
+      ],
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "goal": "Drop each action onto the Event ID it produces.",
+        "what_youll_use": "The Event ID cards you have already reviewed, plus the ground-truth pairs in t1-m03-lab-action-event-pairs.",
+        "done_when": "Every action sits under an Event ID."
+      }
+    },
+    {
+      "id": "t1-m03-action-event-drag-e4726",
+      "type": "exercise",
+      "title": "Action → Event ID",
+      "body": "Ground truth from the lab generators. No trick answers.",
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity.ps1",
+        "lines": [
+          195,
+          215
+        ]
+      },
+      "requires": [
+        "concept:action-to-event",
+        "event:security-domain-controller-specific:4743",
+        "event:security-domain-controller-specific:5141",
+        "event:security:4726",
+        "event:security:4730",
+        "event:security:4734"
+      ],
+      "estimated_seconds": 90,
+      "difficulty": "standard",
+      "graded": true,
+      "payload": {
+        "format": "drag-classify",
+        "buckets": [
+          "Security 4726",
+          "Security 4734",
+          "Security (Domain Controller Specific) 4743",
+          "Security 4730",
+          "Security (Domain Controller Specific) 5141"
+        ],
+        "items": [
+          {
+            "label": "Delete Local User",
+            "bucket": "Security 4726"
+          },
+          {
+            "label": "Delete Local Group",
+            "bucket": "Security 4734"
+          },
+          {
+            "label": "Delete AD User (on a domain controller)",
+            "bucket": "Security 4726"
+          },
+          {
+            "label": "Delete Computer Object (on a domain controller)",
+            "bucket": "Security (Domain Controller Specific) 4743"
+          },
+          {
+            "label": "Delete AD Group (on a domain controller)",
+            "bucket": "Security 4730"
+          },
+          {
+            "label": "Delete a GPO (on a domain controller)",
+            "bucket": "Security (Domain Controller Specific) 5141"
+          }
+        ]
+      }
+    },
+    {
+      "id": "t1-m03-action-event-quiz-e4726",
+      "type": "quiz",
+      "title": "Read it backwards",
+      "body": "Inline feedback, no results page.",
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity.ps1",
+        "lines": [
+          195,
+          195
+        ]
+      },
+      "requires": [
+        "concept:action-to-event",
+        "event:security:4726"
+      ],
+      "estimated_seconds": 35,
+      "graded": true,
+      "payload": {
+        "format": "multiple-choice",
+        "question": "Security 4726 just fired. Which action produced it?",
+        "choices": [
+          "Delete AD User",
+          "Delete Computer Object",
+          "Delete Local Group",
+          "Delete Local User"
+        ],
+        "answer_index": 3,
+        "rationale": "Lab/Generate-Suspicious-Activity.ps1:195 labels this block “Delete Local User”."
+      }
+    }
+  ]
+}

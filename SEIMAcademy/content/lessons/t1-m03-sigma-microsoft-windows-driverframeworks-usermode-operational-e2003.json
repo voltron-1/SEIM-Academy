@@ -1,0 +1,245 @@
+{
+  "schema_version": "1.0.0",
+  "id": "t1-m03-sigma-microsoft-windows-driverframeworks-usermode-operational-e2003",
+  "tier": 1,
+  "module": "3",
+  "title": "Microsoft-Windows-DriverFrameworks-UserMode/Operational (sigma)",
+  "summary": "4 notable Event IDs from the Microsoft-Windows-DriverFrameworks-UserMode/Operational channel on the sigma list.",
+  "estimated_seconds": 230,
+  "teaches": [
+    "channel:microsoft-windows-driverframeworks-usermode-operational",
+    "concept:corpus-purpose",
+    "corpus:sigma",
+    "event:microsoft-windows-driverframeworks-usermode-operational:2003",
+    "event:microsoft-windows-driverframeworks-usermode-operational:2004",
+    "event:microsoft-windows-driverframeworks-usermode-operational:2006",
+    "event:microsoft-windows-driverframeworks-usermode-operational:2033"
+  ],
+  "requires": [],
+  "sources": [
+    {
+      "path": "Logging/Notable-Event-IDs-Sigma.md",
+      "heading": "Microsoft-Windows-DriverFrameworks-UserMode/Operational"
+    }
+  ],
+  "generated": {
+    "generator": "build-content",
+    "generator_version": "1.0.0",
+    "source_repo": "TonyPhipps/SIEM",
+    "source_commit": "4adb971",
+    "source_license": "GPL-3.0",
+    "profile": "event-id-tables",
+    "content_hash": "cde6918e5f72c0220c6d405ddc1852da7b984901e524f691117fb6fd1c260612"
+  },
+  "atoms": [
+    {
+      "id": "t1-m03-sigma-microsoft-windows-driverframeworks-usermode-operational-intro-e2003",
+      "type": "reading",
+      "title": "Microsoft-Windows-DriverFrameworks-UserMode/Operational",
+      "body": "The **Microsoft-Windows-DriverFrameworks-UserMode/Operational** channel appears on the sigma list with 4 notable Event IDs. This sitting covers 4 of them.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-DriverFrameworks-UserMode/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-driverframeworks-usermode-operational",
+        "corpus:sigma"
+      ],
+      "estimated_seconds": 45,
+      "graded": false,
+      "payload": {}
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-driverframeworks-usermode-operational-fc-2003",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-DriverFrameworks-UserMode/Operational 2003",
+      "body": "Log channel: Microsoft-Windows-DriverFrameworks-UserMode/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-DriverFrameworks-UserMode/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-driverframeworks-usermode-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-driverframeworks-usermode-operational:2003"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-driverframeworks-usermode-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-DriverFrameworks-UserMode/Operational — Event ID 2003",
+        "back": "A new UMDF (User-Mode Driver Framework) host process has been successfully created."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-driverframeworks-usermode-operational-fc-2004",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-DriverFrameworks-UserMode/Operational 2004",
+      "body": "Log channel: Microsoft-Windows-DriverFrameworks-UserMode/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-DriverFrameworks-UserMode/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-driverframeworks-usermode-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-driverframeworks-usermode-operational:2004"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-driverframeworks-usermode-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-DriverFrameworks-UserMode/Operational — Event ID 2004",
+        "back": "User-Mode drivers loaded"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-driverframeworks-usermode-operational-fc-2006",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-DriverFrameworks-UserMode/Operational 2006",
+      "body": "Log channel: Microsoft-Windows-DriverFrameworks-UserMode/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-DriverFrameworks-UserMode/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-driverframeworks-usermode-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-driverframeworks-usermode-operational:2006"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-driverframeworks-usermode-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-DriverFrameworks-UserMode/Operational — Event ID 2006",
+        "back": "A UMDF (User-Mode Driver Framework) host process has failed to load a driver."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-driverframeworks-usermode-operational-fc-2033",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-DriverFrameworks-UserMode/Operational 2033",
+      "body": "Log channel: Microsoft-Windows-DriverFrameworks-UserMode/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-DriverFrameworks-UserMode/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-driverframeworks-usermode-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-driverframeworks-usermode-operational:2033"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-driverframeworks-usermode-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-DriverFrameworks-UserMode/Operational — Event ID 2033",
+        "back": "A UMDF (User-Mode Driver Framework) host process is being terminated because it has timed out during a state change."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-driverframeworks-usermode-operational-quiz-e2003",
+      "type": "quiz",
+      "title": "Recall: Microsoft-Windows-DriverFrameworks-UserMode/Operational",
+      "body": "Inline feedback, no results page.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-DriverFrameworks-UserMode/Operational"
+      },
+      "requires": [
+        "event:microsoft-windows-driverframeworks-usermode-operational:2003"
+      ],
+      "estimated_seconds": 35,
+      "graded": true,
+      "payload": {
+        "format": "multiple-choice",
+        "question": "In the Microsoft-Windows-DriverFrameworks-UserMode/Operational channel, which Event ID records: “A new UMDF (User-Mode Driver Framework) host process has been successfully created.”",
+        "choices": [
+          "2003",
+          "2004",
+          "2006",
+          "2033"
+        ],
+        "answer_index": 0,
+        "rationale": "Logging/Notable-Event-IDs-Sigma.md#Microsoft-Windows-DriverFrameworks-UserMode/Operational lists 2003 as “A new UMDF (User-Mode Driver Framework) host process has been successfully created.”."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-driverframeworks-usermode-operational-instr-e2003",
+      "type": "instructions",
+      "title": "Before you start: Microsoft-Windows-DriverFrameworks-UserMode/Opera…",
+      "body": "",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-DriverFrameworks-UserMode/Operational"
+      },
+      "teaches": [
+        "concept:corpus-purpose"
+      ],
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "goal": "Match each Microsoft-Windows-DriverFrameworks-UserMode/Operational Event ID to what it records.",
+        "what_youll_use": "The 4 cards you just reviewed — nothing outside them.",
+        "done_when": "Every ID on the left has a description on the right."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-driverframeworks-usermode-operational-match-e2003",
+      "type": "exercise",
+      "title": "Match: Microsoft-Windows-DriverFrameworks-UserMode/Operational IDs to what they…",
+      "body": "Every ID below was on the cards you just saw.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-DriverFrameworks-UserMode/Operational"
+      },
+      "requires": [
+        "channel:microsoft-windows-driverframeworks-usermode-operational",
+        "event:microsoft-windows-driverframeworks-usermode-operational:2003",
+        "event:microsoft-windows-driverframeworks-usermode-operational:2004",
+        "event:microsoft-windows-driverframeworks-usermode-operational:2006",
+        "event:microsoft-windows-driverframeworks-usermode-operational:2033"
+      ],
+      "estimated_seconds": 60,
+      "difficulty": "standard",
+      "graded": true,
+      "payload": {
+        "format": "match",
+        "pairs": [
+          {
+            "left": "2003",
+            "right": "A new UMDF (User-Mode Driver Framework) host process has been successfully created."
+          },
+          {
+            "left": "2004",
+            "right": "User-Mode drivers loaded"
+          },
+          {
+            "left": "2006",
+            "right": "A UMDF (User-Mode Driver Framework) host process has failed to load a driver."
+          },
+          {
+            "left": "2033",
+            "right": "A UMDF (User-Mode Driver Framework) host process is being terminated because it has timed out during a state change."
+          }
+        ]
+      }
+    }
+  ]
+}

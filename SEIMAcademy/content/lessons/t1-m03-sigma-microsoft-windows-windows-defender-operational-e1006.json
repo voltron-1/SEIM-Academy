@@ -1,0 +1,374 @@
+{
+  "schema_version": "1.0.0",
+  "id": "t1-m03-sigma-microsoft-windows-windows-defender-operational-e1006",
+  "tier": 1,
+  "module": "3",
+  "part": 1,
+  "title": "Microsoft-Windows-Windows Defender/Operational (sigma) — part 1",
+  "summary": "8 notable Event IDs from the Microsoft-Windows-Windows Defender/Operational channel on the sigma list.",
+  "estimated_seconds": 290,
+  "teaches": [
+    "channel:microsoft-windows-windows-defender-operational",
+    "concept:corpus-purpose",
+    "corpus:sigma",
+    "event:microsoft-windows-windows-defender-operational:1006",
+    "event:microsoft-windows-windows-defender-operational:1009",
+    "event:microsoft-windows-windows-defender-operational:1013",
+    "event:microsoft-windows-windows-defender-operational:1015",
+    "event:microsoft-windows-windows-defender-operational:1116",
+    "event:microsoft-windows-windows-defender-operational:1117",
+    "event:microsoft-windows-windows-defender-operational:1121",
+    "event:microsoft-windows-windows-defender-operational:3002"
+  ],
+  "requires": [],
+  "sources": [
+    {
+      "path": "Logging/Notable-Event-IDs-Sigma.md",
+      "heading": "Microsoft-Windows-Windows Defender/Operational"
+    }
+  ],
+  "generated": {
+    "generator": "build-content",
+    "generator_version": "1.0.0",
+    "source_repo": "TonyPhipps/SIEM",
+    "source_commit": "4adb971",
+    "source_license": "GPL-3.0",
+    "profile": "event-id-tables",
+    "content_hash": "4135259d7310f40a34ca859baa12e2091cdda1c7951e3d1dd2a5e388a449808c"
+  },
+  "atoms": [
+    {
+      "id": "t1-m03-sigma-microsoft-windows-windows-defender-operational-intro-e1006",
+      "type": "reading",
+      "title": "Microsoft-Windows-Windows Defender/Operational",
+      "body": "The **Microsoft-Windows-Windows Defender/Operational** channel appears on the sigma list with 15 notable Event IDs. This sitting covers 8 of them.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Windows Defender/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-windows-defender-operational",
+        "corpus:sigma"
+      ],
+      "estimated_seconds": 45,
+      "graded": false,
+      "payload": {}
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-windows-defender-operational-fc-1006",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Windows Defender/Operational 1006",
+      "body": "Log channel: Microsoft-Windows-Windows Defender/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Windows Defender/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-windows-defender-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-windows-defender-operational:1006"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-windows-defender-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Windows Defender/Operational — Event ID 1006",
+        "back": "The antimalware engine found malware or other potentially unwanted software."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-windows-defender-operational-fc-1009",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Windows Defender/Operational 1009",
+      "body": "Log channel: Microsoft-Windows-Windows Defender/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Windows Defender/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-windows-defender-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-windows-defender-operational:1009"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-windows-defender-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Windows Defender/Operational — Event ID 1009",
+        "back": "The antimalware platform restored an item from quarantine."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-windows-defender-operational-fc-1013",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Windows Defender/Operational 1013",
+      "body": "Log channel: Microsoft-Windows-Windows Defender/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Windows Defender/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-windows-defender-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-windows-defender-operational:1013"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-windows-defender-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Windows Defender/Operational — Event ID 1013",
+        "back": "The antimalware platform deleted history of malware and other potentially unwanted software."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-windows-defender-operational-fc-1015",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Windows Defender/Operational 1015",
+      "body": "Log channel: Microsoft-Windows-Windows Defender/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Windows Defender/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-windows-defender-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-windows-defender-operational:1015"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-windows-defender-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Windows Defender/Operational — Event ID 1015",
+        "back": "The antimalware platform detected suspicious behavior."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-windows-defender-operational-fc-1116",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Windows Defender/Operational 1116",
+      "body": "Log channel: Microsoft-Windows-Windows Defender/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Windows Defender/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-windows-defender-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-windows-defender-operational:1116"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-windows-defender-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Windows Defender/Operational — Event ID 1116",
+        "back": "The antimalware platform detected malware or other potentially unwanted software."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-windows-defender-operational-fc-1117",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Windows Defender/Operational 1117",
+      "body": "Log channel: Microsoft-Windows-Windows Defender/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Windows Defender/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-windows-defender-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-windows-defender-operational:1117"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-windows-defender-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Windows Defender/Operational — Event ID 1117",
+        "back": "The antimalware platform detected malware or other potentially unwanted software."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-windows-defender-operational-fc-1121",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Windows Defender/Operational 1121",
+      "body": "Log channel: Microsoft-Windows-Windows Defender/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Windows Defender/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-windows-defender-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-windows-defender-operational:1121"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-windows-defender-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Windows Defender/Operational — Event ID 1121",
+        "back": "Successfully blocked an unauthorized change to a protected folder via Controlled Folder Access (CFA)."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-windows-defender-operational-fc-3002",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Windows Defender/Operational 3002",
+      "body": "Log channel: Microsoft-Windows-Windows Defender/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Windows Defender/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-windows-defender-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-windows-defender-operational:3002"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-windows-defender-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Windows Defender/Operational — Event ID 3002",
+        "back": "Real-time protection encountered an error and failed."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-windows-defender-operational-quiz-e1006",
+      "type": "quiz",
+      "title": "Recall: Microsoft-Windows-Windows Defender/Operational",
+      "body": "Inline feedback, no results page.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Windows Defender/Operational"
+      },
+      "requires": [
+        "event:microsoft-windows-windows-defender-operational:1006"
+      ],
+      "estimated_seconds": 35,
+      "graded": true,
+      "payload": {
+        "format": "multiple-choice",
+        "question": "In the Microsoft-Windows-Windows Defender/Operational channel, which Event ID records: “The antimalware engine found malware or other potentially unwanted software.”",
+        "choices": [
+          "1006",
+          "1009",
+          "1013",
+          "1015"
+        ],
+        "answer_index": 0,
+        "rationale": "Logging/Notable-Event-IDs-Sigma.md#Microsoft-Windows-Windows Defender/Operational lists 1006 as “The antimalware engine found malware or other potentially unwanted software.”."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-windows-defender-operational-instr-e1006",
+      "type": "instructions",
+      "title": "Before you start: Microsoft-Windows-Windows Defender/Operational",
+      "body": "",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Windows Defender/Operational"
+      },
+      "teaches": [
+        "concept:corpus-purpose"
+      ],
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "goal": "Match each Microsoft-Windows-Windows Defender/Operational Event ID to what it records.",
+        "what_youll_use": "The 8 cards you just reviewed — nothing outside them.",
+        "done_when": "Every ID on the left has a description on the right."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-windows-defender-operational-match-e1006",
+      "type": "exercise",
+      "title": "Match: Microsoft-Windows-Windows Defender/Operational IDs to what they record",
+      "body": "Every ID below was on the cards you just saw.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Windows Defender/Operational"
+      },
+      "requires": [
+        "channel:microsoft-windows-windows-defender-operational",
+        "event:microsoft-windows-windows-defender-operational:1006",
+        "event:microsoft-windows-windows-defender-operational:1009",
+        "event:microsoft-windows-windows-defender-operational:1013",
+        "event:microsoft-windows-windows-defender-operational:1015",
+        "event:microsoft-windows-windows-defender-operational:1116",
+        "event:microsoft-windows-windows-defender-operational:1117",
+        "event:microsoft-windows-windows-defender-operational:1121",
+        "event:microsoft-windows-windows-defender-operational:3002"
+      ],
+      "estimated_seconds": 60,
+      "difficulty": "standard",
+      "graded": true,
+      "payload": {
+        "format": "match",
+        "pairs": [
+          {
+            "left": "1006",
+            "right": "The antimalware engine found malware or other potentially unwanted software."
+          },
+          {
+            "left": "1009",
+            "right": "The antimalware platform restored an item from quarantine."
+          },
+          {
+            "left": "1013",
+            "right": "The antimalware platform deleted history of malware and other potentially unwanted software."
+          },
+          {
+            "left": "1015",
+            "right": "The antimalware platform detected suspicious behavior."
+          },
+          {
+            "left": "1116",
+            "right": "The antimalware platform detected malware or other potentially unwanted software."
+          },
+          {
+            "left": "1117",
+            "right": "The antimalware platform detected malware or other potentially unwanted software."
+          },
+          {
+            "left": "1121",
+            "right": "Successfully blocked an unauthorized change to a protected folder via Controlled Folder Access (CFA)."
+          },
+          {
+            "left": "3002",
+            "right": "Real-time protection encountered an error and failed."
+          }
+        ]
+      }
+    }
+  ]
+}

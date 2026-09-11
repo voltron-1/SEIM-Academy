@@ -1,0 +1,455 @@
+{
+  "schema_version": "1.0.0",
+  "id": "t1-m03-risk-security-e4726",
+  "tier": 1,
+  "module": "3",
+  "part": 2,
+  "title": "Security (risk) — part 2",
+  "summary": "11 notable Event IDs from the Security channel on the risk list.",
+  "estimated_seconds": 335,
+  "teaches": [
+    "channel:security",
+    "concept:corpus-purpose",
+    "corpus:risk",
+    "event:security:4726",
+    "event:security:4731",
+    "event:security:4733",
+    "event:security:4734",
+    "event:security:4735",
+    "event:security:4738",
+    "event:security:4739",
+    "event:security:4740",
+    "event:security:4767",
+    "event:security:4782",
+    "event:security:4798"
+  ],
+  "requires": [],
+  "sources": [
+    {
+      "path": "Logging/Notable-Event-IDs-Risk.md",
+      "heading": "Security"
+    }
+  ],
+  "generated": {
+    "generator": "build-content",
+    "generator_version": "1.0.0",
+    "source_repo": "TonyPhipps/SIEM",
+    "source_commit": "4adb971",
+    "source_license": "GPL-3.0",
+    "profile": "event-id-tables",
+    "content_hash": "663746f26ad6fe046ef108a75d645cb50fe2e1ce0b6ca3b77e4b5bfbde36e6b1"
+  },
+  "atoms": [
+    {
+      "id": "t1-m03-risk-security-intro-e4726",
+      "type": "reading",
+      "title": "Security",
+      "body": "The **Security** channel appears on the risk list with 53 notable Event IDs. This sitting covers 11 of them.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:risk"
+      ],
+      "estimated_seconds": 45,
+      "graded": false,
+      "payload": {}
+    },
+    {
+      "id": "t1-m03-risk-security-fc-4726",
+      "type": "flashcard",
+      "title": "Security 4726",
+      "body": "Log channel: Security · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:risk",
+        "event:security:4726"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": true,
+        "deck": "t1-m03-security",
+        "reason": "evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4726",
+        "back": "A user account was deleted."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-fc-4731",
+      "type": "flashcard",
+      "title": "Security 4731",
+      "body": "Log channel: Security · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:risk",
+        "event:security:4731"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": true,
+        "deck": "t1-m03-security",
+        "reason": "evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4731",
+        "back": "A security-enabled local group was created."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-fc-4733",
+      "type": "flashcard",
+      "title": "Security 4733",
+      "body": "Log channel: Security · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:risk",
+        "event:security:4733"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4733",
+        "back": "A member was removed from a security-enabled local group."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-fc-4734",
+      "type": "flashcard",
+      "title": "Security 4734",
+      "body": "Log channel: Security · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:risk",
+        "event:security:4734"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": true,
+        "deck": "t1-m03-security",
+        "reason": "evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4734",
+        "back": "A security-enabled local group was deleted."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-fc-4735",
+      "type": "flashcard",
+      "title": "Security 4735",
+      "body": "Log channel: Security · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:risk",
+        "event:security:4735"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": true,
+        "deck": "t1-m03-security",
+        "reason": "evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4735",
+        "back": "A security-enabled local group was changed."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-fc-4738",
+      "type": "flashcard",
+      "title": "Security 4738",
+      "body": "Log channel: Security · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:risk",
+        "event:security:4738"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "duplicate-event"
+      },
+      "payload": {
+        "front": "Security — Event ID 4738",
+        "back": "A user account was changed."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-fc-4739",
+      "type": "flashcard",
+      "title": "Security 4739",
+      "body": "Log channel: Security · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:risk",
+        "event:security:4739"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4739",
+        "back": "Domain Policy was changed."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-fc-4740",
+      "type": "flashcard",
+      "title": "Security 4740",
+      "body": "Log channel: Security · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:risk",
+        "event:security:4740"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4740",
+        "back": "A user account was locked out."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-fc-4767",
+      "type": "flashcard",
+      "title": "Security 4767",
+      "body": "Log channel: Security · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:risk",
+        "event:security:4767"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4767",
+        "back": "A user account was unlocked."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-fc-4782",
+      "type": "flashcard",
+      "title": "Security 4782",
+      "body": "Log channel: Security · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:risk",
+        "event:security:4782"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4782",
+        "back": "The password hash an account was accessed."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-fc-4798",
+      "type": "flashcard",
+      "title": "Security 4798",
+      "body": "Log channel: Security · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:risk",
+        "event:security:4798"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4798",
+        "back": "A user's local group membership was enumerated."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-quiz-e4726",
+      "type": "quiz",
+      "title": "Recall: Security",
+      "body": "Inline feedback, no results page.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "requires": [
+        "event:security:4726"
+      ],
+      "estimated_seconds": 35,
+      "graded": true,
+      "payload": {
+        "format": "multiple-choice",
+        "question": "In the Security channel, which Event ID records: “A user account was deleted.”",
+        "choices": [
+          "4726",
+          "4731",
+          "4733",
+          "4734"
+        ],
+        "answer_index": 0,
+        "rationale": "Logging/Notable-Event-IDs-Risk.md#Security lists 4726 as “A user account was deleted.”."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-instr-e4726",
+      "type": "instructions",
+      "title": "Before you start: Security",
+      "body": "",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "concept:corpus-purpose"
+      ],
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "goal": "Match each Security Event ID to what it records.",
+        "what_youll_use": "The 11 cards you just reviewed — nothing outside them.",
+        "done_when": "Every ID on the left has a description on the right."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-match-e4726",
+      "type": "exercise",
+      "title": "Match: Security IDs to what they record",
+      "body": "Every ID below was on the cards you just saw.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "requires": [
+        "channel:security",
+        "event:security:4726",
+        "event:security:4731",
+        "event:security:4733",
+        "event:security:4734",
+        "event:security:4735",
+        "event:security:4738",
+        "event:security:4739",
+        "event:security:4740"
+      ],
+      "estimated_seconds": 60,
+      "difficulty": "standard",
+      "graded": true,
+      "payload": {
+        "format": "match",
+        "pairs": [
+          {
+            "left": "4726",
+            "right": "A user account was deleted."
+          },
+          {
+            "left": "4731",
+            "right": "A security-enabled local group was created."
+          },
+          {
+            "left": "4733",
+            "right": "A member was removed from a security-enabled local group."
+          },
+          {
+            "left": "4734",
+            "right": "A security-enabled local group was deleted."
+          },
+          {
+            "left": "4735",
+            "right": "A security-enabled local group was changed."
+          },
+          {
+            "left": "4738",
+            "right": "A user account was changed."
+          },
+          {
+            "left": "4739",
+            "right": "Domain Policy was changed."
+          },
+          {
+            "left": "4740",
+            "right": "A user account was locked out."
+          }
+        ]
+      }
+    }
+  ]
+}

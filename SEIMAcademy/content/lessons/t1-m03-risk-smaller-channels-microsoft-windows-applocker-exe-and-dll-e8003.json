@@ -1,0 +1,393 @@
+{
+  "schema_version": "1.0.0",
+  "id": "t1-m03-risk-smaller-channels-microsoft-windows-applocker-exe-and-dll-e8003",
+  "tier": 1,
+  "module": "3",
+  "part": 1,
+  "title": "Smaller channels (risk) — part 1",
+  "summary": "7 Event IDs swept from 6 low-volume channels on the risk list.",
+  "estimated_seconds": 315,
+  "teaches": [
+    "channel:microsoft-windows-applocker-exe-and-dll",
+    "channel:microsoft-windows-applocker-msi-and-script",
+    "channel:microsoft-windows-applocker-packaged-app-deployment",
+    "channel:microsoft-windows-applocker-packaged-app-execution",
+    "channel:microsoft-windows-ntlm-operational",
+    "channel:microsoft-windows-powershell-analytic",
+    "channel:microsoft-windows-security-mitigations-kernelmode",
+    "concept:corpus-purpose",
+    "corpus:risk",
+    "event:microsoft-windows-applocker-exe-and-dll:8003",
+    "event:microsoft-windows-applocker-msi-and-script:8006",
+    "event:microsoft-windows-applocker-msi-and-script:8007",
+    "event:microsoft-windows-applocker-packaged-app-deployment:8025",
+    "event:microsoft-windows-applocker-packaged-app-execution:8022",
+    "event:microsoft-windows-ntlm-operational:8003",
+    "event:microsoft-windows-powershell-analytic:32850"
+  ],
+  "requires": [],
+  "sources": [
+    {
+      "path": "Logging/Notable-Event-IDs-Risk.md"
+    },
+    {
+      "path": "Logging/Notable-Event-IDs-Risk.md",
+      "heading": "Microsoft-Windows-AppLocker/EXE and DLL"
+    },
+    {
+      "path": "Logging/Notable-Event-IDs-Risk.md",
+      "heading": "Microsoft-Windows-AppLocker/MSI and Script"
+    },
+    {
+      "path": "Logging/Notable-Event-IDs-Risk.md",
+      "heading": "Microsoft-Windows-AppLocker/Packaged app-Deployment"
+    },
+    {
+      "path": "Logging/Notable-Event-IDs-Risk.md",
+      "heading": "Microsoft-Windows-AppLocker/Packaged app-Execution"
+    },
+    {
+      "path": "Logging/Notable-Event-IDs-Risk.md",
+      "heading": "Microsoft-Windows-NTLM/Operational"
+    },
+    {
+      "path": "Logging/Notable-Event-IDs-Risk.md",
+      "heading": "Microsoft-Windows-PowerShell/Analytic"
+    },
+    {
+      "path": "Logging/Notable-Event-IDs-Risk.md",
+      "heading": "Microsoft-Windows-Security-Mitigations/KernelMode"
+    }
+  ],
+  "generated": {
+    "generator": "build-content",
+    "generator_version": "1.0.0",
+    "source_repo": "TonyPhipps/SIEM",
+    "source_commit": "4adb971",
+    "source_license": "GPL-3.0",
+    "profile": "event-id-tables",
+    "content_hash": "c23ca5e85818517868d50dd324ae84bde729085529c81de20da50a224364a870"
+  },
+  "atoms": [
+    {
+      "id": "t1-m03-risk-small-intro-microsoft-windows-applocker-exe-and-dll-e8003",
+      "type": "reading",
+      "title": "Smaller channels",
+      "body": "Most Windows log channels contribute only a handful of notable Event IDs. This sitting sweeps 7 of them across 6 channels on the risk list.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md"
+      },
+      "teaches": [
+        "channel:microsoft-windows-applocker-exe-and-dll",
+        "channel:microsoft-windows-applocker-msi-and-script",
+        "channel:microsoft-windows-applocker-packaged-app-deployment",
+        "channel:microsoft-windows-applocker-packaged-app-execution",
+        "channel:microsoft-windows-ntlm-operational",
+        "channel:microsoft-windows-powershell-analytic",
+        "corpus:risk"
+      ],
+      "estimated_seconds": 45,
+      "graded": false,
+      "payload": {}
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-applocker-exe-and-dll-fc-8003",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-AppLocker/EXE and DLL 8003",
+      "body": "Log channel: Microsoft-Windows-AppLocker/EXE and DLL · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-AppLocker/EXE and DLL"
+      },
+      "teaches": [
+        "channel:microsoft-windows-applocker-exe-and-dll",
+        "corpus:risk",
+        "event:microsoft-windows-applocker-exe-and-dll:8003"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-applocker-exe-and-dll",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-AppLocker/EXE and DLL — Event ID 8003",
+        "back": "... would have been prevented from running."
+      }
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-applocker-msi-and-script-fc-8006",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-AppLocker/MSI and Script 8006",
+      "body": "Log channel: Microsoft-Windows-AppLocker/MSI and Script · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-AppLocker/MSI and Script"
+      },
+      "teaches": [
+        "channel:microsoft-windows-applocker-msi-and-script",
+        "corpus:risk",
+        "event:microsoft-windows-applocker-msi-and-script:8006"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-applocker-msi-and-script",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-AppLocker/MSI and Script — Event ID 8006",
+        "back": "... would have been prevented from running."
+      }
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-applocker-msi-and-script-fc-8007",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-AppLocker/MSI and Script 8007",
+      "body": "Log channel: Microsoft-Windows-AppLocker/MSI and Script · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-AppLocker/MSI and Script"
+      },
+      "teaches": [
+        "channel:microsoft-windows-applocker-msi-and-script",
+        "corpus:risk",
+        "event:microsoft-windows-applocker-msi-and-script:8007"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-applocker-msi-and-script",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-AppLocker/MSI and Script — Event ID 8007",
+        "back": "... was prevented from running."
+      }
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-applocker-packaged-app-execution-fc-8022",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-AppLocker/Packaged app-Execution 8022",
+      "body": "Log channel: Microsoft-Windows-AppLocker/Packaged app-Execution · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-AppLocker/Packaged app-Execution"
+      },
+      "teaches": [
+        "channel:microsoft-windows-applocker-packaged-app-execution",
+        "corpus:risk",
+        "event:microsoft-windows-applocker-packaged-app-execution:8022"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-applocker-packaged-app-execution",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-AppLocker/Packaged app-Execution — Event ID 8022",
+        "back": "... was prevented from running."
+      }
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-applocker-packaged-app-deployment-fc-8025",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-AppLocker/Packaged app-Deployment 8025",
+      "body": "Log channel: Microsoft-Windows-AppLocker/Packaged app-Deployment · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-AppLocker/Packaged app-Deployment"
+      },
+      "teaches": [
+        "channel:microsoft-windows-applocker-packaged-app-deployment",
+        "corpus:risk",
+        "event:microsoft-windows-applocker-packaged-app-deployment:8025"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-applocker-packaged-app-deployment",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-AppLocker/Packaged app-Deployment — Event ID 8025",
+        "back": "... was prevented from running."
+      }
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-ntlm-operational-fc-8003",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-NTLM/Operational 8003",
+      "body": "Log channel: Microsoft-Windows-NTLM/Operational · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-NTLM/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-ntlm-operational",
+        "corpus:risk",
+        "event:microsoft-windows-ntlm-operational:8003"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-ntlm-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-NTLM/Operational — Event ID 8003",
+        "back": "NTLM server blocked in the domain audit: Audit NTLM authentication in this domain."
+      }
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-powershell-analytic-fc-32850",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-PowerShell/Analytic 32850",
+      "body": "Log channel: Microsoft-Windows-PowerShell/Analytic · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-PowerShell/Analytic"
+      },
+      "teaches": [
+        "channel:microsoft-windows-powershell-analytic",
+        "corpus:risk",
+        "event:microsoft-windows-powershell-analytic:32850"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-powershell-analytic",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-PowerShell/Analytic — Event ID 32850",
+        "back": "Creating a server remote session"
+      }
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-security-mitigations-kernelmode-wholesale",
+      "type": "reading",
+      "title": "Microsoft-Windows-Security-Mitigations/KernelMode",
+      "body": "**Microsoft-Windows-Security-Mitigations/KernelMode** is collected wholesale: the source list marks it `*` rather than naming Event IDs. This event log contains log about the \"Exploit Protection\" feature.\n\nThere is nothing to memorise here — what matters is knowing the channel exists and that everything in it is being kept.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-Security-Mitigations/KernelMode"
+      },
+      "teaches": [
+        "channel:microsoft-windows-security-mitigations-kernelmode",
+        "corpus:risk"
+      ],
+      "estimated_seconds": 40,
+      "graded": false,
+      "payload": {}
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-ntlm-operational-quiz-small-microsoft-windows-applocker-exe-and-dll-e8003",
+      "type": "quiz",
+      "title": "Recall: Microsoft-Windows-NTLM/Operational",
+      "body": "Inline feedback, no results page.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-NTLM/Operational"
+      },
+      "requires": [
+        "event:microsoft-windows-ntlm-operational:8003"
+      ],
+      "estimated_seconds": 35,
+      "graded": true,
+      "payload": {
+        "format": "multiple-choice",
+        "question": "In the Microsoft-Windows-NTLM/Operational channel, which Event ID records: “NTLM server blocked in the domain audit: Audit NTLM authentication in this domain.”",
+        "choices": [
+          "8003",
+          "8006",
+          "8007",
+          "8022"
+        ],
+        "answer_index": 0,
+        "rationale": "Logging/Notable-Event-IDs-Risk.md#Microsoft-Windows-NTLM/Operational lists 8003 as “NTLM server blocked in the domain audit: Audit NTLM authentication in this domain.”."
+      }
+    },
+    {
+      "id": "t1-m03-risk-smaller-channels-instr-microsoft-windows-applocker-exe-and-dll-e8003",
+      "type": "instructions",
+      "title": "Before you start: smaller channels",
+      "body": "",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md"
+      },
+      "teaches": [
+        "concept:corpus-purpose"
+      ],
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "goal": "Match each Event ID to what it records.",
+        "what_youll_use": "The 7 cards from this sitting.",
+        "done_when": "Every ID on the left has a description on the right."
+      }
+    },
+    {
+      "id": "t1-m03-risk-small-match-microsoft-windows-applocker-exe-and-dll-e8003",
+      "type": "exercise",
+      "title": "Match: smaller-channel IDs",
+      "body": "Every ID below was on the cards you just saw.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md"
+      },
+      "requires": [
+        "event:microsoft-windows-applocker-exe-and-dll:8003",
+        "event:microsoft-windows-applocker-msi-and-script:8006",
+        "event:microsoft-windows-applocker-msi-and-script:8007",
+        "event:microsoft-windows-applocker-packaged-app-deployment:8025",
+        "event:microsoft-windows-applocker-packaged-app-execution:8022",
+        "event:microsoft-windows-ntlm-operational:8003",
+        "event:microsoft-windows-powershell-analytic:32850"
+      ],
+      "estimated_seconds": 60,
+      "difficulty": "standard",
+      "graded": true,
+      "payload": {
+        "format": "match",
+        "pairs": [
+          {
+            "left": "Microsoft-Windows-AppLocker/EXE and DLL 8003",
+            "right": "... would have been prevented from running."
+          },
+          {
+            "left": "Microsoft-Windows-AppLocker/MSI and Script 8006",
+            "right": "... would have been prevented from running."
+          },
+          {
+            "left": "Microsoft-Windows-AppLocker/MSI and Script 8007",
+            "right": "... was prevented from running."
+          },
+          {
+            "left": "Microsoft-Windows-AppLocker/Packaged app-Execution 8022",
+            "right": "... was prevented from running."
+          },
+          {
+            "left": "Microsoft-Windows-AppLocker/Packaged app-Deployment 8025",
+            "right": "... was prevented from running."
+          },
+          {
+            "left": "Microsoft-Windows-NTLM/Operational 8003",
+            "right": "NTLM server blocked in the domain audit: Audit NTLM authentication in this domain."
+          },
+          {
+            "left": "Microsoft-Windows-PowerShell/Analytic 32850",
+            "right": "Creating a server remote session"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,428 @@
+{
+  "schema_version": "1.0.0",
+  "id": "t1-m03-sigma-security-e5140",
+  "tier": 1,
+  "module": "3",
+  "part": 5,
+  "title": "Security (sigma) — part 5",
+  "summary": "10 notable Event IDs from the Security channel on the sigma list.",
+  "estimated_seconds": 320,
+  "teaches": [
+    "channel:security",
+    "concept:corpus-purpose",
+    "corpus:sigma",
+    "event:security:5140",
+    "event:security:5145",
+    "event:security:5157",
+    "event:security:517",
+    "event:security:5379",
+    "event:security:5441",
+    "event:security:5447",
+    "event:security:5449",
+    "event:security:6416",
+    "event:security:6423"
+  ],
+  "requires": [],
+  "sources": [
+    {
+      "path": "Logging/Notable-Event-IDs-Sigma.md",
+      "heading": "Security"
+    }
+  ],
+  "generated": {
+    "generator": "build-content",
+    "generator_version": "1.0.0",
+    "source_repo": "TonyPhipps/SIEM",
+    "source_commit": "4adb971",
+    "source_license": "GPL-3.0",
+    "profile": "event-id-tables",
+    "content_hash": "7e304de1e2e4738b982aa1e3242c986b8d64c7e0783bd9701f5de21554b4a5eb"
+  },
+  "atoms": [
+    {
+      "id": "t1-m03-sigma-security-intro-e5140",
+      "type": "reading",
+      "title": "Security",
+      "body": "The **Security** channel appears on the sigma list with 50 notable Event IDs. This sitting covers 10 of them.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:sigma"
+      ],
+      "estimated_seconds": 45,
+      "graded": false,
+      "payload": {}
+    },
+    {
+      "id": "t1-m03-sigma-security-fc-5140",
+      "type": "flashcard",
+      "title": "Security 5140",
+      "body": "Log channel: Security · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:sigma",
+        "event:security:5140"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 5140",
+        "back": "Network share object accessed"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-fc-5145",
+      "type": "flashcard",
+      "title": "Security 5145",
+      "body": "Log channel: Security · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:sigma",
+        "event:security:5145"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 5145",
+        "back": "A network share object was checked to see whether client can be granted desired access."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-fc-5157",
+      "type": "flashcard",
+      "title": "Security 5157",
+      "body": "Log channel: Security · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:sigma",
+        "event:security:5157"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 5157",
+        "back": "The Windows Filtering Platform has blocked a connection."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-fc-517",
+      "type": "flashcard",
+      "title": "Security 517",
+      "body": "Log channel: Security · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:sigma",
+        "event:security:517"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 517",
+        "back": "The audit log was cleared."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-fc-5379",
+      "type": "flashcard",
+      "title": "Security 5379",
+      "body": "Log channel: Security · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:sigma",
+        "event:security:5379"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 5379",
+        "back": "Credential Manager credentials were read."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-fc-5441",
+      "type": "flashcard",
+      "title": "Security 5441",
+      "body": "Log channel: Security · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:sigma",
+        "event:security:5441"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 5441",
+        "back": "The following filter was present when the Windows Filtering Platform Base Filtering Engine started"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-fc-5447",
+      "type": "flashcard",
+      "title": "Security 5447",
+      "body": "Log channel: Security · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:sigma",
+        "event:security:5447"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 5447",
+        "back": "A Windows Filtering Platform filter has been modified."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-fc-5449",
+      "type": "flashcard",
+      "title": "Security 5449",
+      "body": "Log channel: Security · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:sigma",
+        "event:security:5449"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 5449",
+        "back": "A Windows Filtering Platform layer has been modified."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-fc-6416",
+      "type": "flashcard",
+      "title": "Security 6416",
+      "body": "Log channel: Security · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:sigma",
+        "event:security:6416"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 6416",
+        "back": "A new external device was recognized by the system"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-fc-6423",
+      "type": "flashcard",
+      "title": "Security 6423",
+      "body": "Log channel: Security · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:sigma",
+        "event:security:6423"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 6423",
+        "back": "The installation of this device is forbidden by system policy."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-quiz-e5140",
+      "type": "quiz",
+      "title": "Recall: Security",
+      "body": "Inline feedback, no results page.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "requires": [
+        "event:security:5140"
+      ],
+      "estimated_seconds": 35,
+      "graded": true,
+      "payload": {
+        "format": "multiple-choice",
+        "question": "In the Security channel, which Event ID records: “Network share object accessed”",
+        "choices": [
+          "517",
+          "5140",
+          "5145",
+          "5157"
+        ],
+        "answer_index": 1,
+        "rationale": "Logging/Notable-Event-IDs-Sigma.md#Security lists 5140 as “Network share object accessed”."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-instr-e5140",
+      "type": "instructions",
+      "title": "Before you start: Security",
+      "body": "",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "concept:corpus-purpose"
+      ],
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "goal": "Match each Security Event ID to what it records.",
+        "what_youll_use": "The 10 cards you just reviewed — nothing outside them.",
+        "done_when": "Every ID on the left has a description on the right."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-match-e5140",
+      "type": "exercise",
+      "title": "Match: Security IDs to what they record",
+      "body": "Every ID below was on the cards you just saw.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "requires": [
+        "channel:security",
+        "event:security:5140",
+        "event:security:5145",
+        "event:security:5157",
+        "event:security:517",
+        "event:security:5379",
+        "event:security:5441",
+        "event:security:5447",
+        "event:security:5449"
+      ],
+      "estimated_seconds": 60,
+      "difficulty": "standard",
+      "graded": true,
+      "payload": {
+        "format": "match",
+        "pairs": [
+          {
+            "left": "5140",
+            "right": "Network share object accessed"
+          },
+          {
+            "left": "5145",
+            "right": "A network share object was checked to see whether client can be granted desired access."
+          },
+          {
+            "left": "5157",
+            "right": "The Windows Filtering Platform has blocked a connection."
+          },
+          {
+            "left": "517",
+            "right": "The audit log was cleared."
+          },
+          {
+            "left": "5379",
+            "right": "Credential Manager credentials were read."
+          },
+          {
+            "left": "5441",
+            "right": "The following filter was present when the Windows Filtering Platform Base Filtering Engine started"
+          },
+          {
+            "left": "5447",
+            "right": "A Windows Filtering Platform filter has been modified."
+          },
+          {
+            "left": "5449",
+            "right": "A Windows Filtering Platform layer has been modified."
+          }
+        ]
+      }
+    }
+  ]
+}

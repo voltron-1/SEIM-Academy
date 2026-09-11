@@ -1,0 +1,428 @@
+{
+  "schema_version": "1.0.0",
+  "id": "t1-m03-sigma-security-e4661",
+  "tier": 1,
+  "module": "3",
+  "part": 2,
+  "title": "Security (sigma) — part 2",
+  "summary": "10 notable Event IDs from the Security channel on the sigma list.",
+  "estimated_seconds": 320,
+  "teaches": [
+    "channel:security",
+    "concept:corpus-purpose",
+    "corpus:sigma",
+    "event:security:4661",
+    "event:security:4662",
+    "event:security:4663",
+    "event:security:4672",
+    "event:security:4673",
+    "event:security:4674",
+    "event:security:4688",
+    "event:security:4689",
+    "event:security:4692",
+    "event:security:4697"
+  ],
+  "requires": [],
+  "sources": [
+    {
+      "path": "Logging/Notable-Event-IDs-Sigma.md",
+      "heading": "Security"
+    }
+  ],
+  "generated": {
+    "generator": "build-content",
+    "generator_version": "1.0.0",
+    "source_repo": "TonyPhipps/SIEM",
+    "source_commit": "4adb971",
+    "source_license": "GPL-3.0",
+    "profile": "event-id-tables",
+    "content_hash": "d9a6fb6322943eec3e7c40e17464f53b3e2480f1ccf41272b1d8953bd999e46c"
+  },
+  "atoms": [
+    {
+      "id": "t1-m03-sigma-security-intro-e4661",
+      "type": "reading",
+      "title": "Security",
+      "body": "The **Security** channel appears on the sigma list with 50 notable Event IDs. This sitting covers 10 of them.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:sigma"
+      ],
+      "estimated_seconds": 45,
+      "graded": false,
+      "payload": {}
+    },
+    {
+      "id": "t1-m03-sigma-security-fc-4661",
+      "type": "flashcard",
+      "title": "Security 4661",
+      "body": "Log channel: Security · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:sigma",
+        "event:security:4661"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4661",
+        "back": "A handle to an object was requested."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-fc-4662",
+      "type": "flashcard",
+      "title": "Security 4662",
+      "body": "Log channel: Security · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:sigma",
+        "event:security:4662"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4662",
+        "back": "An operation was performed on an object."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-fc-4663",
+      "type": "flashcard",
+      "title": "Security 4663",
+      "body": "Log channel: Security · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:sigma",
+        "event:security:4663"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": true,
+        "deck": "t1-m03-security",
+        "reason": "evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4663",
+        "back": "An attempt was made to access an object."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-fc-4672",
+      "type": "flashcard",
+      "title": "Security 4672",
+      "body": "Log channel: Security · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:sigma",
+        "event:security:4672"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4672",
+        "back": "Special privileges assigned to new logon."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-fc-4673",
+      "type": "flashcard",
+      "title": "Security 4673",
+      "body": "Log channel: Security · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:sigma",
+        "event:security:4673"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4673",
+        "back": "A privileged service was called."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-fc-4674",
+      "type": "flashcard",
+      "title": "Security 4674",
+      "body": "Log channel: Security · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:sigma",
+        "event:security:4674"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4674",
+        "back": "An operation was attempted on a privileged object."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-fc-4688",
+      "type": "flashcard",
+      "title": "Security 4688",
+      "body": "Log channel: Security · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:sigma",
+        "event:security:4688"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4688",
+        "back": "A new process has been created."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-fc-4689",
+      "type": "flashcard",
+      "title": "Security 4689",
+      "body": "Log channel: Security · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:sigma",
+        "event:security:4689"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4689",
+        "back": "A process has exited."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-fc-4692",
+      "type": "flashcard",
+      "title": "Security 4692",
+      "body": "Log channel: Security · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:sigma",
+        "event:security:4692"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4692",
+        "back": "Backup of data protection master key was attempted."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-fc-4697",
+      "type": "flashcard",
+      "title": "Security 4697",
+      "body": "Log channel: Security · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:sigma",
+        "event:security:4697"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": true,
+        "deck": "t1-m03-security",
+        "reason": "evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4697",
+        "back": "A service was installed in the system."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-quiz-e4661",
+      "type": "quiz",
+      "title": "Recall: Security",
+      "body": "Inline feedback, no results page.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "requires": [
+        "event:security:4661"
+      ],
+      "estimated_seconds": 35,
+      "graded": true,
+      "payload": {
+        "format": "multiple-choice",
+        "question": "In the Security channel, which Event ID records: “A handle to an object was requested.”",
+        "choices": [
+          "4661",
+          "4662",
+          "4663",
+          "4672"
+        ],
+        "answer_index": 0,
+        "rationale": "Logging/Notable-Event-IDs-Sigma.md#Security lists 4661 as “A handle to an object was requested.”."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-instr-e4661",
+      "type": "instructions",
+      "title": "Before you start: Security",
+      "body": "",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "concept:corpus-purpose"
+      ],
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "goal": "Match each Security Event ID to what it records.",
+        "what_youll_use": "The 10 cards you just reviewed — nothing outside them.",
+        "done_when": "Every ID on the left has a description on the right."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-match-e4661",
+      "type": "exercise",
+      "title": "Match: Security IDs to what they record",
+      "body": "Every ID below was on the cards you just saw.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "requires": [
+        "channel:security",
+        "event:security:4661",
+        "event:security:4662",
+        "event:security:4663",
+        "event:security:4672",
+        "event:security:4673",
+        "event:security:4674",
+        "event:security:4688",
+        "event:security:4689"
+      ],
+      "estimated_seconds": 60,
+      "difficulty": "standard",
+      "graded": true,
+      "payload": {
+        "format": "match",
+        "pairs": [
+          {
+            "left": "4661",
+            "right": "A handle to an object was requested."
+          },
+          {
+            "left": "4662",
+            "right": "An operation was performed on an object."
+          },
+          {
+            "left": "4663",
+            "right": "An attempt was made to access an object."
+          },
+          {
+            "left": "4672",
+            "right": "Special privileges assigned to new logon."
+          },
+          {
+            "left": "4673",
+            "right": "A privileged service was called."
+          },
+          {
+            "left": "4674",
+            "right": "An operation was attempted on a privileged object."
+          },
+          {
+            "left": "4688",
+            "right": "A new process has been created."
+          },
+          {
+            "left": "4689",
+            "right": "A process has exited."
+          }
+        ]
+      }
+    }
+  ]
+}

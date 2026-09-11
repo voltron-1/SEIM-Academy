@@ -1,0 +1,427 @@
+{
+  "schema_version": "1.0.0",
+  "id": "t1-m03-sigma-security-domain-controller-specific-e4649",
+  "tier": 1,
+  "module": "3",
+  "title": "Security (Domain Controller Specific) (sigma)",
+  "summary": "10 notable Event IDs from the Security (Domain Controller Specific) channel on the sigma list.",
+  "estimated_seconds": 320,
+  "teaches": [
+    "channel:security-domain-controller-specific",
+    "concept:corpus-purpose",
+    "corpus:sigma",
+    "event:security-domain-controller-specific:4649",
+    "event:security-domain-controller-specific:4706",
+    "event:security-domain-controller-specific:4741",
+    "event:security-domain-controller-specific:4742",
+    "event:security-domain-controller-specific:4765",
+    "event:security-domain-controller-specific:4768",
+    "event:security-domain-controller-specific:4769",
+    "event:security-domain-controller-specific:4771",
+    "event:security-domain-controller-specific:4794",
+    "event:security-domain-controller-specific:5136"
+  ],
+  "requires": [],
+  "sources": [
+    {
+      "path": "Logging/Notable-Event-IDs-Sigma.md",
+      "heading": "Security (Domain Controller Specific)"
+    }
+  ],
+  "generated": {
+    "generator": "build-content",
+    "generator_version": "1.0.0",
+    "source_repo": "TonyPhipps/SIEM",
+    "source_commit": "4adb971",
+    "source_license": "GPL-3.0",
+    "profile": "event-id-tables",
+    "content_hash": "967fb1e716758c78808fb0b81048f4acb1ec5ca3ab598bfe4b66281894f225c2"
+  },
+  "atoms": [
+    {
+      "id": "t1-m03-sigma-security-domain-controller-specific-intro-e4649",
+      "type": "reading",
+      "title": "Security (Domain Controller Specific)",
+      "body": "The **Security (Domain Controller Specific)** channel appears on the sigma list with 10 notable Event IDs. This sitting covers 10 of them.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security (Domain Controller Specific)"
+      },
+      "teaches": [
+        "channel:security-domain-controller-specific",
+        "corpus:sigma"
+      ],
+      "estimated_seconds": 45,
+      "graded": false,
+      "payload": {}
+    },
+    {
+      "id": "t1-m03-sigma-security-domain-controller-specific-fc-4649",
+      "type": "flashcard",
+      "title": "Security (Domain Controller Specific) 4649",
+      "body": "Log channel: Security (Domain Controller Specific) · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security (Domain Controller Specific)"
+      },
+      "teaches": [
+        "channel:security-domain-controller-specific",
+        "corpus:sigma",
+        "event:security-domain-controller-specific:4649"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security-domain-controller-specific",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security (Domain Controller Specific) — Event ID 4649",
+        "back": "A replay attack was detected."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-domain-controller-specific-fc-4706",
+      "type": "flashcard",
+      "title": "Security (Domain Controller Specific) 4706",
+      "body": "Log channel: Security (Domain Controller Specific) · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security (Domain Controller Specific)"
+      },
+      "teaches": [
+        "channel:security-domain-controller-specific",
+        "corpus:sigma",
+        "event:security-domain-controller-specific:4706"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security-domain-controller-specific",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security (Domain Controller Specific) — Event ID 4706",
+        "back": "A new trust was created to a domain."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-domain-controller-specific-fc-4741",
+      "type": "flashcard",
+      "title": "Security (Domain Controller Specific) 4741",
+      "body": "Log channel: Security (Domain Controller Specific) · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security (Domain Controller Specific)"
+      },
+      "teaches": [
+        "channel:security-domain-controller-specific",
+        "corpus:sigma",
+        "event:security-domain-controller-specific:4741"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": true,
+        "deck": "t1-m03-security-domain-controller-specific",
+        "reason": "evidence-set"
+      },
+      "payload": {
+        "front": "Security (Domain Controller Specific) — Event ID 4741",
+        "back": "A computer account was created."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-domain-controller-specific-fc-4742",
+      "type": "flashcard",
+      "title": "Security (Domain Controller Specific) 4742",
+      "body": "Log channel: Security (Domain Controller Specific) · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security (Domain Controller Specific)"
+      },
+      "teaches": [
+        "channel:security-domain-controller-specific",
+        "corpus:sigma",
+        "event:security-domain-controller-specific:4742"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": true,
+        "deck": "t1-m03-security-domain-controller-specific",
+        "reason": "evidence-set"
+      },
+      "payload": {
+        "front": "Security (Domain Controller Specific) — Event ID 4742",
+        "back": "A computer account was changed."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-domain-controller-specific-fc-4765",
+      "type": "flashcard",
+      "title": "Security (Domain Controller Specific) 4765",
+      "body": "Log channel: Security (Domain Controller Specific) · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security (Domain Controller Specific)"
+      },
+      "teaches": [
+        "channel:security-domain-controller-specific",
+        "corpus:sigma",
+        "event:security-domain-controller-specific:4765"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security-domain-controller-specific",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security (Domain Controller Specific) — Event ID 4765",
+        "back": "SID History was added to an account."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-domain-controller-specific-fc-4768",
+      "type": "flashcard",
+      "title": "Security (Domain Controller Specific) 4768",
+      "body": "Log channel: Security (Domain Controller Specific) · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security (Domain Controller Specific)"
+      },
+      "teaches": [
+        "channel:security-domain-controller-specific",
+        "corpus:sigma",
+        "event:security-domain-controller-specific:4768"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security-domain-controller-specific",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security (Domain Controller Specific) — Event ID 4768",
+        "back": "A Kerberos authentication ticket (TGT) was requested."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-domain-controller-specific-fc-4769",
+      "type": "flashcard",
+      "title": "Security (Domain Controller Specific) 4769",
+      "body": "Log channel: Security (Domain Controller Specific) · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security (Domain Controller Specific)"
+      },
+      "teaches": [
+        "channel:security-domain-controller-specific",
+        "corpus:sigma",
+        "event:security-domain-controller-specific:4769"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security-domain-controller-specific",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security (Domain Controller Specific) — Event ID 4769",
+        "back": "A Kerberos service ticket was requested."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-domain-controller-specific-fc-4771",
+      "type": "flashcard",
+      "title": "Security (Domain Controller Specific) 4771",
+      "body": "Log channel: Security (Domain Controller Specific) · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security (Domain Controller Specific)"
+      },
+      "teaches": [
+        "channel:security-domain-controller-specific",
+        "corpus:sigma",
+        "event:security-domain-controller-specific:4771"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security-domain-controller-specific",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security (Domain Controller Specific) — Event ID 4771",
+        "back": "Kerberos pre-authentication failed."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-domain-controller-specific-fc-4794",
+      "type": "flashcard",
+      "title": "Security (Domain Controller Specific) 4794",
+      "body": "Log channel: Security (Domain Controller Specific) · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security (Domain Controller Specific)"
+      },
+      "teaches": [
+        "channel:security-domain-controller-specific",
+        "corpus:sigma",
+        "event:security-domain-controller-specific:4794"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security-domain-controller-specific",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security (Domain Controller Specific) — Event ID 4794",
+        "back": "An attempt was made to set the Directory Services Restore Mode administrator password."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-domain-controller-specific-fc-5136",
+      "type": "flashcard",
+      "title": "Security (Domain Controller Specific) 5136",
+      "body": "Log channel: Security (Domain Controller Specific) · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security (Domain Controller Specific)"
+      },
+      "teaches": [
+        "channel:security-domain-controller-specific",
+        "corpus:sigma",
+        "event:security-domain-controller-specific:5136"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": true,
+        "deck": "t1-m03-security-domain-controller-specific",
+        "reason": "evidence-set"
+      },
+      "payload": {
+        "front": "Security (Domain Controller Specific) — Event ID 5136",
+        "back": "A directory service object was modified. [1]"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-domain-controller-specific-quiz-e4649",
+      "type": "quiz",
+      "title": "Recall: Security (Domain Controller Specific)",
+      "body": "Inline feedback, no results page.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security (Domain Controller Specific)"
+      },
+      "requires": [
+        "event:security-domain-controller-specific:4649"
+      ],
+      "estimated_seconds": 35,
+      "graded": true,
+      "payload": {
+        "format": "multiple-choice",
+        "question": "In the Security (Domain Controller Specific) channel, which Event ID records: “A replay attack was detected.”",
+        "choices": [
+          "4649",
+          "4706",
+          "4741",
+          "4742"
+        ],
+        "answer_index": 0,
+        "rationale": "Logging/Notable-Event-IDs-Sigma.md#Security (Domain Controller Specific) lists 4649 as “A replay attack was detected.”."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-domain-controller-specific-instr-e4649",
+      "type": "instructions",
+      "title": "Before you start: Security (Domain Controller Specific)",
+      "body": "",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security (Domain Controller Specific)"
+      },
+      "teaches": [
+        "concept:corpus-purpose"
+      ],
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "goal": "Match each Security (Domain Controller Specific) Event ID to what it records.",
+        "what_youll_use": "The 10 cards you just reviewed — nothing outside them.",
+        "done_when": "Every ID on the left has a description on the right."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-domain-controller-specific-match-e4649",
+      "type": "exercise",
+      "title": "Match: Security (Domain Controller Specific) IDs to what they record",
+      "body": "Every ID below was on the cards you just saw.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security (Domain Controller Specific)"
+      },
+      "requires": [
+        "channel:security-domain-controller-specific",
+        "event:security-domain-controller-specific:4649",
+        "event:security-domain-controller-specific:4706",
+        "event:security-domain-controller-specific:4741",
+        "event:security-domain-controller-specific:4742",
+        "event:security-domain-controller-specific:4765",
+        "event:security-domain-controller-specific:4768",
+        "event:security-domain-controller-specific:4769",
+        "event:security-domain-controller-specific:4771"
+      ],
+      "estimated_seconds": 60,
+      "difficulty": "standard",
+      "graded": true,
+      "payload": {
+        "format": "match",
+        "pairs": [
+          {
+            "left": "4649",
+            "right": "A replay attack was detected."
+          },
+          {
+            "left": "4706",
+            "right": "A new trust was created to a domain."
+          },
+          {
+            "left": "4741",
+            "right": "A computer account was created."
+          },
+          {
+            "left": "4742",
+            "right": "A computer account was changed."
+          },
+          {
+            "left": "4765",
+            "right": "SID History was added to an account."
+          },
+          {
+            "left": "4768",
+            "right": "A Kerberos authentication ticket (TGT) was requested."
+          },
+          {
+            "left": "4769",
+            "right": "A Kerberos service ticket was requested."
+          },
+          {
+            "left": "4771",
+            "right": "Kerberos pre-authentication failed."
+          }
+        ]
+      }
+    }
+  ]
+}

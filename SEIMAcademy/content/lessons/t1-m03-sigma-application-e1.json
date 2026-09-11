@@ -1,0 +1,389 @@
+{
+  "schema_version": "1.0.0",
+  "id": "t1-m03-sigma-application-e1",
+  "tier": 1,
+  "module": "3",
+  "part": 1,
+  "title": "Application (sigma) — part 1",
+  "summary": "8 notable Event IDs from the Application channel on the sigma list.",
+  "estimated_seconds": 290,
+  "teaches": [
+    "channel:application",
+    "concept:corpus-purpose",
+    "corpus:sigma",
+    "event:application:1",
+    "event:application:1000",
+    "event:application:1001",
+    "event:application:216",
+    "event:application:325",
+    "event:application:524",
+    "event:application:53",
+    "event:application:865",
+    "provider:application-error",
+    "provider:esent",
+    "provider:microsoft-windows-audit-cve",
+    "provider:microsoft-windows-backup",
+    "provider:microsoft-windows-certificationauthority",
+    "provider:microsoft-windows-softwarerestrictionpolicies",
+    "provider:windows-error-reporting"
+  ],
+  "requires": [],
+  "sources": [
+    {
+      "path": "Logging/Notable-Event-IDs-Sigma.md",
+      "heading": "Application"
+    }
+  ],
+  "generated": {
+    "generator": "build-content",
+    "generator_version": "1.0.0",
+    "source_repo": "TonyPhipps/SIEM",
+    "source_commit": "4adb971",
+    "source_license": "GPL-3.0",
+    "profile": "event-id-tables",
+    "content_hash": "afc0dbc8e28dff1ec2f6852709bfb6eb980872b5fde164a89234a4f287b71a1f"
+  },
+  "atoms": [
+    {
+      "id": "t1-m03-sigma-application-intro-e1",
+      "type": "reading",
+      "title": "Application",
+      "body": "The **Application** channel appears on the sigma list with 16 notable Event IDs. This sitting covers 8 of them.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Application"
+      },
+      "teaches": [
+        "channel:application",
+        "corpus:sigma"
+      ],
+      "estimated_seconds": 45,
+      "graded": false,
+      "payload": {}
+    },
+    {
+      "id": "t1-m03-sigma-application-fc-1",
+      "type": "flashcard",
+      "title": "Application 1",
+      "body": "Log channel: Application · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Application"
+      },
+      "teaches": [
+        "channel:application",
+        "corpus:sigma",
+        "event:application:1",
+        "provider:microsoft-windows-audit-cve"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-application",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Application — Event ID 1",
+        "back": "A potential exploit was detected and the process was terminated."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-application-fc-216",
+      "type": "flashcard",
+      "title": "Application 216",
+      "body": "Log channel: Application · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Application"
+      },
+      "teaches": [
+        "channel:application",
+        "corpus:sigma",
+        "event:application:216",
+        "provider:esent"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-application",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Application — Event ID 216",
+        "back": "A database page checksum mismatch was detected."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-application-fc-325",
+      "type": "flashcard",
+      "title": "Application 325",
+      "body": "Log channel: Application · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Application"
+      },
+      "teaches": [
+        "channel:application",
+        "corpus:sigma",
+        "event:application:325",
+        "provider:esent"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-application",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Application — Event ID 325",
+        "back": "A database engine created a new database."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-application-fc-53",
+      "type": "flashcard",
+      "title": "Application 53",
+      "body": "Log channel: Application · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Application"
+      },
+      "teaches": [
+        "channel:application",
+        "corpus:sigma",
+        "event:application:53",
+        "provider:microsoft-windows-certificationauthority"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-application",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Application — Event ID 53",
+        "back": "Active Directory Certificate Services (AD CS) denied a certificate request."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-application-fc-524",
+      "type": "flashcard",
+      "title": "Application 524",
+      "body": "Log channel: Application · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Application"
+      },
+      "teaches": [
+        "channel:application",
+        "corpus:sigma",
+        "event:application:524",
+        "provider:microsoft-windows-backup"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-application",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Application — Event ID 524",
+        "back": "A backup operation has successfully completed."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-application-fc-865",
+      "type": "flashcard",
+      "title": "Application 865",
+      "body": "Log channel: Application · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Application"
+      },
+      "teaches": [
+        "channel:application",
+        "corpus:sigma",
+        "event:application:865",
+        "provider:microsoft-windows-softwarerestrictionpolicies"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-application",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Application — Event ID 865",
+        "back": "An application was blocked from running because of a Software Restriction Policy (SRP)."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-application-fc-1000",
+      "type": "flashcard",
+      "title": "Application 1000",
+      "body": "Log channel: Application · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Application"
+      },
+      "teaches": [
+        "channel:application",
+        "corpus:sigma",
+        "event:application:1000",
+        "provider:application-error"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-application",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Application — Event ID 1000",
+        "back": "A program has crashed."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-application-fc-1001",
+      "type": "flashcard",
+      "title": "Application 1001",
+      "body": "Log channel: Application · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Application"
+      },
+      "teaches": [
+        "channel:application",
+        "corpus:sigma",
+        "event:application:1001",
+        "provider:windows-error-reporting"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-application",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Application — Event ID 1001",
+        "back": "Application Crash"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-application-quiz-e1",
+      "type": "quiz",
+      "title": "Recall: Application",
+      "body": "Inline feedback, no results page.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Application"
+      },
+      "requires": [
+        "event:application:1"
+      ],
+      "estimated_seconds": 35,
+      "graded": true,
+      "payload": {
+        "format": "multiple-choice",
+        "question": "In the Application channel, which Event ID records: “A potential exploit was detected and the process was terminated.”",
+        "choices": [
+          "1",
+          "53",
+          "216",
+          "325"
+        ],
+        "answer_index": 0,
+        "rationale": "Logging/Notable-Event-IDs-Sigma.md#Application lists 1 as “A potential exploit was detected and the process was terminated.”."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-application-instr-e1",
+      "type": "instructions",
+      "title": "Before you start: Application",
+      "body": "",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Application"
+      },
+      "teaches": [
+        "concept:corpus-purpose"
+      ],
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "goal": "Match each Application Event ID to what it records.",
+        "what_youll_use": "The 8 cards you just reviewed — nothing outside them.",
+        "done_when": "Every ID on the left has a description on the right."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-application-match-e1",
+      "type": "exercise",
+      "title": "Match: Application IDs to what they record",
+      "body": "Every ID below was on the cards you just saw.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Application"
+      },
+      "requires": [
+        "channel:application",
+        "event:application:1",
+        "event:application:1000",
+        "event:application:1001",
+        "event:application:216",
+        "event:application:325",
+        "event:application:524",
+        "event:application:53",
+        "event:application:865"
+      ],
+      "estimated_seconds": 60,
+      "difficulty": "standard",
+      "graded": true,
+      "payload": {
+        "format": "match",
+        "pairs": [
+          {
+            "left": "1",
+            "right": "A potential exploit was detected and the process was terminated."
+          },
+          {
+            "left": "216",
+            "right": "A database page checksum mismatch was detected."
+          },
+          {
+            "left": "325",
+            "right": "A database engine created a new database."
+          },
+          {
+            "left": "53",
+            "right": "Active Directory Certificate Services (AD CS) denied a certificate request."
+          },
+          {
+            "left": "524",
+            "right": "A backup operation has successfully completed."
+          },
+          {
+            "left": "865",
+            "right": "An application was blocked from running because of a Software Restriction Policy (SRP)."
+          },
+          {
+            "left": "1000",
+            "right": "A program has crashed."
+          },
+          {
+            "left": "1001",
+            "right": "Application Crash"
+          }
+        ]
+      }
+    }
+  ]
+}

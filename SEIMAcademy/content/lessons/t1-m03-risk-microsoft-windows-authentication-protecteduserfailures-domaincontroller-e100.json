@@ -1,0 +1,245 @@
+{
+  "schema_version": "1.0.0",
+  "id": "t1-m03-risk-microsoft-windows-authentication-protecteduserfailures-domaincontroller-e100",
+  "tier": 1,
+  "module": "3",
+  "title": "Microsoft-Windows-Authentication/ProtectedUserFailures-DomainController (risk)",
+  "summary": "4 notable Event IDs from the Microsoft-Windows-Authentication/ProtectedUserFailures-DomainController channel on the risk list.",
+  "estimated_seconds": 230,
+  "teaches": [
+    "channel:microsoft-windows-authentication-protecteduserfailures-domaincontroller",
+    "concept:corpus-purpose",
+    "corpus:risk",
+    "event:microsoft-windows-authentication-protecteduserfailures-domaincontroller:100",
+    "event:microsoft-windows-authentication-protecteduserfailures-domaincontroller:102",
+    "event:microsoft-windows-authentication-protecteduserfailures-domaincontroller:104",
+    "event:microsoft-windows-authentication-protecteduserfailures-domaincontroller:303"
+  ],
+  "requires": [],
+  "sources": [
+    {
+      "path": "Logging/Notable-Event-IDs-Risk.md",
+      "heading": "Microsoft-Windows-Authentication/ProtectedUserFailures-DomainController"
+    }
+  ],
+  "generated": {
+    "generator": "build-content",
+    "generator_version": "1.0.0",
+    "source_repo": "TonyPhipps/SIEM",
+    "source_commit": "4adb971",
+    "source_license": "GPL-3.0",
+    "profile": "event-id-tables",
+    "content_hash": "e374b2d1e942a4a2095fae09fd61e3aceb854132a73b7681e63942327e22647d"
+  },
+  "atoms": [
+    {
+      "id": "t1-m03-risk-microsoft-windows-authentication-protecteduserfailures-domaincontroller-intro-e100",
+      "type": "reading",
+      "title": "Microsoft-Windows-Authentication/ProtectedUserFailures-DomainController",
+      "body": "The **Microsoft-Windows-Authentication/ProtectedUserFailures-DomainController** channel appears on the risk list with 4 notable Event IDs. This sitting covers 4 of them.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-Authentication/ProtectedUserFailures-DomainController"
+      },
+      "teaches": [
+        "channel:microsoft-windows-authentication-protecteduserfailures-domaincontroller",
+        "corpus:risk"
+      ],
+      "estimated_seconds": 45,
+      "graded": false,
+      "payload": {}
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-authentication-protecteduserfailures-domaincontroller-fc-100",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Authentication/ProtectedUserFailures-DomainController 100",
+      "body": "Log channel: Microsoft-Windows-Authentication/ProtectedUserFailures-DomainController · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-Authentication/ProtectedUserFailures-DomainController"
+      },
+      "teaches": [
+        "channel:microsoft-windows-authentication-protecteduserfailures-domaincontroller",
+        "corpus:risk",
+        "event:microsoft-windows-authentication-protecteduserfailures-domaincontroller:100"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-authentication-protecteduserfailures-domaincontroller",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Authentication/ProtectedUserFailures-DomainController — Event ID 100",
+        "back": "An NTLM sign-in failure occurs for an account that is in the Protected Users security group."
+      }
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-authentication-protecteduserfailures-domaincontroller-fc-102",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Authentication/ProtectedUserFailures-DomainController 102",
+      "body": "Log channel: Microsoft-Windows-Authentication/ProtectedUserFailures-DomainController · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-Authentication/ProtectedUserFailures-DomainController"
+      },
+      "teaches": [
+        "channel:microsoft-windows-authentication-protecteduserfailures-domaincontroller",
+        "corpus:risk",
+        "event:microsoft-windows-authentication-protecteduserfailures-domaincontroller:102"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-authentication-protecteduserfailures-domaincontroller",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Authentication/ProtectedUserFailures-DomainController — Event ID 102",
+        "back": "An account tried to authenticate using DES or RC4. Protected Users are restricted to AES encryption."
+      }
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-authentication-protecteduserfailures-domaincontroller-fc-104",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Authentication/ProtectedUserFailures-DomainController 104",
+      "body": "Log channel: Microsoft-Windows-Authentication/ProtectedUserFailures-DomainController · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-Authentication/ProtectedUserFailures-DomainController"
+      },
+      "teaches": [
+        "channel:microsoft-windows-authentication-protecteduserfailures-domaincontroller",
+        "corpus:risk",
+        "event:microsoft-windows-authentication-protecteduserfailures-domaincontroller:104"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-authentication-protecteduserfailures-domaincontroller",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Authentication/ProtectedUserFailures-DomainController — Event ID 104",
+        "back": "The security package on the client does not contain the credentials."
+      }
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-authentication-protecteduserfailures-domaincontroller-fc-303",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Authentication/ProtectedUserFailures-DomainController 303",
+      "body": "Log channel: Microsoft-Windows-Authentication/ProtectedUserFailures-DomainController · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-Authentication/ProtectedUserFailures-DomainController"
+      },
+      "teaches": [
+        "channel:microsoft-windows-authentication-protecteduserfailures-domaincontroller",
+        "corpus:risk",
+        "event:microsoft-windows-authentication-protecteduserfailures-domaincontroller:303"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-authentication-protecteduserfailures-domaincontroller",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Authentication/ProtectedUserFailures-DomainController — Event ID 303",
+        "back": "A Kerberos ticket-granting-ticket (TGT) was successfully issued for a member of the Protected User group."
+      }
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-authentication-protecteduserfailures-domaincontroller-quiz-e100",
+      "type": "quiz",
+      "title": "Recall: Microsoft-Windows-Authentication/ProtectedUserFailures-DomainController",
+      "body": "Inline feedback, no results page.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-Authentication/ProtectedUserFailures-DomainController"
+      },
+      "requires": [
+        "event:microsoft-windows-authentication-protecteduserfailures-domaincontroller:100"
+      ],
+      "estimated_seconds": 35,
+      "graded": true,
+      "payload": {
+        "format": "multiple-choice",
+        "question": "In the Microsoft-Windows-Authentication/ProtectedUserFailures-DomainController channel, which Event ID records: “An NTLM sign-in failure occurs for an account that is in the Protected Users security group.”",
+        "choices": [
+          "100",
+          "102",
+          "104",
+          "303"
+        ],
+        "answer_index": 0,
+        "rationale": "Logging/Notable-Event-IDs-Risk.md#Microsoft-Windows-Authentication/ProtectedUserFailures-DomainController lists 100 as “An NTLM sign-in failure occurs for an account that is in the Protected Users security group.”."
+      }
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-authentication-protecteduserfailures-domaincontroller-instr-e100",
+      "type": "instructions",
+      "title": "Before you start: Microsoft-Windows-Authentication/ProtectedUserFai…",
+      "body": "",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-Authentication/ProtectedUserFailures-DomainController"
+      },
+      "teaches": [
+        "concept:corpus-purpose"
+      ],
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "goal": "Match each Microsoft-Windows-Authentication/ProtectedUserFailures-DomainController Event ID to what it records.",
+        "what_youll_use": "The 4 cards you just reviewed — nothing outside them.",
+        "done_when": "Every ID on the left has a description on the right."
+      }
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-authentication-protecteduserfailures-domaincontroller-match-e100",
+      "type": "exercise",
+      "title": "Match: Microsoft-Windows-Authentication/ProtectedUserFailures-DomainController…",
+      "body": "Every ID below was on the cards you just saw.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-Authentication/ProtectedUserFailures-DomainController"
+      },
+      "requires": [
+        "channel:microsoft-windows-authentication-protecteduserfailures-domaincontroller",
+        "event:microsoft-windows-authentication-protecteduserfailures-domaincontroller:100",
+        "event:microsoft-windows-authentication-protecteduserfailures-domaincontroller:102",
+        "event:microsoft-windows-authentication-protecteduserfailures-domaincontroller:104",
+        "event:microsoft-windows-authentication-protecteduserfailures-domaincontroller:303"
+      ],
+      "estimated_seconds": 60,
+      "difficulty": "standard",
+      "graded": true,
+      "payload": {
+        "format": "match",
+        "pairs": [
+          {
+            "left": "100",
+            "right": "An NTLM sign-in failure occurs for an account that is in the Protected Users security group."
+          },
+          {
+            "left": "102",
+            "right": "An account tried to authenticate using DES or RC4. Protected Users are restricted to AES encryption."
+          },
+          {
+            "left": "104",
+            "right": "The security package on the client does not contain the credentials."
+          },
+          {
+            "left": "303",
+            "right": "A Kerberos ticket-granting-ticket (TGT) was successfully issued for a member of the Protected User group."
+          }
+        ]
+      }
+    }
+  ]
+}
