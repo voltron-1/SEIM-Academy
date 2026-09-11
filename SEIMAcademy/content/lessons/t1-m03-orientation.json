@@ -1,0 +1,128 @@
+{
+  "schema_version": "1.0.0",
+  "id": "t1-m03-orientation",
+  "tier": 1,
+  "module": "3",
+  "title": "Windows Event IDs: three lists, three jobs",
+  "summary": "Why the same knowledge base keeps three separate Event ID lists, and what each one is actually for.",
+  "estimated_seconds": 200,
+  "teaches": [
+    "concept:corpus-purpose",
+    "corpus:forensics",
+    "corpus:risk",
+    "corpus:sigma"
+  ],
+  "requires": [],
+  "sources": [
+    {
+      "path": "Logging/Notable-Event-IDs-Forensics.md"
+    },
+    {
+      "path": "Logging/Notable-Event-IDs-Risk.md"
+    },
+    {
+      "path": "Logging/Notable-Event-IDs-Sigma.md"
+    }
+  ],
+  "generated": {
+    "generator": "build-content",
+    "generator_version": "1.0.0",
+    "source_repo": "TonyPhipps/SIEM",
+    "source_commit": "4adb971",
+    "source_license": "GPL-3.0",
+    "profile": "event-id-tables",
+    "content_hash": "94c0b5c104789217e7819a3c2b2f6b441ece0a0c1de0fbddff2bda2dc064368a"
+  },
+  "atoms": [
+    {
+      "id": "t1-m03-orientation-predict",
+      "type": "predict",
+      "title": "Three lists of Windows Event IDs",
+      "body": "No wrong answers here — this one is a guess before you read anything.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md"
+      },
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "prompt": "This knowledge base splits notable Windows Event IDs across three lists: Sigma, Risk and Forensics. What do you think decides which list an Event ID lands on?",
+        "reveal": "Purpose, not severity. Sigma = IDs a detection rule already fires on. Risk = IDs worth scoring but not alerting on. Forensics = IDs that rarely alert but matter once you are reconstructing what happened."
+      }
+    },
+    {
+      "id": "t1-m03-orientation-sigma-reading",
+      "type": "reading",
+      "title": "The sigma list",
+      "body": "Notable Event IDs for ensuring collections are in place to trigger Sigma rules.\n\nIt covers 38 log channels and 196 Event IDs.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md"
+      },
+      "teaches": [
+        "concept:corpus-purpose",
+        "corpus:sigma"
+      ],
+      "estimated_seconds": 45,
+      "graded": false,
+      "payload": {}
+    },
+    {
+      "id": "t1-m03-orientation-risk-reading",
+      "type": "reading",
+      "title": "The risk list",
+      "body": "Notable Event IDs to record to build up risk with. Exlcudes those already included in existing Sigma rules.\n\nIt covers 21 log channels and 157 Event IDs.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md"
+      },
+      "teaches": [
+        "concept:corpus-purpose",
+        "corpus:risk"
+      ],
+      "estimated_seconds": 45,
+      "graded": false,
+      "payload": {}
+    },
+    {
+      "id": "t1-m03-orientation-forensics-reading",
+      "type": "reading",
+      "title": "The forensics list",
+      "body": "Notable Event IDs to record that will help in forensics, if not exclicity in detection. Exlcudes those already included in existing Sigma rules.\n\nIt covers 22 log channels and 96 Event IDs.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md"
+      },
+      "teaches": [
+        "concept:corpus-purpose",
+        "corpus:forensics"
+      ],
+      "estimated_seconds": 45,
+      "graded": false,
+      "payload": {}
+    },
+    {
+      "id": "t1-m03-orientation-quiz",
+      "type": "quiz",
+      "title": "Which list, and why",
+      "body": "One question. Inline feedback either way.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md"
+      },
+      "requires": [
+        "corpus:forensics",
+        "corpus:risk",
+        "corpus:sigma"
+      ],
+      "estimated_seconds": 35,
+      "graded": true,
+      "payload": {
+        "format": "multiple-choice",
+        "question": "An Event ID is worth recording so it can build up an account risk score, but no existing Sigma rule fires on it. Which list does it belong to?",
+        "choices": [
+          "The sigma list",
+          "The risk list",
+          "The forensics list"
+        ],
+        "answer_index": 1,
+        "rationale": "Notable Event IDs to record to build up risk with. Exlcudes those already included in existing Sigma rules."
+      }
+    }
+  ]
+}

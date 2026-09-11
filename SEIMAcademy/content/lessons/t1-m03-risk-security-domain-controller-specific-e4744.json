@@ -1,0 +1,428 @@
+{
+  "schema_version": "1.0.0",
+  "id": "t1-m03-risk-security-domain-controller-specific-e4744",
+  "tier": 1,
+  "module": "3",
+  "part": 2,
+  "title": "Security (Domain Controller Specific) (risk) — part 2",
+  "summary": "10 notable Event IDs from the Security (Domain Controller Specific) channel on the risk list.",
+  "estimated_seconds": 320,
+  "teaches": [
+    "channel:security-domain-controller-specific",
+    "concept:corpus-purpose",
+    "corpus:risk",
+    "event:security-domain-controller-specific:4744",
+    "event:security-domain-controller-specific:4745",
+    "event:security-domain-controller-specific:4746",
+    "event:security-domain-controller-specific:4747",
+    "event:security-domain-controller-specific:4748",
+    "event:security-domain-controller-specific:4749",
+    "event:security-domain-controller-specific:4750",
+    "event:security-domain-controller-specific:4751",
+    "event:security-domain-controller-specific:4752",
+    "event:security-domain-controller-specific:4753"
+  ],
+  "requires": [],
+  "sources": [
+    {
+      "path": "Logging/Notable-Event-IDs-Risk.md",
+      "heading": "Security (Domain Controller Specific)"
+    }
+  ],
+  "generated": {
+    "generator": "build-content",
+    "generator_version": "1.0.0",
+    "source_repo": "TonyPhipps/SIEM",
+    "source_commit": "4adb971",
+    "source_license": "GPL-3.0",
+    "profile": "event-id-tables",
+    "content_hash": "0f565e765f965e7b7880f00fca197118dbf82c514d90fc7b7f096ffde07c1144"
+  },
+  "atoms": [
+    {
+      "id": "t1-m03-risk-security-domain-controller-specific-intro-e4744",
+      "type": "reading",
+      "title": "Security (Domain Controller Specific)",
+      "body": "The **Security (Domain Controller Specific)** channel appears on the risk list with 41 notable Event IDs. This sitting covers 10 of them.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security (Domain Controller Specific)"
+      },
+      "teaches": [
+        "channel:security-domain-controller-specific",
+        "corpus:risk"
+      ],
+      "estimated_seconds": 45,
+      "graded": false,
+      "payload": {}
+    },
+    {
+      "id": "t1-m03-risk-security-domain-controller-specific-fc-4744",
+      "type": "flashcard",
+      "title": "Security (Domain Controller Specific) 4744",
+      "body": "Log channel: Security (Domain Controller Specific) · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security (Domain Controller Specific)"
+      },
+      "teaches": [
+        "channel:security-domain-controller-specific",
+        "corpus:risk",
+        "event:security-domain-controller-specific:4744"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security-domain-controller-specific",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security (Domain Controller Specific) — Event ID 4744",
+        "back": "A security-disabled local group was created"
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-domain-controller-specific-fc-4745",
+      "type": "flashcard",
+      "title": "Security (Domain Controller Specific) 4745",
+      "body": "Log channel: Security (Domain Controller Specific) · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security (Domain Controller Specific)"
+      },
+      "teaches": [
+        "channel:security-domain-controller-specific",
+        "corpus:risk",
+        "event:security-domain-controller-specific:4745"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security-domain-controller-specific",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security (Domain Controller Specific) — Event ID 4745",
+        "back": "A security-disabled local group was changed"
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-domain-controller-specific-fc-4746",
+      "type": "flashcard",
+      "title": "Security (Domain Controller Specific) 4746",
+      "body": "Log channel: Security (Domain Controller Specific) · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security (Domain Controller Specific)"
+      },
+      "teaches": [
+        "channel:security-domain-controller-specific",
+        "corpus:risk",
+        "event:security-domain-controller-specific:4746"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security-domain-controller-specific",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security (Domain Controller Specific) — Event ID 4746",
+        "back": "A member was added to a security-disabled local group"
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-domain-controller-specific-fc-4747",
+      "type": "flashcard",
+      "title": "Security (Domain Controller Specific) 4747",
+      "body": "Log channel: Security (Domain Controller Specific) · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security (Domain Controller Specific)"
+      },
+      "teaches": [
+        "channel:security-domain-controller-specific",
+        "corpus:risk",
+        "event:security-domain-controller-specific:4747"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security-domain-controller-specific",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security (Domain Controller Specific) — Event ID 4747",
+        "back": "A member was removed from a security-disabled local group"
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-domain-controller-specific-fc-4748",
+      "type": "flashcard",
+      "title": "Security (Domain Controller Specific) 4748",
+      "body": "Log channel: Security (Domain Controller Specific) · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security (Domain Controller Specific)"
+      },
+      "teaches": [
+        "channel:security-domain-controller-specific",
+        "corpus:risk",
+        "event:security-domain-controller-specific:4748"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security-domain-controller-specific",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security (Domain Controller Specific) — Event ID 4748",
+        "back": "A security-disabled local group was deleted"
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-domain-controller-specific-fc-4749",
+      "type": "flashcard",
+      "title": "Security (Domain Controller Specific) 4749",
+      "body": "Log channel: Security (Domain Controller Specific) · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security (Domain Controller Specific)"
+      },
+      "teaches": [
+        "channel:security-domain-controller-specific",
+        "corpus:risk",
+        "event:security-domain-controller-specific:4749"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security-domain-controller-specific",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security (Domain Controller Specific) — Event ID 4749",
+        "back": "A security-disabled global group was created"
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-domain-controller-specific-fc-4750",
+      "type": "flashcard",
+      "title": "Security (Domain Controller Specific) 4750",
+      "body": "Log channel: Security (Domain Controller Specific) · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security (Domain Controller Specific)"
+      },
+      "teaches": [
+        "channel:security-domain-controller-specific",
+        "corpus:risk",
+        "event:security-domain-controller-specific:4750"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security-domain-controller-specific",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security (Domain Controller Specific) — Event ID 4750",
+        "back": "A security-disabled global group was changed"
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-domain-controller-specific-fc-4751",
+      "type": "flashcard",
+      "title": "Security (Domain Controller Specific) 4751",
+      "body": "Log channel: Security (Domain Controller Specific) · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security (Domain Controller Specific)"
+      },
+      "teaches": [
+        "channel:security-domain-controller-specific",
+        "corpus:risk",
+        "event:security-domain-controller-specific:4751"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security-domain-controller-specific",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security (Domain Controller Specific) — Event ID 4751",
+        "back": "A member was added to a security-disabled global group"
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-domain-controller-specific-fc-4752",
+      "type": "flashcard",
+      "title": "Security (Domain Controller Specific) 4752",
+      "body": "Log channel: Security (Domain Controller Specific) · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security (Domain Controller Specific)"
+      },
+      "teaches": [
+        "channel:security-domain-controller-specific",
+        "corpus:risk",
+        "event:security-domain-controller-specific:4752"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security-domain-controller-specific",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security (Domain Controller Specific) — Event ID 4752",
+        "back": "A member was removed from a security-disabled global group"
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-domain-controller-specific-fc-4753",
+      "type": "flashcard",
+      "title": "Security (Domain Controller Specific) 4753",
+      "body": "Log channel: Security (Domain Controller Specific) · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security (Domain Controller Specific)"
+      },
+      "teaches": [
+        "channel:security-domain-controller-specific",
+        "corpus:risk",
+        "event:security-domain-controller-specific:4753"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security-domain-controller-specific",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security (Domain Controller Specific) — Event ID 4753",
+        "back": "A security-disabled global group was deleted"
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-domain-controller-specific-quiz-e4744",
+      "type": "quiz",
+      "title": "Recall: Security (Domain Controller Specific)",
+      "body": "Inline feedback, no results page.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security (Domain Controller Specific)"
+      },
+      "requires": [
+        "event:security-domain-controller-specific:4744"
+      ],
+      "estimated_seconds": 35,
+      "graded": true,
+      "payload": {
+        "format": "multiple-choice",
+        "question": "In the Security (Domain Controller Specific) channel, which Event ID records: “A security-disabled local group was created”",
+        "choices": [
+          "4744",
+          "4745",
+          "4746",
+          "4747"
+        ],
+        "answer_index": 0,
+        "rationale": "Logging/Notable-Event-IDs-Risk.md#Security (Domain Controller Specific) lists 4744 as “A security-disabled local group was created”."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-domain-controller-specific-instr-e4744",
+      "type": "instructions",
+      "title": "Before you start: Security (Domain Controller Specific)",
+      "body": "",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security (Domain Controller Specific)"
+      },
+      "teaches": [
+        "concept:corpus-purpose"
+      ],
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "goal": "Match each Security (Domain Controller Specific) Event ID to what it records.",
+        "what_youll_use": "The 10 cards you just reviewed — nothing outside them.",
+        "done_when": "Every ID on the left has a description on the right."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-domain-controller-specific-match-e4744",
+      "type": "exercise",
+      "title": "Match: Security (Domain Controller Specific) IDs to what they record",
+      "body": "Every ID below was on the cards you just saw.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security (Domain Controller Specific)"
+      },
+      "requires": [
+        "channel:security-domain-controller-specific",
+        "event:security-domain-controller-specific:4744",
+        "event:security-domain-controller-specific:4745",
+        "event:security-domain-controller-specific:4746",
+        "event:security-domain-controller-specific:4747",
+        "event:security-domain-controller-specific:4748",
+        "event:security-domain-controller-specific:4749",
+        "event:security-domain-controller-specific:4750",
+        "event:security-domain-controller-specific:4751"
+      ],
+      "estimated_seconds": 60,
+      "difficulty": "standard",
+      "graded": true,
+      "payload": {
+        "format": "match",
+        "pairs": [
+          {
+            "left": "4744",
+            "right": "A security-disabled local group was created"
+          },
+          {
+            "left": "4745",
+            "right": "A security-disabled local group was changed"
+          },
+          {
+            "left": "4746",
+            "right": "A member was added to a security-disabled local group"
+          },
+          {
+            "left": "4747",
+            "right": "A member was removed from a security-disabled local group"
+          },
+          {
+            "left": "4748",
+            "right": "A security-disabled local group was deleted"
+          },
+          {
+            "left": "4749",
+            "right": "A security-disabled global group was created"
+          },
+          {
+            "left": "4750",
+            "right": "A security-disabled global group was changed"
+          },
+          {
+            "left": "4751",
+            "right": "A member was added to a security-disabled global group"
+          }
+        ]
+      }
+    }
+  ]
+}

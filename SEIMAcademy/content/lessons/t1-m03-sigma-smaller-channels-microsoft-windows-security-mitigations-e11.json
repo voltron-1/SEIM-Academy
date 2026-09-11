@@ -1,0 +1,430 @@
+{
+  "schema_version": "1.0.0",
+  "id": "t1-m03-sigma-smaller-channels-microsoft-windows-security-mitigations-e11",
+  "tier": 1,
+  "module": "3",
+  "part": 4,
+  "title": "Smaller channels (sigma) — part 4",
+  "summary": "9 Event IDs swept from 6 low-volume channels on the sigma list.",
+  "estimated_seconds": 305,
+  "teaches": [
+    "channel:microsoft-windows-security-mitigations",
+    "channel:microsoft-windows-shell-core-operational",
+    "channel:microsoft-windows-taskscheduler-operational",
+    "channel:microsoft-windows-terminalservices-localsessionmanager-operational",
+    "channel:microsoft-windows-wmi-activity-operational",
+    "channel:openssh",
+    "concept:corpus-purpose",
+    "corpus:sigma",
+    "event:microsoft-windows-security-mitigations:11",
+    "event:microsoft-windows-shell-core-operational:28115",
+    "event:microsoft-windows-taskscheduler-operational:106",
+    "event:microsoft-windows-taskscheduler-operational:129",
+    "event:microsoft-windows-taskscheduler-operational:141",
+    "event:microsoft-windows-terminalservices-localsessionmanager-operational:21",
+    "event:microsoft-windows-wmi-activity-operational:5859",
+    "event:microsoft-windows-wmi-activity-operational:5861",
+    "event:openssh:3"
+  ],
+  "requires": [],
+  "sources": [
+    {
+      "path": "Logging/Notable-Event-IDs-Sigma.md"
+    },
+    {
+      "path": "Logging/Notable-Event-IDs-Sigma.md",
+      "heading": "Microsoft-Windows-Security-Mitigations"
+    },
+    {
+      "path": "Logging/Notable-Event-IDs-Sigma.md",
+      "heading": "Microsoft-Windows-Shell-Core/Operational"
+    },
+    {
+      "path": "Logging/Notable-Event-IDs-Sigma.md",
+      "heading": "Microsoft-Windows-TaskScheduler/Operational"
+    },
+    {
+      "path": "Logging/Notable-Event-IDs-Sigma.md",
+      "heading": "Microsoft-Windows-TerminalServices-LocalSessionManager/Operational"
+    },
+    {
+      "path": "Logging/Notable-Event-IDs-Sigma.md",
+      "heading": "Microsoft-Windows-WMI-Activity/Operational"
+    },
+    {
+      "path": "Logging/Notable-Event-IDs-Sigma.md",
+      "heading": "OpenSSH"
+    }
+  ],
+  "generated": {
+    "generator": "build-content",
+    "generator_version": "1.0.0",
+    "source_repo": "TonyPhipps/SIEM",
+    "source_commit": "4adb971",
+    "source_license": "GPL-3.0",
+    "profile": "event-id-tables",
+    "content_hash": "d8f8feb71d5b8b55ad7e07997e4d0e5349b01fd6e967f6c4169f88cd4b355bcd"
+  },
+  "atoms": [
+    {
+      "id": "t1-m03-sigma-small-intro-microsoft-windows-security-mitigations-e11",
+      "type": "reading",
+      "title": "Smaller channels",
+      "body": "Most Windows log channels contribute only a handful of notable Event IDs. This sitting sweeps 9 of them across 6 channels on the sigma list.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md"
+      },
+      "teaches": [
+        "channel:microsoft-windows-security-mitigations",
+        "channel:microsoft-windows-shell-core-operational",
+        "channel:microsoft-windows-taskscheduler-operational",
+        "channel:microsoft-windows-terminalservices-localsessionmanager-operational",
+        "channel:microsoft-windows-wmi-activity-operational",
+        "channel:openssh",
+        "corpus:sigma"
+      ],
+      "estimated_seconds": 45,
+      "graded": false,
+      "payload": {}
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-security-mitigations-fc-11",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Security-Mitigations 11",
+      "body": "Log channel: Microsoft-Windows-Security-Mitigations · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Security-Mitigations"
+      },
+      "teaches": [
+        "channel:microsoft-windows-security-mitigations",
+        "corpus:sigma",
+        "event:microsoft-windows-security-mitigations:11"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-security-mitigations",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Security-Mitigations — Event ID 11",
+        "back": "A mitigation policy has been applied to a process."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-shell-core-operational-fc-28115",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Shell-Core/Operational 28115",
+      "body": "Log channel: Microsoft-Windows-Shell-Core/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Shell-Core/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-shell-core-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-shell-core-operational:28115"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-shell-core-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Shell-Core/Operational — Event ID 28115",
+        "back": "Triggered when a shortcut is added to the \"App Resolver Cache\". Indicates when an application is installed."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-taskscheduler-operational-fc-106",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-TaskScheduler/Operational 106",
+      "body": "Log channel: Microsoft-Windows-TaskScheduler/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-TaskScheduler/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-taskscheduler-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-taskscheduler-operational:106"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-taskscheduler-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-TaskScheduler/Operational — Event ID 106",
+        "back": "Task Scheduled"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-taskscheduler-operational-fc-129",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-TaskScheduler/Operational 129",
+      "body": "Log channel: Microsoft-Windows-TaskScheduler/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-TaskScheduler/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-taskscheduler-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-taskscheduler-operational:129"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-taskscheduler-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-TaskScheduler/Operational — Event ID 129",
+        "back": "Task Created"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-taskscheduler-operational-fc-141",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-TaskScheduler/Operational 141",
+      "body": "Log channel: Microsoft-Windows-TaskScheduler/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-TaskScheduler/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-taskscheduler-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-taskscheduler-operational:141"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": true,
+        "deck": "t1-m03-microsoft-windows-taskscheduler-operational",
+        "reason": "evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-TaskScheduler/Operational — Event ID 141",
+        "back": "Task Removed"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-terminalservices-localsessionmanager-operational-fc-21",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-TerminalServices-LocalSessionManager/Operational 21",
+      "body": "Log channel: Microsoft-Windows-TerminalServices-LocalSessionManager/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-TerminalServices-LocalSessionManager/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-terminalservices-localsessionmanager-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-terminalservices-localsessionmanager-operational:21"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-terminalservices-localsessionmanager-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-TerminalServices-LocalSessionManager/Operational — Event ID 21",
+        "back": "Session logon succeeded"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-wmi-activity-operational-fc-5859",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-WMI-Activity/Operational 5859",
+      "body": "Log channel: Microsoft-Windows-WMI-Activity/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-WMI-Activity/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-wmi-activity-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-wmi-activity-operational:5859"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": true,
+        "deck": "t1-m03-microsoft-windows-wmi-activity-operational",
+        "reason": "evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-WMI-Activity/Operational — Event ID 5859",
+        "back": "An Event Subscription Service (ESS) has started."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-wmi-activity-operational-fc-5861",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-WMI-Activity/Operational 5861",
+      "body": "Log channel: Microsoft-Windows-WMI-Activity/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-WMI-Activity/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-wmi-activity-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-wmi-activity-operational:5861"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": true,
+        "deck": "t1-m03-microsoft-windows-wmi-activity-operational",
+        "reason": "evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-WMI-Activity/Operational — Event ID 5861",
+        "back": "Registration of Permanent Event Consumer"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-openssh-fc-3",
+      "type": "flashcard",
+      "title": "OpenSSH 3",
+      "body": "Log channel: OpenSSH · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "OpenSSH"
+      },
+      "teaches": [
+        "channel:openssh",
+        "corpus:sigma",
+        "event:openssh:3"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-openssh",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "OpenSSH — Event ID 3",
+        "back": "Event 3"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-security-mitigations-quiz-small-microsoft-windows-security-mitigations-e11",
+      "type": "quiz",
+      "title": "Recall: Microsoft-Windows-Security-Mitigations",
+      "body": "Inline feedback, no results page.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Security-Mitigations"
+      },
+      "requires": [
+        "event:microsoft-windows-security-mitigations:11"
+      ],
+      "estimated_seconds": 35,
+      "graded": true,
+      "payload": {
+        "format": "multiple-choice",
+        "question": "In the Microsoft-Windows-Security-Mitigations channel, which Event ID records: “A mitigation policy has been applied to a process.”",
+        "choices": [
+          "11",
+          "106",
+          "129",
+          "28115"
+        ],
+        "answer_index": 0,
+        "rationale": "Logging/Notable-Event-IDs-Sigma.md#Microsoft-Windows-Security-Mitigations lists 11 as “A mitigation policy has been applied to a process.”."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-smaller-channels-instr-microsoft-windows-security-mitigations-e11",
+      "type": "instructions",
+      "title": "Before you start: smaller channels",
+      "body": "",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md"
+      },
+      "teaches": [
+        "concept:corpus-purpose"
+      ],
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "goal": "Match each Event ID to what it records.",
+        "what_youll_use": "The 9 cards from this sitting.",
+        "done_when": "Every ID on the left has a description on the right."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-small-match-microsoft-windows-security-mitigations-e11",
+      "type": "exercise",
+      "title": "Match: smaller-channel IDs",
+      "body": "Every ID below was on the cards you just saw.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md"
+      },
+      "requires": [
+        "event:microsoft-windows-security-mitigations:11",
+        "event:microsoft-windows-shell-core-operational:28115",
+        "event:microsoft-windows-taskscheduler-operational:106",
+        "event:microsoft-windows-taskscheduler-operational:129",
+        "event:microsoft-windows-taskscheduler-operational:141",
+        "event:microsoft-windows-terminalservices-localsessionmanager-operational:21",
+        "event:microsoft-windows-wmi-activity-operational:5859",
+        "event:microsoft-windows-wmi-activity-operational:5861"
+      ],
+      "estimated_seconds": 60,
+      "difficulty": "standard",
+      "graded": true,
+      "payload": {
+        "format": "match",
+        "pairs": [
+          {
+            "left": "Microsoft-Windows-Security-Mitigations 11",
+            "right": "A mitigation policy has been applied to a process."
+          },
+          {
+            "left": "Microsoft-Windows-Shell-Core/Operational 28115",
+            "right": "Triggered when a shortcut is added to the \"App Resolver Cache\". Indicates when an application is installed."
+          },
+          {
+            "left": "Microsoft-Windows-TaskScheduler/Operational 106",
+            "right": "Task Scheduled"
+          },
+          {
+            "left": "Microsoft-Windows-TaskScheduler/Operational 129",
+            "right": "Task Created"
+          },
+          {
+            "left": "Microsoft-Windows-TaskScheduler/Operational 141",
+            "right": "Task Removed"
+          },
+          {
+            "left": "Microsoft-Windows-TerminalServices-LocalSessionManager/Operational 21",
+            "right": "Session logon succeeded"
+          },
+          {
+            "left": "Microsoft-Windows-WMI-Activity/Operational 5859",
+            "right": "An Event Subscription Service (ESS) has started."
+          },
+          {
+            "left": "Microsoft-Windows-WMI-Activity/Operational 5861",
+            "right": "Registration of Permanent Event Consumer"
+          }
+        ]
+      }
+    }
+  ]
+}

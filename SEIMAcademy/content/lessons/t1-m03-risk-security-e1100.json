@@ -1,0 +1,455 @@
+{
+  "schema_version": "1.0.0",
+  "id": "t1-m03-risk-security-e1100",
+  "tier": 1,
+  "module": "3",
+  "part": 1,
+  "title": "Security (risk) — part 1",
+  "summary": "11 notable Event IDs from the Security channel on the risk list.",
+  "estimated_seconds": 335,
+  "teaches": [
+    "channel:security",
+    "concept:corpus-purpose",
+    "corpus:risk",
+    "event:security:1100",
+    "event:security:4618",
+    "event:security:4664",
+    "event:security:4693",
+    "event:security:4695",
+    "event:security:4717",
+    "event:security:4718",
+    "event:security:4722",
+    "event:security:4723",
+    "event:security:4724",
+    "event:security:4725"
+  ],
+  "requires": [],
+  "sources": [
+    {
+      "path": "Logging/Notable-Event-IDs-Risk.md",
+      "heading": "Security"
+    }
+  ],
+  "generated": {
+    "generator": "build-content",
+    "generator_version": "1.0.0",
+    "source_repo": "TonyPhipps/SIEM",
+    "source_commit": "4adb971",
+    "source_license": "GPL-3.0",
+    "profile": "event-id-tables",
+    "content_hash": "ea95b8750ae55f4ad1ddf7b3649bcc332aef7671dc2eed6f2f5ea8d1fbcefcb3"
+  },
+  "atoms": [
+    {
+      "id": "t1-m03-risk-security-intro-e1100",
+      "type": "reading",
+      "title": "Security",
+      "body": "The **Security** channel appears on the risk list with 53 notable Event IDs. This sitting covers 11 of them.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:risk"
+      ],
+      "estimated_seconds": 45,
+      "graded": false,
+      "payload": {}
+    },
+    {
+      "id": "t1-m03-risk-security-fc-1100",
+      "type": "flashcard",
+      "title": "Security 1100",
+      "body": "Log channel: Security · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:risk",
+        "event:security:1100"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": true,
+        "deck": "t1-m03-security",
+        "reason": "evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 1100",
+        "back": "The event logging service has shut down."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-fc-4618",
+      "type": "flashcard",
+      "title": "Security 4618",
+      "body": "Log channel: Security · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:risk",
+        "event:security:4618"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4618",
+        "back": "A monitored security event pattern has occurred."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-fc-4664",
+      "type": "flashcard",
+      "title": "Security 4664",
+      "body": "Log channel: Security · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:risk",
+        "event:security:4664"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4664",
+        "back": "An attempt was made to create a hard link"
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-fc-4693",
+      "type": "flashcard",
+      "title": "Security 4693",
+      "body": "Log channel: Security · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:risk",
+        "event:security:4693"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4693",
+        "back": "Recovery of data protection master key was attempted."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-fc-4695",
+      "type": "flashcard",
+      "title": "Security 4695",
+      "body": "Log channel: Security · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:risk",
+        "event:security:4695"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4695",
+        "back": "Unprotection of auditable protected data was attempted."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-fc-4717",
+      "type": "flashcard",
+      "title": "Security 4717",
+      "body": "Log channel: Security · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:risk",
+        "event:security:4717"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4717",
+        "back": "System security access was granted to an account."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-fc-4718",
+      "type": "flashcard",
+      "title": "Security 4718",
+      "body": "Log channel: Security · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:risk",
+        "event:security:4718"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4718",
+        "back": "System security access was removed from an account."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-fc-4722",
+      "type": "flashcard",
+      "title": "Security 4722",
+      "body": "Log channel: Security · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:risk",
+        "event:security:4722"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4722",
+        "back": "A user account was enabled."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-fc-4723",
+      "type": "flashcard",
+      "title": "Security 4723",
+      "body": "Log channel: Security · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:risk",
+        "event:security:4723"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": true,
+        "deck": "t1-m03-security",
+        "reason": "evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4723",
+        "back": "An attempt was made to change an account's password."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-fc-4724",
+      "type": "flashcard",
+      "title": "Security 4724",
+      "body": "Log channel: Security · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:risk",
+        "event:security:4724"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4724",
+        "back": "An attempt was made to reset an account's password."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-fc-4725",
+      "type": "flashcard",
+      "title": "Security 4725",
+      "body": "Log channel: Security · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:risk",
+        "event:security:4725"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4725",
+        "back": "A user account was disabled."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-quiz-e1100",
+      "type": "quiz",
+      "title": "Recall: Security",
+      "body": "Inline feedback, no results page.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "requires": [
+        "event:security:1100"
+      ],
+      "estimated_seconds": 35,
+      "graded": true,
+      "payload": {
+        "format": "multiple-choice",
+        "question": "In the Security channel, which Event ID records: “The event logging service has shut down.”",
+        "choices": [
+          "1100",
+          "4618",
+          "4664",
+          "4693"
+        ],
+        "answer_index": 0,
+        "rationale": "Logging/Notable-Event-IDs-Risk.md#Security lists 1100 as “The event logging service has shut down.”."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-instr-e1100",
+      "type": "instructions",
+      "title": "Before you start: Security",
+      "body": "",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "concept:corpus-purpose"
+      ],
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "goal": "Match each Security Event ID to what it records.",
+        "what_youll_use": "The 11 cards you just reviewed — nothing outside them.",
+        "done_when": "Every ID on the left has a description on the right."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-match-e1100",
+      "type": "exercise",
+      "title": "Match: Security IDs to what they record",
+      "body": "Every ID below was on the cards you just saw.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "requires": [
+        "channel:security",
+        "event:security:1100",
+        "event:security:4618",
+        "event:security:4664",
+        "event:security:4693",
+        "event:security:4695",
+        "event:security:4717",
+        "event:security:4718",
+        "event:security:4722"
+      ],
+      "estimated_seconds": 60,
+      "difficulty": "standard",
+      "graded": true,
+      "payload": {
+        "format": "match",
+        "pairs": [
+          {
+            "left": "1100",
+            "right": "The event logging service has shut down."
+          },
+          {
+            "left": "4618",
+            "right": "A monitored security event pattern has occurred."
+          },
+          {
+            "left": "4664",
+            "right": "An attempt was made to create a hard link"
+          },
+          {
+            "left": "4693",
+            "right": "Recovery of data protection master key was attempted."
+          },
+          {
+            "left": "4695",
+            "right": "Unprotection of auditable protected data was attempted."
+          },
+          {
+            "left": "4717",
+            "right": "System security access was granted to an account."
+          },
+          {
+            "left": "4718",
+            "right": "System security access was removed from an account."
+          },
+          {
+            "left": "4722",
+            "right": "A user account was enabled."
+          }
+        ]
+      }
+    }
+  ]
+}

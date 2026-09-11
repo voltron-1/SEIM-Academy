@@ -1,0 +1,341 @@
+{
+  "schema_version": "1.0.0",
+  "id": "t1-m03-sigma-microsoft-windows-windows-firewall-with-advanced-security-firewall-e2002",
+  "tier": 1,
+  "module": "3",
+  "title": "Microsoft-Windows-Windows Firewall With Advanced Security/Firewall (sigma)",
+  "summary": "7 notable Event IDs from the Microsoft-Windows-Windows Firewall With Advanced Security/Firewall channel on the sigma list.",
+  "estimated_seconds": 275,
+  "teaches": [
+    "channel:microsoft-windows-windows-firewall-with-advanced-security-firewall",
+    "concept:corpus-purpose",
+    "corpus:sigma",
+    "event:microsoft-windows-windows-firewall-with-advanced-security-firewall:2002",
+    "event:microsoft-windows-windows-firewall-with-advanced-security-firewall:2004",
+    "event:microsoft-windows-windows-firewall-with-advanced-security-firewall:2005",
+    "event:microsoft-windows-windows-firewall-with-advanced-security-firewall:2006",
+    "event:microsoft-windows-windows-firewall-with-advanced-security-firewall:2009",
+    "event:microsoft-windows-windows-firewall-with-advanced-security-firewall:2032",
+    "event:microsoft-windows-windows-firewall-with-advanced-security-firewall:2033"
+  ],
+  "requires": [],
+  "sources": [
+    {
+      "path": "Logging/Notable-Event-IDs-Sigma.md",
+      "heading": "Microsoft-Windows-Windows Firewall With Advanced Security/Firewall"
+    }
+  ],
+  "generated": {
+    "generator": "build-content",
+    "generator_version": "1.0.0",
+    "source_repo": "TonyPhipps/SIEM",
+    "source_commit": "4adb971",
+    "source_license": "GPL-3.0",
+    "profile": "event-id-tables",
+    "content_hash": "2c41cdba91425b8b87db8c48dc980f849d03b94cab0045b9c9a31392ace40ab4"
+  },
+  "atoms": [
+    {
+      "id": "t1-m03-sigma-microsoft-windows-windows-firewall-with-advanced-security-firewall-intro-e2002",
+      "type": "reading",
+      "title": "Microsoft-Windows-Windows Firewall With Advanced Security/Firewall",
+      "body": "The **Microsoft-Windows-Windows Firewall With Advanced Security/Firewall** channel appears on the sigma list with 7 notable Event IDs. This sitting covers 7 of them.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Windows Firewall With Advanced Security/Firewall"
+      },
+      "teaches": [
+        "channel:microsoft-windows-windows-firewall-with-advanced-security-firewall",
+        "corpus:sigma"
+      ],
+      "estimated_seconds": 45,
+      "graded": false,
+      "payload": {}
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-windows-firewall-with-advanced-security-firewall-fc-2002",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Windows Firewall With Advanced Security/Firewall 2002",
+      "body": "Log channel: Microsoft-Windows-Windows Firewall With Advanced Security/Firewall · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Windows Firewall With Advanced Security/Firewall"
+      },
+      "teaches": [
+        "channel:microsoft-windows-windows-firewall-with-advanced-security-firewall",
+        "corpus:sigma",
+        "event:microsoft-windows-windows-firewall-with-advanced-security-firewall:2002"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-windows-firewall-with-advanced-security-firewall",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Windows Firewall With Advanced Security/Firewall — Event ID 2002",
+        "back": "Firewall setting changed"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-windows-firewall-with-advanced-security-firewall-fc-2004",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Windows Firewall With Advanced Security/Firewall 2004",
+      "body": "Log channel: Microsoft-Windows-Windows Firewall With Advanced Security/Firewall · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Windows Firewall With Advanced Security/Firewall"
+      },
+      "teaches": [
+        "channel:microsoft-windows-windows-firewall-with-advanced-security-firewall",
+        "corpus:sigma",
+        "event:microsoft-windows-windows-firewall-with-advanced-security-firewall:2004"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": true,
+        "deck": "t1-m03-microsoft-windows-windows-firewall-with-advanced-security-firewall",
+        "reason": "evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Windows Firewall With Advanced Security/Firewall — Event ID 2004",
+        "back": "Firewall Rule Added"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-windows-firewall-with-advanced-security-firewall-fc-2005",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Windows Firewall With Advanced Security/Firewall 2005",
+      "body": "Log channel: Microsoft-Windows-Windows Firewall With Advanced Security/Firewall · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Windows Firewall With Advanced Security/Firewall"
+      },
+      "teaches": [
+        "channel:microsoft-windows-windows-firewall-with-advanced-security-firewall",
+        "corpus:sigma",
+        "event:microsoft-windows-windows-firewall-with-advanced-security-firewall:2005"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-windows-firewall-with-advanced-security-firewall",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Windows Firewall With Advanced Security/Firewall — Event ID 2005",
+        "back": "Firewall Rule Changed"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-windows-firewall-with-advanced-security-firewall-fc-2006",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Windows Firewall With Advanced Security/Firewall 2006",
+      "body": "Log channel: Microsoft-Windows-Windows Firewall With Advanced Security/Firewall · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Windows Firewall With Advanced Security/Firewall"
+      },
+      "teaches": [
+        "channel:microsoft-windows-windows-firewall-with-advanced-security-firewall",
+        "corpus:sigma",
+        "event:microsoft-windows-windows-firewall-with-advanced-security-firewall:2006"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": true,
+        "deck": "t1-m03-microsoft-windows-windows-firewall-with-advanced-security-firewall",
+        "reason": "evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Windows Firewall With Advanced Security/Firewall — Event ID 2006",
+        "back": "Firewall Rule Deleted"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-windows-firewall-with-advanced-security-firewall-fc-2009",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Windows Firewall With Advanced Security/Firewall 2009",
+      "body": "Log channel: Microsoft-Windows-Windows Firewall With Advanced Security/Firewall · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Windows Firewall With Advanced Security/Firewall"
+      },
+      "teaches": [
+        "channel:microsoft-windows-windows-firewall-with-advanced-security-firewall",
+        "corpus:sigma",
+        "event:microsoft-windows-windows-firewall-with-advanced-security-firewall:2009"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-windows-firewall-with-advanced-security-firewall",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Windows Firewall With Advanced Security/Firewall — Event ID 2009",
+        "back": "Firewall failed to load Group Policy"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-windows-firewall-with-advanced-security-firewall-fc-2032",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Windows Firewall With Advanced Security/Firewall 2032",
+      "body": "Log channel: Microsoft-Windows-Windows Firewall With Advanced Security/Firewall · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Windows Firewall With Advanced Security/Firewall"
+      },
+      "teaches": [
+        "channel:microsoft-windows-windows-firewall-with-advanced-security-firewall",
+        "corpus:sigma",
+        "event:microsoft-windows-windows-firewall-with-advanced-security-firewall:2032"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-windows-firewall-with-advanced-security-firewall",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Windows Firewall With Advanced Security/Firewall — Event ID 2032",
+        "back": "Firewall has blocked an inbound connection"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-windows-firewall-with-advanced-security-firewall-fc-2033",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Windows Firewall With Advanced Security/Firewall 2033",
+      "body": "Log channel: Microsoft-Windows-Windows Firewall With Advanced Security/Firewall · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Windows Firewall With Advanced Security/Firewall"
+      },
+      "teaches": [
+        "channel:microsoft-windows-windows-firewall-with-advanced-security-firewall",
+        "corpus:sigma",
+        "event:microsoft-windows-windows-firewall-with-advanced-security-firewall:2033"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-windows-firewall-with-advanced-security-firewall",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Windows Firewall With Advanced Security/Firewall — Event ID 2033",
+        "back": "Firewall Rule Deleted"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-windows-firewall-with-advanced-security-firewall-quiz-e2002",
+      "type": "quiz",
+      "title": "Recall: Microsoft-Windows-Windows Firewall With Advanced Security/Firewall",
+      "body": "Inline feedback, no results page.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Windows Firewall With Advanced Security/Firewall"
+      },
+      "requires": [
+        "event:microsoft-windows-windows-firewall-with-advanced-security-firewall:2002"
+      ],
+      "estimated_seconds": 35,
+      "graded": true,
+      "payload": {
+        "format": "multiple-choice",
+        "question": "In the Microsoft-Windows-Windows Firewall With Advanced Security/Firewall channel, which Event ID records: “Firewall setting changed”",
+        "choices": [
+          "2002",
+          "2004",
+          "2005",
+          "2006"
+        ],
+        "answer_index": 0,
+        "rationale": "Logging/Notable-Event-IDs-Sigma.md#Microsoft-Windows-Windows Firewall With Advanced Security/Firewall lists 2002 as “Firewall setting changed”."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-windows-firewall-with-advanced-security-firewall-instr-e2002",
+      "type": "instructions",
+      "title": "Before you start: Microsoft-Windows-Windows Firewall With Advanced…",
+      "body": "",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Windows Firewall With Advanced Security/Firewall"
+      },
+      "teaches": [
+        "concept:corpus-purpose"
+      ],
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "goal": "Match each Microsoft-Windows-Windows Firewall With Advanced Security/Firewall Event ID to what it records.",
+        "what_youll_use": "The 7 cards you just reviewed — nothing outside them.",
+        "done_when": "Every ID on the left has a description on the right."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-windows-firewall-with-advanced-security-firewall-match-e2002",
+      "type": "exercise",
+      "title": "Match: Microsoft-Windows-Windows Firewall With Advanced Security/Firewall IDs t…",
+      "body": "Every ID below was on the cards you just saw.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Windows Firewall With Advanced Security/Firewall"
+      },
+      "requires": [
+        "channel:microsoft-windows-windows-firewall-with-advanced-security-firewall",
+        "event:microsoft-windows-windows-firewall-with-advanced-security-firewall:2002",
+        "event:microsoft-windows-windows-firewall-with-advanced-security-firewall:2004",
+        "event:microsoft-windows-windows-firewall-with-advanced-security-firewall:2005",
+        "event:microsoft-windows-windows-firewall-with-advanced-security-firewall:2006",
+        "event:microsoft-windows-windows-firewall-with-advanced-security-firewall:2009",
+        "event:microsoft-windows-windows-firewall-with-advanced-security-firewall:2032",
+        "event:microsoft-windows-windows-firewall-with-advanced-security-firewall:2033"
+      ],
+      "estimated_seconds": 60,
+      "difficulty": "standard",
+      "graded": true,
+      "payload": {
+        "format": "match",
+        "pairs": [
+          {
+            "left": "2002",
+            "right": "Firewall setting changed"
+          },
+          {
+            "left": "2004",
+            "right": "Firewall Rule Added"
+          },
+          {
+            "left": "2005",
+            "right": "Firewall Rule Changed"
+          },
+          {
+            "left": "2006",
+            "right": "Firewall Rule Deleted"
+          },
+          {
+            "left": "2009",
+            "right": "Firewall failed to load Group Policy"
+          },
+          {
+            "left": "2032",
+            "right": "Firewall has blocked an inbound connection"
+          },
+          {
+            "left": "2033",
+            "right": "Firewall Rule Deleted"
+          }
+        ]
+      }
+    }
+  ]
+}

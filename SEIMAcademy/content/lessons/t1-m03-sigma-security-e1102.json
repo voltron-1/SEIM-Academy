@@ -1,0 +1,428 @@
+{
+  "schema_version": "1.0.0",
+  "id": "t1-m03-sigma-security-e1102",
+  "tier": 1,
+  "module": "3",
+  "part": 1,
+  "title": "Security (sigma) — part 1",
+  "summary": "10 notable Event IDs from the Security channel on the sigma list.",
+  "estimated_seconds": 320,
+  "teaches": [
+    "channel:security",
+    "concept:corpus-purpose",
+    "corpus:sigma",
+    "event:security:1102",
+    "event:security:4609",
+    "event:security:4611",
+    "event:security:4616",
+    "event:security:4624",
+    "event:security:4625",
+    "event:security:4634",
+    "event:security:4648",
+    "event:security:4656",
+    "event:security:4657"
+  ],
+  "requires": [],
+  "sources": [
+    {
+      "path": "Logging/Notable-Event-IDs-Sigma.md",
+      "heading": "Security"
+    }
+  ],
+  "generated": {
+    "generator": "build-content",
+    "generator_version": "1.0.0",
+    "source_repo": "TonyPhipps/SIEM",
+    "source_commit": "4adb971",
+    "source_license": "GPL-3.0",
+    "profile": "event-id-tables",
+    "content_hash": "57e5a5b627a6bdbca6357f17a0e584df34b5999b3583a85f92c5d10e9d43f785"
+  },
+  "atoms": [
+    {
+      "id": "t1-m03-sigma-security-intro-e1102",
+      "type": "reading",
+      "title": "Security",
+      "body": "The **Security** channel appears on the sigma list with 50 notable Event IDs. This sitting covers 10 of them.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:sigma"
+      ],
+      "estimated_seconds": 45,
+      "graded": false,
+      "payload": {}
+    },
+    {
+      "id": "t1-m03-sigma-security-fc-1102",
+      "type": "flashcard",
+      "title": "Security 1102",
+      "body": "Log channel: Security · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:sigma",
+        "event:security:1102"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 1102",
+        "back": "The audit log was cleared."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-fc-4609",
+      "type": "flashcard",
+      "title": "Security 4609",
+      "body": "Log channel: Security · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:sigma",
+        "event:security:4609"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4609",
+        "back": "Windows is shutting down."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-fc-4611",
+      "type": "flashcard",
+      "title": "Security 4611",
+      "body": "Log channel: Security · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:sigma",
+        "event:security:4611"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4611",
+        "back": "A trusted logon process has been registered with the Local Security Authority."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-fc-4616",
+      "type": "flashcard",
+      "title": "Security 4616",
+      "body": "Log channel: Security · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:sigma",
+        "event:security:4616"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4616",
+        "back": "The system time was changed."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-fc-4624",
+      "type": "flashcard",
+      "title": "Security 4624",
+      "body": "Log channel: Security · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:sigma",
+        "event:security:4624"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4624",
+        "back": "An account was successfully logged on."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-fc-4625",
+      "type": "flashcard",
+      "title": "Security 4625",
+      "body": "Log channel: Security · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:sigma",
+        "event:security:4625"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4625",
+        "back": "An account failed to log on."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-fc-4634",
+      "type": "flashcard",
+      "title": "Security 4634",
+      "body": "Log channel: Security · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:sigma",
+        "event:security:4634"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4634",
+        "back": "An account was logged off."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-fc-4648",
+      "type": "flashcard",
+      "title": "Security 4648",
+      "body": "Log channel: Security · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:sigma",
+        "event:security:4648"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4648",
+        "back": "A logon was attempted using explicit credentials."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-fc-4656",
+      "type": "flashcard",
+      "title": "Security 4656",
+      "body": "Log channel: Security · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:sigma",
+        "event:security:4656"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4656",
+        "back": "A handle to an object was requested."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-fc-4657",
+      "type": "flashcard",
+      "title": "Security 4657",
+      "body": "Log channel: Security · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:sigma",
+        "event:security:4657"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": true,
+        "deck": "t1-m03-security",
+        "reason": "evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4657",
+        "back": "A registry value was modified."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-quiz-e1102",
+      "type": "quiz",
+      "title": "Recall: Security",
+      "body": "Inline feedback, no results page.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "requires": [
+        "event:security:1102"
+      ],
+      "estimated_seconds": 35,
+      "graded": true,
+      "payload": {
+        "format": "multiple-choice",
+        "question": "In the Security channel, which Event ID records: “The audit log was cleared.”",
+        "choices": [
+          "1102",
+          "4609",
+          "4611",
+          "4616"
+        ],
+        "answer_index": 0,
+        "rationale": "Logging/Notable-Event-IDs-Sigma.md#Security lists 1102 as “The audit log was cleared.”."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-instr-e1102",
+      "type": "instructions",
+      "title": "Before you start: Security",
+      "body": "",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "concept:corpus-purpose"
+      ],
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "goal": "Match each Security Event ID to what it records.",
+        "what_youll_use": "The 10 cards you just reviewed — nothing outside them.",
+        "done_when": "Every ID on the left has a description on the right."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-match-e1102",
+      "type": "exercise",
+      "title": "Match: Security IDs to what they record",
+      "body": "Every ID below was on the cards you just saw.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "requires": [
+        "channel:security",
+        "event:security:1102",
+        "event:security:4609",
+        "event:security:4611",
+        "event:security:4616",
+        "event:security:4624",
+        "event:security:4625",
+        "event:security:4634",
+        "event:security:4648"
+      ],
+      "estimated_seconds": 60,
+      "difficulty": "standard",
+      "graded": true,
+      "payload": {
+        "format": "match",
+        "pairs": [
+          {
+            "left": "1102",
+            "right": "The audit log was cleared."
+          },
+          {
+            "left": "4609",
+            "right": "Windows is shutting down."
+          },
+          {
+            "left": "4611",
+            "right": "A trusted logon process has been registered with the Local Security Authority."
+          },
+          {
+            "left": "4616",
+            "right": "The system time was changed."
+          },
+          {
+            "left": "4624",
+            "right": "An account was successfully logged on."
+          },
+          {
+            "left": "4625",
+            "right": "An account failed to log on."
+          },
+          {
+            "left": "4634",
+            "right": "An account was logged off."
+          },
+          {
+            "left": "4648",
+            "right": "A logon was attempted using explicit credentials."
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,428 @@
+{
+  "schema_version": "1.0.0",
+  "id": "t1-m03-risk-security-domain-controller-specific-e4764",
+  "tier": 1,
+  "module": "3",
+  "part": 4,
+  "title": "Security (Domain Controller Specific) (risk) — part 4",
+  "summary": "10 notable Event IDs from the Security (Domain Controller Specific) channel on the risk list.",
+  "estimated_seconds": 320,
+  "teaches": [
+    "channel:security-domain-controller-specific",
+    "concept:corpus-purpose",
+    "corpus:risk",
+    "event:security-domain-controller-specific:4764",
+    "event:security-domain-controller-specific:4766",
+    "event:security-domain-controller-specific:4767",
+    "event:security-domain-controller-specific:4865",
+    "event:security-domain-controller-specific:4866",
+    "event:security-domain-controller-specific:4867",
+    "event:security-domain-controller-specific:5137",
+    "event:security-domain-controller-specific:5138",
+    "event:security-domain-controller-specific:5139",
+    "event:security-domain-controller-specific:5141"
+  ],
+  "requires": [],
+  "sources": [
+    {
+      "path": "Logging/Notable-Event-IDs-Risk.md",
+      "heading": "Security (Domain Controller Specific)"
+    }
+  ],
+  "generated": {
+    "generator": "build-content",
+    "generator_version": "1.0.0",
+    "source_repo": "TonyPhipps/SIEM",
+    "source_commit": "4adb971",
+    "source_license": "GPL-3.0",
+    "profile": "event-id-tables",
+    "content_hash": "7e04daf5cdc1d262446bbeadc047e82f936bfb5cd57deaa26a0ae6d4e3c39189"
+  },
+  "atoms": [
+    {
+      "id": "t1-m03-risk-security-domain-controller-specific-intro-e4764",
+      "type": "reading",
+      "title": "Security (Domain Controller Specific)",
+      "body": "The **Security (Domain Controller Specific)** channel appears on the risk list with 41 notable Event IDs. This sitting covers 10 of them.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security (Domain Controller Specific)"
+      },
+      "teaches": [
+        "channel:security-domain-controller-specific",
+        "corpus:risk"
+      ],
+      "estimated_seconds": 45,
+      "graded": false,
+      "payload": {}
+    },
+    {
+      "id": "t1-m03-risk-security-domain-controller-specific-fc-4764",
+      "type": "flashcard",
+      "title": "Security (Domain Controller Specific) 4764",
+      "body": "Log channel: Security (Domain Controller Specific) · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security (Domain Controller Specific)"
+      },
+      "teaches": [
+        "channel:security-domain-controller-specific",
+        "corpus:risk",
+        "event:security-domain-controller-specific:4764"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security-domain-controller-specific",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security (Domain Controller Specific) — Event ID 4764",
+        "back": "A group's type was changed."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-domain-controller-specific-fc-4766",
+      "type": "flashcard",
+      "title": "Security (Domain Controller Specific) 4766",
+      "body": "Log channel: Security (Domain Controller Specific) · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security (Domain Controller Specific)"
+      },
+      "teaches": [
+        "channel:security-domain-controller-specific",
+        "corpus:risk",
+        "event:security-domain-controller-specific:4766"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security-domain-controller-specific",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security (Domain Controller Specific) — Event ID 4766",
+        "back": "An attempt to add SID History to an account failed."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-domain-controller-specific-fc-4767",
+      "type": "flashcard",
+      "title": "Security (Domain Controller Specific) 4767",
+      "body": "Log channel: Security (Domain Controller Specific) · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security (Domain Controller Specific)"
+      },
+      "teaches": [
+        "channel:security-domain-controller-specific",
+        "corpus:risk",
+        "event:security-domain-controller-specific:4767"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security-domain-controller-specific",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security (Domain Controller Specific) — Event ID 4767",
+        "back": "A user account was unlocked."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-domain-controller-specific-fc-4865",
+      "type": "flashcard",
+      "title": "Security (Domain Controller Specific) 4865",
+      "body": "Log channel: Security (Domain Controller Specific) · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security (Domain Controller Specific)"
+      },
+      "teaches": [
+        "channel:security-domain-controller-specific",
+        "corpus:risk",
+        "event:security-domain-controller-specific:4865"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security-domain-controller-specific",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security (Domain Controller Specific) — Event ID 4865",
+        "back": "A trusted forest information entry was added."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-domain-controller-specific-fc-4866",
+      "type": "flashcard",
+      "title": "Security (Domain Controller Specific) 4866",
+      "body": "Log channel: Security (Domain Controller Specific) · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security (Domain Controller Specific)"
+      },
+      "teaches": [
+        "channel:security-domain-controller-specific",
+        "corpus:risk",
+        "event:security-domain-controller-specific:4866"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security-domain-controller-specific",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security (Domain Controller Specific) — Event ID 4866",
+        "back": "A trusted forest information entry was removed."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-domain-controller-specific-fc-4867",
+      "type": "flashcard",
+      "title": "Security (Domain Controller Specific) 4867",
+      "body": "Log channel: Security (Domain Controller Specific) · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security (Domain Controller Specific)"
+      },
+      "teaches": [
+        "channel:security-domain-controller-specific",
+        "corpus:risk",
+        "event:security-domain-controller-specific:4867"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security-domain-controller-specific",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security (Domain Controller Specific) — Event ID 4867",
+        "back": "A trusted forest information entry was added."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-domain-controller-specific-fc-5137",
+      "type": "flashcard",
+      "title": "Security (Domain Controller Specific) 5137",
+      "body": "Log channel: Security (Domain Controller Specific) · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security (Domain Controller Specific)"
+      },
+      "teaches": [
+        "channel:security-domain-controller-specific",
+        "corpus:risk",
+        "event:security-domain-controller-specific:5137"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": true,
+        "deck": "t1-m03-security-domain-controller-specific",
+        "reason": "evidence-set"
+      },
+      "payload": {
+        "front": "Security (Domain Controller Specific) — Event ID 5137",
+        "back": "A directory service object was created."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-domain-controller-specific-fc-5138",
+      "type": "flashcard",
+      "title": "Security (Domain Controller Specific) 5138",
+      "body": "Log channel: Security (Domain Controller Specific) · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security (Domain Controller Specific)"
+      },
+      "teaches": [
+        "channel:security-domain-controller-specific",
+        "corpus:risk",
+        "event:security-domain-controller-specific:5138"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security-domain-controller-specific",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security (Domain Controller Specific) — Event ID 5138",
+        "back": "A directory service object was undeleted"
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-domain-controller-specific-fc-5139",
+      "type": "flashcard",
+      "title": "Security (Domain Controller Specific) 5139",
+      "body": "Log channel: Security (Domain Controller Specific) · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security (Domain Controller Specific)"
+      },
+      "teaches": [
+        "channel:security-domain-controller-specific",
+        "corpus:risk",
+        "event:security-domain-controller-specific:5139"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security-domain-controller-specific",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security (Domain Controller Specific) — Event ID 5139",
+        "back": "A directory service object was moved."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-domain-controller-specific-fc-5141",
+      "type": "flashcard",
+      "title": "Security (Domain Controller Specific) 5141",
+      "body": "Log channel: Security (Domain Controller Specific) · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security (Domain Controller Specific)"
+      },
+      "teaches": [
+        "channel:security-domain-controller-specific",
+        "corpus:risk",
+        "event:security-domain-controller-specific:5141"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": true,
+        "deck": "t1-m03-security-domain-controller-specific",
+        "reason": "evidence-set"
+      },
+      "payload": {
+        "front": "Security (Domain Controller Specific) — Event ID 5141",
+        "back": "A directory service object was deleted"
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-domain-controller-specific-quiz-e4764",
+      "type": "quiz",
+      "title": "Recall: Security (Domain Controller Specific)",
+      "body": "Inline feedback, no results page.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security (Domain Controller Specific)"
+      },
+      "requires": [
+        "event:security-domain-controller-specific:4764"
+      ],
+      "estimated_seconds": 35,
+      "graded": true,
+      "payload": {
+        "format": "multiple-choice",
+        "question": "In the Security (Domain Controller Specific) channel, which Event ID records: “A group's type was changed.”",
+        "choices": [
+          "4764",
+          "4766",
+          "4767",
+          "4865"
+        ],
+        "answer_index": 0,
+        "rationale": "Logging/Notable-Event-IDs-Risk.md#Security (Domain Controller Specific) lists 4764 as “A group's type was changed.”."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-domain-controller-specific-instr-e4764",
+      "type": "instructions",
+      "title": "Before you start: Security (Domain Controller Specific)",
+      "body": "",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security (Domain Controller Specific)"
+      },
+      "teaches": [
+        "concept:corpus-purpose"
+      ],
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "goal": "Match each Security (Domain Controller Specific) Event ID to what it records.",
+        "what_youll_use": "The 10 cards you just reviewed — nothing outside them.",
+        "done_when": "Every ID on the left has a description on the right."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-domain-controller-specific-match-e4764",
+      "type": "exercise",
+      "title": "Match: Security (Domain Controller Specific) IDs to what they record",
+      "body": "Every ID below was on the cards you just saw.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security (Domain Controller Specific)"
+      },
+      "requires": [
+        "channel:security-domain-controller-specific",
+        "event:security-domain-controller-specific:4764",
+        "event:security-domain-controller-specific:4766",
+        "event:security-domain-controller-specific:4767",
+        "event:security-domain-controller-specific:4865",
+        "event:security-domain-controller-specific:4866",
+        "event:security-domain-controller-specific:4867",
+        "event:security-domain-controller-specific:5137",
+        "event:security-domain-controller-specific:5138"
+      ],
+      "estimated_seconds": 60,
+      "difficulty": "standard",
+      "graded": true,
+      "payload": {
+        "format": "match",
+        "pairs": [
+          {
+            "left": "4764",
+            "right": "A group's type was changed."
+          },
+          {
+            "left": "4766",
+            "right": "An attempt to add SID History to an account failed."
+          },
+          {
+            "left": "4767",
+            "right": "A user account was unlocked."
+          },
+          {
+            "left": "4865",
+            "right": "A trusted forest information entry was added."
+          },
+          {
+            "left": "4866",
+            "right": "A trusted forest information entry was removed."
+          },
+          {
+            "left": "4867",
+            "right": "A trusted forest information entry was added."
+          },
+          {
+            "left": "5137",
+            "right": "A directory service object was created."
+          },
+          {
+            "left": "5138",
+            "right": "A directory service object was undeleted"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,843 @@
+{
+  "schema_version": "1.0.0",
+  "generator": "build-content",
+  "generator_version": "1.0.0",
+  "generator_hash": "5fe1a072e4270471ce6f0736091f5f61ef55fa6425bdf63235a36a72060570b3",
+  "source_repo": "TonyPhipps/SIEM",
+  "source_commit": "4adb971",
+  "source_license": "GPL-3.0",
+  "sources": {
+    "Lab/Generate-Suspicious-Activity-lolbins.ps1": "a9e486106187feed6f8cad8d7b74916be97bcdc40b59ea6e6dcc5aa0ae5a5c8e",
+    "Lab/Generate-Suspicious-Activity-Sigma.ps1": "62edd0d0851926e1ca857e2f595ea77c4a990cab062a9f4414fff562ae24d1e9",
+    "Lab/Generate-Suspicious-Activity.ps1": "0b92e95281c030ce451c14ccd55300bc9c7b5695f8d63962c9568fb3e7860eca",
+    "Logging/Notable-Event-IDs-Forensics.md": "28b6f7c408664ab0c7229a639bc4d66f74dd4be29b6338a514175681dbe6a7dd",
+    "Logging/Notable-Event-IDs-Risk.md": "4edee0cf7448a44a0b0ef86f6df001b700c56b8701f464732486ea4d645d8af4",
+    "Logging/Notable-Event-IDs-Sigma.md": "c7e8d6d9d69f079718d7222e69f1294562e561d4083fea149d571fbdaf341aea"
+  },
+  "modules": [
+    {
+      "id": "t1-m03",
+      "tier": 1,
+      "module": "3",
+      "title": "Windows Event ID triage",
+      "lesson_order": [
+        "t1-m03-orientation",
+        "t1-m03-sigma-application-e1",
+        "t1-m03-sigma-application-e1033",
+        "t1-m03-sigma-microsoft-windows-appxdeployment-server-operational-e400",
+        "t1-m03-sigma-microsoft-windows-codeintegrity-operational-e3001",
+        "t1-m03-sigma-microsoft-windows-driverframeworks-usermode-operational-e2003",
+        "t1-m03-sigma-microsoft-windows-sysmon-operational-e1",
+        "t1-m03-sigma-microsoft-windows-sysmon-operational-e13",
+        "t1-m03-sigma-microsoft-windows-windows-defender-operational-e1006",
+        "t1-m03-sigma-microsoft-windows-windows-defender-operational-e3007",
+        "t1-m03-sigma-microsoft-windows-windows-firewall-with-advanced-security-firewall-e2002",
+        "t1-m03-sigma-security-e1102",
+        "t1-m03-sigma-security-e4661",
+        "t1-m03-sigma-security-e4698",
+        "t1-m03-sigma-security-e4732",
+        "t1-m03-sigma-security-e5140",
+        "t1-m03-sigma-security-domain-controller-specific-e4649",
+        "t1-m03-sigma-system-e26",
+        "t1-m03-sigma-system-e1001",
+        "t1-m03-sigma-smaller-channels-msexchange-management-e6",
+        "t1-m03-sigma-smaller-channels-microsoft-windows-dhcp-server-operational-e1031",
+        "t1-m03-sigma-smaller-channels-microsoft-windows-ntlm-operational-e8001",
+        "t1-m03-sigma-smaller-channels-microsoft-windows-security-mitigations-e11",
+        "t1-m03-risk-application-e1002",
+        "t1-m03-risk-security-e1100",
+        "t1-m03-risk-security-e4726",
+        "t1-m03-risk-security-e4816",
+        "t1-m03-risk-security-e5037",
+        "t1-m03-risk-security-e6278",
+        "t1-m03-risk-security-domain-controller-specific-e4707",
+        "t1-m03-risk-security-domain-controller-specific-e4744",
+        "t1-m03-risk-security-domain-controller-specific-e4754",
+        "t1-m03-risk-security-domain-controller-specific-e4764",
+        "t1-m03-risk-system-e41",
+        "t1-m03-risk-microsoft-windows-authentication-authenticationpolicyfailures-domaincontroller-e105",
+        "t1-m03-risk-microsoft-windows-authentication-protecteduserfailures-domaincontroller-e100",
+        "t1-m03-risk-microsoft-windows-codeintegrity-operational-e3002",
+        "t1-m03-risk-microsoft-windows-grouppolicy-e1085",
+        "t1-m03-risk-microsoft-windows-terminalservices-rdpclient-operational-e1024",
+        "t1-m03-risk-microsoft-windows-windows-defender-operational-e1002",
+        "t1-m03-risk-microsoft-windows-windows-defender-operational-e1117",
+        "t1-m03-risk-smaller-channels-microsoft-windows-applocker-exe-and-dll-e8003",
+        "t1-m03-risk-smaller-channels-microsoft-windows-remotedesktopservices-rdpcorets-operational-e131",
+        "t1-m03-forensics-security-e4647",
+        "t1-m03-forensics-security-e4793",
+        "t1-m03-forensics-security-e4908",
+        "t1-m03-forensics-security-e5027",
+        "t1-m03-forensics-system-e12",
+        "t1-m03-forensics-microsoft-windows-powershell-operational-e40961",
+        "t1-m03-forensics-microsoft-windows-terminalservices-localsessionmanager-operational-e22",
+        "t1-m03-forensics-microsoft-windows-winrm-operational-e6",
+        "t1-m03-forensics-smaller-channels-security-domain-controller-specific-e4770",
+        "t1-m03-forensics-smaller-channels-microsoft-windows-sysmon-operational-e18",
+        "t1-m03-forensics-smaller-channels-microsoft-windows-winlogon-operational-e811",
+        "t1-m03-list-membership-e1",
+        "t1-m03-list-membership-e32867",
+        "t1-m03-action-to-event-e1034",
+        "t1-m03-action-to-event-e4698",
+        "t1-m03-action-to-event-e4723",
+        "t1-m03-action-to-event-e4726",
+        "t1-m03-action-to-event-e4699",
+        "t1-m03-action-to-event-e4720",
+        "t1-m03-action-to-event-e4697",
+        "t1-m03-action-to-event-e1007"
+      ],
+      "exercise_data": [
+        "t1-m03-lab-action-event-pairs"
+      ],
+      "stats": {
+        "lessons": 64,
+        "atoms": 707,
+        "source_rows": 449,
+        "lab_pairs": 50,
+        "lab_pairs_rejected": 0,
+        "srs_eligible_cards": 36,
+        "srs_card_budget": 80,
+        "skipped_sections": 0
+      },
+      "skipped_sections": []
+    }
+  ],
+  "artifacts": {
+    "t1-m03-action-to-event-e1007": {
+      "kind": "lesson",
+      "file": "lessons/t1-m03-action-to-event-e1007.json",
+      "content_hash": "ed11783894e1b0667fd49b016fb9ec6db6c8d4223e96ee37315a2b51f322ebec",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1",
+        "Logging/Notable-Event-IDs-Forensics.md",
+        "Logging/Notable-Event-IDs-Risk.md",
+        "Logging/Notable-Event-IDs-Sigma.md"
+      ]
+    },
+    "t1-m03-action-to-event-e1034": {
+      "kind": "lesson",
+      "file": "lessons/t1-m03-action-to-event-e1034.json",
+      "content_hash": "afa367852349a243135076a66f420088d054c186b4838b663e58408eedee2232",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1",
+        "Logging/Notable-Event-IDs-Forensics.md",
+        "Logging/Notable-Event-IDs-Risk.md",
+        "Logging/Notable-Event-IDs-Sigma.md"
+      ]
+    },
+    "t1-m03-action-to-event-e4697": {
+      "kind": "lesson",
+      "file": "lessons/t1-m03-action-to-event-e4697.json",
+      "content_hash": "f8bb4856ff29c38995bae1a66ec5a3a08f1b00272825bb51c48216907b4a79cf",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1",
+        "Logging/Notable-Event-IDs-Forensics.md",
+        "Logging/Notable-Event-IDs-Risk.md",
+        "Logging/Notable-Event-IDs-Sigma.md"
+      ]
+    },
+    "t1-m03-action-to-event-e4698": {
+      "kind": "lesson",
+      "file": "lessons/t1-m03-action-to-event-e4698.json",
+      "content_hash": "b32c0af98a1f8b930d0bfd58074202be6f24e4a7291d74125457cce976094193",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1",
+        "Logging/Notable-Event-IDs-Forensics.md",
+        "Logging/Notable-Event-IDs-Risk.md",
+        "Logging/Notable-Event-IDs-Sigma.md"
+      ]
+    },
+    "t1-m03-action-to-event-e4699": {
+      "kind": "lesson",
+      "file": "lessons/t1-m03-action-to-event-e4699.json",
+      "content_hash": "3218d555d1500727306337485adb10a6db775f231da1905bddbdb89f4a943bcf",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1",
+        "Logging/Notable-Event-IDs-Forensics.md",
+        "Logging/Notable-Event-IDs-Risk.md",
+        "Logging/Notable-Event-IDs-Sigma.md"
+      ]
+    },
+    "t1-m03-action-to-event-e4720": {
+      "kind": "lesson",
+      "file": "lessons/t1-m03-action-to-event-e4720.json",
+      "content_hash": "49b3d111d25e2c01249d19d600aaf5f6fe88df281df19a063e931140fd83e703",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1",
+        "Logging/Notable-Event-IDs-Forensics.md",
+        "Logging/Notable-Event-IDs-Risk.md",
+        "Logging/Notable-Event-IDs-Sigma.md"
+      ]
+    },
+    "t1-m03-action-to-event-e4723": {
+      "kind": "lesson",
+      "file": "lessons/t1-m03-action-to-event-e4723.json",
+      "content_hash": "f323382d95fc3fa638d4e00a0e3da5c41b63ad431a5db0ecf6b0d2c5e982bbb9",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1",
+        "Logging/Notable-Event-IDs-Forensics.md",
+        "Logging/Notable-Event-IDs-Risk.md",
+        "Logging/Notable-Event-IDs-Sigma.md"
+      ]
+    },
+    "t1-m03-action-to-event-e4726": {
+      "kind": "lesson",
+      "file": "lessons/t1-m03-action-to-event-e4726.json",
+      "content_hash": "6ec77ec82f19cb7f6f5c0fb6d475a56c00606a1753273a7560841805c2488f5f",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1",
+        "Logging/Notable-Event-IDs-Forensics.md",
+        "Logging/Notable-Event-IDs-Risk.md",
+        "Logging/Notable-Event-IDs-Sigma.md"
+      ]
+    },
+    "t1-m03-forensics-microsoft-windows-powershell-operational-e40961": {
+      "kind": "lesson",
+      "file": "lessons/t1-m03-forensics-microsoft-windows-powershell-operational-e40961.json",
+      "content_hash": "514f51c81c3ada40217d9fd0afa1a8604efe3e086c6e02889c92a13f79848822",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1",
+        "Logging/Notable-Event-IDs-Forensics.md"
+      ]
+    },
+    "t1-m03-forensics-microsoft-windows-terminalservices-localsessionmanager-operational-e22": {
+      "kind": "lesson",
+      "file": "lessons/t1-m03-forensics-microsoft-windows-terminalservices-localsessionmanager-operational-e22.json",
+      "content_hash": "d2d4756b71bef2ce1025716fab974aed0006dfc3bca25ff939c983d924f1103d",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1",
+        "Logging/Notable-Event-IDs-Forensics.md"
+      ]
+    },
+    "t1-m03-forensics-microsoft-windows-winrm-operational-e6": {
+      "kind": "lesson",
+      "file": "lessons/t1-m03-forensics-microsoft-windows-winrm-operational-e6.json",
+      "content_hash": "8e7b76987bcf39999b1b763266a7bc1ee7c3f1fb6d9c50fb24bf8847d7386865",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1",
+        "Logging/Notable-Event-IDs-Forensics.md"
+      ]
+    },
+    "t1-m03-forensics-security-e4647": {
+      "kind": "lesson",
+      "file": "lessons/t1-m03-forensics-security-e4647.json",
+      "content_hash": "638461b70827279d3339b34f33882b2c4b11fe8fa618d7d75f2f8626571909ae",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1",
+        "Logging/Notable-Event-IDs-Forensics.md"
+      ]
+    },
+    "t1-m03-forensics-security-e4793": {
+      "kind": "lesson",
+      "file": "lessons/t1-m03-forensics-security-e4793.json",
+      "content_hash": "e38de34f7b904b3bec8e64bee3fe4b5496410bc44a101b75b0d295260a071ed5",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1",
+        "Logging/Notable-Event-IDs-Forensics.md"
+      ]
+    },
+    "t1-m03-forensics-security-e4908": {
+      "kind": "lesson",
+      "file": "lessons/t1-m03-forensics-security-e4908.json",
+      "content_hash": "a88ff1f0a662631da26e728e20ace8ea02f31f82f448e21a09b8a85b7b807ab9",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1",
+        "Logging/Notable-Event-IDs-Forensics.md"
+      ]
+    },
+    "t1-m03-forensics-security-e5027": {
+      "kind": "lesson",
+      "file": "lessons/t1-m03-forensics-security-e5027.json",
+      "content_hash": "5937a35351bb995956a329c5aed55fd104fbe0468a409965a614a19e0bb4e451",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1",
+        "Logging/Notable-Event-IDs-Forensics.md"
+      ]
+    },
+    "t1-m03-forensics-smaller-channels-microsoft-windows-sysmon-operational-e18": {
+      "kind": "lesson",
+      "file": "lessons/t1-m03-forensics-smaller-channels-microsoft-windows-sysmon-operational-e18.json",
+      "content_hash": "d48951d6336a3f94665f5c9f2861561b5d4d627538fbf6a25e477b9d1d27558b",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1",
+        "Logging/Notable-Event-IDs-Forensics.md"
+      ]
+    },
+    "t1-m03-forensics-smaller-channels-microsoft-windows-winlogon-operational-e811": {
+      "kind": "lesson",
+      "file": "lessons/t1-m03-forensics-smaller-channels-microsoft-windows-winlogon-operational-e811.json",
+      "content_hash": "487fc1bbb40ac759946ce0d3d385e5cfd9bde959c1f62c93740666822364d6ba",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1",
+        "Logging/Notable-Event-IDs-Forensics.md"
+      ]
+    },
+    "t1-m03-forensics-smaller-channels-security-domain-controller-specific-e4770": {
+      "kind": "lesson",
+      "file": "lessons/t1-m03-forensics-smaller-channels-security-domain-controller-specific-e4770.json",
+      "content_hash": "28870a3d0bc9bcfeaccbd6e527771d78816bdc1edddd223b574e6c438177f1ef",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1",
+        "Logging/Notable-Event-IDs-Forensics.md"
+      ]
+    },
+    "t1-m03-forensics-system-e12": {
+      "kind": "lesson",
+      "file": "lessons/t1-m03-forensics-system-e12.json",
+      "content_hash": "5b8903d4064292ab072a4bab46e373f7dced8ec7d15fdb09382a18b9cf18abc6",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1",
+        "Logging/Notable-Event-IDs-Forensics.md"
+      ]
+    },
+    "t1-m03-lab-action-event-pairs": {
+      "kind": "exercise-data",
+      "file": "exercise-data/t1-m03-lab-action-event-pairs.json",
+      "content_hash": "79f6ba677313966168f28e2c55bf3be133ce7416f59ee20610439aebcbddb880",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1"
+      ]
+    },
+    "t1-m03-list-membership-e1": {
+      "kind": "lesson",
+      "file": "lessons/t1-m03-list-membership-e1.json",
+      "content_hash": "2dd24026d777edc531a8fcc8c8e4aa363e8380bff0ac6bacc945bbee91ad4a3a",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1",
+        "Logging/Notable-Event-IDs-Forensics.md",
+        "Logging/Notable-Event-IDs-Risk.md",
+        "Logging/Notable-Event-IDs-Sigma.md"
+      ]
+    },
+    "t1-m03-list-membership-e32867": {
+      "kind": "lesson",
+      "file": "lessons/t1-m03-list-membership-e32867.json",
+      "content_hash": "032b720d8d1b93362441753cf81496527a45a79f30cbd0cd37812fd8c996a597",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1",
+        "Logging/Notable-Event-IDs-Forensics.md",
+        "Logging/Notable-Event-IDs-Risk.md",
+        "Logging/Notable-Event-IDs-Sigma.md"
+      ]
+    },
+    "t1-m03-orientation": {
+      "kind": "lesson",
+      "file": "lessons/t1-m03-orientation.json",
+      "content_hash": "94c0b5c104789217e7819a3c2b2f6b441ece0a0c1de0fbddff2bda2dc064368a",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1",
+        "Logging/Notable-Event-IDs-Forensics.md",
+        "Logging/Notable-Event-IDs-Risk.md",
+        "Logging/Notable-Event-IDs-Sigma.md"
+      ]
+    },
+    "t1-m03-risk-application-e1002": {
+      "kind": "lesson",
+      "file": "lessons/t1-m03-risk-application-e1002.json",
+      "content_hash": "d089c30e5aa87cf6dcff6fee2350f794d3997661409293f5828428dc1519de19",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1",
+        "Logging/Notable-Event-IDs-Risk.md"
+      ]
+    },
+    "t1-m03-risk-microsoft-windows-authentication-authenticationpolicyfailures-domaincontroller-e105": {
+      "kind": "lesson",
+      "file": "lessons/t1-m03-risk-microsoft-windows-authentication-authenticationpolicyfailures-domaincontroller-e105.json",
+      "content_hash": "e950bd76d4bf832fb7b3ad27255f53a02cc238dd9c056c5e2ee730beafeb619e",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1",
+        "Logging/Notable-Event-IDs-Risk.md"
+      ]
+    },
+    "t1-m03-risk-microsoft-windows-authentication-protecteduserfailures-domaincontroller-e100": {
+      "kind": "lesson",
+      "file": "lessons/t1-m03-risk-microsoft-windows-authentication-protecteduserfailures-domaincontroller-e100.json",
+      "content_hash": "e374b2d1e942a4a2095fae09fd61e3aceb854132a73b7681e63942327e22647d",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1",
+        "Logging/Notable-Event-IDs-Risk.md"
+      ]
+    },
+    "t1-m03-risk-microsoft-windows-codeintegrity-operational-e3002": {
+      "kind": "lesson",
+      "file": "lessons/t1-m03-risk-microsoft-windows-codeintegrity-operational-e3002.json",
+      "content_hash": "01ab89297f525e8af4f524953c14cd674decfb74cbb90233c03c64b09fcbc67b",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1",
+        "Logging/Notable-Event-IDs-Risk.md"
+      ]
+    },
+    "t1-m03-risk-microsoft-windows-grouppolicy-e1085": {
+      "kind": "lesson",
+      "file": "lessons/t1-m03-risk-microsoft-windows-grouppolicy-e1085.json",
+      "content_hash": "014926ee20c06d15ac00d38edb719f77d2370a9ab5826241522df614c6de0c63",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1",
+        "Logging/Notable-Event-IDs-Risk.md"
+      ]
+    },
+    "t1-m03-risk-microsoft-windows-terminalservices-rdpclient-operational-e1024": {
+      "kind": "lesson",
+      "file": "lessons/t1-m03-risk-microsoft-windows-terminalservices-rdpclient-operational-e1024.json",
+      "content_hash": "09a5f5ca2eb85566de2d606f56d1b8590484550f9c4b8af744215faefcde3c02",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1",
+        "Logging/Notable-Event-IDs-Risk.md"
+      ]
+    },
+    "t1-m03-risk-microsoft-windows-windows-defender-operational-e1002": {
+      "kind": "lesson",
+      "file": "lessons/t1-m03-risk-microsoft-windows-windows-defender-operational-e1002.json",
+      "content_hash": "1f31cd868482f599dd75f837753cd0ea604ed6af8260d33dd5a7c9e38b7340da",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1",
+        "Logging/Notable-Event-IDs-Risk.md"
+      ]
+    },
+    "t1-m03-risk-microsoft-windows-windows-defender-operational-e1117": {
+      "kind": "lesson",
+      "file": "lessons/t1-m03-risk-microsoft-windows-windows-defender-operational-e1117.json",
+      "content_hash": "35668ace0300a58f7fd925dbffb8ec8b19243e904234c4798d87c67a9b838177",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1",
+        "Logging/Notable-Event-IDs-Risk.md"
+      ]
+    },
+    "t1-m03-risk-security-domain-controller-specific-e4707": {
+      "kind": "lesson",
+      "file": "lessons/t1-m03-risk-security-domain-controller-specific-e4707.json",
+      "content_hash": "9afed6fa2424c426a4f45ca9822ce1621f39b97b3e40e0f15d695d030089253b",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1",
+        "Logging/Notable-Event-IDs-Risk.md"
+      ]
+    },
+    "t1-m03-risk-security-domain-controller-specific-e4744": {
+      "kind": "lesson",
+      "file": "lessons/t1-m03-risk-security-domain-controller-specific-e4744.json",
+      "content_hash": "0f565e765f965e7b7880f00fca197118dbf82c514d90fc7b7f096ffde07c1144",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1",
+        "Logging/Notable-Event-IDs-Risk.md"
+      ]
+    },
+    "t1-m03-risk-security-domain-controller-specific-e4754": {
+      "kind": "lesson",
+      "file": "lessons/t1-m03-risk-security-domain-controller-specific-e4754.json",
+      "content_hash": "00af4cb7c3a3b8a0377a5133633f01f93511cbde1852016eb96b648b268604b1",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1",
+        "Logging/Notable-Event-IDs-Risk.md"
+      ]
+    },
+    "t1-m03-risk-security-domain-controller-specific-e4764": {
+      "kind": "lesson",
+      "file": "lessons/t1-m03-risk-security-domain-controller-specific-e4764.json",
+      "content_hash": "7e04daf5cdc1d262446bbeadc047e82f936bfb5cd57deaa26a0ae6d4e3c39189",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1",
+        "Logging/Notable-Event-IDs-Risk.md"
+      ]
+    },
+    "t1-m03-risk-security-e1100": {
+      "kind": "lesson",
+      "file": "lessons/t1-m03-risk-security-e1100.json",
+      "content_hash": "ea95b8750ae55f4ad1ddf7b3649bcc332aef7671dc2eed6f2f5ea8d1fbcefcb3",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1",
+        "Logging/Notable-Event-IDs-Risk.md"
+      ]
+    },
+    "t1-m03-risk-security-e4726": {
+      "kind": "lesson",
+      "file": "lessons/t1-m03-risk-security-e4726.json",
+      "content_hash": "663746f26ad6fe046ef108a75d645cb50fe2e1ce0b6ca3b77e4b5bfbde36e6b1",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1",
+        "Logging/Notable-Event-IDs-Risk.md"
+      ]
+    },
+    "t1-m03-risk-security-e4816": {
+      "kind": "lesson",
+      "file": "lessons/t1-m03-risk-security-e4816.json",
+      "content_hash": "24e235dbf3a3a8a6216f1c9172e2fd74c92fdeece70f95976ca2281e44fab18f",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1",
+        "Logging/Notable-Event-IDs-Risk.md"
+      ]
+    },
+    "t1-m03-risk-security-e5037": {
+      "kind": "lesson",
+      "file": "lessons/t1-m03-risk-security-e5037.json",
+      "content_hash": "70746c079ed9c9f62093c512e96d7d7e43977efd6305ccdb348c6e52e6952a1c",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1",
+        "Logging/Notable-Event-IDs-Risk.md"
+      ]
+    },
+    "t1-m03-risk-security-e6278": {
+      "kind": "lesson",
+      "file": "lessons/t1-m03-risk-security-e6278.json",
+      "content_hash": "507734135662aac3aaacc96632260dfe6367d351a41ad8a0f458409c9971bd9b",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1",
+        "Logging/Notable-Event-IDs-Risk.md"
+      ]
+    },
+    "t1-m03-risk-smaller-channels-microsoft-windows-applocker-exe-and-dll-e8003": {
+      "kind": "lesson",
+      "file": "lessons/t1-m03-risk-smaller-channels-microsoft-windows-applocker-exe-and-dll-e8003.json",
+      "content_hash": "c23ca5e85818517868d50dd324ae84bde729085529c81de20da50a224364a870",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1",
+        "Logging/Notable-Event-IDs-Risk.md"
+      ]
+    },
+    "t1-m03-risk-smaller-channels-microsoft-windows-remotedesktopservices-rdpcorets-operational-e131": {
+      "kind": "lesson",
+      "file": "lessons/t1-m03-risk-smaller-channels-microsoft-windows-remotedesktopservices-rdpcorets-operational-e131.json",
+      "content_hash": "db708c99192a771e0ca93bb886c86c10f334620b1432827c7737325fbeb0a0d9",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1",
+        "Logging/Notable-Event-IDs-Risk.md"
+      ]
+    },
+    "t1-m03-risk-system-e41": {
+      "kind": "lesson",
+      "file": "lessons/t1-m03-risk-system-e41.json",
+      "content_hash": "eb8442cfb8b50526c55a732c420ff4bbe6cd754ecbe0016386e9d774f287982d",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1",
+        "Logging/Notable-Event-IDs-Risk.md"
+      ]
+    },
+    "t1-m03-sigma-application-e1": {
+      "kind": "lesson",
+      "file": "lessons/t1-m03-sigma-application-e1.json",
+      "content_hash": "afc0dbc8e28dff1ec2f6852709bfb6eb980872b5fde164a89234a4f287b71a1f",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1",
+        "Logging/Notable-Event-IDs-Sigma.md"
+      ]
+    },
+    "t1-m03-sigma-application-e1033": {
+      "kind": "lesson",
+      "file": "lessons/t1-m03-sigma-application-e1033.json",
+      "content_hash": "c4913f24ba29b3fb47f81571c7759554fea4fbae80f5a9a0bd41933ad4df2a8a",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1",
+        "Logging/Notable-Event-IDs-Sigma.md"
+      ]
+    },
+    "t1-m03-sigma-microsoft-windows-appxdeployment-server-operational-e400": {
+      "kind": "lesson",
+      "file": "lessons/t1-m03-sigma-microsoft-windows-appxdeployment-server-operational-e400.json",
+      "content_hash": "db97be5e17a47f8613152186849e863c5e34208cabb1b6f9a9b2e113b6165139",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1",
+        "Logging/Notable-Event-IDs-Sigma.md"
+      ]
+    },
+    "t1-m03-sigma-microsoft-windows-codeintegrity-operational-e3001": {
+      "kind": "lesson",
+      "file": "lessons/t1-m03-sigma-microsoft-windows-codeintegrity-operational-e3001.json",
+      "content_hash": "7657e2897d822914527cc1416deb9be50ce575dcfc4b33f029230a925c552097",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1",
+        "Logging/Notable-Event-IDs-Sigma.md"
+      ]
+    },
+    "t1-m03-sigma-microsoft-windows-driverframeworks-usermode-operational-e2003": {
+      "kind": "lesson",
+      "file": "lessons/t1-m03-sigma-microsoft-windows-driverframeworks-usermode-operational-e2003.json",
+      "content_hash": "cde6918e5f72c0220c6d405ddc1852da7b984901e524f691117fb6fd1c260612",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1",
+        "Logging/Notable-Event-IDs-Sigma.md"
+      ]
+    },
+    "t1-m03-sigma-microsoft-windows-sysmon-operational-e1": {
+      "kind": "lesson",
+      "file": "lessons/t1-m03-sigma-microsoft-windows-sysmon-operational-e1.json",
+      "content_hash": "06520c3d4ec1425c41ad0296db593eca7ee6cbf12b40b756d6e0ce0f5b9662d2",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1",
+        "Logging/Notable-Event-IDs-Sigma.md"
+      ]
+    },
+    "t1-m03-sigma-microsoft-windows-sysmon-operational-e13": {
+      "kind": "lesson",
+      "file": "lessons/t1-m03-sigma-microsoft-windows-sysmon-operational-e13.json",
+      "content_hash": "8987c83758b0f2c1ff87958d63b887de0223015649bd6232de825c4b6db4f8fa",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1",
+        "Logging/Notable-Event-IDs-Sigma.md"
+      ]
+    },
+    "t1-m03-sigma-microsoft-windows-windows-defender-operational-e1006": {
+      "kind": "lesson",
+      "file": "lessons/t1-m03-sigma-microsoft-windows-windows-defender-operational-e1006.json",
+      "content_hash": "4135259d7310f40a34ca859baa12e2091cdda1c7951e3d1dd2a5e388a449808c",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1",
+        "Logging/Notable-Event-IDs-Sigma.md"
+      ]
+    },
+    "t1-m03-sigma-microsoft-windows-windows-defender-operational-e3007": {
+      "kind": "lesson",
+      "file": "lessons/t1-m03-sigma-microsoft-windows-windows-defender-operational-e3007.json",
+      "content_hash": "b29a58e564f1278d0d3fb013ae0493811929b725a67b98d6c0ca714d9ab24469",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1",
+        "Logging/Notable-Event-IDs-Sigma.md"
+      ]
+    },
+    "t1-m03-sigma-microsoft-windows-windows-firewall-with-advanced-security-firewall-e2002": {
+      "kind": "lesson",
+      "file": "lessons/t1-m03-sigma-microsoft-windows-windows-firewall-with-advanced-security-firewall-e2002.json",
+      "content_hash": "2c41cdba91425b8b87db8c48dc980f849d03b94cab0045b9c9a31392ace40ab4",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1",
+        "Logging/Notable-Event-IDs-Sigma.md"
+      ]
+    },
+    "t1-m03-sigma-security-domain-controller-specific-e4649": {
+      "kind": "lesson",
+      "file": "lessons/t1-m03-sigma-security-domain-controller-specific-e4649.json",
+      "content_hash": "967fb1e716758c78808fb0b81048f4acb1ec5ca3ab598bfe4b66281894f225c2",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1",
+        "Logging/Notable-Event-IDs-Sigma.md"
+      ]
+    },
+    "t1-m03-sigma-security-e1102": {
+      "kind": "lesson",
+      "file": "lessons/t1-m03-sigma-security-e1102.json",
+      "content_hash": "57e5a5b627a6bdbca6357f17a0e584df34b5999b3583a85f92c5d10e9d43f785",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1",
+        "Logging/Notable-Event-IDs-Sigma.md"
+      ]
+    },
+    "t1-m03-sigma-security-e4661": {
+      "kind": "lesson",
+      "file": "lessons/t1-m03-sigma-security-e4661.json",
+      "content_hash": "d9a6fb6322943eec3e7c40e17464f53b3e2480f1ccf41272b1d8953bd999e46c",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1",
+        "Logging/Notable-Event-IDs-Sigma.md"
+      ]
+    },
+    "t1-m03-sigma-security-e4698": {
+      "kind": "lesson",
+      "file": "lessons/t1-m03-sigma-security-e4698.json",
+      "content_hash": "4ca97e5171774ef492ae58f120f55087e5fc524552daee035f2302c5e0591d8c",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1",
+        "Logging/Notable-Event-IDs-Sigma.md"
+      ]
+    },
+    "t1-m03-sigma-security-e4732": {
+      "kind": "lesson",
+      "file": "lessons/t1-m03-sigma-security-e4732.json",
+      "content_hash": "717c6263fbad846d6c836ddcad6c3a69d94d0aba7921554e41be82e5d0ef4314",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1",
+        "Logging/Notable-Event-IDs-Sigma.md"
+      ]
+    },
+    "t1-m03-sigma-security-e5140": {
+      "kind": "lesson",
+      "file": "lessons/t1-m03-sigma-security-e5140.json",
+      "content_hash": "7e304de1e2e4738b982aa1e3242c986b8d64c7e0783bd9701f5de21554b4a5eb",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1",
+        "Logging/Notable-Event-IDs-Sigma.md"
+      ]
+    },
+    "t1-m03-sigma-smaller-channels-microsoft-windows-dhcp-server-operational-e1031": {
+      "kind": "lesson",
+      "file": "lessons/t1-m03-sigma-smaller-channels-microsoft-windows-dhcp-server-operational-e1031.json",
+      "content_hash": "fe54c670809fca8ea4d485e75d6bad54fe7f21f4fb9eed2acf67331c40641525",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1",
+        "Logging/Notable-Event-IDs-Sigma.md"
+      ]
+    },
+    "t1-m03-sigma-smaller-channels-microsoft-windows-ntlm-operational-e8001": {
+      "kind": "lesson",
+      "file": "lessons/t1-m03-sigma-smaller-channels-microsoft-windows-ntlm-operational-e8001.json",
+      "content_hash": "9ba41c948c4f4c0a3175d2e98461ca5da3e8baa30ab1607a152c7f35424da2f2",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1",
+        "Logging/Notable-Event-IDs-Sigma.md"
+      ]
+    },
+    "t1-m03-sigma-smaller-channels-microsoft-windows-security-mitigations-e11": {
+      "kind": "lesson",
+      "file": "lessons/t1-m03-sigma-smaller-channels-microsoft-windows-security-mitigations-e11.json",
+      "content_hash": "d8f8feb71d5b8b55ad7e07997e4d0e5349b01fd6e967f6c4169f88cd4b355bcd",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1",
+        "Logging/Notable-Event-IDs-Sigma.md"
+      ]
+    },
+    "t1-m03-sigma-smaller-channels-msexchange-management-e6": {
+      "kind": "lesson",
+      "file": "lessons/t1-m03-sigma-smaller-channels-msexchange-management-e6.json",
+      "content_hash": "20d5406609a76934ebaaedd68794e50b42268c9d98bf0af5a0ff0bc41698e48d",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1",
+        "Logging/Notable-Event-IDs-Sigma.md"
+      ]
+    },
+    "t1-m03-sigma-system-e1001": {
+      "kind": "lesson",
+      "file": "lessons/t1-m03-sigma-system-e1001.json",
+      "content_hash": "94acd5de4884369e5fe1b25b182bdf064347ebc7ef6deba8e4f0bde88a9aa572",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1",
+        "Logging/Notable-Event-IDs-Sigma.md"
+      ]
+    },
+    "t1-m03-sigma-system-e26": {
+      "kind": "lesson",
+      "file": "lessons/t1-m03-sigma-system-e26.json",
+      "content_hash": "57573f7889ae0be5e7dc43cf32321b0472eb1e10fddb53c1e6ec1567c5450a2f",
+      "depends_on": [
+        "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+        "Lab/Generate-Suspicious-Activity.ps1",
+        "Logging/Notable-Event-IDs-Sigma.md"
+      ]
+    }
+  }
+}

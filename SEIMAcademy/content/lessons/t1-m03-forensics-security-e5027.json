@@ -1,0 +1,401 @@
+{
+  "schema_version": "1.0.0",
+  "id": "t1-m03-forensics-security-e5027",
+  "tier": 1,
+  "module": "3",
+  "part": 4,
+  "title": "Security (forensics) — part 4",
+  "summary": "9 notable Event IDs from the Security channel on the forensics list.",
+  "estimated_seconds": 305,
+  "teaches": [
+    "channel:security",
+    "concept:corpus-purpose",
+    "corpus:forensics",
+    "event:security:5027",
+    "event:security:5028",
+    "event:security:5029",
+    "event:security:5146",
+    "event:security:5158",
+    "event:security:6145",
+    "event:security:6272",
+    "event:security:6274",
+    "event:security:6275"
+  ],
+  "requires": [],
+  "sources": [
+    {
+      "path": "Logging/Notable-Event-IDs-Forensics.md",
+      "heading": "Security"
+    }
+  ],
+  "generated": {
+    "generator": "build-content",
+    "generator_version": "1.0.0",
+    "source_repo": "TonyPhipps/SIEM",
+    "source_commit": "4adb971",
+    "source_license": "GPL-3.0",
+    "profile": "event-id-tables",
+    "content_hash": "5937a35351bb995956a329c5aed55fd104fbe0468a409965a614a19e0bb4e451"
+  },
+  "atoms": [
+    {
+      "id": "t1-m03-forensics-security-intro-e5027",
+      "type": "reading",
+      "title": "Security",
+      "body": "The **Security** channel appears on the forensics list with 37 notable Event IDs. This sitting covers 9 of them.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:forensics"
+      ],
+      "estimated_seconds": 45,
+      "graded": false,
+      "payload": {}
+    },
+    {
+      "id": "t1-m03-forensics-security-fc-5027",
+      "type": "flashcard",
+      "title": "Security 5027",
+      "body": "Log channel: Security · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:forensics",
+        "event:security:5027"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 5027",
+        "back": "Windows Firewall Service unable to retrieve the security policy from the local storage service will continue enforcing the current policy"
+      }
+    },
+    {
+      "id": "t1-m03-forensics-security-fc-5028",
+      "type": "flashcard",
+      "title": "Security 5028",
+      "body": "Log channel: Security · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:forensics",
+        "event:security:5028"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 5028",
+        "back": "Windows Firewall Service unable to parse the new security policy service will continue with currently enforced policy"
+      }
+    },
+    {
+      "id": "t1-m03-forensics-security-fc-5029",
+      "type": "flashcard",
+      "title": "Security 5029",
+      "body": "Log channel: Security · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:forensics",
+        "event:security:5029"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 5029",
+        "back": "Windows Firewall Service failed to initialize the driver service will continue to enforce the current policy"
+      }
+    },
+    {
+      "id": "t1-m03-forensics-security-fc-5146",
+      "type": "flashcard",
+      "title": "Security 5146",
+      "body": "Log channel: Security · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:forensics",
+        "event:security:5146"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 5146",
+        "back": "The Windows Filtering Platform has blocked a packet."
+      }
+    },
+    {
+      "id": "t1-m03-forensics-security-fc-5158",
+      "type": "flashcard",
+      "title": "Security 5158",
+      "body": "Log channel: Security · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:forensics",
+        "event:security:5158"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 5158",
+        "back": "The Windows Filtering Platform has permitted a bind to a local port."
+      }
+    },
+    {
+      "id": "t1-m03-forensics-security-fc-6145",
+      "type": "flashcard",
+      "title": "Security 6145",
+      "body": "Log channel: Security · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:forensics",
+        "event:security:6145"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 6145",
+        "back": "One or more errors occurred while processing security policy in the group policy objects."
+      }
+    },
+    {
+      "id": "t1-m03-forensics-security-fc-6272",
+      "type": "flashcard",
+      "title": "Security 6272",
+      "body": "Log channel: Security · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:forensics",
+        "event:security:6272"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 6272",
+        "back": "Network Policy Server granted access to a user"
+      }
+    },
+    {
+      "id": "t1-m03-forensics-security-fc-6274",
+      "type": "flashcard",
+      "title": "Security 6274",
+      "body": "Log channel: Security · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:forensics",
+        "event:security:6274"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 6274",
+        "back": "Network Policy Server discarded the request for a user"
+      }
+    },
+    {
+      "id": "t1-m03-forensics-security-fc-6275",
+      "type": "flashcard",
+      "title": "Security 6275",
+      "body": "Log channel: Security · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:forensics",
+        "event:security:6275"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 6275",
+        "back": "Network Policy Server discarded the accounting request for a user"
+      }
+    },
+    {
+      "id": "t1-m03-forensics-security-quiz-e5027",
+      "type": "quiz",
+      "title": "Recall: Security",
+      "body": "Inline feedback, no results page.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Security"
+      },
+      "requires": [
+        "event:security:5027"
+      ],
+      "estimated_seconds": 35,
+      "graded": true,
+      "payload": {
+        "format": "multiple-choice",
+        "question": "In the Security channel, which Event ID records: “Windows Firewall Service unable to retrieve the security policy from the local storage service will continue enforcing the current policy”",
+        "choices": [
+          "5027",
+          "5028",
+          "5029",
+          "5146"
+        ],
+        "answer_index": 0,
+        "rationale": "Logging/Notable-Event-IDs-Forensics.md#Security lists 5027 as “Windows Firewall Service unable to retrieve the security policy from the local storage service will continue enforcing the current policy”."
+      }
+    },
+    {
+      "id": "t1-m03-forensics-security-instr-e5027",
+      "type": "instructions",
+      "title": "Before you start: Security",
+      "body": "",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "concept:corpus-purpose"
+      ],
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "goal": "Match each Security Event ID to what it records.",
+        "what_youll_use": "The 9 cards you just reviewed — nothing outside them.",
+        "done_when": "Every ID on the left has a description on the right."
+      }
+    },
+    {
+      "id": "t1-m03-forensics-security-match-e5027",
+      "type": "exercise",
+      "title": "Match: Security IDs to what they record",
+      "body": "Every ID below was on the cards you just saw.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Security"
+      },
+      "requires": [
+        "channel:security",
+        "event:security:5027",
+        "event:security:5028",
+        "event:security:5029",
+        "event:security:5146",
+        "event:security:5158",
+        "event:security:6145",
+        "event:security:6272",
+        "event:security:6274"
+      ],
+      "estimated_seconds": 60,
+      "difficulty": "standard",
+      "graded": true,
+      "payload": {
+        "format": "match",
+        "pairs": [
+          {
+            "left": "5027",
+            "right": "Windows Firewall Service unable to retrieve the security policy from the local storage service will continue enforcing the current policy"
+          },
+          {
+            "left": "5028",
+            "right": "Windows Firewall Service unable to parse the new security policy service will continue with currently enforced policy"
+          },
+          {
+            "left": "5029",
+            "right": "Windows Firewall Service failed to initialize the driver service will continue to enforce the current policy"
+          },
+          {
+            "left": "5146",
+            "right": "The Windows Filtering Platform has blocked a packet."
+          },
+          {
+            "left": "5158",
+            "right": "The Windows Filtering Platform has permitted a bind to a local port."
+          },
+          {
+            "left": "6145",
+            "right": "One or more errors occurred while processing security policy in the group policy objects."
+          },
+          {
+            "left": "6272",
+            "right": "Network Policy Server granted access to a user"
+          },
+          {
+            "left": "6274",
+            "right": "Network Policy Server discarded the request for a user"
+          }
+        ]
+      }
+    }
+  ]
+}

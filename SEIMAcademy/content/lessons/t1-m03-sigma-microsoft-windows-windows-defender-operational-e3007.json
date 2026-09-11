@@ -1,0 +1,342 @@
+{
+  "schema_version": "1.0.0",
+  "id": "t1-m03-sigma-microsoft-windows-windows-defender-operational-e3007",
+  "tier": 1,
+  "module": "3",
+  "part": 2,
+  "title": "Microsoft-Windows-Windows Defender/Operational (sigma) — part 2",
+  "summary": "7 notable Event IDs from the Microsoft-Windows-Windows Defender/Operational channel on the sigma list.",
+  "estimated_seconds": 275,
+  "teaches": [
+    "channel:microsoft-windows-windows-defender-operational",
+    "concept:corpus-purpose",
+    "corpus:sigma",
+    "event:microsoft-windows-windows-defender-operational:3007",
+    "event:microsoft-windows-windows-defender-operational:5001",
+    "event:microsoft-windows-windows-defender-operational:5007",
+    "event:microsoft-windows-windows-defender-operational:5010",
+    "event:microsoft-windows-windows-defender-operational:5012",
+    "event:microsoft-windows-windows-defender-operational:5013",
+    "event:microsoft-windows-windows-defender-operational:5101"
+  ],
+  "requires": [],
+  "sources": [
+    {
+      "path": "Logging/Notable-Event-IDs-Sigma.md",
+      "heading": "Microsoft-Windows-Windows Defender/Operational"
+    }
+  ],
+  "generated": {
+    "generator": "build-content",
+    "generator_version": "1.0.0",
+    "source_repo": "TonyPhipps/SIEM",
+    "source_commit": "4adb971",
+    "source_license": "GPL-3.0",
+    "profile": "event-id-tables",
+    "content_hash": "b29a58e564f1278d0d3fb013ae0493811929b725a67b98d6c0ca714d9ab24469"
+  },
+  "atoms": [
+    {
+      "id": "t1-m03-sigma-microsoft-windows-windows-defender-operational-intro-e3007",
+      "type": "reading",
+      "title": "Microsoft-Windows-Windows Defender/Operational",
+      "body": "The **Microsoft-Windows-Windows Defender/Operational** channel appears on the sigma list with 15 notable Event IDs. This sitting covers 7 of them.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Windows Defender/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-windows-defender-operational",
+        "corpus:sigma"
+      ],
+      "estimated_seconds": 45,
+      "graded": false,
+      "payload": {}
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-windows-defender-operational-fc-3007",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Windows Defender/Operational 3007",
+      "body": "Log channel: Microsoft-Windows-Windows Defender/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Windows Defender/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-windows-defender-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-windows-defender-operational:3007"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-windows-defender-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Windows Defender/Operational — Event ID 3007",
+        "back": "Real-time Protection feature has restarted"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-windows-defender-operational-fc-5001",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Windows Defender/Operational 5001",
+      "body": "Log channel: Microsoft-Windows-Windows Defender/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Windows Defender/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-windows-defender-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-windows-defender-operational:5001"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-windows-defender-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Windows Defender/Operational — Event ID 5001",
+        "back": "Real-time protection is disabled."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-windows-defender-operational-fc-5007",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Windows Defender/Operational 5007",
+      "body": "Log channel: Microsoft-Windows-Windows Defender/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Windows Defender/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-windows-defender-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-windows-defender-operational:5007"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-windows-defender-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Windows Defender/Operational — Event ID 5007",
+        "back": "configuration has changed."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-windows-defender-operational-fc-5010",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Windows Defender/Operational 5010",
+      "body": "Log channel: Microsoft-Windows-Windows Defender/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Windows Defender/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-windows-defender-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-windows-defender-operational:5010"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-windows-defender-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Windows Defender/Operational — Event ID 5010",
+        "back": "Scanning for malware and other potentially unwanted software is disabled."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-windows-defender-operational-fc-5012",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Windows Defender/Operational 5012",
+      "body": "Log channel: Microsoft-Windows-Windows Defender/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Windows Defender/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-windows-defender-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-windows-defender-operational:5012"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-windows-defender-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Windows Defender/Operational — Event ID 5012",
+        "back": "Scanning for viruses is disabled."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-windows-defender-operational-fc-5013",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Windows Defender/Operational 5013",
+      "body": "Log channel: Microsoft-Windows-Windows Defender/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Windows Defender/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-windows-defender-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-windows-defender-operational:5013"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-windows-defender-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Windows Defender/Operational — Event ID 5013",
+        "back": "Removed or lowered a security feature due to a system state change or a conflicting product."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-windows-defender-operational-fc-5101",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Windows Defender/Operational 5101",
+      "body": "Log channel: Microsoft-Windows-Windows Defender/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Windows Defender/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-windows-defender-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-windows-defender-operational:5101"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-windows-defender-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Windows Defender/Operational — Event ID 5101",
+        "back": "The antimalware platform is expired."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-windows-defender-operational-quiz-e3007",
+      "type": "quiz",
+      "title": "Recall: Microsoft-Windows-Windows Defender/Operational",
+      "body": "Inline feedback, no results page.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Windows Defender/Operational"
+      },
+      "requires": [
+        "event:microsoft-windows-windows-defender-operational:3007"
+      ],
+      "estimated_seconds": 35,
+      "graded": true,
+      "payload": {
+        "format": "multiple-choice",
+        "question": "In the Microsoft-Windows-Windows Defender/Operational channel, which Event ID records: “Real-time Protection feature has restarted”",
+        "choices": [
+          "3007",
+          "5001",
+          "5007",
+          "5010"
+        ],
+        "answer_index": 0,
+        "rationale": "Logging/Notable-Event-IDs-Sigma.md#Microsoft-Windows-Windows Defender/Operational lists 3007 as “Real-time Protection feature has restarted”."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-windows-defender-operational-instr-e3007",
+      "type": "instructions",
+      "title": "Before you start: Microsoft-Windows-Windows Defender/Operational",
+      "body": "",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Windows Defender/Operational"
+      },
+      "teaches": [
+        "concept:corpus-purpose"
+      ],
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "goal": "Match each Microsoft-Windows-Windows Defender/Operational Event ID to what it records.",
+        "what_youll_use": "The 7 cards you just reviewed — nothing outside them.",
+        "done_when": "Every ID on the left has a description on the right."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-windows-defender-operational-match-e3007",
+      "type": "exercise",
+      "title": "Match: Microsoft-Windows-Windows Defender/Operational IDs to what they record",
+      "body": "Every ID below was on the cards you just saw.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Windows Defender/Operational"
+      },
+      "requires": [
+        "channel:microsoft-windows-windows-defender-operational",
+        "event:microsoft-windows-windows-defender-operational:3007",
+        "event:microsoft-windows-windows-defender-operational:5001",
+        "event:microsoft-windows-windows-defender-operational:5007",
+        "event:microsoft-windows-windows-defender-operational:5010",
+        "event:microsoft-windows-windows-defender-operational:5012",
+        "event:microsoft-windows-windows-defender-operational:5013",
+        "event:microsoft-windows-windows-defender-operational:5101"
+      ],
+      "estimated_seconds": 60,
+      "difficulty": "standard",
+      "graded": true,
+      "payload": {
+        "format": "match",
+        "pairs": [
+          {
+            "left": "3007",
+            "right": "Real-time Protection feature has restarted"
+          },
+          {
+            "left": "5001",
+            "right": "Real-time protection is disabled."
+          },
+          {
+            "left": "5007",
+            "right": "configuration has changed."
+          },
+          {
+            "left": "5010",
+            "right": "Scanning for malware and other potentially unwanted software is disabled."
+          },
+          {
+            "left": "5012",
+            "right": "Scanning for viruses is disabled."
+          },
+          {
+            "left": "5013",
+            "right": "Removed or lowered a security feature due to a system state change or a conflicting product."
+          },
+          {
+            "left": "5101",
+            "right": "The antimalware platform is expired."
+          }
+        ]
+      }
+    }
+  ]
+}

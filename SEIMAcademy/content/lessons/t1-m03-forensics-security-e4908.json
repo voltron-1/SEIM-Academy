@@ -1,0 +1,401 @@
+{
+  "schema_version": "1.0.0",
+  "id": "t1-m03-forensics-security-e4908",
+  "tier": 1,
+  "module": "3",
+  "part": 3,
+  "title": "Security (forensics) — part 3",
+  "summary": "9 notable Event IDs from the Security channel on the forensics list.",
+  "estimated_seconds": 305,
+  "teaches": [
+    "channel:security",
+    "concept:corpus-purpose",
+    "corpus:forensics",
+    "event:security:4908",
+    "event:security:4912",
+    "event:security:4951",
+    "event:security:4952",
+    "event:security:4953",
+    "event:security:4956",
+    "event:security:4957",
+    "event:security:4958",
+    "event:security:4964"
+  ],
+  "requires": [],
+  "sources": [
+    {
+      "path": "Logging/Notable-Event-IDs-Forensics.md",
+      "heading": "Security"
+    }
+  ],
+  "generated": {
+    "generator": "build-content",
+    "generator_version": "1.0.0",
+    "source_repo": "TonyPhipps/SIEM",
+    "source_commit": "4adb971",
+    "source_license": "GPL-3.0",
+    "profile": "event-id-tables",
+    "content_hash": "a88ff1f0a662631da26e728e20ace8ea02f31f82f448e21a09b8a85b7b807ab9"
+  },
+  "atoms": [
+    {
+      "id": "t1-m03-forensics-security-intro-e4908",
+      "type": "reading",
+      "title": "Security",
+      "body": "The **Security** channel appears on the forensics list with 37 notable Event IDs. This sitting covers 9 of them.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:forensics"
+      ],
+      "estimated_seconds": 45,
+      "graded": false,
+      "payload": {}
+    },
+    {
+      "id": "t1-m03-forensics-security-fc-4908",
+      "type": "flashcard",
+      "title": "Security 4908",
+      "body": "Log channel: Security · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:forensics",
+        "event:security:4908"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4908",
+        "back": "Special Groups Logon table modified"
+      }
+    },
+    {
+      "id": "t1-m03-forensics-security-fc-4912",
+      "type": "flashcard",
+      "title": "Security 4912",
+      "body": "Log channel: Security · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:forensics",
+        "event:security:4912"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4912",
+        "back": "Per-User Audit Policy changed"
+      }
+    },
+    {
+      "id": "t1-m03-forensics-security-fc-4951",
+      "type": "flashcard",
+      "title": "Security 4951",
+      "body": "Log channel: Security · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:forensics",
+        "event:security:4951"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4951",
+        "back": "A rule has been ignored because its major version number was not recognized by Windows Firewall."
+      }
+    },
+    {
+      "id": "t1-m03-forensics-security-fc-4952",
+      "type": "flashcard",
+      "title": "Security 4952",
+      "body": "Log channel: Security · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:forensics",
+        "event:security:4952"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4952",
+        "back": "Parts of a rule have been ignored because its minor version number was not recognized by Windows Firewall. The other parts of the rule will be enforced."
+      }
+    },
+    {
+      "id": "t1-m03-forensics-security-fc-4953",
+      "type": "flashcard",
+      "title": "Security 4953",
+      "body": "Log channel: Security · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:forensics",
+        "event:security:4953"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4953",
+        "back": "Windows Firewall ignored a rule because it could not be parsed."
+      }
+    },
+    {
+      "id": "t1-m03-forensics-security-fc-4956",
+      "type": "flashcard",
+      "title": "Security 4956",
+      "body": "Log channel: Security · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:forensics",
+        "event:security:4956"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4956",
+        "back": "Windows Firewall has changed the active profile."
+      }
+    },
+    {
+      "id": "t1-m03-forensics-security-fc-4957",
+      "type": "flashcard",
+      "title": "Security 4957",
+      "body": "Log channel: Security · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:forensics",
+        "event:security:4957"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4957",
+        "back": "Windows Firewall did not apply the following rule."
+      }
+    },
+    {
+      "id": "t1-m03-forensics-security-fc-4958",
+      "type": "flashcard",
+      "title": "Security 4958",
+      "body": "Log channel: Security · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:forensics",
+        "event:security:4958"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4958",
+        "back": "Windows Firewall did not apply the following rule because the rule referred to items not configured on this computer."
+      }
+    },
+    {
+      "id": "t1-m03-forensics-security-fc-4964",
+      "type": "flashcard",
+      "title": "Security 4964",
+      "body": "Log channel: Security · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:forensics",
+        "event:security:4964"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4964",
+        "back": "Special groups assigned to a new logon"
+      }
+    },
+    {
+      "id": "t1-m03-forensics-security-quiz-e4908",
+      "type": "quiz",
+      "title": "Recall: Security",
+      "body": "Inline feedback, no results page.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Security"
+      },
+      "requires": [
+        "event:security:4908"
+      ],
+      "estimated_seconds": 35,
+      "graded": true,
+      "payload": {
+        "format": "multiple-choice",
+        "question": "In the Security channel, which Event ID records: “Special Groups Logon table modified”",
+        "choices": [
+          "4908",
+          "4912",
+          "4951",
+          "4952"
+        ],
+        "answer_index": 0,
+        "rationale": "Logging/Notable-Event-IDs-Forensics.md#Security lists 4908 as “Special Groups Logon table modified”."
+      }
+    },
+    {
+      "id": "t1-m03-forensics-security-instr-e4908",
+      "type": "instructions",
+      "title": "Before you start: Security",
+      "body": "",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "concept:corpus-purpose"
+      ],
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "goal": "Match each Security Event ID to what it records.",
+        "what_youll_use": "The 9 cards you just reviewed — nothing outside them.",
+        "done_when": "Every ID on the left has a description on the right."
+      }
+    },
+    {
+      "id": "t1-m03-forensics-security-match-e4908",
+      "type": "exercise",
+      "title": "Match: Security IDs to what they record",
+      "body": "Every ID below was on the cards you just saw.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Security"
+      },
+      "requires": [
+        "channel:security",
+        "event:security:4908",
+        "event:security:4912",
+        "event:security:4951",
+        "event:security:4952",
+        "event:security:4953",
+        "event:security:4956",
+        "event:security:4957",
+        "event:security:4958"
+      ],
+      "estimated_seconds": 60,
+      "difficulty": "standard",
+      "graded": true,
+      "payload": {
+        "format": "match",
+        "pairs": [
+          {
+            "left": "4908",
+            "right": "Special Groups Logon table modified"
+          },
+          {
+            "left": "4912",
+            "right": "Per-User Audit Policy changed"
+          },
+          {
+            "left": "4951",
+            "right": "A rule has been ignored because its major version number was not recognized by Windows Firewall."
+          },
+          {
+            "left": "4952",
+            "right": "Parts of a rule have been ignored because its minor version number was not recognized by Windows Firewall. The other parts of the rule will be enforced."
+          },
+          {
+            "left": "4953",
+            "right": "Windows Firewall ignored a rule because it could not be parsed."
+          },
+          {
+            "left": "4956",
+            "right": "Windows Firewall has changed the active profile."
+          },
+          {
+            "left": "4957",
+            "right": "Windows Firewall did not apply the following rule."
+          },
+          {
+            "left": "4958",
+            "right": "Windows Firewall did not apply the following rule because the rule referred to items not configured on this computer."
+          }
+        ]
+      }
+    }
+  ]
+}

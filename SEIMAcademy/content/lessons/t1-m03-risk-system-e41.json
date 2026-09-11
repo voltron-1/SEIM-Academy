@@ -1,0 +1,427 @@
+{
+  "schema_version": "1.0.0",
+  "id": "t1-m03-risk-system-e41",
+  "tier": 1,
+  "module": "3",
+  "title": "System (risk)",
+  "summary": "10 notable Event IDs from the System channel on the risk list.",
+  "estimated_seconds": 320,
+  "teaches": [
+    "channel:system",
+    "concept:corpus-purpose",
+    "corpus:risk",
+    "event:system:219",
+    "event:system:41",
+    "event:system:7022",
+    "event:system:7024",
+    "event:system:7026",
+    "event:system:7030",
+    "event:system:7031",
+    "event:system:7032",
+    "event:system:7035",
+    "event:system:7040"
+  ],
+  "requires": [],
+  "sources": [
+    {
+      "path": "Logging/Notable-Event-IDs-Risk.md",
+      "heading": "System"
+    }
+  ],
+  "generated": {
+    "generator": "build-content",
+    "generator_version": "1.0.0",
+    "source_repo": "TonyPhipps/SIEM",
+    "source_commit": "4adb971",
+    "source_license": "GPL-3.0",
+    "profile": "event-id-tables",
+    "content_hash": "eb8442cfb8b50526c55a732c420ff4bbe6cd754ecbe0016386e9d774f287982d"
+  },
+  "atoms": [
+    {
+      "id": "t1-m03-risk-system-intro-e41",
+      "type": "reading",
+      "title": "System",
+      "body": "The **System** channel appears on the risk list with 10 notable Event IDs. This sitting covers 10 of them.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "System"
+      },
+      "teaches": [
+        "channel:system",
+        "corpus:risk"
+      ],
+      "estimated_seconds": 45,
+      "graded": false,
+      "payload": {}
+    },
+    {
+      "id": "t1-m03-risk-system-fc-41",
+      "type": "flashcard",
+      "title": "System 41",
+      "body": "Log channel: System · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "System"
+      },
+      "teaches": [
+        "channel:system",
+        "corpus:risk",
+        "event:system:41"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-system",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "System — Event ID 41",
+        "back": "The system has rebooted without cleanly shutting down first"
+      }
+    },
+    {
+      "id": "t1-m03-risk-system-fc-219",
+      "type": "flashcard",
+      "title": "System 219",
+      "body": "Log channel: System · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "System"
+      },
+      "teaches": [
+        "channel:system",
+        "corpus:risk",
+        "event:system:219"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-system",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "System — Event ID 219",
+        "back": "Failed Kernel Driver Loading"
+      }
+    },
+    {
+      "id": "t1-m03-risk-system-fc-7022",
+      "type": "flashcard",
+      "title": "System 7022",
+      "body": "Log channel: System · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "System"
+      },
+      "teaches": [
+        "channel:system",
+        "corpus:risk",
+        "event:system:7022"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-system",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "System — Event ID 7022",
+        "back": "Service hung on starting"
+      }
+    },
+    {
+      "id": "t1-m03-risk-system-fc-7024",
+      "type": "flashcard",
+      "title": "System 7024",
+      "body": "Log channel: System · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "System"
+      },
+      "teaches": [
+        "channel:system",
+        "corpus:risk",
+        "event:system:7024"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-system",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "System — Event ID 7024",
+        "back": "Service terminated with the following service-specific error"
+      }
+    },
+    {
+      "id": "t1-m03-risk-system-fc-7026",
+      "type": "flashcard",
+      "title": "System 7026",
+      "body": "Log channel: System · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "System"
+      },
+      "teaches": [
+        "channel:system",
+        "corpus:risk",
+        "event:system:7026"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-system",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "System — Event ID 7026",
+        "back": "The boot-start or system-start driver(s) [did not/failed to] load"
+      }
+    },
+    {
+      "id": "t1-m03-risk-system-fc-7030",
+      "type": "flashcard",
+      "title": "System 7030",
+      "body": "Log channel: System · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "System"
+      },
+      "teaches": [
+        "channel:system",
+        "corpus:risk",
+        "event:system:7030"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-system",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "System — Event ID 7030",
+        "back": "Service Creation Errors"
+      }
+    },
+    {
+      "id": "t1-m03-risk-system-fc-7031",
+      "type": "flashcard",
+      "title": "System 7031",
+      "body": "Log channel: System · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "System"
+      },
+      "teaches": [
+        "channel:system",
+        "corpus:risk",
+        "event:system:7031"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-system",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "System — Event ID 7031",
+        "back": "Service terminated unexpectedly"
+      }
+    },
+    {
+      "id": "t1-m03-risk-system-fc-7032",
+      "type": "flashcard",
+      "title": "System 7032",
+      "body": "Log channel: System · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "System"
+      },
+      "teaches": [
+        "channel:system",
+        "corpus:risk",
+        "event:system:7032"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-system",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "System — Event ID 7032",
+        "back": "Service tried to take a corrective action (1) after the unexpected termination of the % service"
+      }
+    },
+    {
+      "id": "t1-m03-risk-system-fc-7035",
+      "type": "flashcard",
+      "title": "System 7035",
+      "body": "Log channel: System · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "System"
+      },
+      "teaches": [
+        "channel:system",
+        "corpus:risk",
+        "event:system:7035"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-system",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "System — Event ID 7035",
+        "back": "The [Service Name] service was successfully sent a [start/stop] control"
+      }
+    },
+    {
+      "id": "t1-m03-risk-system-fc-7040",
+      "type": "flashcard",
+      "title": "System 7040",
+      "body": "Log channel: System · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "System"
+      },
+      "teaches": [
+        "channel:system",
+        "corpus:risk",
+        "event:system:7040"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-system",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "System — Event ID 7040",
+        "back": "The service state has changed"
+      }
+    },
+    {
+      "id": "t1-m03-risk-system-quiz-e41",
+      "type": "quiz",
+      "title": "Recall: System",
+      "body": "Inline feedback, no results page.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "System"
+      },
+      "requires": [
+        "event:system:41"
+      ],
+      "estimated_seconds": 35,
+      "graded": true,
+      "payload": {
+        "format": "multiple-choice",
+        "question": "In the System channel, which Event ID records: “The system has rebooted without cleanly shutting down first”",
+        "choices": [
+          "41",
+          "219",
+          "7022",
+          "7024"
+        ],
+        "answer_index": 0,
+        "rationale": "Logging/Notable-Event-IDs-Risk.md#System lists 41 as “The system has rebooted without cleanly shutting down first”."
+      }
+    },
+    {
+      "id": "t1-m03-risk-system-instr-e41",
+      "type": "instructions",
+      "title": "Before you start: System",
+      "body": "",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "System"
+      },
+      "teaches": [
+        "concept:corpus-purpose"
+      ],
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "goal": "Match each System Event ID to what it records.",
+        "what_youll_use": "The 10 cards you just reviewed — nothing outside them.",
+        "done_when": "Every ID on the left has a description on the right."
+      }
+    },
+    {
+      "id": "t1-m03-risk-system-match-e41",
+      "type": "exercise",
+      "title": "Match: System IDs to what they record",
+      "body": "Every ID below was on the cards you just saw.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "System"
+      },
+      "requires": [
+        "channel:system",
+        "event:system:219",
+        "event:system:41",
+        "event:system:7022",
+        "event:system:7024",
+        "event:system:7026",
+        "event:system:7030",
+        "event:system:7031",
+        "event:system:7032"
+      ],
+      "estimated_seconds": 60,
+      "difficulty": "standard",
+      "graded": true,
+      "payload": {
+        "format": "match",
+        "pairs": [
+          {
+            "left": "41",
+            "right": "The system has rebooted without cleanly shutting down first"
+          },
+          {
+            "left": "219",
+            "right": "Failed Kernel Driver Loading"
+          },
+          {
+            "left": "7022",
+            "right": "Service hung on starting"
+          },
+          {
+            "left": "7024",
+            "right": "Service terminated with the following service-specific error"
+          },
+          {
+            "left": "7026",
+            "right": "The boot-start or system-start driver(s) [did not/failed to] load"
+          },
+          {
+            "left": "7030",
+            "right": "Service Creation Errors"
+          },
+          {
+            "left": "7031",
+            "right": "Service terminated unexpectedly"
+          },
+          {
+            "left": "7032",
+            "right": "Service tried to take a corrective action (1) after the unexpected termination of the % service"
+          }
+        ]
+      }
+    }
+  ]
+}

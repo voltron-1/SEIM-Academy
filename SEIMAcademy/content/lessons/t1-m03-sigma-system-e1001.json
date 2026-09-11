@@ -1,0 +1,415 @@
+{
+  "schema_version": "1.0.0",
+  "id": "t1-m03-sigma-system-e1001",
+  "tier": 1,
+  "module": "3",
+  "part": 2,
+  "title": "System (sigma) — part 2",
+  "summary": "9 notable Event IDs from the System channel on the sigma list.",
+  "estimated_seconds": 305,
+  "teaches": [
+    "channel:system",
+    "concept:corpus-purpose",
+    "corpus:sigma",
+    "event:system:10001",
+    "event:system:1001",
+    "event:system:4100",
+    "event:system:5805",
+    "event:system:5829",
+    "event:system:7023",
+    "event:system:7034",
+    "event:system:7036",
+    "event:system:7045",
+    "provider:microsoft-windows-distributedcom",
+    "provider:microsoft-windows-iphlpsvc",
+    "provider:microsoft-windows-wer-systemerrorreporting",
+    "provider:netlogon",
+    "provider:service-control-manager"
+  ],
+  "requires": [],
+  "sources": [
+    {
+      "path": "Logging/Notable-Event-IDs-Sigma.md",
+      "heading": "System"
+    }
+  ],
+  "generated": {
+    "generator": "build-content",
+    "generator_version": "1.0.0",
+    "source_repo": "TonyPhipps/SIEM",
+    "source_commit": "4adb971",
+    "source_license": "GPL-3.0",
+    "profile": "event-id-tables",
+    "content_hash": "94acd5de4884369e5fe1b25b182bdf064347ebc7ef6deba8e4f0bde88a9aa572"
+  },
+  "atoms": [
+    {
+      "id": "t1-m03-sigma-system-intro-e1001",
+      "type": "reading",
+      "title": "System",
+      "body": "The **System** channel appears on the sigma list with 19 notable Event IDs. This sitting covers 9 of them.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "System"
+      },
+      "teaches": [
+        "channel:system",
+        "corpus:sigma"
+      ],
+      "estimated_seconds": 45,
+      "graded": false,
+      "payload": {}
+    },
+    {
+      "id": "t1-m03-sigma-system-fc-1001",
+      "type": "flashcard",
+      "title": "System 1001",
+      "body": "Log channel: System · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "System"
+      },
+      "teaches": [
+        "channel:system",
+        "corpus:sigma",
+        "event:system:1001",
+        "provider:microsoft-windows-wer-systemerrorreporting"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-system",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "System — Event ID 1001",
+        "back": "System Crash"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-system-fc-4100",
+      "type": "flashcard",
+      "title": "System 4100",
+      "body": "Log channel: System · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "System"
+      },
+      "teaches": [
+        "channel:system",
+        "corpus:sigma",
+        "event:system:4100",
+        "provider:microsoft-windows-iphlpsvc"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": true,
+        "deck": "t1-m03-system",
+        "reason": "evidence-set"
+      },
+      "payload": {
+        "front": "System — Event ID 4100",
+        "back": "A network interface has changed its connectivity state."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-system-fc-5805",
+      "type": "flashcard",
+      "title": "System 5805",
+      "body": "Log channel: System · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "System"
+      },
+      "teaches": [
+        "channel:system",
+        "corpus:sigma",
+        "event:system:5805",
+        "provider:netlogon"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-system",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "System — Event ID 5805",
+        "back": "A computer failed to authenticate because its account password is incorrect."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-system-fc-5829",
+      "type": "flashcard",
+      "title": "System 5829",
+      "body": "Log channel: System · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "System"
+      },
+      "teaches": [
+        "channel:system",
+        "corpus:sigma",
+        "event:system:5829",
+        "provider:netlogon"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-system",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "System — Event ID 5829",
+        "back": "A machine is using a vulnerable Netlogon secure channel connection."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-system-fc-7023",
+      "type": "flashcard",
+      "title": "System 7023",
+      "body": "Log channel: System · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "System"
+      },
+      "teaches": [
+        "channel:system",
+        "corpus:sigma",
+        "event:system:7023",
+        "provider:service-control-manager"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-system",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "System — Event ID 7023",
+        "back": "Service terminated with error"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-system-fc-7034",
+      "type": "flashcard",
+      "title": "System 7034",
+      "body": "Log channel: System · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "System"
+      },
+      "teaches": [
+        "channel:system",
+        "corpus:sigma",
+        "event:system:7034",
+        "provider:service-control-manager"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-system",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "System — Event ID 7034",
+        "back": "Service terminated unexpectedly"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-system-fc-7036",
+      "type": "flashcard",
+      "title": "System 7036",
+      "body": "Log channel: System · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "System"
+      },
+      "teaches": [
+        "channel:system",
+        "corpus:sigma",
+        "event:system:7036",
+        "provider:service-control-manager"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-system",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "System — Event ID 7036",
+        "back": "The [Service Name] service entered the [Status] state"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-system-fc-7045",
+      "type": "flashcard",
+      "title": "System 7045",
+      "body": "Log channel: System · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "System"
+      },
+      "teaches": [
+        "channel:system",
+        "corpus:sigma",
+        "event:system:7045",
+        "provider:service-control-manager"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-system",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "System — Event ID 7045",
+        "back": "A service was installed in the system"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-system-fc-10001",
+      "type": "flashcard",
+      "title": "System 10001",
+      "body": "Log channel: System · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "System"
+      },
+      "teaches": [
+        "channel:system",
+        "corpus:sigma",
+        "event:system:10001",
+        "provider:microsoft-windows-distributedcom"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-system",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "System — Event ID 10001",
+        "back": "A DCOM server failed to start because it is not registered."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-system-quiz-e1001",
+      "type": "quiz",
+      "title": "Recall: System",
+      "body": "Inline feedback, no results page.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "System"
+      },
+      "requires": [
+        "event:system:1001"
+      ],
+      "estimated_seconds": 35,
+      "graded": true,
+      "payload": {
+        "format": "multiple-choice",
+        "question": "In the System channel, which Event ID records: “System Crash”",
+        "choices": [
+          "1001",
+          "4100",
+          "5805",
+          "5829"
+        ],
+        "answer_index": 0,
+        "rationale": "Logging/Notable-Event-IDs-Sigma.md#System lists 1001 as “System Crash”."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-system-instr-e1001",
+      "type": "instructions",
+      "title": "Before you start: System",
+      "body": "",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "System"
+      },
+      "teaches": [
+        "concept:corpus-purpose"
+      ],
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "goal": "Match each System Event ID to what it records.",
+        "what_youll_use": "The 9 cards you just reviewed — nothing outside them.",
+        "done_when": "Every ID on the left has a description on the right."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-system-match-e1001",
+      "type": "exercise",
+      "title": "Match: System IDs to what they record",
+      "body": "Every ID below was on the cards you just saw.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "System"
+      },
+      "requires": [
+        "channel:system",
+        "event:system:1001",
+        "event:system:4100",
+        "event:system:5805",
+        "event:system:5829",
+        "event:system:7023",
+        "event:system:7034",
+        "event:system:7036",
+        "event:system:7045"
+      ],
+      "estimated_seconds": 60,
+      "difficulty": "standard",
+      "graded": true,
+      "payload": {
+        "format": "match",
+        "pairs": [
+          {
+            "left": "1001",
+            "right": "System Crash"
+          },
+          {
+            "left": "4100",
+            "right": "A network interface has changed its connectivity state."
+          },
+          {
+            "left": "5805",
+            "right": "A computer failed to authenticate because its account password is incorrect."
+          },
+          {
+            "left": "5829",
+            "right": "A machine is using a vulnerable Netlogon secure channel connection."
+          },
+          {
+            "left": "7023",
+            "right": "Service terminated with error"
+          },
+          {
+            "left": "7034",
+            "right": "Service terminated unexpectedly"
+          },
+          {
+            "left": "7036",
+            "right": "The [Service Name] service entered the [Status] state"
+          },
+          {
+            "left": "7045",
+            "right": "A service was installed in the system"
+          }
+        ]
+      }
+    }
+  ]
+}

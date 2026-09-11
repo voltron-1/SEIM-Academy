@@ -1,0 +1,309 @@
+{
+  "schema_version": "1.0.0",
+  "id": "t1-m03-forensics-system-e12",
+  "tier": 1,
+  "module": "3",
+  "title": "System (forensics)",
+  "summary": "6 notable Event IDs from the System channel on the forensics list.",
+  "estimated_seconds": 260,
+  "teaches": [
+    "channel:system",
+    "concept:corpus-purpose",
+    "corpus:forensics",
+    "event:system:105",
+    "event:system:107",
+    "event:system:12",
+    "event:system:13",
+    "event:system:27",
+    "event:system:33"
+  ],
+  "requires": [],
+  "sources": [
+    {
+      "path": "Logging/Notable-Event-IDs-Forensics.md",
+      "heading": "System"
+    }
+  ],
+  "generated": {
+    "generator": "build-content",
+    "generator_version": "1.0.0",
+    "source_repo": "TonyPhipps/SIEM",
+    "source_commit": "4adb971",
+    "source_license": "GPL-3.0",
+    "profile": "event-id-tables",
+    "content_hash": "5b8903d4064292ab072a4bab46e373f7dced8ec7d15fdb09382a18b9cf18abc6"
+  },
+  "atoms": [
+    {
+      "id": "t1-m03-forensics-system-intro-e12",
+      "type": "reading",
+      "title": "System",
+      "body": "The **System** channel appears on the forensics list with 6 notable Event IDs. This sitting covers 6 of them.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "System"
+      },
+      "teaches": [
+        "channel:system",
+        "corpus:forensics"
+      ],
+      "estimated_seconds": 45,
+      "graded": false,
+      "payload": {}
+    },
+    {
+      "id": "t1-m03-forensics-system-fc-12",
+      "type": "flashcard",
+      "title": "System 12",
+      "body": "Log channel: System · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "System"
+      },
+      "teaches": [
+        "channel:system",
+        "corpus:forensics",
+        "event:system:12"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-system",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "System — Event ID 12",
+        "back": "The operating system started at system time xxxx"
+      }
+    },
+    {
+      "id": "t1-m03-forensics-system-fc-13",
+      "type": "flashcard",
+      "title": "System 13",
+      "body": "Log channel: System · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "System"
+      },
+      "teaches": [
+        "channel:system",
+        "corpus:forensics",
+        "event:system:13"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-system",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "System — Event ID 13",
+        "back": "The operating system is shutting down at system time xxxx"
+      }
+    },
+    {
+      "id": "t1-m03-forensics-system-fc-27",
+      "type": "flashcard",
+      "title": "System 27",
+      "body": "Log channel: System · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "System"
+      },
+      "teaches": [
+        "channel:system",
+        "corpus:forensics",
+        "event:system:27"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-system",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "System — Event ID 27",
+        "back": "Network link is disconnected"
+      }
+    },
+    {
+      "id": "t1-m03-forensics-system-fc-33",
+      "type": "flashcard",
+      "title": "System 33",
+      "body": "Log channel: System · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "System"
+      },
+      "teaches": [
+        "channel:system",
+        "corpus:forensics",
+        "event:system:33"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-system",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "System — Event ID 33",
+        "back": "Network link has been established"
+      }
+    },
+    {
+      "id": "t1-m03-forensics-system-fc-105",
+      "type": "flashcard",
+      "title": "System 105",
+      "body": "Log channel: System · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "System"
+      },
+      "teaches": [
+        "channel:system",
+        "corpus:forensics",
+        "event:system:105"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-system",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "System — Event ID 105",
+        "back": "Power source change"
+      }
+    },
+    {
+      "id": "t1-m03-forensics-system-fc-107",
+      "type": "flashcard",
+      "title": "System 107",
+      "body": "Log channel: System · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "System"
+      },
+      "teaches": [
+        "channel:system",
+        "corpus:forensics",
+        "event:system:107"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-system",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "System — Event ID 107",
+        "back": "The system has resumed from sleep"
+      }
+    },
+    {
+      "id": "t1-m03-forensics-system-quiz-e12",
+      "type": "quiz",
+      "title": "Recall: System",
+      "body": "Inline feedback, no results page.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "System"
+      },
+      "requires": [
+        "event:system:12"
+      ],
+      "estimated_seconds": 35,
+      "graded": true,
+      "payload": {
+        "format": "multiple-choice",
+        "question": "In the System channel, which Event ID records: “The operating system started at system time xxxx”",
+        "choices": [
+          "12",
+          "13",
+          "27",
+          "33"
+        ],
+        "answer_index": 0,
+        "rationale": "Logging/Notable-Event-IDs-Forensics.md#System lists 12 as “The operating system started at system time xxxx”."
+      }
+    },
+    {
+      "id": "t1-m03-forensics-system-instr-e12",
+      "type": "instructions",
+      "title": "Before you start: System",
+      "body": "",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "System"
+      },
+      "teaches": [
+        "concept:corpus-purpose"
+      ],
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "goal": "Match each System Event ID to what it records.",
+        "what_youll_use": "The 6 cards you just reviewed — nothing outside them.",
+        "done_when": "Every ID on the left has a description on the right."
+      }
+    },
+    {
+      "id": "t1-m03-forensics-system-match-e12",
+      "type": "exercise",
+      "title": "Match: System IDs to what they record",
+      "body": "Every ID below was on the cards you just saw.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "System"
+      },
+      "requires": [
+        "channel:system",
+        "event:system:105",
+        "event:system:107",
+        "event:system:12",
+        "event:system:13",
+        "event:system:27",
+        "event:system:33"
+      ],
+      "estimated_seconds": 60,
+      "difficulty": "standard",
+      "graded": true,
+      "payload": {
+        "format": "match",
+        "pairs": [
+          {
+            "left": "12",
+            "right": "The operating system started at system time xxxx"
+          },
+          {
+            "left": "13",
+            "right": "The operating system is shutting down at system time xxxx"
+          },
+          {
+            "left": "27",
+            "right": "Network link is disconnected"
+          },
+          {
+            "left": "33",
+            "right": "Network link has been established"
+          },
+          {
+            "left": "105",
+            "right": "Power source change"
+          },
+          {
+            "left": "107",
+            "right": "The system has resumed from sleep"
+          }
+        ]
+      }
+    }
+  ]
+}

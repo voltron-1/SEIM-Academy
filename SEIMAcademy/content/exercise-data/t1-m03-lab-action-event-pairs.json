@@ -1,0 +1,740 @@
+{
+  "schema_version": "1.0.0",
+  "id": "t1-m03-lab-action-event-pairs",
+  "kind": "action-event-pairs",
+  "parse_only": true,
+  "pairs": [
+    {
+      "action": "Application Uninstalled",
+      "channel": "Application",
+      "event_ids": [
+        1034,
+        11724
+      ],
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity.ps1",
+        "lines": [
+          54,
+          54
+        ]
+      }
+    },
+    {
+      "action": "Create a Local Group",
+      "channel": "Security",
+      "event_ids": [
+        4731
+      ],
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity.ps1",
+        "lines": [
+          67,
+          67
+        ]
+      }
+    },
+    {
+      "action": "Create Local User",
+      "channel": "Security",
+      "event_ids": [
+        4720
+      ],
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity.ps1",
+        "lines": [
+          71,
+          71
+        ]
+      }
+    },
+    {
+      "action": "Create a Computer Object",
+      "channel": "Security",
+      "event_ids": [
+        4741
+      ],
+      "scope": "dc",
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity.ps1",
+        "lines": [
+          75,
+          75
+        ]
+      }
+    },
+    {
+      "action": "Create AD User Object",
+      "channel": "Security",
+      "event_ids": [
+        4720
+      ],
+      "scope": "dc",
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity.ps1",
+        "lines": [
+          80,
+          80
+        ]
+      }
+    },
+    {
+      "action": "Create AD Group",
+      "channel": "Security",
+      "event_ids": [
+        4727
+      ],
+      "scope": "dc",
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity.ps1",
+        "lines": [
+          84,
+          84
+        ]
+      }
+    },
+    {
+      "action": "Create Scheduled Task",
+      "channel": "Security",
+      "event_ids": [
+        4698
+      ],
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity.ps1",
+        "lines": [
+          88,
+          88
+        ]
+      }
+    },
+    {
+      "action": "Create GPO",
+      "channel": "Security",
+      "event_ids": [
+        5137
+      ],
+      "scope": "dc",
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity.ps1",
+        "lines": [
+          92,
+          92
+        ]
+      }
+    },
+    {
+      "action": "Create a Service",
+      "channel": "Security",
+      "event_ids": [
+        4697
+      ],
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity.ps1",
+        "lines": [
+          97,
+          97
+        ]
+      }
+    },
+    {
+      "action": "Modify User Account",
+      "channel": "Security",
+      "event_ids": [
+        4738
+      ],
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity.ps1",
+        "lines": [
+          104,
+          104
+        ]
+      }
+    },
+    {
+      "action": "Modify Local Group",
+      "channel": "Security",
+      "event_ids": [
+        4735
+      ],
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity.ps1",
+        "lines": [
+          120,
+          120
+        ]
+      }
+    },
+    {
+      "action": "Change AD User Password",
+      "channel": "Security",
+      "event_ids": [
+        4723
+      ],
+      "scope": "dc",
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity.ps1",
+        "lines": [
+          136,
+          136
+        ]
+      }
+    },
+    {
+      "action": "Change Local User Password",
+      "channel": "Security",
+      "event_ids": [
+        4723
+      ],
+      "scope": "target-system",
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity.ps1",
+        "lines": [
+          144,
+          144
+        ]
+      }
+    },
+    {
+      "action": "Modify Domain Computer",
+      "channel": "Security",
+      "event_ids": [
+        4742
+      ],
+      "scope": "dc",
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity.ps1",
+        "lines": [
+          165,
+          165
+        ]
+      }
+    },
+    {
+      "action": "Link or Unlink a GPO",
+      "channel": "Security",
+      "event_ids": [
+        5136
+      ],
+      "scope": "dc",
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity.ps1",
+        "lines": [
+          169,
+          169
+        ]
+      }
+    },
+    {
+      "action": "Modify a GPO",
+      "channel": "Security",
+      "event_ids": [
+        5136
+      ],
+      "scope": "dc",
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity.ps1",
+        "lines": [
+          173,
+          173
+        ]
+      }
+    },
+    {
+      "action": "Modify/Update a Service",
+      "channel": "Security",
+      "event_ids": [
+        4657
+      ],
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity.ps1",
+        "lines": [
+          180,
+          180
+        ]
+      }
+    },
+    {
+      "action": "Scheduled Task Modified",
+      "channel": "Security",
+      "event_ids": [
+        4702
+      ],
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity.ps1",
+        "lines": [
+          184,
+          184
+        ]
+      }
+    },
+    {
+      "action": "Delete Local User",
+      "channel": "Security",
+      "event_ids": [
+        4726
+      ],
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity.ps1",
+        "lines": [
+          195,
+          195
+        ]
+      }
+    },
+    {
+      "action": "Delete Local Group",
+      "channel": "Security",
+      "event_ids": [
+        4734
+      ],
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity.ps1",
+        "lines": [
+          199,
+          199
+        ]
+      }
+    },
+    {
+      "action": "Delete AD User",
+      "channel": "Security",
+      "event_ids": [
+        4726
+      ],
+      "scope": "dc",
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity.ps1",
+        "lines": [
+          203,
+          203
+        ]
+      }
+    },
+    {
+      "action": "Delete Computer Object",
+      "channel": "Security",
+      "event_ids": [
+        4743
+      ],
+      "scope": "dc",
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity.ps1",
+        "lines": [
+          207,
+          207
+        ]
+      }
+    },
+    {
+      "action": "Delete AD Group",
+      "channel": "Security",
+      "event_ids": [
+        4730
+      ],
+      "scope": "dc",
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity.ps1",
+        "lines": [
+          211,
+          211
+        ]
+      }
+    },
+    {
+      "action": "Delete a GPO",
+      "channel": "Security",
+      "event_ids": [
+        5141
+      ],
+      "scope": "dc",
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity.ps1",
+        "lines": [
+          215,
+          215
+        ]
+      }
+    },
+    {
+      "action": "Delete Scheduled Task",
+      "channel": "Security",
+      "event_ids": [
+        4699
+      ],
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity.ps1",
+        "lines": [
+          219,
+          219
+        ]
+      }
+    },
+    {
+      "action": "Suspicious Windows Event Log Service Shutdown",
+      "channel": "Security",
+      "event_ids": [
+        1100
+      ],
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity.ps1",
+        "lines": [
+          247,
+          247
+        ]
+      }
+    },
+    {
+      "action": "MSI Installation From Suspicious Locations",
+      "channel": "Application",
+      "event_ids": [
+        1040,
+        1042
+      ],
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "lines": [
+          50,
+          50
+        ]
+      }
+    },
+    {
+      "action": "MSI Installation From Web",
+      "channel": "Application",
+      "event_ids": [
+        1040,
+        1042
+      ],
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "lines": [
+          56,
+          56
+        ]
+      }
+    },
+    {
+      "action": "Active Directory User Backdoors",
+      "channel": "Security",
+      "event_ids": [
+        4742,
+        5136
+      ],
+      "scope": "dc",
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "lines": [
+          61,
+          61
+        ]
+      }
+    },
+    {
+      "action": "Active Directory User Backdoors",
+      "channel": "Security",
+      "event_ids": [
+        4738
+      ],
+      "scope": "dc",
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "lines": [
+          77,
+          77
+        ]
+      }
+    },
+    {
+      "action": "Possible DC Shadow Attack",
+      "channel": "Security",
+      "event_ids": [
+        4742,
+        5136
+      ],
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "lines": [
+          86,
+          86
+        ]
+      }
+    },
+    {
+      "action": "Weak Encryption Enabled and Kerberoast",
+      "channel": "Security",
+      "event_ids": [
+        4738
+      ],
+      "scope": "dc",
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "lines": [
+          124,
+          124
+        ]
+      }
+    },
+    {
+      "action": "New or Renamed User Account with '$' Character",
+      "channel": "Security",
+      "event_ids": [
+        4720,
+        4781
+      ],
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "lines": [
+          129,
+          129
+        ]
+      }
+    },
+    {
+      "action": "Failed Code Integrity Checks",
+      "channel": "Security",
+      "event_ids": [
+        5038
+      ],
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "lines": [
+          137,
+          137
+        ]
+      }
+    },
+    {
+      "action": "Windows Event Auditing Disabled",
+      "channel": "Security",
+      "event_ids": [
+        4719
+      ],
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "lines": [
+          145,
+          145
+        ]
+      }
+    },
+    {
+      "action": "Important Windows Event Auditing Disabled",
+      "channel": "Security",
+      "event_ids": [
+        4719
+      ],
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "lines": [
+          151,
+          151
+        ]
+      }
+    },
+    {
+      "action": "ETW Logging Disabled In .NET Processes - Registry",
+      "channel": "Security",
+      "event_ids": [
+        4657
+      ],
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "lines": [
+          157,
+          157
+        ]
+      }
+    },
+    {
+      "action": "ISO Image Mounted",
+      "channel": "Security",
+      "event_ids": [
+        4663
+      ],
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "lines": [
+          188,
+          188
+        ]
+      }
+    },
+    {
+      "action": "PowerShell Scripts Installed as Services - Security",
+      "channel": "Security",
+      "event_ids": [
+        4697
+      ],
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "lines": [
+          194,
+          194
+        ]
+      }
+    },
+    {
+      "action": "Remote Access Tool Services Have Been Installed - Security",
+      "channel": "Security",
+      "event_ids": [
+        4697
+      ],
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "lines": [
+          199,
+          199
+        ]
+      }
+    },
+    {
+      "action": "Suspicious Windows ANONYMOUS LOGON Local Account Created",
+      "channel": "Security",
+      "event_ids": [
+        4720
+      ],
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "lines": [
+          205,
+          205
+        ]
+      }
+    },
+    {
+      "action": "Suspicious Scheduled Task Creation",
+      "channel": "Security",
+      "event_ids": [
+        4698
+      ],
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "lines": [
+          211,
+          211
+        ]
+      }
+    },
+    {
+      "action": "Windows Firewall Settings Have Been Changed",
+      "channel": "Microsoft-Windows-Windows Firewall With Advanced Security/Firewall",
+      "event_ids": [
+        2003
+      ],
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "lines": [
+          225,
+          225
+        ]
+      }
+    },
+    {
+      "action": "A Rule Has Been Deleted From The Windows Firewall Exception List",
+      "channel": "Microsoft-Windows-Windows Firewall With Advanced Security/Firewall",
+      "event_ids": [
+        2006
+      ],
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "lines": [
+          231,
+          231
+        ]
+      }
+    },
+    {
+      "action": "New Firewall Rule Added In Windows Firewall Exception List For Potential Suspicious Application",
+      "channel": "Microsoft-Windows-Windows Firewall With Advanced Security/Firewall",
+      "event_ids": [
+        2004
+      ],
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "lines": [
+          237,
+          237
+        ]
+      }
+    },
+    {
+      "action": "Certificate Exported From Local Certificate Store",
+      "channel": "Microsoft-Windows-CertificateServicesClient-Lifecycle-System/Operational",
+      "event_ids": [
+        1007
+      ],
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "lines": [
+          243,
+          243
+        ]
+      }
+    },
+    {
+      "action": "title: Potential Remote Desktop Connection to Non-Domain Host",
+      "channel": "Microsoft-Windows-NTLM/Operational",
+      "event_ids": [
+        8001
+      ],
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "lines": [
+          256,
+          256
+        ]
+      }
+    },
+    {
+      "action": "title: Important Scheduled Task Deleted",
+      "channel": "Microsoft-Windows-TaskScheduler/Operational",
+      "event_ids": [
+        141
+      ],
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "lines": [
+          273,
+          273
+        ]
+      }
+    },
+    {
+      "action": "title: WMI Persistence",
+      "channel": "Microsoft-Windows-WMI-Activity/Operational",
+      "event_ids": [
+        5859,
+        5861
+      ],
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "lines": [
+          284,
+          284
+        ]
+      }
+    },
+    {
+      "action": "ISATAP Router Address Was Set",
+      "channel": "System",
+      "event_ids": [
+        4100
+      ],
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "lines": [
+          317,
+          317
+        ]
+      }
+    }
+  ],
+  "generated": {
+    "generator": "build-content",
+    "generator_version": "1.0.0",
+    "source_repo": "TonyPhipps/SIEM",
+    "source_commit": "4adb971",
+    "source_license": "GPL-3.0",
+    "profile": "event-id-tables",
+    "content_hash": "79f6ba677313966168f28e2c55bf3be133ce7416f59ee20610439aebcbddb880"
+  }
+}

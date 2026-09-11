@@ -1,0 +1,427 @@
+{
+  "schema_version": "1.0.0",
+  "id": "t1-m03-sigma-microsoft-windows-codeintegrity-operational-e3001",
+  "tier": 1,
+  "module": "3",
+  "title": "Microsoft-Windows-CodeIntegrity/Operational (sigma)",
+  "summary": "10 notable Event IDs from the Microsoft-Windows-CodeIntegrity/Operational channel on the sigma list.",
+  "estimated_seconds": 320,
+  "teaches": [
+    "channel:microsoft-windows-codeintegrity-operational",
+    "concept:corpus-purpose",
+    "corpus:sigma",
+    "event:microsoft-windows-codeintegrity-operational:3001",
+    "event:microsoft-windows-codeintegrity-operational:3021",
+    "event:microsoft-windows-codeintegrity-operational:3023",
+    "event:microsoft-windows-codeintegrity-operational:3032",
+    "event:microsoft-windows-codeintegrity-operational:3033",
+    "event:microsoft-windows-codeintegrity-operational:3036",
+    "event:microsoft-windows-codeintegrity-operational:3037",
+    "event:microsoft-windows-codeintegrity-operational:3077",
+    "event:microsoft-windows-codeintegrity-operational:3082",
+    "event:microsoft-windows-codeintegrity-operational:3104"
+  ],
+  "requires": [],
+  "sources": [
+    {
+      "path": "Logging/Notable-Event-IDs-Sigma.md",
+      "heading": "Microsoft-Windows-CodeIntegrity/Operational"
+    }
+  ],
+  "generated": {
+    "generator": "build-content",
+    "generator_version": "1.0.0",
+    "source_repo": "TonyPhipps/SIEM",
+    "source_commit": "4adb971",
+    "source_license": "GPL-3.0",
+    "profile": "event-id-tables",
+    "content_hash": "7657e2897d822914527cc1416deb9be50ce575dcfc4b33f029230a925c552097"
+  },
+  "atoms": [
+    {
+      "id": "t1-m03-sigma-microsoft-windows-codeintegrity-operational-intro-e3001",
+      "type": "reading",
+      "title": "Microsoft-Windows-CodeIntegrity/Operational",
+      "body": "The **Microsoft-Windows-CodeIntegrity/Operational** channel appears on the sigma list with 10 notable Event IDs. This sitting covers 10 of them.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-CodeIntegrity/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-codeintegrity-operational",
+        "corpus:sigma"
+      ],
+      "estimated_seconds": 45,
+      "graded": false,
+      "payload": {}
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-codeintegrity-operational-fc-3001",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-CodeIntegrity/Operational 3001",
+      "body": "Log channel: Microsoft-Windows-CodeIntegrity/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-CodeIntegrity/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-codeintegrity-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-codeintegrity-operational:3001"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-codeintegrity-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-CodeIntegrity/Operational — Event ID 3001",
+        "back": "Code Integrity determined an unsigned kernel module %2 is loaded into the system. Check with the publisher to see if a signed version of the kernel module is available."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-codeintegrity-operational-fc-3021",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-CodeIntegrity/Operational 3021",
+      "body": "Log channel: Microsoft-Windows-CodeIntegrity/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-CodeIntegrity/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-codeintegrity-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-codeintegrity-operational:3021"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-codeintegrity-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-CodeIntegrity/Operational — Event ID 3021",
+        "back": "Code Integrity was unable to verify the image hash of a file."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-codeintegrity-operational-fc-3023",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-CodeIntegrity/Operational 3023",
+      "body": "Log channel: Microsoft-Windows-CodeIntegrity/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-CodeIntegrity/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-codeintegrity-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-codeintegrity-operational:3023"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-codeintegrity-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-CodeIntegrity/Operational — Event ID 3023",
+        "back": "Windows is unable to verify the integrity of the file %2 because the signing certificate has been revoked. Check with the publisher to see if a new signed version of the kernel module is available."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-codeintegrity-operational-fc-3032",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-CodeIntegrity/Operational 3032",
+      "body": "Log channel: Microsoft-Windows-CodeIntegrity/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-CodeIntegrity/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-codeintegrity-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-codeintegrity-operational:3032"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-codeintegrity-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-CodeIntegrity/Operational — Event ID 3032",
+        "back": "Code Integrity is currently in \"Audit Mode\" and detected an image that would have been blocked if enforcement was turned on."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-codeintegrity-operational-fc-3033",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-CodeIntegrity/Operational 3033",
+      "body": "Log channel: Microsoft-Windows-CodeIntegrity/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-CodeIntegrity/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-codeintegrity-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-codeintegrity-operational:3033"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-codeintegrity-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-CodeIntegrity/Operational — Event ID 3033",
+        "back": "Code Integrity determined that a file does not meet the security requirements and has blocked it from loading."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-codeintegrity-operational-fc-3036",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-CodeIntegrity/Operational 3036",
+      "body": "Log channel: Microsoft-Windows-CodeIntegrity/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-CodeIntegrity/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-codeintegrity-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-codeintegrity-operational:3036"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-codeintegrity-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-CodeIntegrity/Operational — Event ID 3036",
+        "back": "Code Integrity was unable to load a file because its digital signature was revoked."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-codeintegrity-operational-fc-3037",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-CodeIntegrity/Operational 3037",
+      "body": "Log channel: Microsoft-Windows-CodeIntegrity/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-CodeIntegrity/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-codeintegrity-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-codeintegrity-operational:3037"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-codeintegrity-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-CodeIntegrity/Operational — Event ID 3037",
+        "back": "Code Integrity was unable to load a file because the signature has expired."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-codeintegrity-operational-fc-3077",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-CodeIntegrity/Operational 3077",
+      "body": "Log channel: Microsoft-Windows-CodeIntegrity/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-CodeIntegrity/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-codeintegrity-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-codeintegrity-operational:3077"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-codeintegrity-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-CodeIntegrity/Operational — Event ID 3077",
+        "back": "Code Integrity failed to load a file because the signature's root certificate is not trusted by the system."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-codeintegrity-operational-fc-3082",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-CodeIntegrity/Operational 3082",
+      "body": "Log channel: Microsoft-Windows-CodeIntegrity/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-CodeIntegrity/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-codeintegrity-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-codeintegrity-operational:3082"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-codeintegrity-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-CodeIntegrity/Operational — Event ID 3082",
+        "back": "Code Integrity failed to load a file because its digital signature is not valid for the \"Dynamic Code\" or \"Hardened\" environment."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-codeintegrity-operational-fc-3104",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-CodeIntegrity/Operational 3104",
+      "body": "Log channel: Microsoft-Windows-CodeIntegrity/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-CodeIntegrity/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-codeintegrity-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-codeintegrity-operational:3104"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-codeintegrity-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-CodeIntegrity/Operational — Event ID 3104",
+        "back": "Code Integrity is starting the image verification process for a file."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-codeintegrity-operational-quiz-e3001",
+      "type": "quiz",
+      "title": "Recall: Microsoft-Windows-CodeIntegrity/Operational",
+      "body": "Inline feedback, no results page.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-CodeIntegrity/Operational"
+      },
+      "requires": [
+        "event:microsoft-windows-codeintegrity-operational:3001"
+      ],
+      "estimated_seconds": 35,
+      "graded": true,
+      "payload": {
+        "format": "multiple-choice",
+        "question": "In the Microsoft-Windows-CodeIntegrity/Operational channel, which Event ID records: “Code Integrity determined an unsigned kernel module %2 is loaded into the system. Check with the publisher to see if a signed version of the kernel module is available.”",
+        "choices": [
+          "3001",
+          "3021",
+          "3023",
+          "3032"
+        ],
+        "answer_index": 0,
+        "rationale": "Logging/Notable-Event-IDs-Sigma.md#Microsoft-Windows-CodeIntegrity/Operational lists 3001 as “Code Integrity determined an unsigned kernel module %2 is loaded into the system. Check with the publisher to see if a signed version of the kernel module is available.”."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-codeintegrity-operational-instr-e3001",
+      "type": "instructions",
+      "title": "Before you start: Microsoft-Windows-CodeIntegrity/Operational",
+      "body": "",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-CodeIntegrity/Operational"
+      },
+      "teaches": [
+        "concept:corpus-purpose"
+      ],
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "goal": "Match each Microsoft-Windows-CodeIntegrity/Operational Event ID to what it records.",
+        "what_youll_use": "The 10 cards you just reviewed — nothing outside them.",
+        "done_when": "Every ID on the left has a description on the right."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-codeintegrity-operational-match-e3001",
+      "type": "exercise",
+      "title": "Match: Microsoft-Windows-CodeIntegrity/Operational IDs to what they record",
+      "body": "Every ID below was on the cards you just saw.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-CodeIntegrity/Operational"
+      },
+      "requires": [
+        "channel:microsoft-windows-codeintegrity-operational",
+        "event:microsoft-windows-codeintegrity-operational:3001",
+        "event:microsoft-windows-codeintegrity-operational:3021",
+        "event:microsoft-windows-codeintegrity-operational:3023",
+        "event:microsoft-windows-codeintegrity-operational:3032",
+        "event:microsoft-windows-codeintegrity-operational:3033",
+        "event:microsoft-windows-codeintegrity-operational:3036",
+        "event:microsoft-windows-codeintegrity-operational:3037",
+        "event:microsoft-windows-codeintegrity-operational:3077"
+      ],
+      "estimated_seconds": 60,
+      "difficulty": "standard",
+      "graded": true,
+      "payload": {
+        "format": "match",
+        "pairs": [
+          {
+            "left": "3001",
+            "right": "Code Integrity determined an unsigned kernel module %2 is loaded into the system. Check with the publisher to see if a signed version of the kernel module is available."
+          },
+          {
+            "left": "3021",
+            "right": "Code Integrity was unable to verify the image hash of a file."
+          },
+          {
+            "left": "3023",
+            "right": "Windows is unable to verify the integrity of the file %2 because the signing certificate has been revoked. Check with the publisher to see if a new signed version of the kernel module is available."
+          },
+          {
+            "left": "3032",
+            "right": "Code Integrity is currently in \"Audit Mode\" and detected an image that would have been blocked if enforcement was turned on."
+          },
+          {
+            "left": "3033",
+            "right": "Code Integrity determined that a file does not meet the security requirements and has blocked it from loading."
+          },
+          {
+            "left": "3036",
+            "right": "Code Integrity was unable to load a file because its digital signature was revoked."
+          },
+          {
+            "left": "3037",
+            "right": "Code Integrity was unable to load a file because the signature has expired."
+          },
+          {
+            "left": "3077",
+            "right": "Code Integrity failed to load a file because the signature's root certificate is not trusted by the system."
+          }
+        ]
+      }
+    }
+  ]
+}

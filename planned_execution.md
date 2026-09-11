@@ -13,34 +13,67 @@ Status markers: `[ ]` todo · `[~]` in-progress · `[x]` done · `[!]` blocked
 
 ## NEXT UP
 
-**Phase 1 — Schema & pipeline** `[~]` **in progress** (opened 2026-09-06) —
-[#3](https://github.com/voltron-1/SEIM-Academy/issues/3), milestone *Phase 1 — Schema &
-pipeline*. The decision gate cleared; nothing blocks it.
+**Phase 2 — App shell** `[ ]` **not started** —
+[#4](https://github.com/voltron-1/SEIM-Academy/issues/4), milestone *Phase 2 — App shell*.
+Opens when PR [#110](https://github.com/voltron-1/SEIM-Academy/pull/110) merges. Nothing
+blocks it.
 
-**Next unstarted item:** draft `SEIMAcademy/app-data-schema.md` — the lesson/atom/quiz
-JSON schema carrying the `teaches` / `requires` / `source` fields, the eight atom types,
-the per-atom body-length cap, and the `lifecycle_stage` field that Decision A adds. Then
-scaffold `SEIMAcademy/scripts/build-content.*` to parse the three
-`Logging/Notable-Event-IDs-*.md` tables into lesson JSON.
+**Next unstarted item:** initialize the SPA project (TypeScript + Preact or vanilla Web
+Components — explicitly not Next.js/React), then build the dark theme token system to WCAG
+2.1 AA contrast from day one rather than as a retrofit.
 
-**Two approved decisions constrain that first deliverable** — cheaper to build in than to
-retrofit:
+**Two constraints Phase 1 hands forward** — cheaper to honour than to retrofit:
 
-- **Decision A** adds `lifecycle_stage` to the atom schema (PICERL stages for Tier 1
-  Module 8).
-- **Decision B** adds a parser branch for `Lab/Generate-Suspicious-Activity*.ps1`.
-  **Hard constraint: parse-only.** These are live telemetry generators for a lab domain —
-  `build-content` reads their inline Event ID comments as text and must never execute them
-  or shell out to PowerShell. The constraint belongs in the schema doc *and* in the script.
+- **The renderer must disable raw HTML.** `SEIMAcademy/app-data-schema.md` §7 makes this
+  normative. Lesson content is generated from a third-party source repository, and the
+  build-time markup check is a backstop, not a substitute for a renderer that cannot be
+  made to execute markup. `innerHTML`, `dangerouslySetInnerHTML` and a Markdown parser on
+  permissive defaults are out of contract.
+- **Decision 5 (reduced-motion as a hard default) is a token-system decision, not a
+  retrofit.** It is deferred to Phase 9+, but if it is ever going to be a hard default it
+  has to be decided before the Phase 2 token system locks in. Revisit it now, while the
+  tokens are being written.
 
-Decisions C and D are docs-only (README, `curriculum-map.md`) and can land alongside
-Phase 1 without gating it. Two further cross-check proposals — a new cloud/identity Tier 1
-module, and README non-goals for networking, EDR, phishing and scripting — remain
-unapproved proposals and can follow Phase 1 without rework.
+The app reads `SEIMAcademy/content/lessons/*.json`; `build-manifest.json` carries each
+module's play order and per-artifact dependencies.
 
 ---
 
 ## LAST SESSION
+
+**2026-09-10** — **Phase 1 built and closed.** The pipeline, schema and generated pilot
+module landed in PR [#110](https://github.com/voltron-1/SEIM-Academy/pull/110) (closes
+[#3](https://github.com/voltron-1/SEIM-Academy/issues/3) on merge). Pilot module t1-m03
+(Windows Event ID triage): 449 source rows plus 50 ground-truth `action → event` pairs →
+**64 lessons, 707 atoms, 36 SRS cards**. Decisions A and B are built in from schema
+version 1.0.0 rather than retrofitted, and Decision B's parse-only constraint is enforced
+in code by an import allowlist over the pipeline's own source, not just asserted in a
+comment.
+
+**The exit gate was not met on the first build, and that is the session's main finding.**
+`security-auditor`, `code-reviewer` and `tester-debugger` ran in parallel on the changeset;
+**20 findings were fixed before the PR** ([remediation](findings/20260910-phase1-remediation.md)).
+The tester proved "regeneration scoped to changed files only" held only for same-line
+substitutions — every atom stored an absolute source line number, so one added row rewrote
+22 of 65 artifacts. The original test suite passed because its one scoping case used the
+single edit shape that hides the bug. Markdown atoms now anchor on path + heading + Event
+ID; measured after the fix, a mid-document blank line regenerates **0** of 65 artifacts and
+an added row regenerates **3**.
+
+An independent verifier written in a different language
+(`verify-against-source.py`, 896 checks) found a quiz that named the wrong log channel for
+its answer — schema-valid, internally consistent, factually wrong. It is kept in the repo
+and should be run after any parser change.
+
+**Two source ambiguities were resolved rather than guessed.** The mixed-separator cell
+`8 15, 16, 33` is confirmed as four Event IDs and recorded in `module-manifest.json`; an
+EventID of `*` turned out to be a directive to collect a channel wholesale, not malformed
+data, and is now taught as a channel instead of silently dropping it. The build emits zero
+warnings.
+
+**Structure for Phases 4 and 6:** generator profiles live under
+`SEIMAcademy/scripts/lib/profiles/`. Adding a module with the same source shape is a
+manifest edit; a new source shape is a new profile plus one registry line.
 
 **2026-09-06** — **Phase 0 closed; Phase 1 opened.** Ran the final audit item:
 cross-checked all 20 modules against 2026 Tier 1/Tier 2 SOC hiring requirements and
@@ -77,11 +110,14 @@ all 177 source files verified, curriculum map committed, content audit recorded.
       *Exit met 2026-09-06 — [audit](findings/20260904-phase0-content-audit.md),
       [cross-check](findings/20260906-phase0-external-crosscheck.md).*
       [#2](https://github.com/voltron-1/SEIM-Academy/issues/2) closed.
-- [~] **Phase 1 — Schema & pipeline** — `app-data-schema.md`, `build-content` script,
-      generated lessons for the pilot module. *In progress since 2026-09-06; decision gate
-      cleared.* [#3](https://github.com/voltron-1/SEIM-Academy/issues/3)
+- [x] **Phase 1 — Schema & pipeline** — `app-data-schema.md`, `build-content` script,
+      generated lessons for the pilot module. *Exit met 2026-09-10 — 64 lessons, 707 atoms;
+      [remediation](findings/20260910-phase1-remediation.md).*
+      [#3](https://github.com/voltron-1/SEIM-Academy/issues/3),
+      PR [#110](https://github.com/voltron-1/SEIM-Academy/pull/110).
 - [ ] **Phase 2 — App shell** — theme tokens, left rail, HUD, atom renderer, local
-      persistence, offline/degraded states, PWA shell.
+      persistence, offline/degraded states, PWA shell. *Next up; opens on PR #110 merge.*
+      [#4](https://github.com/voltron-1/SEIM-Academy/issues/4)
 - [ ] **Phase 3 — Core components** — Instructions atom, Flashcard+SRS, MC/fill-blank,
       matching/drag with keyboard equivalent, test-out check.
 - [ ] **Phase 4 — Tier 1 complete** — pipeline across ten Tier 1 modules; Capstone 1.

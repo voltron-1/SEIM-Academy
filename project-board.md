@@ -36,7 +36,6 @@ the order (see the phase graph in `README.md`).
 
 | Phase | Epic | Issue | Workstream | Depends on |
 |---|---|---|---|---|
-| 2 | App shell | [#4](https://github.com/voltron-1/SEIM-Academy/issues/4) | B | Phase 1 |
 | 3 | Core components | [#5](https://github.com/voltron-1/SEIM-Academy/issues/5) | C | Phase 2 |
 | 4 | Tier 1 complete | [#6](https://github.com/voltron-1/SEIM-Academy/issues/6) | A + C | Phases 1–3 |
 | 5 | Advanced components | [#7](https://github.com/voltron-1/SEIM-Academy/issues/7) | C | Phase 3 (parallel w/ Phase 4) |
@@ -49,58 +48,43 @@ the order (see the phase graph in `README.md`).
 
 Unblocked, queued to start next.
 
-_Empty — Phase 1 has moved to In Progress and every remaining phase depends on it._
+| Phase | Epic | Issue | Workstream | Unblocked by |
+|---|---|---|---|---|
+| 2 | App shell | [#4](https://github.com/voltron-1/SEIM-Academy/issues/4) | B | Phase 1 exit gate met 2026-09-10 |
 
 ### 🔧 In Progress
 
-| Phase | Epic | Issue | Milestone | Workstream | Owner |
-|---|---|---|---|---|---|
-| 1 | Schema & pipeline | [#3](https://github.com/voltron-1/SEIM-Academy/issues/3) | Phase 1 — Schema & pipeline | A | _unassigned_ |
+_Empty — Phase 1's exit gate is met and its PR is open; Phase 2 opens on merge._
 
 ### 🏁 Done
 
 | Phase | Epic | Issue | Milestone | Closed | Evidence |
 |---|---|---|---|---|---|
 | 0 | Content audit | [#2](https://github.com/voltron-1/SEIM-Academy/issues/2) | Phase 0 — Content audit (closed) | 2026-09-06 | [audit](findings/20260904-phase0-content-audit.md) · [cross-check](findings/20260906-phase0-external-crosscheck.md) |
+| 1 | Schema & pipeline | [#3](https://github.com/voltron-1/SEIM-Academy/issues/3) | Phase 1 — Schema & pipeline | 2026-09-10 (PR [#110](https://github.com/voltron-1/SEIM-Academy/pull/110) open) | [remediation](findings/20260910-phase1-remediation.md) · [security](findings/20260910-phase1-security-audit.md) · [code review](findings/20260910-phase1-code-review.md) · [tests](findings/20260910-phase1-test-report.md) |
 
 ---
 
-## Current Sprint — Phase 1 (Schema & pipeline) — [#3](https://github.com/voltron-1/SEIM-Academy/issues/3)
+## Next Sprint — Phase 2 (App shell) — [#4](https://github.com/voltron-1/SEIM-Academy/issues/4)
 
-Task-level cards for the one phase actively in progress, pulled directly from
-`execution.md`. Nothing is checked yet — the sprint opened 2026-09-06 when the Phase 1
-decision gate cleared.
+Opens when PR [#110](https://github.com/voltron-1/SEIM-Academy/pull/110) merges. Task-level
+cards live in `execution.md` § Phase 2 and are pulled in here when the sprint starts.
 
-**Gate cleared 2026-09-06.** Decisions A–D approved (see Decisions board). Two of them
-constrain the first deliverable and must be reflected in `app-data-schema.md` as it is
-written, not retrofitted:
+**Phase 1 closed 2026-09-10.** All exit-gate clauses met; the scoping clause was
+demonstrably *not* met as first built and was fixed before the PR
+([remediation](findings/20260910-phase1-remediation.md)). Five commands reproduce the gate:
+`build-content.mjs --prune`, `validate-content.mjs`, `check-prereqs.mjs`,
+`test-pipeline.mjs`, `verify-against-source.py`.
 
-- **A** adds a `lifecycle_stage` field to the atom schema (PICERL stages for T1-8).
-- **B** adds a parser branch for `Lab/Generate-Suspicious-Activity*.ps1` as labeled
-  exercise data. **Parse-only — `build-content` must never execute them or shell out to
-  PowerShell.** This constraint belongs in the schema doc and in the script itself.
+**Carried into Phase 2 as a constraint, not a task:** `app-data-schema.md` §7 makes the
+renderer's raw-HTML obligation normative. Content comes from a third-party source repo;
+the build-time markup check is a backstop, not a substitute for a renderer that cannot be
+made to execute markup. `innerHTML`, `dangerouslySetInnerHTML` and a permissive Markdown
+parser are out of contract.
 
-**To Do:**
-- [ ] Draft `SEIMAcademy/app-data-schema.md` — lesson/atom/quiz JSON schema
-  - [ ] `teaches` tag field (content/instructions atoms)
-  - [ ] `requires` tag field (exercise atoms)
-  - [ ] `source` field (repo-relative path, optional `#heading`)
-  - [ ] Atom types: reading, quiz, flashcard, instructions, exercise, scenario, predict, capstone-step
-  - [ ] Body-length cap per atom (per ADHD principle 1)
-  - [ ] `lifecycle_stage` field *(Decision A)*
-- [ ] Scaffold `SEIMAcademy/scripts/build-content.*`
-  - [ ] Markdown heading/list parser for the pilot module's source docs
-  - [ ] Atom normalizer → emits `SEIMAcademy/content/lessons/*.json`
-  - [ ] `teaches`/`requires` derivation from parsed headings/terms
-  - [ ] Idempotency check (re-run without source changes → identical output)
-  - [ ] PowerShell-comment parser branch for the Lab generators *(Decision B, parse-only)*
-- [ ] Generate flashcard/quiz content directly from `Notable-Event-IDs-*.md` tables (no hand-copied answer keys)
-- [ ] Validate generated pilot-module JSON against the schema
-- [ ] Confirm re-running after a deliberate source edit regenerates only the affected lesson
-- [ ] *(Optional, recommended)* stub a local pre-commit check for `requires` ⊆ `teaches` ahead of the full Phase 8 CI build
-
-**Exit check:** pipeline runs against the pilot module end-to-end; output validates
-against the schema; regeneration is correctly scoped to changed files only.
+**Open question for Phase 4, surfaced by Phase 1:** the pilot module generated 64 lessons
+(~6 hours) from 449 source rows. Faithful, but whether Module 3 should be scoped down is a
+curriculum decision, not a pipeline change.
 
 ---
 

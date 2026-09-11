@@ -1,0 +1,475 @@
+{
+  "schema_version": "1.0.0",
+  "id": "t1-m03-sigma-smaller-channels-msexchange-management-e6",
+  "tier": 1,
+  "module": "3",
+  "part": 1,
+  "title": "Smaller channels (sigma) — part 1",
+  "summary": "10 Event IDs swept from 9 low-volume channels on the sigma list.",
+  "estimated_seconds": 320,
+  "teaches": [
+    "channel:microsoft-iis-configuration-operational",
+    "channel:microsoft-servicebus-operational",
+    "channel:microsoft-windows-applocker-exe-and-dll",
+    "channel:microsoft-windows-appmodel-runtime-admin",
+    "channel:microsoft-windows-appxpackaging-operational",
+    "channel:microsoft-windows-bits-client-operational",
+    "channel:microsoft-windows-capi2-operational",
+    "channel:microsoft-windows-certificateservicesclient-lifecycle-system-operational",
+    "channel:msexchange-management",
+    "concept:corpus-purpose",
+    "corpus:sigma",
+    "event:microsoft-iis-configuration-operational:29",
+    "event:microsoft-servicebus-operational:40300",
+    "event:microsoft-windows-applocker-exe-and-dll:8004",
+    "event:microsoft-windows-appmodel-runtime-admin:201",
+    "event:microsoft-windows-appxpackaging-operational:157",
+    "event:microsoft-windows-bits-client-operational:16403",
+    "event:microsoft-windows-bits-client-operational:3",
+    "event:microsoft-windows-capi2-operational:70",
+    "event:microsoft-windows-certificateservicesclient-lifecycle-system-operational:1007",
+    "event:msexchange-management:6"
+  ],
+  "requires": [],
+  "sources": [
+    {
+      "path": "Logging/Notable-Event-IDs-Sigma.md"
+    },
+    {
+      "path": "Logging/Notable-Event-IDs-Sigma.md",
+      "heading": "Microsoft-IIS-Configuration/Operational"
+    },
+    {
+      "path": "Logging/Notable-Event-IDs-Sigma.md",
+      "heading": "Microsoft-ServiceBus/Operational"
+    },
+    {
+      "path": "Logging/Notable-Event-IDs-Sigma.md",
+      "heading": "Microsoft-Windows-AppLocker/EXE and DLL"
+    },
+    {
+      "path": "Logging/Notable-Event-IDs-Sigma.md",
+      "heading": "Microsoft-Windows-AppModel-Runtime/Admin"
+    },
+    {
+      "path": "Logging/Notable-Event-IDs-Sigma.md",
+      "heading": "Microsoft-Windows-AppxPackaging/Operational"
+    },
+    {
+      "path": "Logging/Notable-Event-IDs-Sigma.md",
+      "heading": "Microsoft-Windows-Bits-Client/Operational"
+    },
+    {
+      "path": "Logging/Notable-Event-IDs-Sigma.md",
+      "heading": "Microsoft-Windows-CAPI2/Operational"
+    },
+    {
+      "path": "Logging/Notable-Event-IDs-Sigma.md",
+      "heading": "Microsoft-Windows-CertificateServicesClient-Lifecycle-System/Operational"
+    },
+    {
+      "path": "Logging/Notable-Event-IDs-Sigma.md",
+      "heading": "MSExchange Management"
+    }
+  ],
+  "generated": {
+    "generator": "build-content",
+    "generator_version": "1.0.0",
+    "source_repo": "TonyPhipps/SIEM",
+    "source_commit": "4adb971",
+    "source_license": "GPL-3.0",
+    "profile": "event-id-tables",
+    "content_hash": "20d5406609a76934ebaaedd68794e50b42268c9d98bf0af5a0ff0bc41698e48d"
+  },
+  "atoms": [
+    {
+      "id": "t1-m03-sigma-small-intro-msexchange-management-e6",
+      "type": "reading",
+      "title": "Smaller channels",
+      "body": "Most Windows log channels contribute only a handful of notable Event IDs. This sitting sweeps 10 of them across 9 channels on the sigma list.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md"
+      },
+      "teaches": [
+        "channel:microsoft-iis-configuration-operational",
+        "channel:microsoft-servicebus-operational",
+        "channel:microsoft-windows-applocker-exe-and-dll",
+        "channel:microsoft-windows-appmodel-runtime-admin",
+        "channel:microsoft-windows-appxpackaging-operational",
+        "channel:microsoft-windows-bits-client-operational",
+        "channel:microsoft-windows-capi2-operational",
+        "channel:microsoft-windows-certificateservicesclient-lifecycle-system-operational",
+        "channel:msexchange-management",
+        "corpus:sigma"
+      ],
+      "estimated_seconds": 45,
+      "graded": false,
+      "payload": {}
+    },
+    {
+      "id": "t1-m03-sigma-msexchange-management-fc-6",
+      "type": "flashcard",
+      "title": "MSExchange Management 6",
+      "body": "Log channel: MSExchange Management · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "MSExchange Management"
+      },
+      "teaches": [
+        "channel:msexchange-management",
+        "corpus:sigma",
+        "event:msexchange-management:6"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-msexchange-management",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "MSExchange Management — Event ID 6",
+        "back": "Cndlet Failed"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-iis-configuration-operational-fc-29",
+      "type": "flashcard",
+      "title": "Microsoft-IIS-Configuration/Operational 29",
+      "body": "Log channel: Microsoft-IIS-Configuration/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-IIS-Configuration/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-iis-configuration-operational",
+        "corpus:sigma",
+        "event:microsoft-iis-configuration-operational:29"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-iis-configuration-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-IIS-Configuration/Operational — Event ID 29",
+        "back": "The change to the configuration was successfully committed."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-servicebus-operational-fc-40300",
+      "type": "flashcard",
+      "title": "Microsoft-ServiceBus/Operational 40300",
+      "body": "Log channel: Microsoft-ServiceBus/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-ServiceBus/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-servicebus-operational",
+        "corpus:sigma",
+        "event:microsoft-servicebus-operational:40300"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-servicebus-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-ServiceBus/Operational — Event ID 40300",
+        "back": "An error occurred while processing a request."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-applocker-exe-and-dll-fc-8004",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-AppLocker/EXE and DLL 8004",
+      "body": "Log channel: Microsoft-Windows-AppLocker/EXE and DLL · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-AppLocker/EXE and DLL"
+      },
+      "teaches": [
+        "channel:microsoft-windows-applocker-exe-and-dll",
+        "corpus:sigma",
+        "event:microsoft-windows-applocker-exe-and-dll:8004"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-applocker-exe-and-dll",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-AppLocker/EXE and DLL — Event ID 8004",
+        "back": "... was prevented from running."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-appmodel-runtime-admin-fc-201",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-AppModel-Runtime/Admin 201",
+      "body": "Log channel: Microsoft-Windows-AppModel-Runtime/Admin · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-AppModel-Runtime/Admin"
+      },
+      "teaches": [
+        "channel:microsoft-windows-appmodel-runtime-admin",
+        "corpus:sigma",
+        "event:microsoft-windows-appmodel-runtime-admin:201"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-appmodel-runtime-admin",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-AppModel-Runtime/Admin — Event ID 201",
+        "back": "A package (app) failed to register because a specific file or resource could not be found."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-appxpackaging-operational-fc-157",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-AppxPackaging/Operational 157",
+      "body": "Log channel: Microsoft-Windows-AppxPackaging/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-AppxPackaging/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-appxpackaging-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-appxpackaging-operational:157"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-appxpackaging-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-AppxPackaging/Operational — Event ID 157",
+        "back": "An AppX or MSIX package was successfully validated."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-bits-client-operational-fc-3",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Bits-Client/Operational 3",
+      "body": "Log channel: Microsoft-Windows-Bits-Client/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Bits-Client/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-bits-client-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-bits-client-operational:3"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-bits-client-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Bits-Client/Operational — Event ID 3",
+        "back": "A BITS (Background Intelligent Transfer Service) job has completed."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-bits-client-operational-fc-16403",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Bits-Client/Operational 16403",
+      "body": "Log channel: Microsoft-Windows-Bits-Client/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Bits-Client/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-bits-client-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-bits-client-operational:16403"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-bits-client-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Bits-Client/Operational — Event ID 16403",
+        "back": "A BITS job has been modified by a user or an application."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-capi2-operational-fc-70",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-CAPI2/Operational 70",
+      "body": "Log channel: Microsoft-Windows-CAPI2/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-CAPI2/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-capi2-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-capi2-operational:70"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-capi2-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-CAPI2/Operational — Event ID 70",
+        "back": "A certificate was successfully retrieved from the network."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-certificateservicesclient-lifecycle-system-operational-fc-1007",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-CertificateServicesClient-Lifecycle-System/Operational 1007",
+      "body": "Log channel: Microsoft-Windows-CertificateServicesClient-Lifecycle-System/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-CertificateServicesClient-Lifecycle-System/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-certificateservicesclient-lifecycle-system-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-certificateservicesclient-lifecycle-system-operational:1007"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": true,
+        "deck": "t1-m03-microsoft-windows-certificateservicesclient-lifecycle-system-operational",
+        "reason": "evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-CertificateServicesClient-Lifecycle-System/Operational — Event ID 1007",
+        "back": "A certificate has been exported from the system store."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-msexchange-management-quiz-small-msexchange-management-e6",
+      "type": "quiz",
+      "title": "Recall: MSExchange Management",
+      "body": "Inline feedback, no results page.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "MSExchange Management"
+      },
+      "requires": [
+        "event:msexchange-management:6"
+      ],
+      "estimated_seconds": 35,
+      "graded": true,
+      "payload": {
+        "format": "multiple-choice",
+        "question": "In the MSExchange Management channel, which Event ID records: “Cndlet Failed”",
+        "choices": [
+          "6",
+          "29",
+          "8004",
+          "40300"
+        ],
+        "answer_index": 0,
+        "rationale": "Logging/Notable-Event-IDs-Sigma.md#MSExchange Management lists 6 as “Cndlet Failed”."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-smaller-channels-instr-msexchange-management-e6",
+      "type": "instructions",
+      "title": "Before you start: smaller channels",
+      "body": "",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md"
+      },
+      "teaches": [
+        "concept:corpus-purpose"
+      ],
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "goal": "Match each Event ID to what it records.",
+        "what_youll_use": "The 10 cards from this sitting.",
+        "done_when": "Every ID on the left has a description on the right."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-small-match-msexchange-management-e6",
+      "type": "exercise",
+      "title": "Match: smaller-channel IDs",
+      "body": "Every ID below was on the cards you just saw.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md"
+      },
+      "requires": [
+        "event:microsoft-iis-configuration-operational:29",
+        "event:microsoft-servicebus-operational:40300",
+        "event:microsoft-windows-applocker-exe-and-dll:8004",
+        "event:microsoft-windows-appmodel-runtime-admin:201",
+        "event:microsoft-windows-appxpackaging-operational:157",
+        "event:microsoft-windows-bits-client-operational:16403",
+        "event:microsoft-windows-bits-client-operational:3",
+        "event:msexchange-management:6"
+      ],
+      "estimated_seconds": 60,
+      "difficulty": "standard",
+      "graded": true,
+      "payload": {
+        "format": "match",
+        "pairs": [
+          {
+            "left": "MSExchange Management 6",
+            "right": "Cndlet Failed"
+          },
+          {
+            "left": "Microsoft-IIS-Configuration/Operational 29",
+            "right": "The change to the configuration was successfully committed."
+          },
+          {
+            "left": "Microsoft-ServiceBus/Operational 40300",
+            "right": "An error occurred while processing a request."
+          },
+          {
+            "left": "Microsoft-Windows-AppLocker/EXE and DLL 8004",
+            "right": "... was prevented from running."
+          },
+          {
+            "left": "Microsoft-Windows-AppModel-Runtime/Admin 201",
+            "right": "A package (app) failed to register because a specific file or resource could not be found."
+          },
+          {
+            "left": "Microsoft-Windows-AppxPackaging/Operational 157",
+            "right": "An AppX or MSIX package was successfully validated."
+          },
+          {
+            "left": "Microsoft-Windows-Bits-Client/Operational 3",
+            "right": "A BITS (Background Intelligent Transfer Service) job has completed."
+          },
+          {
+            "left": "Microsoft-Windows-Bits-Client/Operational 16403",
+            "right": "A BITS job has been modified by a user or an application."
+          }
+        ]
+      }
+    }
+  ]
+}

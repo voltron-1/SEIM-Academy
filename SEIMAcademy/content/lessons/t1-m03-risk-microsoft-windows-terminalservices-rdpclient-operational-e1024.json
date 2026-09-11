@@ -1,0 +1,245 @@
+{
+  "schema_version": "1.0.0",
+  "id": "t1-m03-risk-microsoft-windows-terminalservices-rdpclient-operational-e1024",
+  "tier": 1,
+  "module": "3",
+  "title": "Microsoft-Windows-TerminalServices-RDPClient/Operational (risk)",
+  "summary": "4 notable Event IDs from the Microsoft-Windows-TerminalServices-RDPClient/Operational channel on the risk list.",
+  "estimated_seconds": 230,
+  "teaches": [
+    "channel:microsoft-windows-terminalservices-rdpclient-operational",
+    "concept:corpus-purpose",
+    "corpus:risk",
+    "event:microsoft-windows-terminalservices-rdpclient-operational:1024",
+    "event:microsoft-windows-terminalservices-rdpclient-operational:1025",
+    "event:microsoft-windows-terminalservices-rdpclient-operational:1102",
+    "event:microsoft-windows-terminalservices-rdpclient-operational:1103"
+  ],
+  "requires": [],
+  "sources": [
+    {
+      "path": "Logging/Notable-Event-IDs-Risk.md",
+      "heading": "Microsoft-Windows-TerminalServices-RDPClient/Operational"
+    }
+  ],
+  "generated": {
+    "generator": "build-content",
+    "generator_version": "1.0.0",
+    "source_repo": "TonyPhipps/SIEM",
+    "source_commit": "4adb971",
+    "source_license": "GPL-3.0",
+    "profile": "event-id-tables",
+    "content_hash": "09a5f5ca2eb85566de2d606f56d1b8590484550f9c4b8af744215faefcde3c02"
+  },
+  "atoms": [
+    {
+      "id": "t1-m03-risk-microsoft-windows-terminalservices-rdpclient-operational-intro-e1024",
+      "type": "reading",
+      "title": "Microsoft-Windows-TerminalServices-RDPClient/Operational",
+      "body": "The **Microsoft-Windows-TerminalServices-RDPClient/Operational** channel appears on the risk list with 4 notable Event IDs. This sitting covers 4 of them.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-TerminalServices-RDPClient/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-terminalservices-rdpclient-operational",
+        "corpus:risk"
+      ],
+      "estimated_seconds": 45,
+      "graded": false,
+      "payload": {}
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-terminalservices-rdpclient-operational-fc-1024",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-TerminalServices-RDPClient/Operational 1024",
+      "body": "Log channel: Microsoft-Windows-TerminalServices-RDPClient/Operational · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-TerminalServices-RDPClient/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-terminalservices-rdpclient-operational",
+        "corpus:risk",
+        "event:microsoft-windows-terminalservices-rdpclient-operational:1024"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-terminalservices-rdpclient-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-TerminalServices-RDPClient/Operational — Event ID 1024",
+        "back": "RDP connection attempt"
+      }
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-terminalservices-rdpclient-operational-fc-1025",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-TerminalServices-RDPClient/Operational 1025",
+      "body": "Log channel: Microsoft-Windows-TerminalServices-RDPClient/Operational · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-TerminalServices-RDPClient/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-terminalservices-rdpclient-operational",
+        "corpus:risk",
+        "event:microsoft-windows-terminalservices-rdpclient-operational:1025"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-terminalservices-rdpclient-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-TerminalServices-RDPClient/Operational — Event ID 1025",
+        "back": "RDP connection made"
+      }
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-terminalservices-rdpclient-operational-fc-1102",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-TerminalServices-RDPClient/Operational 1102",
+      "body": "Log channel: Microsoft-Windows-TerminalServices-RDPClient/Operational · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-TerminalServices-RDPClient/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-terminalservices-rdpclient-operational",
+        "corpus:risk",
+        "event:microsoft-windows-terminalservices-rdpclient-operational:1102"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-terminalservices-rdpclient-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-TerminalServices-RDPClient/Operational — Event ID 1102",
+        "back": "multi-transport connection attempt"
+      }
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-terminalservices-rdpclient-operational-fc-1103",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-TerminalServices-RDPClient/Operational 1103",
+      "body": "Log channel: Microsoft-Windows-TerminalServices-RDPClient/Operational · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-TerminalServices-RDPClient/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-terminalservices-rdpclient-operational",
+        "corpus:risk",
+        "event:microsoft-windows-terminalservices-rdpclient-operational:1103"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-terminalservices-rdpclient-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-TerminalServices-RDPClient/Operational — Event ID 1103",
+        "back": "multi-transport connection made"
+      }
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-terminalservices-rdpclient-operational-quiz-e1024",
+      "type": "quiz",
+      "title": "Recall: Microsoft-Windows-TerminalServices-RDPClient/Operational",
+      "body": "Inline feedback, no results page.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-TerminalServices-RDPClient/Operational"
+      },
+      "requires": [
+        "event:microsoft-windows-terminalservices-rdpclient-operational:1024"
+      ],
+      "estimated_seconds": 35,
+      "graded": true,
+      "payload": {
+        "format": "multiple-choice",
+        "question": "In the Microsoft-Windows-TerminalServices-RDPClient/Operational channel, which Event ID records: “RDP connection attempt”",
+        "choices": [
+          "1024",
+          "1025",
+          "1102",
+          "1103"
+        ],
+        "answer_index": 0,
+        "rationale": "Logging/Notable-Event-IDs-Risk.md#Microsoft-Windows-TerminalServices-RDPClient/Operational lists 1024 as “RDP connection attempt”."
+      }
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-terminalservices-rdpclient-operational-instr-e1024",
+      "type": "instructions",
+      "title": "Before you start: Microsoft-Windows-TerminalServices-RDPClient/Oper…",
+      "body": "",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-TerminalServices-RDPClient/Operational"
+      },
+      "teaches": [
+        "concept:corpus-purpose"
+      ],
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "goal": "Match each Microsoft-Windows-TerminalServices-RDPClient/Operational Event ID to what it records.",
+        "what_youll_use": "The 4 cards you just reviewed — nothing outside them.",
+        "done_when": "Every ID on the left has a description on the right."
+      }
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-terminalservices-rdpclient-operational-match-e1024",
+      "type": "exercise",
+      "title": "Match: Microsoft-Windows-TerminalServices-RDPClient/Operational IDs to what the…",
+      "body": "Every ID below was on the cards you just saw.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-TerminalServices-RDPClient/Operational"
+      },
+      "requires": [
+        "channel:microsoft-windows-terminalservices-rdpclient-operational",
+        "event:microsoft-windows-terminalservices-rdpclient-operational:1024",
+        "event:microsoft-windows-terminalservices-rdpclient-operational:1025",
+        "event:microsoft-windows-terminalservices-rdpclient-operational:1102",
+        "event:microsoft-windows-terminalservices-rdpclient-operational:1103"
+      ],
+      "estimated_seconds": 60,
+      "difficulty": "standard",
+      "graded": true,
+      "payload": {
+        "format": "match",
+        "pairs": [
+          {
+            "left": "1024",
+            "right": "RDP connection attempt"
+          },
+          {
+            "left": "1025",
+            "right": "RDP connection made"
+          },
+          {
+            "left": "1102",
+            "right": "multi-transport connection attempt"
+          },
+          {
+            "left": "1103",
+            "right": "multi-transport connection made"
+          }
+        ]
+      }
+    }
+  ]
+}

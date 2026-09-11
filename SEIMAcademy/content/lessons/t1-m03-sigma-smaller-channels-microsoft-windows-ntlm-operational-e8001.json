@@ -1,0 +1,430 @@
+{
+  "schema_version": "1.0.0",
+  "id": "t1-m03-sigma-smaller-channels-microsoft-windows-ntlm-operational-e8001",
+  "tier": 1,
+  "module": "3",
+  "part": 3,
+  "title": "Smaller channels (sigma) — part 3",
+  "summary": "9 Event IDs swept from 6 low-volume channels on the sigma list.",
+  "estimated_seconds": 305,
+  "teaches": [
+    "channel:microsoft-windows-ntlm-operational",
+    "channel:microsoft-windows-powershell-operational",
+    "channel:microsoft-windows-rpcfirewall-operational",
+    "channel:microsoft-windows-smbclient-connectivity",
+    "channel:microsoft-windows-smbclient-security",
+    "channel:microsoft-windows-smbserver-connectivity",
+    "concept:corpus-purpose",
+    "corpus:sigma",
+    "event:microsoft-windows-ntlm-operational:8001",
+    "event:microsoft-windows-ntlm-operational:8002",
+    "event:microsoft-windows-ntlm-operational:8004",
+    "event:microsoft-windows-powershell-operational:4103",
+    "event:microsoft-windows-powershell-operational:4104",
+    "event:microsoft-windows-rpcfirewall-operational:3",
+    "event:microsoft-windows-smbclient-connectivity:4000",
+    "event:microsoft-windows-smbclient-security:31017",
+    "event:microsoft-windows-smbserver-connectivity:4000"
+  ],
+  "requires": [],
+  "sources": [
+    {
+      "path": "Logging/Notable-Event-IDs-Sigma.md"
+    },
+    {
+      "path": "Logging/Notable-Event-IDs-Sigma.md",
+      "heading": "Microsoft-Windows-NTLM/Operational"
+    },
+    {
+      "path": "Logging/Notable-Event-IDs-Sigma.md",
+      "heading": "Microsoft-Windows-Powershell/Operational"
+    },
+    {
+      "path": "Logging/Notable-Event-IDs-Sigma.md",
+      "heading": "Microsoft-Windows-RpcFirewall/Operational"
+    },
+    {
+      "path": "Logging/Notable-Event-IDs-Sigma.md",
+      "heading": "Microsoft-Windows-SMBClient/Connectivity"
+    },
+    {
+      "path": "Logging/Notable-Event-IDs-Sigma.md",
+      "heading": "Microsoft-Windows-SMBClient/Security"
+    },
+    {
+      "path": "Logging/Notable-Event-IDs-Sigma.md",
+      "heading": "Microsoft-Windows-SMBServer/Connectivity"
+    }
+  ],
+  "generated": {
+    "generator": "build-content",
+    "generator_version": "1.0.0",
+    "source_repo": "TonyPhipps/SIEM",
+    "source_commit": "4adb971",
+    "source_license": "GPL-3.0",
+    "profile": "event-id-tables",
+    "content_hash": "9ba41c948c4f4c0a3175d2e98461ca5da3e8baa30ab1607a152c7f35424da2f2"
+  },
+  "atoms": [
+    {
+      "id": "t1-m03-sigma-small-intro-microsoft-windows-ntlm-operational-e8001",
+      "type": "reading",
+      "title": "Smaller channels",
+      "body": "Most Windows log channels contribute only a handful of notable Event IDs. This sitting sweeps 9 of them across 6 channels on the sigma list.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md"
+      },
+      "teaches": [
+        "channel:microsoft-windows-ntlm-operational",
+        "channel:microsoft-windows-powershell-operational",
+        "channel:microsoft-windows-rpcfirewall-operational",
+        "channel:microsoft-windows-smbclient-connectivity",
+        "channel:microsoft-windows-smbclient-security",
+        "channel:microsoft-windows-smbserver-connectivity",
+        "corpus:sigma"
+      ],
+      "estimated_seconds": 45,
+      "graded": false,
+      "payload": {}
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-ntlm-operational-fc-8001",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-NTLM/Operational 8001",
+      "body": "Log channel: Microsoft-Windows-NTLM/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-NTLM/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-ntlm-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-ntlm-operational:8001"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": true,
+        "deck": "t1-m03-microsoft-windows-ntlm-operational",
+        "reason": "evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-NTLM/Operational — Event ID 8001",
+        "back": "NTLM client blocked audit: Audit outgoing NTLM authentication traffic that would be blocked."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-ntlm-operational-fc-8002",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-NTLM/Operational 8002",
+      "body": "Log channel: Microsoft-Windows-NTLM/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-NTLM/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-ntlm-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-ntlm-operational:8002"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-ntlm-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-NTLM/Operational — Event ID 8002",
+        "back": "NTLM server blocked audit: Audit Incoming NTLM Traffic that would be blocked."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-ntlm-operational-fc-8004",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-NTLM/Operational 8004",
+      "body": "Log channel: Microsoft-Windows-NTLM/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-NTLM/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-ntlm-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-ntlm-operational:8004"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-ntlm-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-NTLM/Operational — Event ID 8004",
+        "back": "Domain Controller Blocked Audit: Audit NTLM authentication to this domain controller."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-powershell-operational-fc-4103",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Powershell/Operational 4103",
+      "body": "Log channel: Microsoft-Windows-Powershell/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Powershell/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-powershell-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-powershell-operational:4103"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-powershell-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Powershell/Operational — Event ID 4103",
+        "back": "Pipeline executed"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-powershell-operational-fc-4104",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Powershell/Operational 4104",
+      "body": "Log channel: Microsoft-Windows-Powershell/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Powershell/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-powershell-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-powershell-operational:4104"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-powershell-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Powershell/Operational — Event ID 4104",
+        "back": "Scriptblock executed"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-rpcfirewall-operational-fc-3",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-RpcFirewall/Operational 3",
+      "body": "Log channel: Microsoft-Windows-RpcFirewall/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-RpcFirewall/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-rpcfirewall-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-rpcfirewall-operational:3"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-rpcfirewall-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-RpcFirewall/Operational — Event ID 3",
+        "back": "Blocked RPC Call."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-smbclient-connectivity-fc-4000",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-SMBClient/Connectivity 4000",
+      "body": "Log channel: Microsoft-Windows-SMBClient/Connectivity · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-SMBClient/Connectivity"
+      },
+      "teaches": [
+        "channel:microsoft-windows-smbclient-connectivity",
+        "corpus:sigma",
+        "event:microsoft-windows-smbclient-connectivity:4000"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-smbclient-connectivity",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-SMBClient/Connectivity — Event ID 4000",
+        "back": "Successfully established a connection"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-smbclient-security-fc-31017",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-SMBClient/Security 31017",
+      "body": "Log channel: Microsoft-Windows-SMBClient/Security · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-SMBClient/Security"
+      },
+      "teaches": [
+        "channel:microsoft-windows-smbclient-security",
+        "corpus:sigma",
+        "event:microsoft-windows-smbclient-security:31017"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-smbclient-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-SMBClient/Security — Event ID 31017",
+        "back": "SMB client rejected a response from a server because it was not signed"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-smbserver-connectivity-fc-4000",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-SMBServer/Connectivity 4000",
+      "body": "Log channel: Microsoft-Windows-SMBServer/Connectivity · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-SMBServer/Connectivity"
+      },
+      "teaches": [
+        "channel:microsoft-windows-smbserver-connectivity",
+        "corpus:sigma",
+        "event:microsoft-windows-smbserver-connectivity:4000"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-smbserver-connectivity",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-SMBServer/Connectivity — Event ID 4000",
+        "back": "The SMB client connection to the share was established"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-ntlm-operational-quiz-small-microsoft-windows-ntlm-operational-e8001",
+      "type": "quiz",
+      "title": "Recall: Microsoft-Windows-NTLM/Operational",
+      "body": "Inline feedback, no results page.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-NTLM/Operational"
+      },
+      "requires": [
+        "event:microsoft-windows-ntlm-operational:8001"
+      ],
+      "estimated_seconds": 35,
+      "graded": true,
+      "payload": {
+        "format": "multiple-choice",
+        "question": "In the Microsoft-Windows-NTLM/Operational channel, which Event ID records: “NTLM client blocked audit: Audit outgoing NTLM authentication traffic that would be blocked.”",
+        "choices": [
+          "4103",
+          "8001",
+          "8002",
+          "8004"
+        ],
+        "answer_index": 1,
+        "rationale": "Logging/Notable-Event-IDs-Sigma.md#Microsoft-Windows-NTLM/Operational lists 8001 as “NTLM client blocked audit: Audit outgoing NTLM authentication traffic that would be blocked.”."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-smaller-channels-instr-microsoft-windows-ntlm-operational-e8001",
+      "type": "instructions",
+      "title": "Before you start: smaller channels",
+      "body": "",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md"
+      },
+      "teaches": [
+        "concept:corpus-purpose"
+      ],
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "goal": "Match each Event ID to what it records.",
+        "what_youll_use": "The 9 cards from this sitting.",
+        "done_when": "Every ID on the left has a description on the right."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-small-match-microsoft-windows-ntlm-operational-e8001",
+      "type": "exercise",
+      "title": "Match: smaller-channel IDs",
+      "body": "Every ID below was on the cards you just saw.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md"
+      },
+      "requires": [
+        "event:microsoft-windows-ntlm-operational:8001",
+        "event:microsoft-windows-ntlm-operational:8002",
+        "event:microsoft-windows-ntlm-operational:8004",
+        "event:microsoft-windows-powershell-operational:4103",
+        "event:microsoft-windows-powershell-operational:4104",
+        "event:microsoft-windows-rpcfirewall-operational:3",
+        "event:microsoft-windows-smbclient-connectivity:4000",
+        "event:microsoft-windows-smbclient-security:31017"
+      ],
+      "estimated_seconds": 60,
+      "difficulty": "standard",
+      "graded": true,
+      "payload": {
+        "format": "match",
+        "pairs": [
+          {
+            "left": "Microsoft-Windows-NTLM/Operational 8001",
+            "right": "NTLM client blocked audit: Audit outgoing NTLM authentication traffic that would be blocked."
+          },
+          {
+            "left": "Microsoft-Windows-NTLM/Operational 8002",
+            "right": "NTLM server blocked audit: Audit Incoming NTLM Traffic that would be blocked."
+          },
+          {
+            "left": "Microsoft-Windows-NTLM/Operational 8004",
+            "right": "Domain Controller Blocked Audit: Audit NTLM authentication to this domain controller."
+          },
+          {
+            "left": "Microsoft-Windows-Powershell/Operational 4103",
+            "right": "Pipeline executed"
+          },
+          {
+            "left": "Microsoft-Windows-Powershell/Operational 4104",
+            "right": "Scriptblock executed"
+          },
+          {
+            "left": "Microsoft-Windows-RpcFirewall/Operational 3",
+            "right": "Blocked RPC Call."
+          },
+          {
+            "left": "Microsoft-Windows-SMBClient/Connectivity 4000",
+            "right": "Successfully established a connection"
+          },
+          {
+            "left": "Microsoft-Windows-SMBClient/Security 31017",
+            "right": "SMB client rejected a response from a server because it was not signed"
+          }
+        ]
+      }
+    }
+  ]
+}

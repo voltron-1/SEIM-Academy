@@ -1,0 +1,309 @@
+{
+  "schema_version": "1.0.0",
+  "id": "t1-m03-forensics-microsoft-windows-terminalservices-localsessionmanager-operational-e22",
+  "tier": 1,
+  "module": "3",
+  "title": "Microsoft-Windows-TerminalServices-LocalSessionManager/Operational (forensics)",
+  "summary": "6 notable Event IDs from the Microsoft-Windows-TerminalServices-LocalSessionManager/Operational channel on the forensics list.",
+  "estimated_seconds": 260,
+  "teaches": [
+    "channel:microsoft-windows-terminalservices-localsessionmanager-operational",
+    "concept:corpus-purpose",
+    "corpus:forensics",
+    "event:microsoft-windows-terminalservices-localsessionmanager-operational:22",
+    "event:microsoft-windows-terminalservices-localsessionmanager-operational:23",
+    "event:microsoft-windows-terminalservices-localsessionmanager-operational:24",
+    "event:microsoft-windows-terminalservices-localsessionmanager-operational:25",
+    "event:microsoft-windows-terminalservices-localsessionmanager-operational:39",
+    "event:microsoft-windows-terminalservices-localsessionmanager-operational:40"
+  ],
+  "requires": [],
+  "sources": [
+    {
+      "path": "Logging/Notable-Event-IDs-Forensics.md",
+      "heading": "Microsoft-Windows-TerminalServices-LocalSessionManager/Operational"
+    }
+  ],
+  "generated": {
+    "generator": "build-content",
+    "generator_version": "1.0.0",
+    "source_repo": "TonyPhipps/SIEM",
+    "source_commit": "4adb971",
+    "source_license": "GPL-3.0",
+    "profile": "event-id-tables",
+    "content_hash": "d2d4756b71bef2ce1025716fab974aed0006dfc3bca25ff939c983d924f1103d"
+  },
+  "atoms": [
+    {
+      "id": "t1-m03-forensics-microsoft-windows-terminalservices-localsessionmanager-operational-intro-e22",
+      "type": "reading",
+      "title": "Microsoft-Windows-TerminalServices-LocalSessionManager/Operational",
+      "body": "The **Microsoft-Windows-TerminalServices-LocalSessionManager/Operational** channel appears on the forensics list with 6 notable Event IDs. This sitting covers 6 of them.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Microsoft-Windows-TerminalServices-LocalSessionManager/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-terminalservices-localsessionmanager-operational",
+        "corpus:forensics"
+      ],
+      "estimated_seconds": 45,
+      "graded": false,
+      "payload": {}
+    },
+    {
+      "id": "t1-m03-forensics-microsoft-windows-terminalservices-localsessionmanager-operational-fc-22",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-TerminalServices-LocalSessionManager/Operational 22",
+      "body": "Log channel: Microsoft-Windows-TerminalServices-LocalSessionManager/Operational · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Microsoft-Windows-TerminalServices-LocalSessionManager/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-terminalservices-localsessionmanager-operational",
+        "corpus:forensics",
+        "event:microsoft-windows-terminalservices-localsessionmanager-operational:22"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-terminalservices-localsessionmanager-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-TerminalServices-LocalSessionManager/Operational — Event ID 22",
+        "back": "Shell start notification received"
+      }
+    },
+    {
+      "id": "t1-m03-forensics-microsoft-windows-terminalservices-localsessionmanager-operational-fc-23",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-TerminalServices-LocalSessionManager/Operational 23",
+      "body": "Log channel: Microsoft-Windows-TerminalServices-LocalSessionManager/Operational · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Microsoft-Windows-TerminalServices-LocalSessionManager/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-terminalservices-localsessionmanager-operational",
+        "corpus:forensics",
+        "event:microsoft-windows-terminalservices-localsessionmanager-operational:23"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-terminalservices-localsessionmanager-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-TerminalServices-LocalSessionManager/Operational — Event ID 23",
+        "back": "Session logoff succeeded"
+      }
+    },
+    {
+      "id": "t1-m03-forensics-microsoft-windows-terminalservices-localsessionmanager-operational-fc-24",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-TerminalServices-LocalSessionManager/Operational 24",
+      "body": "Log channel: Microsoft-Windows-TerminalServices-LocalSessionManager/Operational · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Microsoft-Windows-TerminalServices-LocalSessionManager/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-terminalservices-localsessionmanager-operational",
+        "corpus:forensics",
+        "event:microsoft-windows-terminalservices-localsessionmanager-operational:24"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-terminalservices-localsessionmanager-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-TerminalServices-LocalSessionManager/Operational — Event ID 24",
+        "back": "Session has been disconnected"
+      }
+    },
+    {
+      "id": "t1-m03-forensics-microsoft-windows-terminalservices-localsessionmanager-operational-fc-25",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-TerminalServices-LocalSessionManager/Operational 25",
+      "body": "Log channel: Microsoft-Windows-TerminalServices-LocalSessionManager/Operational · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Microsoft-Windows-TerminalServices-LocalSessionManager/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-terminalservices-localsessionmanager-operational",
+        "corpus:forensics",
+        "event:microsoft-windows-terminalservices-localsessionmanager-operational:25"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-terminalservices-localsessionmanager-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-TerminalServices-LocalSessionManager/Operational — Event ID 25",
+        "back": "Session reconnection succeeded"
+      }
+    },
+    {
+      "id": "t1-m03-forensics-microsoft-windows-terminalservices-localsessionmanager-operational-fc-39",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-TerminalServices-LocalSessionManager/Operational 39",
+      "body": "Log channel: Microsoft-Windows-TerminalServices-LocalSessionManager/Operational · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Microsoft-Windows-TerminalServices-LocalSessionManager/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-terminalservices-localsessionmanager-operational",
+        "corpus:forensics",
+        "event:microsoft-windows-terminalservices-localsessionmanager-operational:39"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-terminalservices-localsessionmanager-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-TerminalServices-LocalSessionManager/Operational — Event ID 39",
+        "back": "Session <X> has been disconnected by session <Y>"
+      }
+    },
+    {
+      "id": "t1-m03-forensics-microsoft-windows-terminalservices-localsessionmanager-operational-fc-40",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-TerminalServices-LocalSessionManager/Operational 40",
+      "body": "Log channel: Microsoft-Windows-TerminalServices-LocalSessionManager/Operational · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Microsoft-Windows-TerminalServices-LocalSessionManager/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-terminalservices-localsessionmanager-operational",
+        "corpus:forensics",
+        "event:microsoft-windows-terminalservices-localsessionmanager-operational:40"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-terminalservices-localsessionmanager-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-TerminalServices-LocalSessionManager/Operational — Event ID 40",
+        "back": "Session <X> has been disconnected, reason code <Z>"
+      }
+    },
+    {
+      "id": "t1-m03-forensics-microsoft-windows-terminalservices-localsessionmanager-operational-quiz-e22",
+      "type": "quiz",
+      "title": "Recall: Microsoft-Windows-TerminalServices-LocalSessionManager/Operational",
+      "body": "Inline feedback, no results page.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Microsoft-Windows-TerminalServices-LocalSessionManager/Operational"
+      },
+      "requires": [
+        "event:microsoft-windows-terminalservices-localsessionmanager-operational:22"
+      ],
+      "estimated_seconds": 35,
+      "graded": true,
+      "payload": {
+        "format": "multiple-choice",
+        "question": "In the Microsoft-Windows-TerminalServices-LocalSessionManager/Operational channel, which Event ID records: “Shell start notification received”",
+        "choices": [
+          "22",
+          "23",
+          "24",
+          "25"
+        ],
+        "answer_index": 0,
+        "rationale": "Logging/Notable-Event-IDs-Forensics.md#Microsoft-Windows-TerminalServices-LocalSessionManager/Operational lists 22 as “Shell start notification received”."
+      }
+    },
+    {
+      "id": "t1-m03-forensics-microsoft-windows-terminalservices-localsessionmanager-operational-instr-e22",
+      "type": "instructions",
+      "title": "Before you start: Microsoft-Windows-TerminalServices-LocalSessionMa…",
+      "body": "",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Microsoft-Windows-TerminalServices-LocalSessionManager/Operational"
+      },
+      "teaches": [
+        "concept:corpus-purpose"
+      ],
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "goal": "Match each Microsoft-Windows-TerminalServices-LocalSessionManager/Operational Event ID to what it records.",
+        "what_youll_use": "The 6 cards you just reviewed — nothing outside them.",
+        "done_when": "Every ID on the left has a description on the right."
+      }
+    },
+    {
+      "id": "t1-m03-forensics-microsoft-windows-terminalservices-localsessionmanager-operational-match-e22",
+      "type": "exercise",
+      "title": "Match: Microsoft-Windows-TerminalServices-LocalSessionManager/Operational IDs t…",
+      "body": "Every ID below was on the cards you just saw.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Microsoft-Windows-TerminalServices-LocalSessionManager/Operational"
+      },
+      "requires": [
+        "channel:microsoft-windows-terminalservices-localsessionmanager-operational",
+        "event:microsoft-windows-terminalservices-localsessionmanager-operational:22",
+        "event:microsoft-windows-terminalservices-localsessionmanager-operational:23",
+        "event:microsoft-windows-terminalservices-localsessionmanager-operational:24",
+        "event:microsoft-windows-terminalservices-localsessionmanager-operational:25",
+        "event:microsoft-windows-terminalservices-localsessionmanager-operational:39",
+        "event:microsoft-windows-terminalservices-localsessionmanager-operational:40"
+      ],
+      "estimated_seconds": 60,
+      "difficulty": "standard",
+      "graded": true,
+      "payload": {
+        "format": "match",
+        "pairs": [
+          {
+            "left": "22",
+            "right": "Shell start notification received"
+          },
+          {
+            "left": "23",
+            "right": "Session logoff succeeded"
+          },
+          {
+            "left": "24",
+            "right": "Session has been disconnected"
+          },
+          {
+            "left": "25",
+            "right": "Session reconnection succeeded"
+          },
+          {
+            "left": "39",
+            "right": "Session <X> has been disconnected by session <Y>"
+          },
+          {
+            "left": "40",
+            "right": "Session <X> has been disconnected, reason code <Z>"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,428 @@
+{
+  "schema_version": "1.0.0",
+  "id": "t1-m03-forensics-security-e4647",
+  "tier": 1,
+  "module": "3",
+  "part": 1,
+  "title": "Security (forensics) — part 1",
+  "summary": "10 notable Event IDs from the Security channel on the forensics list.",
+  "estimated_seconds": 320,
+  "teaches": [
+    "channel:security",
+    "concept:corpus-purpose",
+    "corpus:forensics",
+    "event:security:4647",
+    "event:security:4670",
+    "event:security:4696",
+    "event:security:4700",
+    "event:security:4703",
+    "event:security:4705",
+    "event:security:4715",
+    "event:security:4778",
+    "event:security:4779",
+    "event:security:4780"
+  ],
+  "requires": [],
+  "sources": [
+    {
+      "path": "Logging/Notable-Event-IDs-Forensics.md",
+      "heading": "Security"
+    }
+  ],
+  "generated": {
+    "generator": "build-content",
+    "generator_version": "1.0.0",
+    "source_repo": "TonyPhipps/SIEM",
+    "source_commit": "4adb971",
+    "source_license": "GPL-3.0",
+    "profile": "event-id-tables",
+    "content_hash": "638461b70827279d3339b34f33882b2c4b11fe8fa618d7d75f2f8626571909ae"
+  },
+  "atoms": [
+    {
+      "id": "t1-m03-forensics-security-intro-e4647",
+      "type": "reading",
+      "title": "Security",
+      "body": "The **Security** channel appears on the forensics list with 37 notable Event IDs. This sitting covers 10 of them.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:forensics"
+      ],
+      "estimated_seconds": 45,
+      "graded": false,
+      "payload": {}
+    },
+    {
+      "id": "t1-m03-forensics-security-fc-4647",
+      "type": "flashcard",
+      "title": "Security 4647",
+      "body": "Log channel: Security · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:forensics",
+        "event:security:4647"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4647",
+        "back": "User initiated logoff."
+      }
+    },
+    {
+      "id": "t1-m03-forensics-security-fc-4670",
+      "type": "flashcard",
+      "title": "Security 4670",
+      "body": "Log channel: Security · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:forensics",
+        "event:security:4670"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4670",
+        "back": "Permissions on an object were changed."
+      }
+    },
+    {
+      "id": "t1-m03-forensics-security-fc-4696",
+      "type": "flashcard",
+      "title": "Security 4696",
+      "body": "Log channel: Security · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:forensics",
+        "event:security:4696"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4696",
+        "back": "A primary token was assigned to process"
+      }
+    },
+    {
+      "id": "t1-m03-forensics-security-fc-4700",
+      "type": "flashcard",
+      "title": "Security 4700",
+      "body": "Log channel: Security · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:forensics",
+        "event:security:4700"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4700",
+        "back": "A scheduled task was enabled."
+      }
+    },
+    {
+      "id": "t1-m03-forensics-security-fc-4703",
+      "type": "flashcard",
+      "title": "Security 4703",
+      "body": "Log channel: Security · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:forensics",
+        "event:security:4703"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4703",
+        "back": "A user right was adjusted."
+      }
+    },
+    {
+      "id": "t1-m03-forensics-security-fc-4705",
+      "type": "flashcard",
+      "title": "Security 4705",
+      "body": "Log channel: Security · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:forensics",
+        "event:security:4705"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4705",
+        "back": "A user right was removed"
+      }
+    },
+    {
+      "id": "t1-m03-forensics-security-fc-4715",
+      "type": "flashcard",
+      "title": "Security 4715",
+      "body": "Log channel: Security · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:forensics",
+        "event:security:4715"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4715",
+        "back": "The audit policy (SACL) on an object was changed."
+      }
+    },
+    {
+      "id": "t1-m03-forensics-security-fc-4778",
+      "type": "flashcard",
+      "title": "Security 4778",
+      "body": "Log channel: Security · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:forensics",
+        "event:security:4778"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4778",
+        "back": "A session was reconnected to a Window Station."
+      }
+    },
+    {
+      "id": "t1-m03-forensics-security-fc-4779",
+      "type": "flashcard",
+      "title": "Security 4779",
+      "body": "Log channel: Security · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:forensics",
+        "event:security:4779"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4779",
+        "back": "A session was disconnected from a Window Station."
+      }
+    },
+    {
+      "id": "t1-m03-forensics-security-fc-4780",
+      "type": "flashcard",
+      "title": "Security 4780",
+      "body": "Log channel: Security · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:forensics",
+        "event:security:4780"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4780",
+        "back": "The ACL was set on accounts which are members of administrators groups."
+      }
+    },
+    {
+      "id": "t1-m03-forensics-security-quiz-e4647",
+      "type": "quiz",
+      "title": "Recall: Security",
+      "body": "Inline feedback, no results page.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Security"
+      },
+      "requires": [
+        "event:security:4647"
+      ],
+      "estimated_seconds": 35,
+      "graded": true,
+      "payload": {
+        "format": "multiple-choice",
+        "question": "In the Security channel, which Event ID records: “User initiated logoff.”",
+        "choices": [
+          "4647",
+          "4670",
+          "4696",
+          "4700"
+        ],
+        "answer_index": 0,
+        "rationale": "Logging/Notable-Event-IDs-Forensics.md#Security lists 4647 as “User initiated logoff.”."
+      }
+    },
+    {
+      "id": "t1-m03-forensics-security-instr-e4647",
+      "type": "instructions",
+      "title": "Before you start: Security",
+      "body": "",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "concept:corpus-purpose"
+      ],
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "goal": "Match each Security Event ID to what it records.",
+        "what_youll_use": "The 10 cards you just reviewed — nothing outside them.",
+        "done_when": "Every ID on the left has a description on the right."
+      }
+    },
+    {
+      "id": "t1-m03-forensics-security-match-e4647",
+      "type": "exercise",
+      "title": "Match: Security IDs to what they record",
+      "body": "Every ID below was on the cards you just saw.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Security"
+      },
+      "requires": [
+        "channel:security",
+        "event:security:4647",
+        "event:security:4670",
+        "event:security:4696",
+        "event:security:4700",
+        "event:security:4703",
+        "event:security:4705",
+        "event:security:4715",
+        "event:security:4778"
+      ],
+      "estimated_seconds": 60,
+      "difficulty": "standard",
+      "graded": true,
+      "payload": {
+        "format": "match",
+        "pairs": [
+          {
+            "left": "4647",
+            "right": "User initiated logoff."
+          },
+          {
+            "left": "4670",
+            "right": "Permissions on an object were changed."
+          },
+          {
+            "left": "4696",
+            "right": "A primary token was assigned to process"
+          },
+          {
+            "left": "4700",
+            "right": "A scheduled task was enabled."
+          },
+          {
+            "left": "4703",
+            "right": "A user right was adjusted."
+          },
+          {
+            "left": "4705",
+            "right": "A user right was removed"
+          },
+          {
+            "left": "4715",
+            "right": "The audit policy (SACL) on an object was changed."
+          },
+          {
+            "left": "4778",
+            "right": "A session was reconnected to a Window Station."
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,428 @@
+{
+  "schema_version": "1.0.0",
+  "id": "t1-m03-sigma-security-e4732",
+  "tier": 1,
+  "module": "3",
+  "part": 4,
+  "title": "Security (sigma) — part 4",
+  "summary": "10 notable Event IDs from the Security channel on the sigma list.",
+  "estimated_seconds": 320,
+  "teaches": [
+    "channel:security",
+    "concept:corpus-purpose",
+    "corpus:sigma",
+    "event:security:4732",
+    "event:security:4738",
+    "event:security:4776",
+    "event:security:4781",
+    "event:security:4799",
+    "event:security:4800",
+    "event:security:4825",
+    "event:security:4898",
+    "event:security:4899",
+    "event:security:5038"
+  ],
+  "requires": [],
+  "sources": [
+    {
+      "path": "Logging/Notable-Event-IDs-Sigma.md",
+      "heading": "Security"
+    }
+  ],
+  "generated": {
+    "generator": "build-content",
+    "generator_version": "1.0.0",
+    "source_repo": "TonyPhipps/SIEM",
+    "source_commit": "4adb971",
+    "source_license": "GPL-3.0",
+    "profile": "event-id-tables",
+    "content_hash": "717c6263fbad846d6c836ddcad6c3a69d94d0aba7921554e41be82e5d0ef4314"
+  },
+  "atoms": [
+    {
+      "id": "t1-m03-sigma-security-intro-e4732",
+      "type": "reading",
+      "title": "Security",
+      "body": "The **Security** channel appears on the sigma list with 50 notable Event IDs. This sitting covers 10 of them.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:sigma"
+      ],
+      "estimated_seconds": 45,
+      "graded": false,
+      "payload": {}
+    },
+    {
+      "id": "t1-m03-sigma-security-fc-4732",
+      "type": "flashcard",
+      "title": "Security 4732",
+      "body": "Log channel: Security · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:sigma",
+        "event:security:4732"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4732",
+        "back": "A member was added to a security-enabled local group."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-fc-4738",
+      "type": "flashcard",
+      "title": "Security 4738",
+      "body": "Log channel: Security · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:sigma",
+        "event:security:4738"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": true,
+        "deck": "t1-m03-security",
+        "reason": "evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4738",
+        "back": "A user account was changed."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-fc-4776",
+      "type": "flashcard",
+      "title": "Security 4776",
+      "body": "Log channel: Security · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:sigma",
+        "event:security:4776"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4776",
+        "back": "The domain controller attempted to validate the credentials for an account."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-fc-4781",
+      "type": "flashcard",
+      "title": "Security 4781",
+      "body": "Log channel: Security · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:sigma",
+        "event:security:4781"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": true,
+        "deck": "t1-m03-security",
+        "reason": "evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4781",
+        "back": "The name of an account was changed."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-fc-4799",
+      "type": "flashcard",
+      "title": "Security 4799",
+      "body": "Log channel: Security · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:sigma",
+        "event:security:4799"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4799",
+        "back": "A security-enabled local group membership was enumerated."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-fc-4800",
+      "type": "flashcard",
+      "title": "Security 4800",
+      "body": "Log channel: Security · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:sigma",
+        "event:security:4800"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4800",
+        "back": "The workstation was locked."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-fc-4825",
+      "type": "flashcard",
+      "title": "Security 4825",
+      "body": "Log channel: Security · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:sigma",
+        "event:security:4825"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4825",
+        "back": "A user was denied the right to log on at this computer."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-fc-4898",
+      "type": "flashcard",
+      "title": "Security 4898",
+      "body": "Log channel: Security · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:sigma",
+        "event:security:4898"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4898",
+        "back": "Certificate Services loaded a template"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-fc-4899",
+      "type": "flashcard",
+      "title": "Security 4899",
+      "body": "Log channel: Security · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:sigma",
+        "event:security:4899"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4899",
+        "back": "A Certificate Services template was updated"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-fc-5038",
+      "type": "flashcard",
+      "title": "Security 5038",
+      "body": "Log channel: Security · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:sigma",
+        "event:security:5038"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": true,
+        "deck": "t1-m03-security",
+        "reason": "evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 5038",
+        "back": "Code integrity determined that the image hash of a file is not valid"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-quiz-e4732",
+      "type": "quiz",
+      "title": "Recall: Security",
+      "body": "Inline feedback, no results page.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "requires": [
+        "event:security:4732"
+      ],
+      "estimated_seconds": 35,
+      "graded": true,
+      "payload": {
+        "format": "multiple-choice",
+        "question": "In the Security channel, which Event ID records: “A member was added to a security-enabled local group.”",
+        "choices": [
+          "4732",
+          "4738",
+          "4776",
+          "4781"
+        ],
+        "answer_index": 0,
+        "rationale": "Logging/Notable-Event-IDs-Sigma.md#Security lists 4732 as “A member was added to a security-enabled local group.”."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-instr-e4732",
+      "type": "instructions",
+      "title": "Before you start: Security",
+      "body": "",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "concept:corpus-purpose"
+      ],
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "goal": "Match each Security Event ID to what it records.",
+        "what_youll_use": "The 10 cards you just reviewed — nothing outside them.",
+        "done_when": "Every ID on the left has a description on the right."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-security-match-e4732",
+      "type": "exercise",
+      "title": "Match: Security IDs to what they record",
+      "body": "Every ID below was on the cards you just saw.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Security"
+      },
+      "requires": [
+        "channel:security",
+        "event:security:4732",
+        "event:security:4738",
+        "event:security:4776",
+        "event:security:4781",
+        "event:security:4799",
+        "event:security:4800",
+        "event:security:4825",
+        "event:security:4898"
+      ],
+      "estimated_seconds": 60,
+      "difficulty": "standard",
+      "graded": true,
+      "payload": {
+        "format": "match",
+        "pairs": [
+          {
+            "left": "4732",
+            "right": "A member was added to a security-enabled local group."
+          },
+          {
+            "left": "4738",
+            "right": "A user account was changed."
+          },
+          {
+            "left": "4776",
+            "right": "The domain controller attempted to validate the credentials for an account."
+          },
+          {
+            "left": "4781",
+            "right": "The name of an account was changed."
+          },
+          {
+            "left": "4799",
+            "right": "A security-enabled local group membership was enumerated."
+          },
+          {
+            "left": "4800",
+            "right": "The workstation was locked."
+          },
+          {
+            "left": "4825",
+            "right": "A user was denied the right to log on at this computer."
+          },
+          {
+            "left": "4898",
+            "right": "Certificate Services loaded a template"
+          }
+        ]
+      }
+    }
+  ]
+}

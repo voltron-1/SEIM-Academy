@@ -1,0 +1,374 @@
+{
+  "schema_version": "1.0.0",
+  "id": "t1-m03-risk-microsoft-windows-windows-defender-operational-e1002",
+  "tier": 1,
+  "module": "3",
+  "part": 1,
+  "title": "Microsoft-Windows-Windows Defender/Operational (risk) — part 1",
+  "summary": "8 notable Event IDs from the Microsoft-Windows-Windows Defender/Operational channel on the risk list.",
+  "estimated_seconds": 290,
+  "teaches": [
+    "channel:microsoft-windows-windows-defender-operational",
+    "concept:corpus-purpose",
+    "corpus:risk",
+    "event:microsoft-windows-windows-defender-operational:1002",
+    "event:microsoft-windows-windows-defender-operational:1003",
+    "event:microsoft-windows-windows-defender-operational:1005",
+    "event:microsoft-windows-windows-defender-operational:1007",
+    "event:microsoft-windows-windows-defender-operational:1008",
+    "event:microsoft-windows-windows-defender-operational:1012",
+    "event:microsoft-windows-windows-defender-operational:1014",
+    "event:microsoft-windows-windows-defender-operational:1015"
+  ],
+  "requires": [],
+  "sources": [
+    {
+      "path": "Logging/Notable-Event-IDs-Risk.md",
+      "heading": "Microsoft-Windows-Windows Defender/Operational"
+    }
+  ],
+  "generated": {
+    "generator": "build-content",
+    "generator_version": "1.0.0",
+    "source_repo": "TonyPhipps/SIEM",
+    "source_commit": "4adb971",
+    "source_license": "GPL-3.0",
+    "profile": "event-id-tables",
+    "content_hash": "1f31cd868482f599dd75f837753cd0ea604ed6af8260d33dd5a7c9e38b7340da"
+  },
+  "atoms": [
+    {
+      "id": "t1-m03-risk-microsoft-windows-windows-defender-operational-intro-e1002",
+      "type": "reading",
+      "title": "Microsoft-Windows-Windows Defender/Operational",
+      "body": "The **Microsoft-Windows-Windows Defender/Operational** channel appears on the risk list with 16 notable Event IDs. This sitting covers 8 of them.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-Windows Defender/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-windows-defender-operational",
+        "corpus:risk"
+      ],
+      "estimated_seconds": 45,
+      "graded": false,
+      "payload": {}
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-windows-defender-operational-fc-1002",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Windows Defender/Operational 1002",
+      "body": "Log channel: Microsoft-Windows-Windows Defender/Operational · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-Windows Defender/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-windows-defender-operational",
+        "corpus:risk",
+        "event:microsoft-windows-windows-defender-operational:1002"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-windows-defender-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Windows Defender/Operational — Event ID 1002",
+        "back": "An antimalware scan was stopped before it finished."
+      }
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-windows-defender-operational-fc-1003",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Windows Defender/Operational 1003",
+      "body": "Log channel: Microsoft-Windows-Windows Defender/Operational · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-Windows Defender/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-windows-defender-operational",
+        "corpus:risk",
+        "event:microsoft-windows-windows-defender-operational:1003"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-windows-defender-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Windows Defender/Operational — Event ID 1003",
+        "back": "malware scan paused"
+      }
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-windows-defender-operational-fc-1005",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Windows Defender/Operational 1005",
+      "body": "Log channel: Microsoft-Windows-Windows Defender/Operational · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-Windows Defender/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-windows-defender-operational",
+        "corpus:risk",
+        "event:microsoft-windows-windows-defender-operational:1005"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-windows-defender-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Windows Defender/Operational — Event ID 1005",
+        "back": "An antimalware scan failed."
+      }
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-windows-defender-operational-fc-1007",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Windows Defender/Operational 1007",
+      "body": "Log channel: Microsoft-Windows-Windows Defender/Operational · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-Windows Defender/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-windows-defender-operational",
+        "corpus:risk",
+        "event:microsoft-windows-windows-defender-operational:1007"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-windows-defender-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Windows Defender/Operational — Event ID 1007",
+        "back": "The antimalware platform performed an action to protect your system from malware or other potentially unwanted software."
+      }
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-windows-defender-operational-fc-1008",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Windows Defender/Operational 1008",
+      "body": "Log channel: Microsoft-Windows-Windows Defender/Operational · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-Windows Defender/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-windows-defender-operational",
+        "corpus:risk",
+        "event:microsoft-windows-windows-defender-operational:1008"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-windows-defender-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Windows Defender/Operational — Event ID 1008",
+        "back": "The antimalware platform attempted to perform an action to protect your system from malware or other potentially unwanted software, but the action failed."
+      }
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-windows-defender-operational-fc-1012",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Windows Defender/Operational 1012",
+      "body": "Log channel: Microsoft-Windows-Windows Defender/Operational · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-Windows Defender/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-windows-defender-operational",
+        "corpus:risk",
+        "event:microsoft-windows-windows-defender-operational:1012"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-windows-defender-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Windows Defender/Operational — Event ID 1012",
+        "back": "unable to delete item in quarantine"
+      }
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-windows-defender-operational-fc-1014",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Windows Defender/Operational 1014",
+      "body": "Log channel: Microsoft-Windows-Windows Defender/Operational · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-Windows Defender/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-windows-defender-operational",
+        "corpus:risk",
+        "event:microsoft-windows-windows-defender-operational:1014"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-windows-defender-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Windows Defender/Operational — Event ID 1014",
+        "back": "The antimalware platform could not delete history of malware and other potentially unwanted software."
+      }
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-windows-defender-operational-fc-1015",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Windows Defender/Operational 1015",
+      "body": "Log channel: Microsoft-Windows-Windows Defender/Operational · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-Windows Defender/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-windows-defender-operational",
+        "corpus:risk",
+        "event:microsoft-windows-windows-defender-operational:1015"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-windows-defender-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Windows Defender/Operational — Event ID 1015",
+        "back": "The antimalware platform detected suspicious behavior."
+      }
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-windows-defender-operational-quiz-e1002",
+      "type": "quiz",
+      "title": "Recall: Microsoft-Windows-Windows Defender/Operational",
+      "body": "Inline feedback, no results page.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-Windows Defender/Operational"
+      },
+      "requires": [
+        "event:microsoft-windows-windows-defender-operational:1002"
+      ],
+      "estimated_seconds": 35,
+      "graded": true,
+      "payload": {
+        "format": "multiple-choice",
+        "question": "In the Microsoft-Windows-Windows Defender/Operational channel, which Event ID records: “An antimalware scan was stopped before it finished.”",
+        "choices": [
+          "1002",
+          "1003",
+          "1005",
+          "1007"
+        ],
+        "answer_index": 0,
+        "rationale": "Logging/Notable-Event-IDs-Risk.md#Microsoft-Windows-Windows Defender/Operational lists 1002 as “An antimalware scan was stopped before it finished.”."
+      }
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-windows-defender-operational-instr-e1002",
+      "type": "instructions",
+      "title": "Before you start: Microsoft-Windows-Windows Defender/Operational",
+      "body": "",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-Windows Defender/Operational"
+      },
+      "teaches": [
+        "concept:corpus-purpose"
+      ],
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "goal": "Match each Microsoft-Windows-Windows Defender/Operational Event ID to what it records.",
+        "what_youll_use": "The 8 cards you just reviewed — nothing outside them.",
+        "done_when": "Every ID on the left has a description on the right."
+      }
+    },
+    {
+      "id": "t1-m03-risk-microsoft-windows-windows-defender-operational-match-e1002",
+      "type": "exercise",
+      "title": "Match: Microsoft-Windows-Windows Defender/Operational IDs to what they record",
+      "body": "Every ID below was on the cards you just saw.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Microsoft-Windows-Windows Defender/Operational"
+      },
+      "requires": [
+        "channel:microsoft-windows-windows-defender-operational",
+        "event:microsoft-windows-windows-defender-operational:1002",
+        "event:microsoft-windows-windows-defender-operational:1003",
+        "event:microsoft-windows-windows-defender-operational:1005",
+        "event:microsoft-windows-windows-defender-operational:1007",
+        "event:microsoft-windows-windows-defender-operational:1008",
+        "event:microsoft-windows-windows-defender-operational:1012",
+        "event:microsoft-windows-windows-defender-operational:1014",
+        "event:microsoft-windows-windows-defender-operational:1015"
+      ],
+      "estimated_seconds": 60,
+      "difficulty": "standard",
+      "graded": true,
+      "payload": {
+        "format": "match",
+        "pairs": [
+          {
+            "left": "1002",
+            "right": "An antimalware scan was stopped before it finished."
+          },
+          {
+            "left": "1003",
+            "right": "malware scan paused"
+          },
+          {
+            "left": "1005",
+            "right": "An antimalware scan failed."
+          },
+          {
+            "left": "1007",
+            "right": "The antimalware platform performed an action to protect your system from malware or other potentially unwanted software."
+          },
+          {
+            "left": "1008",
+            "right": "The antimalware platform attempted to perform an action to protect your system from malware or other potentially unwanted software, but the action failed."
+          },
+          {
+            "left": "1012",
+            "right": "unable to delete item in quarantine"
+          },
+          {
+            "left": "1014",
+            "right": "The antimalware platform could not delete history of malware and other potentially unwanted software."
+          },
+          {
+            "left": "1015",
+            "right": "The antimalware platform detected suspicious behavior."
+          }
+        ]
+      }
+    }
+  ]
+}

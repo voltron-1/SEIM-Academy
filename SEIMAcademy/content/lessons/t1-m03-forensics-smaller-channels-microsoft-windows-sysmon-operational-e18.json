@@ -1,0 +1,457 @@
+{
+  "schema_version": "1.0.0",
+  "id": "t1-m03-forensics-smaller-channels-microsoft-windows-sysmon-operational-e18",
+  "tier": 1,
+  "module": "3",
+  "part": 2,
+  "title": "Smaller channels (forensics) — part 2",
+  "summary": "10 Event IDs swept from 6 low-volume channels on the forensics list.",
+  "estimated_seconds": 320,
+  "teaches": [
+    "channel:microsoft-windows-sysmon-operational",
+    "channel:microsoft-windows-taskscheduler-operational",
+    "channel:microsoft-windows-terminalservices-remoteconnectionmanager-operational",
+    "channel:microsoft-windows-tpm-wmi",
+    "channel:microsoft-windows-universaltelemetryclient-operational",
+    "channel:microsoft-windows-vhdmp-operational",
+    "concept:corpus-purpose",
+    "corpus:forensics",
+    "event:microsoft-windows-sysmon-operational:18",
+    "event:microsoft-windows-taskscheduler-operational:200",
+    "event:microsoft-windows-taskscheduler-operational:201",
+    "event:microsoft-windows-terminalservices-remoteconnectionmanager-operational:1149",
+    "event:microsoft-windows-tpm-wmi:513",
+    "event:microsoft-windows-tpm-wmi:514",
+    "event:microsoft-windows-universaltelemetryclient-operational:55",
+    "event:microsoft-windows-vhdmp-operational:1",
+    "event:microsoft-windows-vhdmp-operational:12",
+    "event:microsoft-windows-vhdmp-operational:2"
+  ],
+  "requires": [],
+  "sources": [
+    {
+      "path": "Logging/Notable-Event-IDs-Forensics.md"
+    },
+    {
+      "path": "Logging/Notable-Event-IDs-Forensics.md",
+      "heading": "Microsoft-Windows-Sysmon/Operational"
+    },
+    {
+      "path": "Logging/Notable-Event-IDs-Forensics.md",
+      "heading": "Microsoft-Windows-TaskScheduler/Operational"
+    },
+    {
+      "path": "Logging/Notable-Event-IDs-Forensics.md",
+      "heading": "Microsoft-Windows-TerminalServices-RemoteConnectionManager/Operational"
+    },
+    {
+      "path": "Logging/Notable-Event-IDs-Forensics.md",
+      "heading": "Microsoft-Windows-TPM-WMI"
+    },
+    {
+      "path": "Logging/Notable-Event-IDs-Forensics.md",
+      "heading": "Microsoft-Windows-UniversalTelemetryClient/Operational"
+    },
+    {
+      "path": "Logging/Notable-Event-IDs-Forensics.md",
+      "heading": "Microsoft-Windows-VHDMP-Operational"
+    }
+  ],
+  "generated": {
+    "generator": "build-content",
+    "generator_version": "1.0.0",
+    "source_repo": "TonyPhipps/SIEM",
+    "source_commit": "4adb971",
+    "source_license": "GPL-3.0",
+    "profile": "event-id-tables",
+    "content_hash": "d48951d6336a3f94665f5c9f2861561b5d4d627538fbf6a25e477b9d1d27558b"
+  },
+  "atoms": [
+    {
+      "id": "t1-m03-forensics-small-intro-microsoft-windows-sysmon-operational-e18",
+      "type": "reading",
+      "title": "Smaller channels",
+      "body": "Most Windows log channels contribute only a handful of notable Event IDs. This sitting sweeps 10 of them across 6 channels on the forensics list.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md"
+      },
+      "teaches": [
+        "channel:microsoft-windows-sysmon-operational",
+        "channel:microsoft-windows-taskscheduler-operational",
+        "channel:microsoft-windows-terminalservices-remoteconnectionmanager-operational",
+        "channel:microsoft-windows-tpm-wmi",
+        "channel:microsoft-windows-universaltelemetryclient-operational",
+        "channel:microsoft-windows-vhdmp-operational",
+        "corpus:forensics"
+      ],
+      "estimated_seconds": 45,
+      "graded": false,
+      "payload": {}
+    },
+    {
+      "id": "t1-m03-forensics-microsoft-windows-sysmon-operational-fc-18",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Sysmon/Operational 18",
+      "body": "Log channel: Microsoft-Windows-Sysmon/Operational · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Microsoft-Windows-Sysmon/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-sysmon-operational",
+        "corpus:forensics",
+        "event:microsoft-windows-sysmon-operational:18"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-sysmon-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Sysmon/Operational — Event ID 18",
+        "back": "PipeEvent (Pipe Connected)"
+      }
+    },
+    {
+      "id": "t1-m03-forensics-microsoft-windows-taskscheduler-operational-fc-200",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-TaskScheduler/Operational 200",
+      "body": "Log channel: Microsoft-Windows-TaskScheduler/Operational · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Microsoft-Windows-TaskScheduler/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-taskscheduler-operational",
+        "corpus:forensics",
+        "event:microsoft-windows-taskscheduler-operational:200"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-taskscheduler-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-TaskScheduler/Operational — Event ID 200",
+        "back": "Task Executed"
+      }
+    },
+    {
+      "id": "t1-m03-forensics-microsoft-windows-taskscheduler-operational-fc-201",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-TaskScheduler/Operational 201",
+      "body": "Log channel: Microsoft-Windows-TaskScheduler/Operational · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Microsoft-Windows-TaskScheduler/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-taskscheduler-operational",
+        "corpus:forensics",
+        "event:microsoft-windows-taskscheduler-operational:201"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-taskscheduler-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-TaskScheduler/Operational — Event ID 201",
+        "back": "Task Completed"
+      }
+    },
+    {
+      "id": "t1-m03-forensics-microsoft-windows-terminalservices-remoteconnectionmanager-operational-fc-1149",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-TerminalServices-RemoteConnectionManager/Operational 1149",
+      "body": "Log channel: Microsoft-Windows-TerminalServices-RemoteConnectionManager/Operational · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Microsoft-Windows-TerminalServices-RemoteConnectionManager/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-terminalservices-remoteconnectionmanager-operational",
+        "corpus:forensics",
+        "event:microsoft-windows-terminalservices-remoteconnectionmanager-operational:1149"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-terminalservices-remoteconnectionmanager-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-TerminalServices-RemoteConnectionManager/Operational — Event ID 1149",
+        "back": "User authentication succeeded"
+      }
+    },
+    {
+      "id": "t1-m03-forensics-microsoft-windows-tpm-wmi-fc-513",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-TPM-WMI 513",
+      "body": "Log channel: Microsoft-Windows-TPM-WMI · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Microsoft-Windows-TPM-WMI"
+      },
+      "teaches": [
+        "channel:microsoft-windows-tpm-wmi",
+        "corpus:forensics",
+        "event:microsoft-windows-tpm-wmi:513"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-tpm-wmi",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-TPM-WMI — Event ID 513",
+        "back": "TPM Owner Authorization information was backed up successfully to Active Directory Domain Services."
+      }
+    },
+    {
+      "id": "t1-m03-forensics-microsoft-windows-tpm-wmi-fc-514",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-TPM-WMI 514",
+      "body": "Log channel: Microsoft-Windows-TPM-WMI · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Microsoft-Windows-TPM-WMI"
+      },
+      "teaches": [
+        "channel:microsoft-windows-tpm-wmi",
+        "corpus:forensics",
+        "event:microsoft-windows-tpm-wmi:514"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-tpm-wmi",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-TPM-WMI — Event ID 514",
+        "back": "Failed to backup TPM Owner Authorization information to Active Directory Domain Services. Errorcode: %1"
+      }
+    },
+    {
+      "id": "t1-m03-forensics-microsoft-windows-universaltelemetryclient-operational-fc-55",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-UniversalTelemetryClient/Operational 55",
+      "body": "Log channel: Microsoft-Windows-UniversalTelemetryClient/Operational · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Microsoft-Windows-UniversalTelemetryClient/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-universaltelemetryclient-operational",
+        "corpus:forensics",
+        "event:microsoft-windows-universaltelemetryclient-operational:55"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-universaltelemetryclient-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-UniversalTelemetryClient/Operational — Event ID 55",
+        "back": "Indicates whether the computer has Internet or Not."
+      }
+    },
+    {
+      "id": "t1-m03-forensics-microsoft-windows-vhdmp-operational-fc-1",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-VHDMP-Operational 1",
+      "body": "Log channel: Microsoft-Windows-VHDMP-Operational · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Microsoft-Windows-VHDMP-Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-vhdmp-operational",
+        "corpus:forensics",
+        "event:microsoft-windows-vhdmp-operational:1"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-vhdmp-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-VHDMP-Operational — Event ID 1",
+        "back": "Triggers when you mount a VHD (Virtual Hard Disk)."
+      }
+    },
+    {
+      "id": "t1-m03-forensics-microsoft-windows-vhdmp-operational-fc-2",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-VHDMP-Operational 2",
+      "body": "Log channel: Microsoft-Windows-VHDMP-Operational · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Microsoft-Windows-VHDMP-Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-vhdmp-operational",
+        "corpus:forensics",
+        "event:microsoft-windows-vhdmp-operational:2"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-vhdmp-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-VHDMP-Operational — Event ID 2",
+        "back": "Triggers when you unmount a VHD (Virtual Hard Disk)."
+      }
+    },
+    {
+      "id": "t1-m03-forensics-microsoft-windows-vhdmp-operational-fc-12",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-VHDMP-Operational 12",
+      "body": "Log channel: Microsoft-Windows-VHDMP-Operational · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Microsoft-Windows-VHDMP-Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-vhdmp-operational",
+        "corpus:forensics",
+        "event:microsoft-windows-vhdmp-operational:12"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-vhdmp-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-VHDMP-Operational — Event ID 12",
+        "back": "Contains information about the type, path, handle count of the mounted device."
+      }
+    },
+    {
+      "id": "t1-m03-forensics-microsoft-windows-sysmon-operational-quiz-small-microsoft-windows-sysmon-operational-e18",
+      "type": "quiz",
+      "title": "Recall: Microsoft-Windows-Sysmon/Operational",
+      "body": "Inline feedback, no results page.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Microsoft-Windows-Sysmon/Operational"
+      },
+      "requires": [
+        "event:microsoft-windows-sysmon-operational:18"
+      ],
+      "estimated_seconds": 35,
+      "graded": true,
+      "payload": {
+        "format": "multiple-choice",
+        "question": "In the Microsoft-Windows-Sysmon/Operational channel, which Event ID records: “PipeEvent (Pipe Connected)”",
+        "choices": [
+          "18",
+          "200",
+          "201",
+          "1149"
+        ],
+        "answer_index": 0,
+        "rationale": "Logging/Notable-Event-IDs-Forensics.md#Microsoft-Windows-Sysmon/Operational lists 18 as “PipeEvent (Pipe Connected)”."
+      }
+    },
+    {
+      "id": "t1-m03-forensics-smaller-channels-instr-microsoft-windows-sysmon-operational-e18",
+      "type": "instructions",
+      "title": "Before you start: smaller channels",
+      "body": "",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md"
+      },
+      "teaches": [
+        "concept:corpus-purpose"
+      ],
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "goal": "Match each Event ID to what it records.",
+        "what_youll_use": "The 10 cards from this sitting.",
+        "done_when": "Every ID on the left has a description on the right."
+      }
+    },
+    {
+      "id": "t1-m03-forensics-small-match-microsoft-windows-sysmon-operational-e18",
+      "type": "exercise",
+      "title": "Match: smaller-channel IDs",
+      "body": "Every ID below was on the cards you just saw.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md"
+      },
+      "requires": [
+        "event:microsoft-windows-sysmon-operational:18",
+        "event:microsoft-windows-taskscheduler-operational:200",
+        "event:microsoft-windows-taskscheduler-operational:201",
+        "event:microsoft-windows-terminalservices-remoteconnectionmanager-operational:1149",
+        "event:microsoft-windows-tpm-wmi:513",
+        "event:microsoft-windows-tpm-wmi:514",
+        "event:microsoft-windows-universaltelemetryclient-operational:55",
+        "event:microsoft-windows-vhdmp-operational:1"
+      ],
+      "estimated_seconds": 60,
+      "difficulty": "standard",
+      "graded": true,
+      "payload": {
+        "format": "match",
+        "pairs": [
+          {
+            "left": "Microsoft-Windows-Sysmon/Operational 18",
+            "right": "PipeEvent (Pipe Connected)"
+          },
+          {
+            "left": "Microsoft-Windows-TaskScheduler/Operational 200",
+            "right": "Task Executed"
+          },
+          {
+            "left": "Microsoft-Windows-TaskScheduler/Operational 201",
+            "right": "Task Completed"
+          },
+          {
+            "left": "Microsoft-Windows-TerminalServices-RemoteConnectionManager/Operational 1149",
+            "right": "User authentication succeeded"
+          },
+          {
+            "left": "Microsoft-Windows-TPM-WMI 513",
+            "right": "TPM Owner Authorization information was backed up successfully to Active Directory Domain Services."
+          },
+          {
+            "left": "Microsoft-Windows-TPM-WMI 514",
+            "right": "Failed to backup TPM Owner Authorization information to Active Directory Domain Services. Errorcode: %1"
+          },
+          {
+            "left": "Microsoft-Windows-UniversalTelemetryClient/Operational 55",
+            "right": "Indicates whether the computer has Internet or Not."
+          },
+          {
+            "left": "Microsoft-Windows-VHDMP-Operational 1",
+            "right": "Triggers when you mount a VHD (Virtual Hard Disk)."
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,455 @@
+{
+  "schema_version": "1.0.0",
+  "id": "t1-m03-risk-security-e4816",
+  "tier": 1,
+  "module": "3",
+  "part": 3,
+  "title": "Security (risk) — part 3",
+  "summary": "11 notable Event IDs from the Security channel on the risk list.",
+  "estimated_seconds": 335,
+  "teaches": [
+    "channel:security",
+    "concept:corpus-purpose",
+    "corpus:risk",
+    "event:security:4816",
+    "event:security:4882",
+    "event:security:4946",
+    "event:security:4947",
+    "event:security:4948",
+    "event:security:4950",
+    "event:security:5025",
+    "event:security:5030",
+    "event:security:5031",
+    "event:security:5034",
+    "event:security:5035"
+  ],
+  "requires": [],
+  "sources": [
+    {
+      "path": "Logging/Notable-Event-IDs-Risk.md",
+      "heading": "Security"
+    }
+  ],
+  "generated": {
+    "generator": "build-content",
+    "generator_version": "1.0.0",
+    "source_repo": "TonyPhipps/SIEM",
+    "source_commit": "4adb971",
+    "source_license": "GPL-3.0",
+    "profile": "event-id-tables",
+    "content_hash": "24e235dbf3a3a8a6216f1c9172e2fd74c92fdeece70f95976ca2281e44fab18f"
+  },
+  "atoms": [
+    {
+      "id": "t1-m03-risk-security-intro-e4816",
+      "type": "reading",
+      "title": "Security",
+      "body": "The **Security** channel appears on the risk list with 53 notable Event IDs. This sitting covers 11 of them.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:risk"
+      ],
+      "estimated_seconds": 45,
+      "graded": false,
+      "payload": {}
+    },
+    {
+      "id": "t1-m03-risk-security-fc-4816",
+      "type": "flashcard",
+      "title": "Security 4816",
+      "body": "Log channel: Security · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:risk",
+        "event:security:4816"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4816",
+        "back": "RPC detected an integrity violation while decrypting an incoming message."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-fc-4882",
+      "type": "flashcard",
+      "title": "Security 4882",
+      "body": "Log channel: Security · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:risk",
+        "event:security:4882"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4882",
+        "back": "The security permissions for Certificate Services changed."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-fc-4946",
+      "type": "flashcard",
+      "title": "Security 4946",
+      "body": "Log channel: Security · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:risk",
+        "event:security:4946"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4946",
+        "back": "A change has been made to Windows Firewall exception list. A rule was added."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-fc-4947",
+      "type": "flashcard",
+      "title": "Security 4947",
+      "body": "Log channel: Security · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:risk",
+        "event:security:4947"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4947",
+        "back": "A change has been made to Windows Firewall exception list. A rule was modified."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-fc-4948",
+      "type": "flashcard",
+      "title": "Security 4948",
+      "body": "Log channel: Security · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:risk",
+        "event:security:4948"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4948",
+        "back": "A change has been made to Windows Firewall exception list. A rule was deleted."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-fc-4950",
+      "type": "flashcard",
+      "title": "Security 4950",
+      "body": "Log channel: Security · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:risk",
+        "event:security:4950"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 4950",
+        "back": "A Windows Firewall setting has changed (local only)"
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-fc-5025",
+      "type": "flashcard",
+      "title": "Security 5025",
+      "body": "Log channel: Security · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:risk",
+        "event:security:5025"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 5025",
+        "back": "Windows Firewall Service has been stopped"
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-fc-5030",
+      "type": "flashcard",
+      "title": "Security 5030",
+      "body": "Log channel: Security · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:risk",
+        "event:security:5030"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 5030",
+        "back": "Windows Firewall Service failed to start"
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-fc-5031",
+      "type": "flashcard",
+      "title": "Security 5031",
+      "body": "Log channel: Security · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:risk",
+        "event:security:5031"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 5031",
+        "back": "The Windows Firewall Service blocked an application from accepting incoming connections on the network."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-fc-5034",
+      "type": "flashcard",
+      "title": "Security 5034",
+      "body": "Log channel: Security · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:risk",
+        "event:security:5034"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 5034",
+        "back": "The Windows Firewall Driver was stopped"
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-fc-5035",
+      "type": "flashcard",
+      "title": "Security 5035",
+      "body": "Log channel: Security · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:risk",
+        "event:security:5035"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 5035",
+        "back": "Windows Firewall Driver failed to start"
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-quiz-e4816",
+      "type": "quiz",
+      "title": "Recall: Security",
+      "body": "Inline feedback, no results page.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "requires": [
+        "event:security:4816"
+      ],
+      "estimated_seconds": 35,
+      "graded": true,
+      "payload": {
+        "format": "multiple-choice",
+        "question": "In the Security channel, which Event ID records: “RPC detected an integrity violation while decrypting an incoming message.”",
+        "choices": [
+          "4816",
+          "4882",
+          "4946",
+          "4947"
+        ],
+        "answer_index": 0,
+        "rationale": "Logging/Notable-Event-IDs-Risk.md#Security lists 4816 as “RPC detected an integrity violation while decrypting an incoming message.”."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-instr-e4816",
+      "type": "instructions",
+      "title": "Before you start: Security",
+      "body": "",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "concept:corpus-purpose"
+      ],
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "goal": "Match each Security Event ID to what it records.",
+        "what_youll_use": "The 11 cards you just reviewed — nothing outside them.",
+        "done_when": "Every ID on the left has a description on the right."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-match-e4816",
+      "type": "exercise",
+      "title": "Match: Security IDs to what they record",
+      "body": "Every ID below was on the cards you just saw.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "requires": [
+        "channel:security",
+        "event:security:4816",
+        "event:security:4882",
+        "event:security:4946",
+        "event:security:4947",
+        "event:security:4948",
+        "event:security:4950",
+        "event:security:5025",
+        "event:security:5030"
+      ],
+      "estimated_seconds": 60,
+      "difficulty": "standard",
+      "graded": true,
+      "payload": {
+        "format": "match",
+        "pairs": [
+          {
+            "left": "4816",
+            "right": "RPC detected an integrity violation while decrypting an incoming message."
+          },
+          {
+            "left": "4882",
+            "right": "The security permissions for Certificate Services changed."
+          },
+          {
+            "left": "4946",
+            "right": "A change has been made to Windows Firewall exception list. A rule was added."
+          },
+          {
+            "left": "4947",
+            "right": "A change has been made to Windows Firewall exception list. A rule was modified."
+          },
+          {
+            "left": "4948",
+            "right": "A change has been made to Windows Firewall exception list. A rule was deleted."
+          },
+          {
+            "left": "4950",
+            "right": "A Windows Firewall setting has changed (local only)"
+          },
+          {
+            "left": "5025",
+            "right": "Windows Firewall Service has been stopped"
+          },
+          {
+            "left": "5030",
+            "right": "Windows Firewall Service failed to start"
+          }
+        ]
+      }
+    }
+  ]
+}

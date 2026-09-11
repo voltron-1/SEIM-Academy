@@ -1,0 +1,454 @@
+{
+  "schema_version": "1.0.0",
+  "id": "t1-m03-forensics-microsoft-windows-winrm-operational-e6",
+  "tier": 1,
+  "module": "3",
+  "title": "Microsoft-Windows-WinRM/Operational (forensics)",
+  "summary": "11 notable Event IDs from the Microsoft-Windows-WinRM/Operational channel on the forensics list.",
+  "estimated_seconds": 335,
+  "teaches": [
+    "channel:microsoft-windows-winrm-operational",
+    "concept:corpus-purpose",
+    "corpus:forensics",
+    "event:microsoft-windows-winrm-operational:134",
+    "event:microsoft-windows-winrm-operational:15",
+    "event:microsoft-windows-winrm-operational:16",
+    "event:microsoft-windows-winrm-operational:168",
+    "event:microsoft-windows-winrm-operational:169",
+    "event:microsoft-windows-winrm-operational:33",
+    "event:microsoft-windows-winrm-operational:6",
+    "event:microsoft-windows-winrm-operational:8",
+    "event:microsoft-windows-winrm-operational:81",
+    "event:microsoft-windows-winrm-operational:82",
+    "event:microsoft-windows-winrm-operational:91"
+  ],
+  "requires": [],
+  "sources": [
+    {
+      "path": "Logging/Notable-Event-IDs-Forensics.md",
+      "heading": "Microsoft-Windows-WinRM/Operational"
+    }
+  ],
+  "generated": {
+    "generator": "build-content",
+    "generator_version": "1.0.0",
+    "source_repo": "TonyPhipps/SIEM",
+    "source_commit": "4adb971",
+    "source_license": "GPL-3.0",
+    "profile": "event-id-tables",
+    "content_hash": "8e7b76987bcf39999b1b763266a7bc1ee7c3f1fb6d9c50fb24bf8847d7386865"
+  },
+  "atoms": [
+    {
+      "id": "t1-m03-forensics-microsoft-windows-winrm-operational-intro-e6",
+      "type": "reading",
+      "title": "Microsoft-Windows-WinRM/Operational",
+      "body": "The **Microsoft-Windows-WinRM/Operational** channel appears on the forensics list with 11 notable Event IDs. This sitting covers 11 of them.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Microsoft-Windows-WinRM/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-winrm-operational",
+        "corpus:forensics"
+      ],
+      "estimated_seconds": 45,
+      "graded": false,
+      "payload": {}
+    },
+    {
+      "id": "t1-m03-forensics-microsoft-windows-winrm-operational-fc-6",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-WinRM/Operational 6",
+      "body": "Log channel: Microsoft-Windows-WinRM/Operational · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Microsoft-Windows-WinRM/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-winrm-operational",
+        "corpus:forensics",
+        "event:microsoft-windows-winrm-operational:6"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-winrm-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-WinRM/Operational — Event ID 6",
+        "back": "WSMan Session created"
+      }
+    },
+    {
+      "id": "t1-m03-forensics-microsoft-windows-winrm-operational-fc-8",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-WinRM/Operational 8",
+      "body": "Log channel: Microsoft-Windows-WinRM/Operational · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Microsoft-Windows-WinRM/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-winrm-operational",
+        "corpus:forensics",
+        "event:microsoft-windows-winrm-operational:8"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-winrm-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-WinRM/Operational — Event ID 8",
+        "back": "WSMan Session deinitialization"
+      }
+    },
+    {
+      "id": "t1-m03-forensics-microsoft-windows-winrm-operational-fc-15",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-WinRM/Operational 15",
+      "body": "Log channel: Microsoft-Windows-WinRM/Operational · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Microsoft-Windows-WinRM/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-winrm-operational",
+        "corpus:forensics",
+        "event:microsoft-windows-winrm-operational:15"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-winrm-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-WinRM/Operational — Event ID 15",
+        "back": "WSMan Session deinitialization"
+      }
+    },
+    {
+      "id": "t1-m03-forensics-microsoft-windows-winrm-operational-fc-16",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-WinRM/Operational 16",
+      "body": "Log channel: Microsoft-Windows-WinRM/Operational · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Microsoft-Windows-WinRM/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-winrm-operational",
+        "corpus:forensics",
+        "event:microsoft-windows-winrm-operational:16"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-winrm-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-WinRM/Operational — Event ID 16",
+        "back": "WSMan Session deinitialization"
+      }
+    },
+    {
+      "id": "t1-m03-forensics-microsoft-windows-winrm-operational-fc-33",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-WinRM/Operational 33",
+      "body": "Log channel: Microsoft-Windows-WinRM/Operational · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Microsoft-Windows-WinRM/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-winrm-operational",
+        "corpus:forensics",
+        "event:microsoft-windows-winrm-operational:33"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-winrm-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-WinRM/Operational — Event ID 33",
+        "back": "WSMan Session deinitialization"
+      }
+    },
+    {
+      "id": "t1-m03-forensics-microsoft-windows-winrm-operational-fc-81",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-WinRM/Operational 81",
+      "body": "Log channel: Microsoft-Windows-WinRM/Operational · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Microsoft-Windows-WinRM/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-winrm-operational",
+        "corpus:forensics",
+        "event:microsoft-windows-winrm-operational:81"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-winrm-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-WinRM/Operational — Event ID 81",
+        "back": "Processing Client Request"
+      }
+    },
+    {
+      "id": "t1-m03-forensics-microsoft-windows-winrm-operational-fc-82",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-WinRM/Operational 82",
+      "body": "Log channel: Microsoft-Windows-WinRM/Operational · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Microsoft-Windows-WinRM/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-winrm-operational",
+        "corpus:forensics",
+        "event:microsoft-windows-winrm-operational:82"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-winrm-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-WinRM/Operational — Event ID 82",
+        "back": "Entering the plugin"
+      }
+    },
+    {
+      "id": "t1-m03-forensics-microsoft-windows-winrm-operational-fc-134",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-WinRM/Operational 134",
+      "body": "Log channel: Microsoft-Windows-WinRM/Operational · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Microsoft-Windows-WinRM/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-winrm-operational",
+        "corpus:forensics",
+        "event:microsoft-windows-winrm-operational:134"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-winrm-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-WinRM/Operational — Event ID 134",
+        "back": "Sending response"
+      }
+    },
+    {
+      "id": "t1-m03-forensics-microsoft-windows-winrm-operational-fc-91",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-WinRM/Operational 91",
+      "body": "Log channel: Microsoft-Windows-WinRM/Operational · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Microsoft-Windows-WinRM/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-winrm-operational",
+        "corpus:forensics",
+        "event:microsoft-windows-winrm-operational:91"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-winrm-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-WinRM/Operational — Event ID 91",
+        "back": "Session Created"
+      }
+    },
+    {
+      "id": "t1-m03-forensics-microsoft-windows-winrm-operational-fc-168",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-WinRM/Operational 168",
+      "body": "Log channel: Microsoft-Windows-WinRM/Operational · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Microsoft-Windows-WinRM/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-winrm-operational",
+        "corpus:forensics",
+        "event:microsoft-windows-winrm-operational:168"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-winrm-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-WinRM/Operational — Event ID 168",
+        "back": "Authenticating attempt"
+      }
+    },
+    {
+      "id": "t1-m03-forensics-microsoft-windows-winrm-operational-fc-169",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-WinRM/Operational 169",
+      "body": "Log channel: Microsoft-Windows-WinRM/Operational · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Microsoft-Windows-WinRM/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-winrm-operational",
+        "corpus:forensics",
+        "event:microsoft-windows-winrm-operational:169"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-winrm-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-WinRM/Operational — Event ID 169",
+        "back": "Authentication success"
+      }
+    },
+    {
+      "id": "t1-m03-forensics-microsoft-windows-winrm-operational-quiz-e6",
+      "type": "quiz",
+      "title": "Recall: Microsoft-Windows-WinRM/Operational",
+      "body": "Inline feedback, no results page.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Microsoft-Windows-WinRM/Operational"
+      },
+      "requires": [
+        "event:microsoft-windows-winrm-operational:6"
+      ],
+      "estimated_seconds": 35,
+      "graded": true,
+      "payload": {
+        "format": "multiple-choice",
+        "question": "In the Microsoft-Windows-WinRM/Operational channel, which Event ID records: “WSMan Session created”",
+        "choices": [
+          "6",
+          "8",
+          "15",
+          "16"
+        ],
+        "answer_index": 0,
+        "rationale": "Logging/Notable-Event-IDs-Forensics.md#Microsoft-Windows-WinRM/Operational lists 6 as “WSMan Session created”."
+      }
+    },
+    {
+      "id": "t1-m03-forensics-microsoft-windows-winrm-operational-instr-e6",
+      "type": "instructions",
+      "title": "Before you start: Microsoft-Windows-WinRM/Operational",
+      "body": "",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Microsoft-Windows-WinRM/Operational"
+      },
+      "teaches": [
+        "concept:corpus-purpose"
+      ],
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "goal": "Match each Microsoft-Windows-WinRM/Operational Event ID to what it records.",
+        "what_youll_use": "The 11 cards you just reviewed — nothing outside them.",
+        "done_when": "Every ID on the left has a description on the right."
+      }
+    },
+    {
+      "id": "t1-m03-forensics-microsoft-windows-winrm-operational-match-e6",
+      "type": "exercise",
+      "title": "Match: Microsoft-Windows-WinRM/Operational IDs to what they record",
+      "body": "Every ID below was on the cards you just saw.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Microsoft-Windows-WinRM/Operational"
+      },
+      "requires": [
+        "channel:microsoft-windows-winrm-operational",
+        "event:microsoft-windows-winrm-operational:134",
+        "event:microsoft-windows-winrm-operational:15",
+        "event:microsoft-windows-winrm-operational:16",
+        "event:microsoft-windows-winrm-operational:33",
+        "event:microsoft-windows-winrm-operational:6",
+        "event:microsoft-windows-winrm-operational:8",
+        "event:microsoft-windows-winrm-operational:81",
+        "event:microsoft-windows-winrm-operational:82"
+      ],
+      "estimated_seconds": 60,
+      "difficulty": "standard",
+      "graded": true,
+      "payload": {
+        "format": "match",
+        "pairs": [
+          {
+            "left": "6",
+            "right": "WSMan Session created"
+          },
+          {
+            "left": "8",
+            "right": "WSMan Session deinitialization"
+          },
+          {
+            "left": "15",
+            "right": "WSMan Session deinitialization"
+          },
+          {
+            "left": "16",
+            "right": "WSMan Session deinitialization"
+          },
+          {
+            "left": "33",
+            "right": "WSMan Session deinitialization"
+          },
+          {
+            "left": "81",
+            "right": "Processing Client Request"
+          },
+          {
+            "left": "82",
+            "right": "Entering the plugin"
+          },
+          {
+            "left": "134",
+            "right": "Sending response"
+          }
+        ]
+      }
+    }
+  ]
+}

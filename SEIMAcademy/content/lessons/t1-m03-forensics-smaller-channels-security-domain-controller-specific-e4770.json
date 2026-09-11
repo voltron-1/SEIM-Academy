@@ -1,0 +1,463 @@
+{
+  "schema_version": "1.0.0",
+  "id": "t1-m03-forensics-smaller-channels-security-domain-controller-specific-e4770",
+  "tier": 1,
+  "module": "3",
+  "part": 1,
+  "title": "Smaller channels (forensics) — part 1",
+  "summary": "10 Event IDs swept from 7 low-volume channels on the forensics list.",
+  "estimated_seconds": 320,
+  "teaches": [
+    "channel:microsoft-windows-dnsserver-audit",
+    "channel:microsoft-windows-powershell-analytic",
+    "channel:microsoft-windows-printservice-operational",
+    "channel:microsoft-windows-shell-core-operational",
+    "channel:microsoft-windows-smbclient-security",
+    "channel:microsoft-windows-sysmon-operational",
+    "channel:security-domain-controller-specific",
+    "concept:corpus-purpose",
+    "corpus:forensics",
+    "event:microsoft-windows-dnsserver-audit:541",
+    "event:microsoft-windows-powershell-analytic:32867",
+    "event:microsoft-windows-powershell-analytic:32868",
+    "event:microsoft-windows-printservice-operational:307",
+    "event:microsoft-windows-shell-core-operational:9707",
+    "event:microsoft-windows-shell-core-operational:9708",
+    "event:microsoft-windows-smbclient-security:31001",
+    "event:microsoft-windows-sysmon-operational:15",
+    "event:security-domain-controller-specific:4770",
+    "event:security-domain-controller-specific:4820"
+  ],
+  "requires": [],
+  "sources": [
+    {
+      "path": "Logging/Notable-Event-IDs-Forensics.md"
+    },
+    {
+      "path": "Logging/Notable-Event-IDs-Forensics.md",
+      "heading": "Microsoft-Windows-DNSServer/Audit"
+    },
+    {
+      "path": "Logging/Notable-Event-IDs-Forensics.md",
+      "heading": "Microsoft-Windows-PowerShell/Analytic"
+    },
+    {
+      "path": "Logging/Notable-Event-IDs-Forensics.md",
+      "heading": "Microsoft-Windows-PrintService/Operational"
+    },
+    {
+      "path": "Logging/Notable-Event-IDs-Forensics.md",
+      "heading": "Microsoft-Windows-Shell-Core/Operational"
+    },
+    {
+      "path": "Logging/Notable-Event-IDs-Forensics.md",
+      "heading": "Microsoft-Windows-SmbClient/Security"
+    },
+    {
+      "path": "Logging/Notable-Event-IDs-Forensics.md",
+      "heading": "Microsoft-Windows-Sysmon/Operational"
+    },
+    {
+      "path": "Logging/Notable-Event-IDs-Forensics.md",
+      "heading": "Security (Domain Controller Specific)"
+    }
+  ],
+  "generated": {
+    "generator": "build-content",
+    "generator_version": "1.0.0",
+    "source_repo": "TonyPhipps/SIEM",
+    "source_commit": "4adb971",
+    "source_license": "GPL-3.0",
+    "profile": "event-id-tables",
+    "content_hash": "28870a3d0bc9bcfeaccbd6e527771d78816bdc1edddd223b574e6c438177f1ef"
+  },
+  "atoms": [
+    {
+      "id": "t1-m03-forensics-small-intro-security-domain-controller-specific-e4770",
+      "type": "reading",
+      "title": "Smaller channels",
+      "body": "Most Windows log channels contribute only a handful of notable Event IDs. This sitting sweeps 10 of them across 7 channels on the forensics list.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md"
+      },
+      "teaches": [
+        "channel:microsoft-windows-dnsserver-audit",
+        "channel:microsoft-windows-powershell-analytic",
+        "channel:microsoft-windows-printservice-operational",
+        "channel:microsoft-windows-shell-core-operational",
+        "channel:microsoft-windows-smbclient-security",
+        "channel:microsoft-windows-sysmon-operational",
+        "channel:security-domain-controller-specific",
+        "corpus:forensics"
+      ],
+      "estimated_seconds": 45,
+      "graded": false,
+      "payload": {}
+    },
+    {
+      "id": "t1-m03-forensics-security-domain-controller-specific-fc-4770",
+      "type": "flashcard",
+      "title": "Security (Domain Controller Specific) 4770",
+      "body": "Log channel: Security (Domain Controller Specific) · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Security (Domain Controller Specific)"
+      },
+      "teaches": [
+        "channel:security-domain-controller-specific",
+        "corpus:forensics",
+        "event:security-domain-controller-specific:4770"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security-domain-controller-specific",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security (Domain Controller Specific) — Event ID 4770",
+        "back": "A Kerberos service ticket was renewed."
+      }
+    },
+    {
+      "id": "t1-m03-forensics-security-domain-controller-specific-fc-4820",
+      "type": "flashcard",
+      "title": "Security (Domain Controller Specific) 4820",
+      "body": "Log channel: Security (Domain Controller Specific) · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Security (Domain Controller Specific)"
+      },
+      "teaches": [
+        "channel:security-domain-controller-specific",
+        "corpus:forensics",
+        "event:security-domain-controller-specific:4820"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security-domain-controller-specific",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security (Domain Controller Specific) — Event ID 4820",
+        "back": "A Kerberos Ticket-granting-ticket (TGT) was denied because the device does not meet the access control restrictions"
+      }
+    },
+    {
+      "id": "t1-m03-forensics-microsoft-windows-dnsserver-audit-fc-541",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-DNSServer/Audit 541",
+      "body": "Log channel: Microsoft-Windows-DNSServer/Audit · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Microsoft-Windows-DNSServer/Audit"
+      },
+      "teaches": [
+        "channel:microsoft-windows-dnsserver-audit",
+        "corpus:forensics",
+        "event:microsoft-windows-dnsserver-audit:541"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-dnsserver-audit",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-DNSServer/Audit — Event ID 541",
+        "back": "The setting serverlevelplugindll on scope . has been set to $dll_path"
+      }
+    },
+    {
+      "id": "t1-m03-forensics-microsoft-windows-printservice-operational-fc-307",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-PrintService/Operational 307",
+      "body": "Log channel: Microsoft-Windows-PrintService/Operational · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Microsoft-Windows-PrintService/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-printservice-operational",
+        "corpus:forensics",
+        "event:microsoft-windows-printservice-operational:307"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-printservice-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-PrintService/Operational — Event ID 307",
+        "back": "Print Job"
+      }
+    },
+    {
+      "id": "t1-m03-forensics-microsoft-windows-powershell-analytic-fc-32867",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-PowerShell/Analytic 32867",
+      "body": "Log channel: Microsoft-Windows-PowerShell/Analytic · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Microsoft-Windows-PowerShell/Analytic"
+      },
+      "teaches": [
+        "channel:microsoft-windows-powershell-analytic",
+        "corpus:forensics",
+        "event:microsoft-windows-powershell-analytic:32867"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-powershell-analytic",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-PowerShell/Analytic — Event ID 32867",
+        "back": "PowerShell input object"
+      }
+    },
+    {
+      "id": "t1-m03-forensics-microsoft-windows-powershell-analytic-fc-32868",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-PowerShell/Analytic 32868",
+      "body": "Log channel: Microsoft-Windows-PowerShell/Analytic · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Microsoft-Windows-PowerShell/Analytic"
+      },
+      "teaches": [
+        "channel:microsoft-windows-powershell-analytic",
+        "corpus:forensics",
+        "event:microsoft-windows-powershell-analytic:32868"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-powershell-analytic",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-PowerShell/Analytic — Event ID 32868",
+        "back": "PowerShell output object"
+      }
+    },
+    {
+      "id": "t1-m03-forensics-microsoft-windows-shell-core-operational-fc-9707",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Shell-Core/Operational 9707",
+      "body": "Log channel: Microsoft-Windows-Shell-Core/Operational · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Microsoft-Windows-Shell-Core/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-shell-core-operational",
+        "corpus:forensics",
+        "event:microsoft-windows-shell-core-operational:9707"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-shell-core-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Shell-Core/Operational — Event ID 9707",
+        "back": "Detects the start of the execution of a process from both the \"Software\\Microsoft\\Windows\\CurrentVersion\\Run\" and \"Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce\" registry keys with the full command line."
+      }
+    },
+    {
+      "id": "t1-m03-forensics-microsoft-windows-shell-core-operational-fc-9708",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Shell-Core/Operational 9708",
+      "body": "Log channel: Microsoft-Windows-Shell-Core/Operational · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Microsoft-Windows-Shell-Core/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-shell-core-operational",
+        "corpus:forensics",
+        "event:microsoft-windows-shell-core-operational:9708"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-shell-core-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Shell-Core/Operational — Event ID 9708",
+        "back": "Detects when the aforementioned process finishes execution with the corresponding PID (Useful when the process is still running on the system)."
+      }
+    },
+    {
+      "id": "t1-m03-forensics-microsoft-windows-smbclient-security-fc-31001",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-SmbClient/Security 31001",
+      "body": "Log channel: Microsoft-Windows-SmbClient/Security · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Microsoft-Windows-SmbClient/Security"
+      },
+      "teaches": [
+        "channel:microsoft-windows-smbclient-security",
+        "corpus:forensics",
+        "event:microsoft-windows-smbclient-security:31001"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-smbclient-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-SmbClient/Security — Event ID 31001",
+        "back": "Failed login to destination"
+      }
+    },
+    {
+      "id": "t1-m03-forensics-microsoft-windows-sysmon-operational-fc-15",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Sysmon/Operational 15",
+      "body": "Log channel: Microsoft-Windows-Sysmon/Operational · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Microsoft-Windows-Sysmon/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-sysmon-operational",
+        "corpus:forensics",
+        "event:microsoft-windows-sysmon-operational:15"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-sysmon-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Sysmon/Operational — Event ID 15",
+        "back": "FileCreateStreamHash"
+      }
+    },
+    {
+      "id": "t1-m03-forensics-security-domain-controller-specific-quiz-small-security-domain-controller-specific-e4770",
+      "type": "quiz",
+      "title": "Recall: Security (Domain Controller Specific)",
+      "body": "Inline feedback, no results page.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Security (Domain Controller Specific)"
+      },
+      "requires": [
+        "event:security-domain-controller-specific:4770"
+      ],
+      "estimated_seconds": 35,
+      "graded": true,
+      "payload": {
+        "format": "multiple-choice",
+        "question": "In the Security (Domain Controller Specific) channel, which Event ID records: “A Kerberos service ticket was renewed.”",
+        "choices": [
+          "307",
+          "541",
+          "4770",
+          "4820"
+        ],
+        "answer_index": 2,
+        "rationale": "Logging/Notable-Event-IDs-Forensics.md#Security (Domain Controller Specific) lists 4770 as “A Kerberos service ticket was renewed.”."
+      }
+    },
+    {
+      "id": "t1-m03-forensics-smaller-channels-instr-security-domain-controller-specific-e4770",
+      "type": "instructions",
+      "title": "Before you start: smaller channels",
+      "body": "",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md"
+      },
+      "teaches": [
+        "concept:corpus-purpose"
+      ],
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "goal": "Match each Event ID to what it records.",
+        "what_youll_use": "The 10 cards from this sitting.",
+        "done_when": "Every ID on the left has a description on the right."
+      }
+    },
+    {
+      "id": "t1-m03-forensics-small-match-security-domain-controller-specific-e4770",
+      "type": "exercise",
+      "title": "Match: smaller-channel IDs",
+      "body": "Every ID below was on the cards you just saw.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md"
+      },
+      "requires": [
+        "event:microsoft-windows-dnsserver-audit:541",
+        "event:microsoft-windows-powershell-analytic:32867",
+        "event:microsoft-windows-powershell-analytic:32868",
+        "event:microsoft-windows-printservice-operational:307",
+        "event:microsoft-windows-shell-core-operational:9707",
+        "event:microsoft-windows-shell-core-operational:9708",
+        "event:security-domain-controller-specific:4770",
+        "event:security-domain-controller-specific:4820"
+      ],
+      "estimated_seconds": 60,
+      "difficulty": "standard",
+      "graded": true,
+      "payload": {
+        "format": "match",
+        "pairs": [
+          {
+            "left": "Security (Domain Controller Specific) 4770",
+            "right": "A Kerberos service ticket was renewed."
+          },
+          {
+            "left": "Security (Domain Controller Specific) 4820",
+            "right": "A Kerberos Ticket-granting-ticket (TGT) was denied because the device does not meet the access control restrictions"
+          },
+          {
+            "left": "Microsoft-Windows-DNSServer/Audit 541",
+            "right": "The setting serverlevelplugindll on scope . has been set to $dll_path"
+          },
+          {
+            "left": "Microsoft-Windows-PrintService/Operational 307",
+            "right": "Print Job"
+          },
+          {
+            "left": "Microsoft-Windows-PowerShell/Analytic 32867",
+            "right": "PowerShell input object"
+          },
+          {
+            "left": "Microsoft-Windows-PowerShell/Analytic 32868",
+            "right": "PowerShell output object"
+          },
+          {
+            "left": "Microsoft-Windows-Shell-Core/Operational 9707",
+            "right": "Detects the start of the execution of a process from both the \"Software\\Microsoft\\Windows\\CurrentVersion\\Run\" and \"Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce\" registry keys with the full command line."
+          },
+          {
+            "left": "Microsoft-Windows-Shell-Core/Operational 9708",
+            "right": "Detects when the aforementioned process finishes execution with the corresponding PID (Useful when the process is still running on the system)."
+          }
+        ]
+      }
+    }
+  ]
+}

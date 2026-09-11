@@ -1,0 +1,428 @@
+{
+  "schema_version": "1.0.0",
+  "id": "t1-m03-risk-security-e6278",
+  "tier": 1,
+  "module": "3",
+  "part": 5,
+  "title": "Security (risk) — part 5",
+  "summary": "10 notable Event IDs from the Security channel on the risk list.",
+  "estimated_seconds": 320,
+  "teaches": [
+    "channel:security",
+    "concept:corpus-purpose",
+    "corpus:risk",
+    "event:security:6278",
+    "event:security:6279",
+    "event:security:6280",
+    "event:security:6281",
+    "event:security:6410",
+    "event:security:6419",
+    "event:security:6420",
+    "event:security:6421",
+    "event:security:6422",
+    "event:security:6424"
+  ],
+  "requires": [],
+  "sources": [
+    {
+      "path": "Logging/Notable-Event-IDs-Risk.md",
+      "heading": "Security"
+    }
+  ],
+  "generated": {
+    "generator": "build-content",
+    "generator_version": "1.0.0",
+    "source_repo": "TonyPhipps/SIEM",
+    "source_commit": "4adb971",
+    "source_license": "GPL-3.0",
+    "profile": "event-id-tables",
+    "content_hash": "507734135662aac3aaacc96632260dfe6367d351a41ad8a0f458409c9971bd9b"
+  },
+  "atoms": [
+    {
+      "id": "t1-m03-risk-security-intro-e6278",
+      "type": "reading",
+      "title": "Security",
+      "body": "The **Security** channel appears on the risk list with 53 notable Event IDs. This sitting covers 10 of them.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:risk"
+      ],
+      "estimated_seconds": 45,
+      "graded": false,
+      "payload": {}
+    },
+    {
+      "id": "t1-m03-risk-security-fc-6278",
+      "type": "flashcard",
+      "title": "Security 6278",
+      "body": "Log channel: Security · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:risk",
+        "event:security:6278"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 6278",
+        "back": "Network Policy Server granted full access to a user because the host met the defined health policy"
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-fc-6279",
+      "type": "flashcard",
+      "title": "Security 6279",
+      "body": "Log channel: Security · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:risk",
+        "event:security:6279"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 6279",
+        "back": "Network Policy Server locked the user account due to repeated failed authentication attempts"
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-fc-6280",
+      "type": "flashcard",
+      "title": "Security 6280",
+      "body": "Log channel: Security · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:risk",
+        "event:security:6280"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 6280",
+        "back": "Network Policy Server unlocked the user account"
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-fc-6281",
+      "type": "flashcard",
+      "title": "Security 6281",
+      "body": "Log channel: Security · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:risk",
+        "event:security:6281"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 6281",
+        "back": "Code Integrity determined that the page hashes of an image file are not valid."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-fc-6410",
+      "type": "flashcard",
+      "title": "Security 6410",
+      "body": "Log channel: Security · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:risk",
+        "event:security:6410"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 6410",
+        "back": "Code integrity determined that a file does not meet the security requirements to load into a process."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-fc-6419",
+      "type": "flashcard",
+      "title": "Security 6419",
+      "body": "Log channel: Security · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:risk",
+        "event:security:6419"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 6419",
+        "back": "A request was made to disable a device."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-fc-6420",
+      "type": "flashcard",
+      "title": "Security 6420",
+      "body": "Log channel: Security · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:risk",
+        "event:security:6420"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 6420",
+        "back": "A device was disabled."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-fc-6421",
+      "type": "flashcard",
+      "title": "Security 6421",
+      "body": "Log channel: Security · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:risk",
+        "event:security:6421"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 6421",
+        "back": "A request was made to enable a device."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-fc-6422",
+      "type": "flashcard",
+      "title": "Security 6422",
+      "body": "Log channel: Security · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:risk",
+        "event:security:6422"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 6422",
+        "back": "A device was enabled."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-fc-6424",
+      "type": "flashcard",
+      "title": "Security 6424",
+      "body": "Log channel: Security · Source list: risk",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "channel:security",
+        "corpus:risk",
+        "event:security:6424"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-security",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Security — Event ID 6424",
+        "back": "The installation of this device was allowed after having previously been forbidden by policy."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-quiz-e6278",
+      "type": "quiz",
+      "title": "Recall: Security",
+      "body": "Inline feedback, no results page.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "requires": [
+        "event:security:6278"
+      ],
+      "estimated_seconds": 35,
+      "graded": true,
+      "payload": {
+        "format": "multiple-choice",
+        "question": "In the Security channel, which Event ID records: “Network Policy Server granted full access to a user because the host met the defined health policy”",
+        "choices": [
+          "6278",
+          "6279",
+          "6280",
+          "6281"
+        ],
+        "answer_index": 0,
+        "rationale": "Logging/Notable-Event-IDs-Risk.md#Security lists 6278 as “Network Policy Server granted full access to a user because the host met the defined health policy”."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-instr-e6278",
+      "type": "instructions",
+      "title": "Before you start: Security",
+      "body": "",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "teaches": [
+        "concept:corpus-purpose"
+      ],
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "goal": "Match each Security Event ID to what it records.",
+        "what_youll_use": "The 10 cards you just reviewed — nothing outside them.",
+        "done_when": "Every ID on the left has a description on the right."
+      }
+    },
+    {
+      "id": "t1-m03-risk-security-match-e6278",
+      "type": "exercise",
+      "title": "Match: Security IDs to what they record",
+      "body": "Every ID below was on the cards you just saw.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Risk.md",
+        "heading": "Security"
+      },
+      "requires": [
+        "channel:security",
+        "event:security:6278",
+        "event:security:6279",
+        "event:security:6280",
+        "event:security:6281",
+        "event:security:6410",
+        "event:security:6419",
+        "event:security:6420",
+        "event:security:6421"
+      ],
+      "estimated_seconds": 60,
+      "difficulty": "standard",
+      "graded": true,
+      "payload": {
+        "format": "match",
+        "pairs": [
+          {
+            "left": "6278",
+            "right": "Network Policy Server granted full access to a user because the host met the defined health policy"
+          },
+          {
+            "left": "6279",
+            "right": "Network Policy Server locked the user account due to repeated failed authentication attempts"
+          },
+          {
+            "left": "6280",
+            "right": "Network Policy Server unlocked the user account"
+          },
+          {
+            "left": "6281",
+            "right": "Code Integrity determined that the page hashes of an image file are not valid."
+          },
+          {
+            "left": "6410",
+            "right": "Code integrity determined that a file does not meet the security requirements to load into a process."
+          },
+          {
+            "left": "6419",
+            "right": "A request was made to disable a device."
+          },
+          {
+            "left": "6420",
+            "right": "A device was disabled."
+          },
+          {
+            "left": "6421",
+            "right": "A request was made to enable a device."
+          }
+        ]
+      }
+    }
+  ]
+}

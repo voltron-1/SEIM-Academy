@@ -1,0 +1,441 @@
+{
+  "schema_version": "1.0.0",
+  "id": "t1-m03-sigma-system-e26",
+  "tier": 1,
+  "module": "3",
+  "part": 1,
+  "title": "System (sigma) — part 1",
+  "summary": "10 notable Event IDs from the System channel on the sigma list.",
+  "estimated_seconds": 320,
+  "teaches": [
+    "channel:system",
+    "concept:corpus-purpose",
+    "corpus:sigma",
+    "event:system:104",
+    "event:system:16",
+    "event:system:26",
+    "event:system:39",
+    "event:system:42",
+    "event:system:55",
+    "event:system:6038",
+    "event:system:98",
+    "provider:application-popup",
+    "provider:lsasrv",
+    "provider:microsoft-windows-eventlog",
+    "provider:microsoft-windows-kerberos-key-distribution-center",
+    "provider:microsoft-windows-kernel-general",
+    "provider:microsoft-windows-ntfs",
+    "provider:microsoft-windows-windowsupdateclient",
+    "provider:ntfs"
+  ],
+  "requires": [],
+  "sources": [
+    {
+      "path": "Logging/Notable-Event-IDs-Sigma.md",
+      "heading": "System"
+    }
+  ],
+  "generated": {
+    "generator": "build-content",
+    "generator_version": "1.0.0",
+    "source_repo": "TonyPhipps/SIEM",
+    "source_commit": "4adb971",
+    "source_license": "GPL-3.0",
+    "profile": "event-id-tables",
+    "content_hash": "57573f7889ae0be5e7dc43cf32321b0472eb1e10fddb53c1e6ec1567c5450a2f"
+  },
+  "atoms": [
+    {
+      "id": "t1-m03-sigma-system-intro-e26",
+      "type": "reading",
+      "title": "System",
+      "body": "The **System** channel appears on the sigma list with 19 notable Event IDs. This sitting covers 10 of them.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "System"
+      },
+      "teaches": [
+        "channel:system",
+        "corpus:sigma"
+      ],
+      "estimated_seconds": 45,
+      "graded": false,
+      "payload": {}
+    },
+    {
+      "id": "t1-m03-sigma-system-fc-26",
+      "type": "flashcard",
+      "title": "System 26",
+      "body": "Log channel: System · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "System"
+      },
+      "teaches": [
+        "channel:system",
+        "corpus:sigma",
+        "event:system:26",
+        "provider:application-popup"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-system",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "System — Event ID 26",
+        "back": "A pop-up message was displayed to a user or a background process"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-system-fc-6038",
+      "type": "flashcard",
+      "title": "System 6038",
+      "body": "Log channel: System · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "System"
+      },
+      "teaches": [
+        "channel:system",
+        "corpus:sigma",
+        "event:system:6038",
+        "provider:lsasrv"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-system",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "System — Event ID 6038",
+        "back": "Microsoft Windows is using a legacy (NTLMv1) authentication protocol because it could not negotiate a more secure one (NTLMv2 or Kerberos)."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-system-fc-16-microsoft-windows-kerberos-key-distribution-center",
+      "type": "flashcard",
+      "title": "System 16",
+      "body": "Log channel: System · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "System"
+      },
+      "teaches": [
+        "channel:system",
+        "corpus:sigma",
+        "event:system:16",
+        "provider:microsoft-windows-kerberos-key-distribution-center"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-system",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "System — Event ID 16 (Microsoft-Windows-Kerberos-Key-Distribution-Center)",
+        "back": "The KDC cannot find a suitable certificate to use for Smart Card logons"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-system-fc-16-microsoft-windows-kernel-general",
+      "type": "flashcard",
+      "title": "System 16",
+      "body": "Log channel: System · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "System"
+      },
+      "teaches": [
+        "channel:system",
+        "corpus:sigma",
+        "event:system:16",
+        "provider:microsoft-windows-kernel-general"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-system",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "System — Event ID 16 (Microsoft-Windows-Kernel-General)",
+        "back": "The history was cleared."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-system-fc-16-microsoft-windows-windowsupdateclient",
+      "type": "flashcard",
+      "title": "System 16",
+      "body": "Log channel: System · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "System"
+      },
+      "teaches": [
+        "channel:system",
+        "corpus:sigma",
+        "event:system:16",
+        "provider:microsoft-windows-windowsupdateclient"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-system",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "System — Event ID 16 (Microsoft-Windows-WindowsUpdateClient)",
+        "back": "The Windows Update agent has started downloading an update."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-system-fc-39",
+      "type": "flashcard",
+      "title": "System 39",
+      "body": "Log channel: System · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "System"
+      },
+      "teaches": [
+        "channel:system",
+        "corpus:sigma",
+        "event:system:39",
+        "provider:microsoft-windows-kerberos-key-distribution-center"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-system",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "System — Event ID 39",
+        "back": "The KDC encountered an error while processing a Kerberos ticket request."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-system-fc-42",
+      "type": "flashcard",
+      "title": "System 42",
+      "body": "Log channel: System · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "System"
+      },
+      "teaches": [
+        "channel:system",
+        "corpus:sigma",
+        "event:system:42"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-system",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "System — Event ID 42",
+        "back": "The system is entering sleep"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-system-fc-55",
+      "type": "flashcard",
+      "title": "System 55",
+      "body": "Log channel: System · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "System"
+      },
+      "teaches": [
+        "channel:system",
+        "corpus:sigma",
+        "event:system:55",
+        "provider:ntfs"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-system",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "System — Event ID 55",
+        "back": "The file system structure on the disk is corrupt and unusable."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-system-fc-98",
+      "type": "flashcard",
+      "title": "System 98",
+      "body": "Log channel: System · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "System"
+      },
+      "teaches": [
+        "channel:system",
+        "corpus:sigma",
+        "event:system:98",
+        "provider:microsoft-windows-ntfs"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-system",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "System — Event ID 98",
+        "back": "Volume Shadow Copy (VSS) service has started on the volume."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-system-fc-104",
+      "type": "flashcard",
+      "title": "System 104",
+      "body": "Log channel: System · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "System"
+      },
+      "teaches": [
+        "channel:system",
+        "corpus:sigma",
+        "event:system:104",
+        "provider:microsoft-windows-eventlog"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-system",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "System — Event ID 104",
+        "back": "Event Log was Cleared"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-system-quiz-e26",
+      "type": "quiz",
+      "title": "Recall: System",
+      "body": "Inline feedback, no results page.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "System"
+      },
+      "requires": [
+        "event:system:26"
+      ],
+      "estimated_seconds": 35,
+      "graded": true,
+      "payload": {
+        "format": "multiple-choice",
+        "question": "In the System channel, which Event ID records: “A pop-up message was displayed to a user or a background process”",
+        "choices": [
+          "16",
+          "26",
+          "39",
+          "6038"
+        ],
+        "answer_index": 1,
+        "rationale": "Logging/Notable-Event-IDs-Sigma.md#System lists 26 as “A pop-up message was displayed to a user or a background process”."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-system-instr-e26",
+      "type": "instructions",
+      "title": "Before you start: System",
+      "body": "",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "System"
+      },
+      "teaches": [
+        "concept:corpus-purpose"
+      ],
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "goal": "Match each System Event ID to what it records.",
+        "what_youll_use": "The 10 cards you just reviewed — nothing outside them.",
+        "done_when": "Every ID on the left has a description on the right."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-system-match-e26",
+      "type": "exercise",
+      "title": "Match: System IDs to what they record",
+      "body": "Every ID below was on the cards you just saw.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "System"
+      },
+      "requires": [
+        "channel:system",
+        "event:system:16",
+        "event:system:26",
+        "event:system:39",
+        "event:system:42",
+        "event:system:55",
+        "event:system:6038"
+      ],
+      "estimated_seconds": 60,
+      "difficulty": "standard",
+      "graded": true,
+      "payload": {
+        "format": "match",
+        "pairs": [
+          {
+            "left": "26",
+            "right": "A pop-up message was displayed to a user or a background process"
+          },
+          {
+            "left": "6038",
+            "right": "Microsoft Windows is using a legacy (NTLMv1) authentication protocol because it could not negotiate a more secure one (NTLMv2 or Kerberos)."
+          },
+          {
+            "left": "16 (Microsoft-Windows-Kerberos-Key-Distribution-Center)",
+            "right": "The KDC cannot find a suitable certificate to use for Smart Card logons"
+          },
+          {
+            "left": "16 (Microsoft-Windows-Kernel-General)",
+            "right": "The history was cleared."
+          },
+          {
+            "left": "16 (Microsoft-Windows-WindowsUpdateClient)",
+            "right": "The Windows Update agent has started downloading an update."
+          },
+          {
+            "left": "39",
+            "right": "The KDC encountered an error while processing a Kerberos ticket request."
+          },
+          {
+            "left": "42",
+            "right": "The system is entering sleep"
+          },
+          {
+            "left": "55",
+            "right": "The file system structure on the disk is corrupt and unusable."
+          }
+        ]
+      }
+    }
+  ]
+}

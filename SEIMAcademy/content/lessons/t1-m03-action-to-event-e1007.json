@@ -1,0 +1,167 @@
+{
+  "schema_version": "1.0.0",
+  "id": "t1-m03-action-to-event-e1007",
+  "tier": 1,
+  "module": "3",
+  "part": 8,
+  "title": "Action → Event ID — part 8",
+  "summary": "Ground-truth pairs from the lab telemetry generators: what someone did, and what the log recorded.",
+  "estimated_seconds": 195,
+  "teaches": [
+    "concept:action-to-event"
+  ],
+  "requires": [
+    "event:microsoft-windows-certificateservicesclient-lifecycle-system-operational:1007",
+    "event:microsoft-windows-ntlm-operational:8001",
+    "event:microsoft-windows-taskscheduler-operational:141",
+    "event:microsoft-windows-wmi-activity-operational:5859",
+    "event:microsoft-windows-wmi-activity-operational:5861",
+    "event:system:4100"
+  ],
+  "sources": [
+    {
+      "path": "Lab/Generate-Suspicious-Activity-Sigma.ps1"
+    }
+  ],
+  "generated": {
+    "generator": "build-content",
+    "generator_version": "1.0.0",
+    "source_repo": "TonyPhipps/SIEM",
+    "source_commit": "4adb971",
+    "source_license": "GPL-3.0",
+    "profile": "event-id-tables",
+    "content_hash": "ed11783894e1b0667fd49b016fb9ec6db6c8d4223e96ee37315a2b51f322ebec"
+  },
+  "atoms": [
+    {
+      "id": "t1-m03-action-event-intro-e1007",
+      "type": "reading",
+      "title": "What the attacker did, what the log said",
+      "body": "These pairs come from the lab telemetry generators in the source knowledge base. Each block there is labelled with the action it performs and the Event ID that action produces — ground truth, written by whoever wrote the generator.\n\nReading an alert backwards, from Event ID to action, is the whole job on a triage queue.",
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "lines": [
+          243,
+          243
+        ]
+      },
+      "teaches": [
+        "concept:action-to-event"
+      ],
+      "estimated_seconds": 50,
+      "graded": false,
+      "payload": {}
+    },
+    {
+      "id": "t1-m03-lab-action-to-event-instr-e1007",
+      "type": "instructions",
+      "title": "Before you start: action to event",
+      "body": "",
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "lines": [
+          243,
+          243
+        ]
+      },
+      "teaches": [
+        "concept:action-to-event"
+      ],
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "goal": "Drop each action onto the Event ID it produces.",
+        "what_youll_use": "The Event ID cards you have already reviewed, plus the ground-truth pairs in t1-m03-lab-action-event-pairs.",
+        "done_when": "Every action sits under an Event ID."
+      }
+    },
+    {
+      "id": "t1-m03-action-event-drag-e1007",
+      "type": "exercise",
+      "title": "Action → Event ID",
+      "body": "Ground truth from the lab generators. No trick answers.",
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "lines": [
+          243,
+          317
+        ]
+      },
+      "requires": [
+        "concept:action-to-event",
+        "event:microsoft-windows-certificateservicesclient-lifecycle-system-operational:1007",
+        "event:microsoft-windows-ntlm-operational:8001",
+        "event:microsoft-windows-taskscheduler-operational:141",
+        "event:microsoft-windows-wmi-activity-operational:5859",
+        "event:microsoft-windows-wmi-activity-operational:5861",
+        "event:system:4100"
+      ],
+      "estimated_seconds": 80,
+      "difficulty": "standard",
+      "graded": true,
+      "payload": {
+        "format": "drag-classify",
+        "buckets": [
+          "Microsoft-Windows-CertificateServicesClient-Lifecycle-System/Operational 1007",
+          "Microsoft-Windows-NTLM/Operational 8001",
+          "Microsoft-Windows-TaskScheduler/Operational 141",
+          "Microsoft-Windows-WMI-Activity/Operational 5859, 5861",
+          "System 4100"
+        ],
+        "items": [
+          {
+            "label": "Certificate Exported From Local Certificate Store",
+            "bucket": "Microsoft-Windows-CertificateServicesClient-Lifecycle-System/Operational 1007"
+          },
+          {
+            "label": "title: Potential Remote Desktop Connection to Non-Domain Host",
+            "bucket": "Microsoft-Windows-NTLM/Operational 8001"
+          },
+          {
+            "label": "title: Important Scheduled Task Deleted",
+            "bucket": "Microsoft-Windows-TaskScheduler/Operational 141"
+          },
+          {
+            "label": "title: WMI Persistence",
+            "bucket": "Microsoft-Windows-WMI-Activity/Operational 5859, 5861"
+          },
+          {
+            "label": "ISATAP Router Address Was Set",
+            "bucket": "System 4100"
+          }
+        ]
+      }
+    },
+    {
+      "id": "t1-m03-action-event-quiz-e1007",
+      "type": "quiz",
+      "title": "Read it backwards",
+      "body": "Inline feedback, no results page.",
+      "source": {
+        "path": "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+        "lines": [
+          243,
+          243
+        ]
+      },
+      "requires": [
+        "concept:action-to-event",
+        "event:microsoft-windows-certificateservicesclient-lifecycle-system-operational:1007"
+      ],
+      "estimated_seconds": 35,
+      "graded": true,
+      "payload": {
+        "format": "multiple-choice",
+        "question": "Microsoft-Windows-CertificateServicesClient-Lifecycle-System/Operational 1007 just fired. Which action produced it?",
+        "choices": [
+          "Certificate Exported From Local Certificate Store",
+          "title: Important Scheduled Task Deleted",
+          "title: Potential Remote Desktop Connection to Non-Domain Host",
+          "title: WMI Persistence"
+        ],
+        "answer_index": 0,
+        "rationale": "Lab/Generate-Suspicious-Activity-Sigma.ps1:243 labels this block “Certificate Exported From Local Certificate Store”."
+      }
+    }
+  ]
+}

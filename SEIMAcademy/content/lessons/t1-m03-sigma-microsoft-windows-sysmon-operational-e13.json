@@ -1,0 +1,455 @@
+{
+  "schema_version": "1.0.0",
+  "id": "t1-m03-sigma-microsoft-windows-sysmon-operational-e13",
+  "tier": 1,
+  "module": "3",
+  "part": 2,
+  "title": "Microsoft-Windows-Sysmon/Operational (sigma) — part 2",
+  "summary": "11 notable Event IDs from the Microsoft-Windows-Sysmon/Operational channel on the sigma list.",
+  "estimated_seconds": 335,
+  "teaches": [
+    "channel:microsoft-windows-sysmon-operational",
+    "concept:corpus-purpose",
+    "corpus:sigma",
+    "event:microsoft-windows-sysmon-operational:13",
+    "event:microsoft-windows-sysmon-operational:14",
+    "event:microsoft-windows-sysmon-operational:17",
+    "event:microsoft-windows-sysmon-operational:19",
+    "event:microsoft-windows-sysmon-operational:20",
+    "event:microsoft-windows-sysmon-operational:21",
+    "event:microsoft-windows-sysmon-operational:22",
+    "event:microsoft-windows-sysmon-operational:255",
+    "event:microsoft-windows-sysmon-operational:27",
+    "event:microsoft-windows-sysmon-operational:28",
+    "event:microsoft-windows-sysmon-operational:29"
+  ],
+  "requires": [],
+  "sources": [
+    {
+      "path": "Logging/Notable-Event-IDs-Sigma.md",
+      "heading": "Microsoft-Windows-Sysmon/Operational"
+    }
+  ],
+  "generated": {
+    "generator": "build-content",
+    "generator_version": "1.0.0",
+    "source_repo": "TonyPhipps/SIEM",
+    "source_commit": "4adb971",
+    "source_license": "GPL-3.0",
+    "profile": "event-id-tables",
+    "content_hash": "8987c83758b0f2c1ff87958d63b887de0223015649bd6232de825c4b6db4f8fa"
+  },
+  "atoms": [
+    {
+      "id": "t1-m03-sigma-microsoft-windows-sysmon-operational-intro-e13",
+      "type": "reading",
+      "title": "Microsoft-Windows-Sysmon/Operational",
+      "body": "The **Microsoft-Windows-Sysmon/Operational** channel appears on the sigma list with 22 notable Event IDs. This sitting covers 11 of them.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Sysmon/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-sysmon-operational",
+        "corpus:sigma"
+      ],
+      "estimated_seconds": 45,
+      "graded": false,
+      "payload": {}
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-sysmon-operational-fc-13",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Sysmon/Operational 13",
+      "body": "Log channel: Microsoft-Windows-Sysmon/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Sysmon/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-sysmon-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-sysmon-operational:13"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-sysmon-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Sysmon/Operational — Event ID 13",
+        "back": "RegistryEvent (Value Set)"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-sysmon-operational-fc-14",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Sysmon/Operational 14",
+      "body": "Log channel: Microsoft-Windows-Sysmon/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Sysmon/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-sysmon-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-sysmon-operational:14"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-sysmon-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Sysmon/Operational — Event ID 14",
+        "back": "RegistryEvent (Key and Value Rename)"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-sysmon-operational-fc-17",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Sysmon/Operational 17",
+      "body": "Log channel: Microsoft-Windows-Sysmon/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Sysmon/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-sysmon-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-sysmon-operational:17"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-sysmon-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Sysmon/Operational — Event ID 17",
+        "back": "PipeEvent (Pipe Created)"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-sysmon-operational-fc-19",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Sysmon/Operational 19",
+      "body": "Log channel: Microsoft-Windows-Sysmon/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Sysmon/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-sysmon-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-sysmon-operational:19"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-sysmon-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Sysmon/Operational — Event ID 19",
+        "back": "WmiEvent (WmiEventFilter activity detected)"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-sysmon-operational-fc-20",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Sysmon/Operational 20",
+      "body": "Log channel: Microsoft-Windows-Sysmon/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Sysmon/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-sysmon-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-sysmon-operational:20"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-sysmon-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Sysmon/Operational — Event ID 20",
+        "back": "WmiEvent (WmiEventConsumer activity detected)"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-sysmon-operational-fc-21",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Sysmon/Operational 21",
+      "body": "Log channel: Microsoft-Windows-Sysmon/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Sysmon/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-sysmon-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-sysmon-operational:21"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-sysmon-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Sysmon/Operational — Event ID 21",
+        "back": "WmiEvent (WmiEventConsumerToFilter activity detected)"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-sysmon-operational-fc-22",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Sysmon/Operational 22",
+      "body": "Log channel: Microsoft-Windows-Sysmon/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Sysmon/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-sysmon-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-sysmon-operational:22"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-sysmon-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Sysmon/Operational — Event ID 22",
+        "back": "DNSEvent (DNS query)"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-sysmon-operational-fc-27",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Sysmon/Operational 27",
+      "body": "Log channel: Microsoft-Windows-Sysmon/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Sysmon/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-sysmon-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-sysmon-operational:27"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-sysmon-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Sysmon/Operational — Event ID 27",
+        "back": "FileBlockExecutable"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-sysmon-operational-fc-28",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Sysmon/Operational 28",
+      "body": "Log channel: Microsoft-Windows-Sysmon/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Sysmon/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-sysmon-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-sysmon-operational:28"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-sysmon-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Sysmon/Operational — Event ID 28",
+        "back": "FileBlockShredding"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-sysmon-operational-fc-29",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Sysmon/Operational 29",
+      "body": "Log channel: Microsoft-Windows-Sysmon/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Sysmon/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-sysmon-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-sysmon-operational:29"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-sysmon-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Sysmon/Operational — Event ID 29",
+        "back": "FileExecutableDetected"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-sysmon-operational-fc-255",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Sysmon/Operational 255",
+      "body": "Log channel: Microsoft-Windows-Sysmon/Operational · Source list: sigma",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Sysmon/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-sysmon-operational",
+        "corpus:sigma",
+        "event:microsoft-windows-sysmon-operational:255"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-sysmon-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Sysmon/Operational — Event ID 255",
+        "back": "Error"
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-sysmon-operational-quiz-e13",
+      "type": "quiz",
+      "title": "Recall: Microsoft-Windows-Sysmon/Operational",
+      "body": "Inline feedback, no results page.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Sysmon/Operational"
+      },
+      "requires": [
+        "event:microsoft-windows-sysmon-operational:13"
+      ],
+      "estimated_seconds": 35,
+      "graded": true,
+      "payload": {
+        "format": "multiple-choice",
+        "question": "In the Microsoft-Windows-Sysmon/Operational channel, which Event ID records: “RegistryEvent (Value Set)”",
+        "choices": [
+          "13",
+          "14",
+          "17",
+          "19"
+        ],
+        "answer_index": 0,
+        "rationale": "Logging/Notable-Event-IDs-Sigma.md#Microsoft-Windows-Sysmon/Operational lists 13 as “RegistryEvent (Value Set)”."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-sysmon-operational-instr-e13",
+      "type": "instructions",
+      "title": "Before you start: Microsoft-Windows-Sysmon/Operational",
+      "body": "",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Sysmon/Operational"
+      },
+      "teaches": [
+        "concept:corpus-purpose"
+      ],
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "goal": "Match each Microsoft-Windows-Sysmon/Operational Event ID to what it records.",
+        "what_youll_use": "The 11 cards you just reviewed — nothing outside them.",
+        "done_when": "Every ID on the left has a description on the right."
+      }
+    },
+    {
+      "id": "t1-m03-sigma-microsoft-windows-sysmon-operational-match-e13",
+      "type": "exercise",
+      "title": "Match: Microsoft-Windows-Sysmon/Operational IDs to what they record",
+      "body": "Every ID below was on the cards you just saw.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Sigma.md",
+        "heading": "Microsoft-Windows-Sysmon/Operational"
+      },
+      "requires": [
+        "channel:microsoft-windows-sysmon-operational",
+        "event:microsoft-windows-sysmon-operational:13",
+        "event:microsoft-windows-sysmon-operational:14",
+        "event:microsoft-windows-sysmon-operational:17",
+        "event:microsoft-windows-sysmon-operational:19",
+        "event:microsoft-windows-sysmon-operational:20",
+        "event:microsoft-windows-sysmon-operational:21",
+        "event:microsoft-windows-sysmon-operational:22",
+        "event:microsoft-windows-sysmon-operational:27"
+      ],
+      "estimated_seconds": 60,
+      "difficulty": "standard",
+      "graded": true,
+      "payload": {
+        "format": "match",
+        "pairs": [
+          {
+            "left": "13",
+            "right": "RegistryEvent (Value Set)"
+          },
+          {
+            "left": "14",
+            "right": "RegistryEvent (Key and Value Rename)"
+          },
+          {
+            "left": "17",
+            "right": "PipeEvent (Pipe Created)"
+          },
+          {
+            "left": "19",
+            "right": "WmiEvent (WmiEventFilter activity detected)"
+          },
+          {
+            "left": "20",
+            "right": "WmiEvent (WmiEventConsumer activity detected)"
+          },
+          {
+            "left": "21",
+            "right": "WmiEvent (WmiEventConsumerToFilter activity detected)"
+          },
+          {
+            "left": "22",
+            "right": "DNSEvent (DNS query)"
+          },
+          {
+            "left": "27",
+            "right": "FileBlockExecutable"
+          }
+        ]
+      }
+    }
+  ]
+}

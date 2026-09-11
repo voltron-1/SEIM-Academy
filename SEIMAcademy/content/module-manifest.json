@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0.0",
+  "source_repo": "TonyPhipps/SIEM",
+  "source_commit": "4adb971",
+  "source_license": "GPL-3.0",
+  "modules": [
+    {
+      "id": "t1-m03",
+      "tier": 1,
+      "module": "3",
+      "title": "Windows Event ID triage",
+      "profile": "event-id-tables",
+      "concepts": [
+        "concept:corpus-purpose",
+        "concept:corpus-membership",
+        "concept:reference-lookup",
+        "concept:action-to-event"
+      ],
+      "options": {
+        "lookup_table_rows": 120,
+        "srs_card_budget": 80,
+        "min_section_rows": 4
+      },
+      "sources": [
+        {
+          "path": "Logging/Notable-Event-IDs-Sigma.md",
+          "corpus": "sigma"
+        },
+        {
+          "path": "Logging/Notable-Event-IDs-Risk.md",
+          "corpus": "risk"
+        },
+        {
+          "path": "Logging/Notable-Event-IDs-Forensics.md",
+          "corpus": "forensics"
+        }
+      ],
+      "exercise_data": [
+        {
+          "path": "Lab/Generate-Suspicious-Activity.ps1",
+          "profile": "ps1-event-labels"
+        },
+        {
+          "path": "Lab/Generate-Suspicious-Activity-Sigma.ps1",
+          "profile": "ps1-event-labels"
+        },
+        {
+          "path": "Lab/Generate-Suspicious-Activity-lolbins.ps1",
+          "profile": "ps1-event-labels"
+        }
+      ],
+      "confirmed_cells": [
+        {
+          "path": "Logging/Notable-Event-IDs-Forensics.md",
+          "heading": "Microsoft-Windows-WinRM/Operational",
+          "cell": "8 15, 16, 33",
+          "event_ids": [
+            8,
+            15,
+            16,
+            33
+          ],
+          "note": "Confirmed 2026-09-10: the source is missing a comma between 8 and 15; these are four distinct Event IDs, not a typo."
+        }
+      ]
+    }
+  ]
+}

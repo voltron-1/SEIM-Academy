@@ -1,0 +1,341 @@
+{
+  "schema_version": "1.0.0",
+  "id": "t1-m03-forensics-microsoft-windows-powershell-operational-e40961",
+  "tier": 1,
+  "module": "3",
+  "title": "Microsoft-Windows-Powershell/Operational (forensics)",
+  "summary": "7 notable Event IDs from the Microsoft-Windows-Powershell/Operational channel on the forensics list.",
+  "estimated_seconds": 275,
+  "teaches": [
+    "channel:microsoft-windows-powershell-operational",
+    "concept:corpus-purpose",
+    "corpus:forensics",
+    "event:microsoft-windows-powershell-operational:24577",
+    "event:microsoft-windows-powershell-operational:40961",
+    "event:microsoft-windows-powershell-operational:40962",
+    "event:microsoft-windows-powershell-operational:53504",
+    "event:microsoft-windows-powershell-operational:8193",
+    "event:microsoft-windows-powershell-operational:8194",
+    "event:microsoft-windows-powershell-operational:8197"
+  ],
+  "requires": [],
+  "sources": [
+    {
+      "path": "Logging/Notable-Event-IDs-Forensics.md",
+      "heading": "Microsoft-Windows-Powershell/Operational"
+    }
+  ],
+  "generated": {
+    "generator": "build-content",
+    "generator_version": "1.0.0",
+    "source_repo": "TonyPhipps/SIEM",
+    "source_commit": "4adb971",
+    "source_license": "GPL-3.0",
+    "profile": "event-id-tables",
+    "content_hash": "514f51c81c3ada40217d9fd0afa1a8604efe3e086c6e02889c92a13f79848822"
+  },
+  "atoms": [
+    {
+      "id": "t1-m03-forensics-microsoft-windows-powershell-operational-intro-e40961",
+      "type": "reading",
+      "title": "Microsoft-Windows-Powershell/Operational",
+      "body": "The **Microsoft-Windows-Powershell/Operational** channel appears on the forensics list with 7 notable Event IDs. This sitting covers 7 of them.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Microsoft-Windows-Powershell/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-powershell-operational",
+        "corpus:forensics"
+      ],
+      "estimated_seconds": 45,
+      "graded": false,
+      "payload": {}
+    },
+    {
+      "id": "t1-m03-forensics-microsoft-windows-powershell-operational-fc-40961",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Powershell/Operational 40961",
+      "body": "Log channel: Microsoft-Windows-Powershell/Operational · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Microsoft-Windows-Powershell/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-powershell-operational",
+        "corpus:forensics",
+        "event:microsoft-windows-powershell-operational:40961"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-powershell-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Powershell/Operational — Event ID 40961",
+        "back": "PowerShell Console Starting"
+      }
+    },
+    {
+      "id": "t1-m03-forensics-microsoft-windows-powershell-operational-fc-40962",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Powershell/Operational 40962",
+      "body": "Log channel: Microsoft-Windows-Powershell/Operational · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Microsoft-Windows-Powershell/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-powershell-operational",
+        "corpus:forensics",
+        "event:microsoft-windows-powershell-operational:40962"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-powershell-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Powershell/Operational — Event ID 40962",
+        "back": "PowerShell Console Started"
+      }
+    },
+    {
+      "id": "t1-m03-forensics-microsoft-windows-powershell-operational-fc-24577",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Powershell/Operational 24577",
+      "body": "Log channel: Microsoft-Windows-Powershell/Operational · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Microsoft-Windows-Powershell/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-powershell-operational",
+        "corpus:forensics",
+        "event:microsoft-windows-powershell-operational:24577"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-powershell-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Powershell/Operational — Event ID 24577",
+        "back": "Powershell script ran"
+      }
+    },
+    {
+      "id": "t1-m03-forensics-microsoft-windows-powershell-operational-fc-8193",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Powershell/Operational 8193",
+      "body": "Log channel: Microsoft-Windows-Powershell/Operational · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Microsoft-Windows-Powershell/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-powershell-operational",
+        "corpus:forensics",
+        "event:microsoft-windows-powershell-operational:8193"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-powershell-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Powershell/Operational — Event ID 8193",
+        "back": "Session created"
+      }
+    },
+    {
+      "id": "t1-m03-forensics-microsoft-windows-powershell-operational-fc-8194",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Powershell/Operational 8194",
+      "body": "Log channel: Microsoft-Windows-Powershell/Operational · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Microsoft-Windows-Powershell/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-powershell-operational",
+        "corpus:forensics",
+        "event:microsoft-windows-powershell-operational:8194"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-powershell-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Powershell/Operational — Event ID 8194",
+        "back": "Session created"
+      }
+    },
+    {
+      "id": "t1-m03-forensics-microsoft-windows-powershell-operational-fc-8197",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Powershell/Operational 8197",
+      "body": "Log channel: Microsoft-Windows-Powershell/Operational · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Microsoft-Windows-Powershell/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-powershell-operational",
+        "corpus:forensics",
+        "event:microsoft-windows-powershell-operational:8197"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-powershell-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Powershell/Operational — Event ID 8197",
+        "back": "Session Closed"
+      }
+    },
+    {
+      "id": "t1-m03-forensics-microsoft-windows-powershell-operational-fc-53504",
+      "type": "flashcard",
+      "title": "Microsoft-Windows-Powershell/Operational 53504",
+      "body": "Log channel: Microsoft-Windows-Powershell/Operational · Source list: forensics",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Microsoft-Windows-Powershell/Operational"
+      },
+      "teaches": [
+        "channel:microsoft-windows-powershell-operational",
+        "corpus:forensics",
+        "event:microsoft-windows-powershell-operational:53504"
+      ],
+      "estimated_seconds": 15,
+      "graded": false,
+      "srs": {
+        "eligible": false,
+        "deck": "t1-m03-microsoft-windows-powershell-operational",
+        "reason": "not-in-evidence-set"
+      },
+      "payload": {
+        "front": "Microsoft-Windows-Powershell/Operational — Event ID 53504",
+        "back": "Records the authenticating user"
+      }
+    },
+    {
+      "id": "t1-m03-forensics-microsoft-windows-powershell-operational-quiz-e40961",
+      "type": "quiz",
+      "title": "Recall: Microsoft-Windows-Powershell/Operational",
+      "body": "Inline feedback, no results page.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Microsoft-Windows-Powershell/Operational"
+      },
+      "requires": [
+        "event:microsoft-windows-powershell-operational:40961"
+      ],
+      "estimated_seconds": 35,
+      "graded": true,
+      "payload": {
+        "format": "multiple-choice",
+        "question": "In the Microsoft-Windows-Powershell/Operational channel, which Event ID records: “PowerShell Console Starting”",
+        "choices": [
+          "8193",
+          "24577",
+          "40961",
+          "40962"
+        ],
+        "answer_index": 2,
+        "rationale": "Logging/Notable-Event-IDs-Forensics.md#Microsoft-Windows-Powershell/Operational lists 40961 as “PowerShell Console Starting”."
+      }
+    },
+    {
+      "id": "t1-m03-forensics-microsoft-windows-powershell-operational-instr-e40961",
+      "type": "instructions",
+      "title": "Before you start: Microsoft-Windows-Powershell/Operational",
+      "body": "",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Microsoft-Windows-Powershell/Operational"
+      },
+      "teaches": [
+        "concept:corpus-purpose"
+      ],
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "goal": "Match each Microsoft-Windows-Powershell/Operational Event ID to what it records.",
+        "what_youll_use": "The 7 cards you just reviewed — nothing outside them.",
+        "done_when": "Every ID on the left has a description on the right."
+      }
+    },
+    {
+      "id": "t1-m03-forensics-microsoft-windows-powershell-operational-match-e40961",
+      "type": "exercise",
+      "title": "Match: Microsoft-Windows-Powershell/Operational IDs to what they record",
+      "body": "Every ID below was on the cards you just saw.",
+      "source": {
+        "path": "Logging/Notable-Event-IDs-Forensics.md",
+        "heading": "Microsoft-Windows-Powershell/Operational"
+      },
+      "requires": [
+        "channel:microsoft-windows-powershell-operational",
+        "event:microsoft-windows-powershell-operational:24577",
+        "event:microsoft-windows-powershell-operational:40961",
+        "event:microsoft-windows-powershell-operational:40962",
+        "event:microsoft-windows-powershell-operational:53504",
+        "event:microsoft-windows-powershell-operational:8193",
+        "event:microsoft-windows-powershell-operational:8194",
+        "event:microsoft-windows-powershell-operational:8197"
+      ],
+      "estimated_seconds": 60,
+      "difficulty": "standard",
+      "graded": true,
+      "payload": {
+        "format": "match",
+        "pairs": [
+          {
+            "left": "40961",
+            "right": "PowerShell Console Starting"
+          },
+          {
+            "left": "40962",
+            "right": "PowerShell Console Started"
+          },
+          {
+            "left": "24577",
+            "right": "Powershell script ran"
+          },
+          {
+            "left": "8193",
+            "right": "Session created"
+          },
+          {
+            "left": "8194",
+            "right": "Session created"
+          },
+          {
+            "left": "8197",
+            "right": "Session Closed"
+          },
+          {
+            "left": "53504",
+            "right": "Records the authenticating user"
+          }
+        ]
+      }
+    }
+  ]
+}
