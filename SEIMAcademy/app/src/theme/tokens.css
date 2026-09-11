@@ -1,0 +1,87 @@
+/*
+ * Theme tokens.
+ *
+ * One accent colour marks every interactive element; everything else is desaturated
+ * (BUILD-PLAN, "High signal-to-noise visual design"). Every pairing below is verified
+ * against WCAG 2.1 AA by `npm run check:contrast` — the ratios are computed, not
+ * eyeballed, and a violation fails the build.
+ */
+
+:root {
+  /* --- surfaces, darkest to lightest ------------------------------------------------ */
+  --bg: #0f1115;
+  --surface: #171a21;
+  --surface-raised: #1f232c;
+  /*
+   * --border is decorative: dividers and card edges that carry no meaning on their own,
+   * so WCAG 1.4.11 does not apply to it. --border-strong is a CONTROL boundary — the edge
+   * of an input or button that a learner has to be able to find — so it must clear 3:1
+   * against every surface it sits on. The first value tried here was 1.93:1; the contrast
+   * check caught it before it shipped.
+   */
+  --border: #2c313c;
+  --border-strong: #646e84;
+
+  /* --- text ------------------------------------------------------------------------- */
+  --text: #e9ecf1;
+  --text-muted: #a7b0c0;
+
+  /* --- meaning ---------------------------------------------------------------------- */
+  --accent: #58c4dd;
+  --accent-strong: #8ad8ea;
+  --danger: #ff8a8a;
+  --success: #7fd39b;
+  --focus: #ffd479;
+
+  /* --- motion ----------------------------------------------------------------------- */
+  /*
+   * Decision 5, resolved 2026-09-10: reduced motion is a HARD DEFAULT, not an
+   * OS-preference opt-out. The audience is explicitly ADHD and anxiety-safe, motion is a
+   * known trigger, and BUILD-PLAN says the anxiety-safe rule wins where principles
+   * conflict. Animation exists only where a learner turns it on.
+   */
+  --motion-duration: 0ms;
+  --motion-ease: linear;
+
+  /* --- spacing and shape ------------------------------------------------------------ */
+  --radius: 10px;
+  --radius-sm: 6px;
+  --gap: 12px;
+  --gap-lg: 20px;
+  --rail-width: 216px;
+  --hud-height: 56px;
+  --measure: 62ch; /* one atom, one screen — never a wall of text */
+}
+
+/* Opt-in only. Nothing in the app sets this; a learner does, from settings. */
+:root[data-motion='full'] {
+  --motion-duration: 160ms;
+  --motion-ease: cubic-bezier(0.2, 0, 0, 1);
+}
+
+/* The OS preference can only ever reduce motion further, never restore it. */
+@media (prefers-reduced-motion: reduce) {
+  :root,
+  :root[data-motion='full'] {
+    --motion-duration: 0ms;
+  }
+}
+
+/*
+ * The hard default, enforced rather than hoped for: every animation and transition in the
+ * app resolves through the token. A component cannot opt itself back into motion by
+ * hardcoding a duration.
+ */
+*,
+*::before,
+*::after {
+  animation-duration: var(--motion-duration) !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: var(--motion-duration) !important;
+  scroll-behavior: auto !important;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
