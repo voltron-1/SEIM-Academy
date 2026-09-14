@@ -125,7 +125,7 @@ phase cannot end with five components and no way to check them. See
 [plan](plans/20260911-phase3-core-components.md).
 
 - [x] Instructions atom (fixed anatomy: Goal → What you'll use → How you'll know you're done); schema-enforced to precede every exercise atom — [#34](https://github.com/voltron-1/SEIM-Academy/issues/34)
-- [x] Flashcard (SRS) — [#35](https://github.com/voltron-1/SEIM-Academy/issues/35)
+- [x] Flashcard (SRS) — [#35](https://github.com/voltron-1/SEIM-Academy/issues/35), PR [#121](https://github.com/voltron-1/SEIM-Academy/pull/121)
   - [x] SM-2 scheduler implementation — pure module, `src/state/srs.ts`
   - [x] Unit tests against known SM-2 interval sequences
   - [x] Enforced topic-diversity/interleaving window — never drops a due card

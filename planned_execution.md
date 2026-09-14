@@ -56,7 +56,8 @@ abstention — see [findings](findings/20260910-phase2-local-model-spike.md).
 ## LAST SESSION
 
 **2026-09-13** — **Phase 3 Unit 2 closed: Flashcard + SRS**
-([#35](https://github.com/voltron-1/SEIM-Academy/issues/35)). SM-2 as a pure module, the
+([#35](https://github.com/voltron-1/SEIM-Academy/issues/35), PR
+[#121](https://github.com/voltron-1/SEIM-Academy/pull/121), merged 2026-09-14). SM-2 as a pure module, the
 topic-diversity queue builder, the graded component, and the rail's due count. 111 tests
 green; contrast, types, build and the 24 PWA checks all pass. Plan:
 [`plans/20260913-phase3-unit2-flashcard-srs.md`](plans/20260913-phase3-unit2-flashcard-srs.md).
@@ -202,7 +203,9 @@ all 177 source files verified, curriculum map committed, content audit recorded.
       PRs [#112](https://github.com/voltron-1/SEIM-Academy/pull/112)–[#115](https://github.com/voltron-1/SEIM-Academy/pull/115).
 - [~] **Phase 3 — Core components** — Instructions atom, Flashcard+SRS, MC/fill-blank,
       matching/drag with keyboard equivalent, test-out check. *In progress since
-      2026-09-11; Units 1 and 2 of 4 done.*
+      2026-09-11; Units 1 and 2 of 4 done.* PRs
+      [#117](https://github.com/voltron-1/SEIM-Academy/pull/117),
+      [#121](https://github.com/voltron-1/SEIM-Academy/pull/121).
       [#5](https://github.com/voltron-1/SEIM-Academy/issues/5)
 - [ ] **Phase 4 — Tier 1 complete** — pipeline across ten Tier 1 modules; Capstone 1.
 - [ ] **Phase 5 — Advanced components** — calculators, SPL sandbox, structured editor,
