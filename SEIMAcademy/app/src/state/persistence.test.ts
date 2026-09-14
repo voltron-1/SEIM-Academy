@@ -4,7 +4,9 @@ import {
   emptyState, migrate, completeAtom, setPosition, addFlag, removeFlag, isFlagged,
   completedOn, hasCompleted, load, save, dayKey, STORAGE_KEY, STATE_VERSION,
   type PersistedState, type StorageLike,
+  putSrsCard, srsCardFor, dueCount,
 } from './persistence.js';
+import type { SrsCard } from './srs.js';
 
 const memory = (): StorageLike & { data: Map<string, string> } => {
   const data = new Map<string, string>();
@@ -113,4 +115,125 @@ test('dayKey is the local calendar day', () => {
 
 test('the storage key is versioned', () => {
   assert.match(STORAGE_KEY, /\/v\d+$/);
+});
+
+// ---------------------------------------------------------------------------
+// SRS card state (#35)
+// ---------------------------------------------------------------------------
+
+const srsCard = (over: Partial<SrsCard> = {}): SrsCard => ({
+  atomId: 'card-1',
+  deck: 'security',
+  teaches: ['event:4624'],
+  ease: 2.5,
+  intervalDays: 6,
+  repetitions: 2,
+  dueDay: '2026-09-20',
+  lapses: 0,
+  ...over,
+});
+
+test('a review round-trips through storage with its schedule intact', () => {
+  const store = memory();
+  const saved = putSrsCard(emptyState(), srsCard());
+  assert.ok(save(store, saved));
+
+  const loaded = load(store);
+  assert.deepEqual(srsCardFor(loaded, 'card-1'), srsCard());
+});
+
+test('reviewing the same card again replaces its state rather than piling up', () => {
+  let s = putSrsCard(emptyState(), srsCard());
+  s = putSrsCard(s, srsCard({ intervalDays: 15, repetitions: 3 }));
+  assert.equal(Object.keys(s.srsCards).length, 1);
+  assert.equal(srsCardFor(s, 'card-1')?.intervalDays, 15);
+});
+
+test('state written before the SRS deck existed keeps its streak', () => {
+  // The alternative is bumping STATE_VERSION, which resets to empty on mismatch and
+  // would wipe every learner's streak and resume position to add one field.
+  const older = { ...emptyState(), streakDays: 9, position: { lessonId: 'l-1', atomIndex: 4 } };
+  delete (older as Partial<PersistedState>).srsCards;
+
+  const migrated = migrate(JSON.parse(JSON.stringify(older)));
+  assert.equal(migrated.streakDays, 9, 'adding a field must not cost a learner their streak');
+  assert.deepEqual(migrated.position, { lessonId: 'l-1', atomIndex: 4 });
+  assert.deepEqual(migrated.srsCards, {});
+});
+
+test('a card of the wrong shape is dropped without taking the rest of the deck with it', () => {
+  const raw = {
+    ...emptyState(),
+    srsCards: {
+      good: srsCard({ atomId: 'good' }),
+      bad: { atomId: 'bad', ease: 'very' },
+      alsoBad: null,
+    },
+  };
+  const migrated = migrate(JSON.parse(JSON.stringify(raw)));
+  assert.deepEqual(Object.keys(migrated.srsCards), ['good']);
+});
+
+test('due counting is by day, so the rail can show a number without loading a deck', () => {
+  let s = putSrsCard(emptyState(), srsCard({ atomId: 'a', dueDay: '2026-09-19' }));
+  s = putSrsCard(s, srsCard({ atomId: 'b', dueDay: '2026-09-20' }));
+  s = putSrsCard(s, srsCard({ atomId: 'c', dueDay: '2026-09-21' }));
+  assert.equal(dueCount(s, '2026-09-20'), 2);
+});
+
+// ---------------------------------------------------------------------------
+// migrate() hardening. Persisted state is hand-editable by anyone with the browser
+// profile, so these are shapes a real payload can have, not hypotheticals.
+// ---------------------------------------------------------------------------
+
+const migrated = (srsCards: unknown): PersistedState =>
+  migrate(JSON.parse(JSON.stringify({ ...emptyState(), srsCards })));
+
+test('a __proto__ key is rejected rather than re-pointing the deck prototype', () => {
+  // JSON.parse makes __proto__ a real own property, so it reaches Object.entries. A
+  // bracket assignment would then hit the Object.prototype setter and silently move the
+  // map's prototype instead of storing a card.
+  const state = migrated({ __proto__: srsCard({ atomId: '__proto__' }), good: srsCard({ atomId: 'good' }) });
+  assert.deepEqual(Object.keys(state.srsCards), ['good']);
+  assert.equal(
+    Object.getPrototypeOf(state.srsCards),
+    Object.prototype,
+    'the map prototype was re-pointed at the card instead of the key being rejected'
+  );
+});
+
+test('an atom id that names an Object.prototype member does not resolve to one', () => {
+  const state = migrated({ good: srsCard({ atomId: 'good' }) });
+  for (const id of ['toString', 'constructor', 'valueOf', 'hasOwnProperty']) {
+    assert.equal(srsCardFor(state, id), undefined, `${id} resolved to an inherited member`);
+  }
+});
+
+test('a due day that is not a calendar day is rejected', () => {
+  // "zzz" never matches a date compare, so the card would be due forever-never and drop
+  // silently out of review while still sitting in storage.
+  assert.deepEqual(Object.keys(migrated({ a: srsCard({ atomId: 'a', dueDay: 'zzz' }) }).srsCards), []);
+  assert.deepEqual(Object.keys(migrated({ b: srsCard({ atomId: 'b', dueDay: '' }) }).srsCards), []);
+  assert.deepEqual(Object.keys(migrated({ c: srsCard({ atomId: 'c', dueDay: '2026-9-1' }) }).srsCards), []);
+});
+
+test('a number too large to schedule with is rejected', () => {
+  // 1e308 * 1e308 overflows to Infinity, which makes an Invalid Date and a "NaN-NaN-NaN"
+  // day key that sorts above every real date — the card is never due again.
+  assert.deepEqual(Object.keys(migrated({ a: srsCard({ atomId: 'a', ease: 1e308 }) }).srsCards), []);
+  assert.deepEqual(Object.keys(migrated({ b: srsCard({ atomId: 'b', intervalDays: 1e308 }) }).srsCards), []);
+  assert.deepEqual(Object.keys(migrated({ c: srsCard({ atomId: 'c', repetitions: -4 }) }).srsCards), []);
+  assert.deepEqual(Object.keys(migrated({ d: srsCard({ atomId: 'd', ease: 0.2 }) }).srsCards), []);
+});
+
+test('an srsCards that is an array is rejected rather than iterated by index', () => {
+  // typeof [] === 'object', so the container check passes; Object.entries then yields
+  // "0", "1" as keys and every card is filed under a number it can never be found by.
+  assert.deepEqual(migrated([srsCard({ atomId: 'a' })]).srsCards, {});
+});
+
+test('a card filed under a key that is not its own atom id is rejected', () => {
+  // Stored under "A" while claiming to be "B", it can never be updated again but is
+  // counted as due forever.
+  assert.deepEqual(Object.keys(migrated({ A: srsCard({ atomId: 'B' }) }).srsCards), []);
 });

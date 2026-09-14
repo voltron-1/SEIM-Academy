@@ -2,19 +2,21 @@ import { useState } from 'preact/hooks';
 import type { Atom, Difficulty } from '../content/types';
 import { Markdown } from './Markdown';
 import { Instructions as InstructionsAtom } from './Instructions';
+import { Flashcard as FlashcardAtom } from './Flashcard';
+import type { SrsCard } from '../state/srs';
+import { str, list } from './payload';
 import './atoms.css';
 
 /**
  * One shared renderer per atom type, one atom per screen (#26).
  *
- * Phase 2 renders; **Phase 3 makes them interactive** — the SM-2 scheduler, answer
- * grading, drag-and-drop with its keyboard equivalent, and the test-out check. Reveal
- * buttons here let the pilot module be read start to finish, which is what the Phase 2
- * exit check asks for, without pretending to grade anything.
+ * Phase 2 rendered; **Phase 3 makes them interactive**, one component per unit. Unit 1
+ * moved the instructions atom out into its own file and Unit 2 does the same for the
+ * flashcard, which now grades into the SM-2 scheduler. The reveal-only renderers left
+ * here are the ones whose units have not landed yet.
  *
- * Every payload value is read through a narrow accessor rather than cast: `payload` is
- * `Record<string, unknown>` in the schema, and a lesson from a future generator profile
- * could carry a shape this build has never seen.
+ * Every payload value is read through a narrow accessor rather than cast — see
+ * `payload.ts`, which both this file and the extracted components share.
  */
 
 interface AtomProps {
@@ -23,13 +25,14 @@ interface AtomProps {
   hint?: boolean;
   /** Difficulty of the exercise an instructions atom introduces; passed down by the player. */
   nextDifficulty?: Difficulty;
+  /**
+   * Scheduler state for a flashcard, and the grade handler that reschedules it. Optional
+   * so the renderer contract stays additive — an atom rendered without them still plays as
+   * a reveal, which is what an ineligible card does anyway (§6.5).
+   */
+  srsCard?: SrsCard;
+  onGrade?: (grade: number) => void;
 }
-
-const str = (payload: Record<string, unknown>, key: string): string =>
-  typeof payload[key] === 'string' ? (payload[key] as string) : '';
-
-const list = (payload: Record<string, unknown>, key: string): unknown[] =>
-  Array.isArray(payload[key]) ? (payload[key] as unknown[]) : [];
 
 /**
  * `forceOpen` is how the shell's Hint button reaches in: Hint is a persistent affordance
@@ -64,21 +67,8 @@ function Reading({ atom }: AtomProps) {
   return <Markdown body={atom.body} />;
 }
 
-function Flashcard({ atom, hint }: AtomProps) {
-  return (
-    <>
-      <p class="atom__front data">{str(atom.payload, 'front')}</p>
-      <Reveal label="Show the answer" forceOpen={hint}>
-        <p class="atom__back">{str(atom.payload, 'back')}</p>
-      </Reveal>
-      {atom.srs && !atom.srs.eligible && (
-        <p class="atom__aside">
-          Not in the review deck — {atom.srs.reason.replace(/-/g, ' ')}. It still plays here;
-          it just never enters spaced repetition.
-        </p>
-      )}
-    </>
-  );
+function Flashcard({ atom, hint, srsCard, onGrade }: AtomProps) {
+  return <FlashcardAtom atom={atom} card={srsCard} onGrade={onGrade ?? (() => {})} hint={hint} />;
 }
 
 function Quiz({ atom, hint }: AtomProps) {
@@ -192,7 +182,7 @@ const RENDERERS: Partial<Record<Atom['type'], (props: AtomProps) => preact.JSX.E
   exercise: Exercise,
 };
 
-export function AtomView({ atom, hint, nextDifficulty }: AtomProps) {
+export function AtomView({ atom, hint, nextDifficulty, srsCard, onGrade }: AtomProps) {
   const Renderer = RENDERERS[atom.type] ?? Unsupported;
   return (
     <article class="atom" aria-labelledby={`${atom.id}-title`}>
@@ -201,7 +191,7 @@ export function AtomView({ atom, hint, nextDifficulty }: AtomProps) {
         {atom.difficulty === 'step-up' && <span class="atom__badge">a step up</span>}
       </p>
       <h2 id={`${atom.id}-title`}>{atom.title}</h2>
-      <Renderer atom={atom} hint={hint} nextDifficulty={nextDifficulty} />
+      <Renderer atom={atom} hint={hint} nextDifficulty={nextDifficulty} srsCard={srsCard} onGrade={onGrade} />
       <p class="atom__source">
         from <code>{atom.source.path}</code>
         {atom.source.heading ? <code>#{atom.source.heading}</code> : null}
