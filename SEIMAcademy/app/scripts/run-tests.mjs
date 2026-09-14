@@ -18,7 +18,7 @@ import path from 'node:path';
 
 const APP = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const OUT = path.join(APP, '.tmp-test');
-const MIN_TEST_FILES = 6;
+const MIN_TEST_FILES = 10;
 
 const run = (cmd, args) => spawnSync(cmd, args, { cwd: APP, stdio: 'inherit', shell: process.platform === 'win32' });
 

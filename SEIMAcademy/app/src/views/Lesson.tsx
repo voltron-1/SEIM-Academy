@@ -3,6 +3,7 @@ import { loadLesson, ContentUnavailable } from '../content';
 import type { Lesson } from '../content/types';
 import { AtomView } from '../atoms';
 import { useSession } from '../state/session';
+import { cardForAtom } from '../state/srs';
 import { Degraded, StaleNotice } from './index';
 import './lesson.css';
 
@@ -111,6 +112,13 @@ export function LessonPlayer({ lessonId }: { lessonId: string }) {
         hint={hintAt === index}
         /* A harder exercise is announced by the atom before it, never discovered mid-struggle. */
         nextDifficulty={atom.type === 'instructions' ? atoms[index + 1]?.difficulty : undefined}
+        srsCard={cardForAtom(atom, session.srsCardFor(atom.id))}
+        /* Grading schedules the card and moves on. A grade is not a score: nothing about
+           it is recorded as a pass or a failure, only as a date. */
+        onGrade={(grade) => {
+          session.gradeCard(atom, grade);
+          advance();
+        }}
       />
 
       <div class="lesson__controls">

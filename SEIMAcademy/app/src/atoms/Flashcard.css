@@ -1,0 +1,51 @@
+.flashcard__front { font-size: var(--size-lg); margin: 0 0 var(--gap); max-width: var(--measure); }
+.flashcard__back { margin: 0; max-width: var(--measure); }
+
+.flashcard__reveal {
+  background: var(--surface-raised);
+  color: var(--text);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  padding: 8px 14px;
+  cursor: pointer;
+}
+
+.flashcard__answer:empty { display: none; }
+
+.flashcard__ask {
+  margin: var(--gap-lg) 0 var(--gap);
+  font-size: var(--size-sm);
+  color: var(--text-muted);
+}
+
+.grades {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap);
+  margin: 0;
+  padding: 0;
+}
+
+.grade {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  min-width: 7rem;
+  padding: 10px 14px;
+  background: var(--surface-raised);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  /* Decision 5: reduced motion is a hard default, so this routes through the token
+     rather than hard-coding a duration. */
+  transition: border-color var(--motion-duration) var(--motion-ease);
+}
+
+.grade:hover { border-color: var(--border-strong); }
+.grade__shape { font-size: 0.85em; flex: none; }
+.grade__interval { margin-left: auto; font-size: var(--size-xs); color: var(--text-muted); }
+
+.grade--again { border-left: 3px solid var(--danger); }
+.grade--easy { border-left: 3px solid var(--success); }

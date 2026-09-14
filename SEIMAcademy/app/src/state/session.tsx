@@ -1,5 +1,5 @@
 import { createContext } from 'preact';
-import { useCallback, useContext, useEffect, useMemo, useReducer, useState } from 'preact/hooks';
+import { useCallback, useContext, useEffect, useMemo, useReducer, useRef, useState } from 'preact/hooks';
 import type { ComponentChildren } from 'preact';
 import {
   reducer, initialState, routeFromHash, type Route, type SessionState,
@@ -8,9 +8,12 @@ import {
   load as loadPersisted, save as savePersisted, emptyState, dayKey,
   completeAtom as completeAtomIn, setPosition as setPositionIn,
   addFlag, removeFlag, isFlagged as isFlaggedIn, completedOn,
+  putSrsCard, srsCardFor as srsCardForIn, dueCount as dueCountIn,
   type PersistedState, type Position,
 } from './persistence';
 import { DAILY_TARGET_ATOMS } from './session-core';
+import { cardForAtom, review as reviewCard, type SrsCard } from './srs';
+import type { Atom } from '../content/types';
 
 export { ROUTES, DAILY_TARGET_ATOMS, chromeFor } from './session-core';
 export type { Route, SessionState, ChromeVisibility } from './session-core';
@@ -44,6 +47,15 @@ export interface SessionApi extends SessionState {
   flagCount: number;
   /** False when the browser refused to store — private mode, quota, blocked cookies. */
   storageWorks: boolean;
+
+  /**
+   * Spaced repetition (#35). The card for an atom, and the grade that reschedules it.
+   * `dueCount` is what the rail shows — BUILD-PLAN's ambient accountability, read off
+   * persisted state so it is on screen at first paint.
+   */
+  srsCardFor: (atomId: string) => SrsCard | undefined;
+  gradeCard: (atom: Atom, grade: number) => void;
+  dueCount: number;
 
   /** Lesson currently being played, if any. */
   activeLessonId: string | null;
@@ -83,13 +95,29 @@ export function SessionProvider({ children }: { children: ComponentChildren }) {
   const [skipSignal, setSkipSignal] = useState(0);
   const [hintSignal, setHintSignal] = useState(0);
 
+  /**
+   * The committed state, mirrored outside Preact's render cycle.
+   *
+   * `persisted` is only refreshed on re-render, so two writes in the same tick would both
+   * build on the same snapshot and the second would silently discard the first. The lesson
+   * player does exactly that — grading a flashcard schedules the card and then completes
+   * the atom — so every grade a learner submitted was being thrown away, with no error
+   * anywhere. `commit` takes an updater and applies it to this ref instead.
+   */
+  const latest = useRef<PersistedState>(persisted);
+
   // Read once, synchronously enough that the first paint can already be the resumed
   // screen rather than a flash of the wrong one.
   useEffect(() => {
-    setPersisted(loadPersisted(storage()));
+    const loaded = loadPersisted(storage());
+    latest.current = loaded;
+    setPersisted(loaded);
   }, []);
 
-  const commit = useCallback((next: PersistedState) => {
+  const commit = useCallback((update: (current: PersistedState) => PersistedState) => {
+    const next = update(latest.current);
+    if (next === latest.current) return;
+    latest.current = next;
     setPersisted(next);
     setStorageWorks(savePersisted(storage(), next));
   }, []);
@@ -124,19 +152,24 @@ export function SessionProvider({ children }: { children: ComponentChildren }) {
       setPaused: (paused) => dispatch({ type: 'setPaused', paused }),
       setActiveAtom: (atomId) => dispatch({ type: 'setActiveAtom', atomId }),
 
-      completeAtom: (atomId) => commit(completeAtomIn(persisted, atomId, today)),
-      setPosition: (position) => commit(setPositionIn(persisted, position)),
+      completeAtom: (atomId) => commit((s) => completeAtomIn(s, atomId, today)),
+      srsCardFor: (atomId) => srsCardForIn(persisted, atomId),
+      dueCount: dueCountIn(persisted, today),
+      gradeCard: (atom, grade) =>
+        commit((s) => {
+          const card = cardForAtom(atom, srsCardForIn(s, atom.id), today);
+          // An ineligible or non-flashcard atom has no card; grading it is a no-op rather
+          // than an error, so a caller never has to check first.
+          return card ? putSrsCard(s, reviewCard(card, grade, today)) : s;
+        }),
+      setPosition: (position) => commit((s) => setPositionIn(s, position)),
       isFlagged: (atomId) => isFlaggedIn(persisted, atomId),
       toggleFlag: (atomId, note) =>
-        commit(
-          isFlaggedIn(persisted, atomId)
-            ? removeFlag(persisted, atomId)
-            : addFlag(persisted, atomId, today, note)
-        ),
+        commit((s) => (isFlaggedIn(s, atomId) ? removeFlag(s, atomId) : addFlag(s, atomId, today, note))),
 
       startLesson: (lessonId, atomIndex = 0) => {
         setActiveLessonId(lessonId);
-        commit(setPositionIn(persisted, { lessonId, atomIndex }));
+        commit((s) => setPositionIn(s, { lessonId, atomIndex }));
       },
       exitLesson: () => {
         setActiveLessonId(null);

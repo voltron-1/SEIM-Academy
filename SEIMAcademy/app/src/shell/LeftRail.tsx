@@ -17,7 +17,7 @@ const LABELS: Record<Route, string> = {
  * leave without hunting for the way out.
  */
 export function LeftRail() {
-  const { route, navigate, focusMode } = useSession();
+  const { route, navigate, focusMode, dueCount } = useSession();
   if (focusMode) return null;
 
   return (
@@ -39,6 +39,15 @@ export function LeftRail() {
               }}
             >
               {LABELS[r]}
+              {/* The count is inside the link, so a screen reader reads "Review, 2 cards
+                  due" rather than "Review" and then a stray number. Nothing due renders
+                  nothing: a 0 staring back every day a learner is caught up is the
+                  opposite of what the counter is for. */}
+              {r === 'review' && dueCount > 0 && (
+                <span class="rail__badge">
+                  {dueCount} {dueCount === 1 ? 'card due' : 'cards due'}
+                </span>
+              )}
             </a>
           </li>
         ))}

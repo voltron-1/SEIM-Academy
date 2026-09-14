@@ -15,20 +15,21 @@ Status markers: `[ ]` todo · `[~]` in-progress · `[x]` done · `[!]` blocked
 
 **Phase 3 — Core components** `[~]` **in progress** (opened 2026-09-11) —
 [#5](https://github.com/voltron-1/SEIM-Academy/issues/5), milestone *Phase 3 — Core
-components*. Running in four gated units; Unit 1 (test harness + Instructions atom) is
-done.
+components*. Running in four gated units; Units 1 and 2 are done.
 
-**Next unstarted item:** Unit 2 — Flashcard + SRS
-[#35](https://github.com/voltron-1/SEIM-Academy/issues/35). SM-2 scheduler as a pure
-module, unit-tested against known interval sequences, plus the enforced
-topic-diversity/interleaving window. It is the one piece in this phase with a correct
-answer checkable against a specification rather than an opinion.
+**Next unstarted item:** Unit 3 — multiple-choice/fill-in-the-blank
+[#36](https://github.com/voltron-1/SEIM-Academy/issues/36) **and** matching/drag-classify
+[#37](https://github.com/voltron-1/SEIM-Academy/issues/37), which ship together. Inline
+feedback, never a separate results page; neutral, non-punitive wrong-answer copy. The drag
+interaction ships its **keyboard-operable equivalent in the same PR** — the accessibility
+baseline says day one, not as a later add-on — plus touch support.
 
-Then: multiple-choice/fill-in-the-blank with inline feedback
-[#36](https://github.com/voltron-1/SEIM-Academy/issues/36), matching/drag-classify **with
-its keyboard equivalent in the same PR** [#37](https://github.com/voltron-1/SEIM-Academy/issues/37),
-the test-out check [#38](https://github.com/voltron-1/SEIM-Academy/issues/38), and the
+Then: the test-out check [#38](https://github.com/voltron-1/SEIM-Academy/issues/38) and the
 cross-component accessibility sweep [#39](https://github.com/voltron-1/SEIM-Academy/issues/39).
+
+**Deferred out of Unit 2, not forgotten:** the Review route that actually *plays* the due
+queue [#118](https://github.com/voltron-1/SEIM-Academy/issues/118). The scheduler, the queue
+builder and the rail's due count all shipped; no view calls them yet.
 
 **Unit 1 settled the thing that would have blocked the exit check.** Phase 3 requires
 keyboard/screen-reader verification and nothing in Phases 1–2 could do it. The harness was
@@ -53,6 +54,67 @@ abstention — see [findings](findings/20260910-phase2-local-model-spike.md).
 ---
 
 ## LAST SESSION
+
+**2026-09-13** — **Phase 3 Unit 2 closed: Flashcard + SRS**
+([#35](https://github.com/voltron-1/SEIM-Academy/issues/35)). SM-2 as a pure module, the
+topic-diversity queue builder, the graded component, and the rail's due count. 111 tests
+green; contrast, types, build and the 24 PWA checks all pass. Plan:
+[`plans/20260913-phase3-unit2-flashcard-srs.md`](plans/20260913-phase3-unit2-flashcard-srs.md).
+
+**The review caught a blocker that 101 passing tests had missed.** `commit()` in
+`state/session.tsx` took a value, so grading a card and completing the atom — which the
+lesson player does in one tick — both built from the same snapshot and the second silently
+discarded the first. **Every grade a learner submitted was being thrown away**, with no
+error. Not a race: 100% reproducible. No existing test exercised two writes in one tick,
+which is the gap, not the bug. `commit()` now takes an updater.
+
+**Hardening, from the parallel security audit**
+([findings](findings/20260913-phase3-unit2-security.md), 0 critical / 0 high / 4 medium /
+3 low). `migrate()`'s new deck validation was materially weaker than the `completedByDay`
+validation three lines above it in the same function — a `__proto__` key re-pointed the map's
+prototype, `dueDay: "zzz"` made a card due forever-never, and `ease: 1e308` produced a
+`"NaN-NaN-NaN"` day key that sorts above every real date. All three are the *same silent
+disappearance* that `srs.ts` names in its own comment as the thing the queue must never do.
+`buildReviewQueue`'s backward scan is now bounded at the window — identical output, O(n·window)
+instead of O(n²).
+
+**Two things worth keeping from the verification.** The keyboard test caught a reveal control
+downgraded from `<button>` to `<div>`; **axe did not** — which is the argument for running
+both rather than treating axe as the accessibility gate. And the SM-2 sequences were
+re-derived by hand independently of the test file, because a test that enshrines a wrong
+number is worse than no test: the published order is *interval first, then ease*, which the
+plan originally had backwards.
+
+Follow-ups filed with milestones at creation:
+[#118](https://github.com/voltron-1/SEIM-Academy/issues/118) Review route player (Phase 3),
+[#119](https://github.com/voltron-1/SEIM-Academy/issues/119) error boundary and
+[#120](https://github.com/voltron-1/SEIM-Academy/issues/120) CSP (both Phase 8).
+
+**2026-09-11** — **Phase 2 closed; Phase 3 opened and Unit 1 landed.**
+[#116](https://github.com/voltron-1/SEIM-Academy/pull/116) closed the Phase 2 epic
+([#4](https://github.com/voltron-1/SEIM-Academy/issues/4)) and recorded the #33
+local-model spike. [#117](https://github.com/voltron-1/SEIM-Academy/pull/117) opened
+Phase 3 with Unit 1 of 4: the DOM/a11y test harness and the Instructions atom
+([#34](https://github.com/voltron-1/SEIM-Academy/issues/34) closed) — plan at
+[`plans/20260911-phase3-core-components.md`](plans/20260911-phase3-core-components.md).
+
+**The harness was built before any component, deliberately.** Phase 3's exit check is
+keyboard/screen-reader verification and every test through Phases 1–2 was state-level, with
+no browser in the build environment. happy-dom + Testing Library + axe-core, all
+devDependencies and outside the free/self-hosted critical path. Querying by role and
+accessible name makes the natural test *be* the accessibility assertion. `node --test` still
+runs everything; two small ESM hooks cover what Vite does and Node doesn't, so no `.js`
+suffixes leaked into production source to satisfy a runner.
+
+**The axe gate was fired at a real violation before being trusted** — it reported
+`button-name` and `image-alt` with help URLs. That check exists because this suite already
+reported `# pass 0` and exited `0` once, in Phase 2 Unit 3. A gate nobody has watched fire
+is not yet a gate.
+
+**Instructions atom first** because §6.4 makes it the schema-enforced prerequisite of every
+exercise atom, so its shape had to settle before the four components that follow. Phase 2
+had rendered it as a `<p>` inside a `<dl>` — invalid HTML; it is now a real description
+list, announced as three navigable terms rather than three unrelated blocks.
 
 **2026-09-10** — **Phases 1 and 2 both built, reviewed, merged and closed.** Six PRs:
 [#110](https://github.com/voltron-1/SEIM-Academy/pull/110) and
@@ -140,7 +202,7 @@ all 177 source files verified, curriculum map committed, content audit recorded.
       PRs [#112](https://github.com/voltron-1/SEIM-Academy/pull/112)–[#115](https://github.com/voltron-1/SEIM-Academy/pull/115).
 - [~] **Phase 3 — Core components** — Instructions atom, Flashcard+SRS, MC/fill-blank,
       matching/drag with keyboard equivalent, test-out check. *In progress since
-      2026-09-11; Unit 1 of 4 done.*
+      2026-09-11; Units 1 and 2 of 4 done.*
       [#5](https://github.com/voltron-1/SEIM-Academy/issues/5)
 - [ ] **Phase 4 — Tier 1 complete** — pipeline across ten Tier 1 modules; Capstone 1.
 - [ ] **Phase 5 — Advanced components** — calculators, SPL sandbox, structured editor,

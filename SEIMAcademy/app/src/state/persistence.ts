@@ -14,6 +14,20 @@
  * which is exactly why progress keyed on them survives a source edit.
  */
 
+import { MIN_EASE, MAX_EASE, MAX_INTERVAL_DAYS } from './srs';
+import type { SrsCard } from './srs';
+
+/** A calendar day key. Shared so the two loops that validate one cannot drift apart. */
+const DAY_KEY = /^\d{4}-\d{2}-\d{2}$/;
+
+/**
+ * Keys that are not data. `JSON.parse` makes `__proto__` a real own property, so it
+ * reaches `Object.entries`, and a bracket assignment would then find the
+ * `Object.prototype.__proto__` setter and re-point the map's prototype instead of storing
+ * anything.
+ */
+const UNSAFE_KEYS = new Set(['__proto__', 'constructor', 'prototype']);
+
 export const STORAGE_KEY = 'seim-academy/v1';
 export const STATE_VERSION = 1;
 
@@ -39,6 +53,8 @@ export interface PersistedState {
   /** Resume-exactly-here. */
   position: Position | null;
   flags: Flag[];
+  /** SM-2 state per flashcard atom, keyed by atom id (#35). */
+  srsCards: Record<string, SrsCard>;
 }
 
 export const emptyState = (): PersistedState => ({
@@ -49,6 +65,7 @@ export const emptyState = (): PersistedState => ({
   streakDays: 0,
   position: null,
   flags: [],
+  srsCards: {},
 });
 
 /** Local calendar day, not UTC: a streak is about the learner's day, not the server's. */
@@ -80,7 +97,62 @@ export function migrate(raw: unknown): PersistedState {
   const byDay: Record<string, string[]> = {};
   if (candidate.completedByDay && typeof candidate.completedByDay === 'object') {
     for (const [day, ids] of Object.entries(candidate.completedByDay)) {
-      if (/^\d{4}-\d{2}-\d{2}$/.test(day)) byDay[day] = strings(ids);
+      if (DAY_KEY.test(day)) byDay[day] = strings(ids);
+    }
+  }
+
+  /**
+   * Anything here could be hand-edited or written by an older build, so a card is kept
+   * only if every field it schedules on is *usable*, not merely the right type. One bad
+   * card is dropped; the rest of the deck survives, because losing a whole review deck to
+   * one corrupt entry is a far worse outcome than losing one card's history.
+   *
+   * Type checks alone are not enough here. `dueDay: "zzz"` is a string that no date
+   * compare ever matches, so the card would be due forever-never and drop silently out of
+   * review while still sitting in storage. `ease: 1e308` overflows an interval multiply to
+   * Infinity, which makes an Invalid Date and a "NaN-NaN-NaN" day key that sorts above
+   * every real date — the same silent disappearance. srs.ts calls that outcome a retention
+   * bug the learner cannot see, so it is rejected at the door.
+   */
+  const bounded = (n: unknown, max: number): n is number =>
+    typeof n === 'number' && Number.isInteger(n) && n >= 0 && n <= max;
+
+  const srsCards: Record<string, SrsCard> = {};
+  // typeof [] === 'object', so the array check is not redundant: without it, Object.entries
+  // files every card under a numeric index it can never be looked up by.
+  if (candidate.srsCards && typeof candidate.srsCards === 'object' && !Array.isArray(candidate.srsCards)) {
+    for (const [atomId, value] of Object.entries(candidate.srsCards)) {
+      if (UNSAFE_KEYS.has(atomId)) continue;
+      const c = value as Partial<SrsCard> | null;
+      if (
+        c &&
+        typeof c === 'object' &&
+        // Keyed by anything other than its own id, a card can never be updated again but
+        // is still counted as due forever.
+        c.atomId === atomId &&
+        typeof c.deck === 'string' &&
+        Array.isArray(c.teaches) &&
+        typeof c.ease === 'number' &&
+        Number.isFinite(c.ease) &&
+        c.ease >= MIN_EASE &&
+        c.ease <= MAX_EASE &&
+        bounded(c.intervalDays, MAX_INTERVAL_DAYS) &&
+        bounded(c.repetitions, Number.MAX_SAFE_INTEGER) &&
+        bounded(c.lapses, Number.MAX_SAFE_INTEGER) &&
+        typeof c.dueDay === 'string' &&
+        DAY_KEY.test(c.dueDay)
+      ) {
+        srsCards[atomId] = {
+          atomId,
+          deck: c.deck,
+          teaches: c.teaches.filter((t): t is string => typeof t === 'string'),
+          ease: c.ease,
+          intervalDays: c.intervalDays,
+          repetitions: c.repetitions,
+          dueDay: c.dueDay,
+          lapses: c.lapses,
+        };
+      }
     }
   }
 
@@ -104,6 +176,7 @@ export function migrate(raw: unknown): PersistedState {
           (f): f is Flag => !!f && typeof f.atomId === 'string' && typeof f.day === 'string'
         )
       : [],
+    srsCards,
   };
 }
 
@@ -153,6 +226,28 @@ export const removeFlag = (state: PersistedState, atomId: string): PersistedStat
   ...state,
   flags: state.flags.filter((f) => f.atomId !== atomId),
 });
+
+/** Reviewing a card replaces its state; a card has one schedule, not a history of them. */
+export const putSrsCard = (state: PersistedState, card: SrsCard): PersistedState => ({
+  ...state,
+  srsCards: { ...state.srsCards, [card.atomId]: card },
+});
+
+/**
+ * `hasOwn`, not a bare lookup: an atom id of `toString` or `constructor` would otherwise
+ * resolve to an inherited `Object.prototype` member, which is truthy and would be handed
+ * on as if it were a card.
+ */
+export const srsCardFor = (state: PersistedState, atomId: string): SrsCard | undefined =>
+  Object.hasOwn(state.srsCards, atomId) ? state.srsCards[atomId] : undefined;
+
+/**
+ * Today's due count for the left rail — BUILD-PLAN's ambient-accountability mechanism,
+ * "instead of a calendar/syllabus". Counted off persisted state alone so the rail can
+ * show a number on first paint without loading any lesson content.
+ */
+export const dueCount = (state: PersistedState, today: string = dayKey()): number =>
+  Object.values(state.srsCards).filter((card) => card.dueDay <= today).length;
 
 export const isFlagged = (state: PersistedState, atomId: string): boolean =>
   state.flags.some((f) => f.atomId === atomId);
