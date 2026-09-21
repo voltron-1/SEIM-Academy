@@ -259,25 +259,5 @@ export function Copilot() {
   );
 }
 
-export function Review() {
-  const load = useManifest();
-  const cards = load.status === 'ready' ? (load.manifest.modules[0]?.stats.srs_eligible_cards ?? 0) : 0;
-  return (
-    <>
-      <h1>Review</h1>
-      <div class="panel panel--quiet">
-        <p>
-          <span class="data">{cards}</span> cards are eligible for spaced repetition — the
-          Event IDs with ground-truth evidence behind them, not every row in the source
-          tables.
-        </p>
-        <p class="muted">
-          The SM-2 scheduler and the topic-interleaving window are <strong>Phase 3</strong>.
-          Showing a review queue before a scheduler exists would be showing a number with
-          nothing behind it.
-        </p>
-      </div>
-    </>
-  );
-}
+export { Review } from './Review';
 

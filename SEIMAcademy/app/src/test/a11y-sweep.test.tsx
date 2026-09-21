@@ -4,7 +4,9 @@ import { render, screen, cleanup, fireEvent, waitFor } from '@testing-library/pr
 import userEvent from '@testing-library/user-event';
 import { AtomView } from '../atoms';
 import { TestOut } from '../views/TestOut';
+import { Review } from '../views/Review';
 import { SessionProvider } from '../state/session';
+import { STORAGE_KEY, dayKey, type PersistedState } from '../state/persistence';
 import { assertNoA11yViolations } from './a11y';
 import type { Atom, BuildManifest, ModuleReport, Lesson } from '../content/types';
 
@@ -226,10 +228,16 @@ let originalFetch: typeof globalThis.fetch;
 
 beforeEach(() => {
   originalFetch = globalThis.fetch;
-  globalThis.fetch = (async (input: RequestInfo | URL) =>
-    String(input).includes('l-1.json')
-      ? new Response(JSON.stringify(testOutLesson), { status: 200 })
-      : new Response('not found', { status: 404 })) as typeof globalThis.fetch;
+  globalThis.fetch = (async (input: RequestInfo | URL) => {
+    const url = String(input);
+    if (url.includes('build-manifest.json')) {
+      return new Response(JSON.stringify(testOutManifest), { status: 200 });
+    }
+    if (url.includes('l-1.json')) {
+      return new Response(JSON.stringify(testOutLesson), { status: 200 });
+    }
+    return new Response('not found', { status: 404 });
+  }) as typeof globalThis.fetch;
 });
 
 afterEach(() => {
@@ -257,5 +265,56 @@ test('sweep: Test-out is fully operable by keyboard, clean at rest and on the re
   }
 
   await waitFor(() => assert.ok(screen.getByText('You know this module.')));
+  await assertNoA11yViolations(container);
+});
+
+// ---------------------------------------------------------------------------
+// Review — reuses Flashcard's keyboard path; the sweep is on the route's own
+// fetch/queue wiring, on top of Flashcard's own keyboard coverage above.
+// ---------------------------------------------------------------------------
+
+test('sweep: Review is fully operable by keyboard, clean at rest and on the caught-up screen', async () => {
+  const today = dayKey();
+  const seeded: PersistedState = {
+    version: 1,
+    completedAtomIds: [],
+    completedByDay: {},
+    lastActiveDay: null,
+    streakDays: 0,
+    position: null,
+    flags: [],
+    srsCards: {
+      'f-1': {
+        atomId: 'f-1',
+        deck: 'mod-1',
+        teaches: ['tag-1'],
+        ease: 2.5,
+        intervalDays: 1,
+        repetitions: 1,
+        dueDay: today,
+        lapses: 0,
+      },
+    },
+  };
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(seeded));
+
+  const user = userEvent.setup();
+  const { container } = render(
+    <SessionProvider>
+      <Review />
+    </SessionProvider>
+  );
+
+  await waitFor(() => assert.ok(screen.getByText('front 1')));
+  await assertNoA11yViolations(container);
+
+  await user.tab(); // -> "Show the answer"
+  await user.keyboard('{Enter}');
+  await user.tab(); // -> "Again"
+  await user.tab(); // -> "Hard"
+  await user.tab(); // -> "Good"
+  await user.keyboard('{Enter}');
+
+  await waitFor(() => assert.ok(screen.getByText(/caught up/i)));
   await assertNoA11yViolations(container);
 });

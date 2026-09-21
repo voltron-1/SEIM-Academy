@@ -12,7 +12,7 @@ import {
   type PersistedState, type Position,
 } from './persistence';
 import { DAILY_TARGET_ATOMS } from './session-core';
-import { cardForAtom, review as reviewCard, type SrsCard } from './srs';
+import { cardForAtom, cardsDue, review as reviewCard, type SrsCard } from './srs';
 import type { Atom } from '../content/types';
 
 export { ROUTES, DAILY_TARGET_ATOMS, chromeFor } from './session-core';
@@ -56,6 +56,8 @@ export interface SessionApi extends SessionState {
   srsCardFor: (atomId: string) => SrsCard | undefined;
   gradeCard: (atom: Atom, grade: number) => void;
   dueCount: number;
+  /** The cards `dueCount` counts, for the Review route to actually play. */
+  dueCards: SrsCard[];
 
   /** Lesson currently being played, if any. */
   activeLessonId: string | null;
@@ -155,6 +157,7 @@ export function SessionProvider({ children }: { children: ComponentChildren }) {
       completeAtom: (atomId) => commit((s) => completeAtomIn(s, atomId, today)),
       srsCardFor: (atomId) => srsCardForIn(persisted, atomId),
       dueCount: dueCountIn(persisted, today),
+      dueCards: cardsDue(Object.values(persisted.srsCards), today),
       gradeCard: (atom, grade) =>
         commit((s) => {
           const card = cardForAtom(atom, srsCardForIn(s, atom.id), today);

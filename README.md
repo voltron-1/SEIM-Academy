@@ -4,15 +4,21 @@ Planning repository for **SEIM-Academy** — an interactive, dark-cyber-themed l
 module that turns a SOC knowledge-base repo into a Tier 1 / Tier 2 analyst training
 track, with an embedded Socratic copilot agent.
 
-**Status: Phase 0 (content audit) in progress. No application code yet.**
-The source knowledge base is [`TonyPhipps/SIEM`](https://github.com/TonyPhipps/SIEM)
-(GPL-3.0). All 31 Curriculum Map path specs have been verified — 177 files, none
-missing. See [`curriculum-map.md`](curriculum-map.md) and `planned_execution.md`.
+**Status: Phase 3 — Core components, closing out.** Phases 0–2 (content audit, schema
+& pipeline, app shell) are done. The app lives in [`SEIMAcademy/app/`](SEIMAcademy/app)
+— Preact + TypeScript, 64 generated lessons / 707 atoms, playing start to finish with
+local persistence and an offline-safe PWA shell. Phase 3 has shipped all five core
+components (Instructions, Flashcard+SRS, Quiz, Matching/drag-classify, the test-out
+check) plus the Review route that plays the due spaced-repetition queue — the last item
+on the milestone. The source knowledge base is
+[`TonyPhipps/SIEM`](https://github.com/TonyPhipps/SIEM) (GPL-3.0). See
+`planned_execution.md` for the current phase and next unstarted item.
 
 ## What's here
 
 | Document | Role | Use it for |
 |---|---|---|
+| [`SEIMAcademy/app/`](SEIMAcademy/app) | **The application** | Preact + TypeScript PWA; `npm run verify` runs the full gate (types, tests, build, PWA checks) |
 | [`BUILD-PLAN.md`](BUILD-PLAN.md) | **What** to build — the seed plan | Goals, design principles, curriculum map, UI/UX spec, copilot behavior contract, tech stack, phases 0–9, success metrics, open decisions |
 | [`IMPLEMENTATION-PLAN.md`](IMPLEMENTATION-PLAN.md) | **How and in what order** | Workstreams, per-phase technical approach + definition of done, staffing, timeline, risks, decision gates |
 | [`execution.md`](execution.md) | **Task-level tracker** | Day-to-day checklist per phase, with exit checks |

@@ -1,9 +1,10 @@
 import { test, afterEach } from 'node:test';
 import assert from 'node:assert/strict';
-import { render, screen, cleanup, fireEvent } from '@testing-library/preact';
+import { render, screen, cleanup, fireEvent, waitFor } from '@testing-library/preact';
 import { SessionProvider, useSession } from './session';
-import { STORAGE_KEY, type PersistedState } from './persistence';
+import { STORAGE_KEY, dayKey, type PersistedState } from './persistence';
 import type { Atom } from '../content/types';
+import type { SrsCard } from './srs';
 
 afterEach(() => {
   cleanup();
@@ -84,6 +85,43 @@ test('grading an ineligible card changes nothing rather than erroring', () => {
   );
   fireEvent.click(screen.getByRole('button'));
   assert.deepEqual(stored().srsCards, {});
+});
+
+test('dueCards exposes only the cards due today or overdue, not the whole deck', async () => {
+  const today = dayKey();
+  const card = (atomId: string, dueDay: string): SrsCard => ({
+    atomId,
+    deck: 'd',
+    teaches: [],
+    ease: 2.5,
+    intervalDays: 1,
+    repetitions: 1,
+    dueDay,
+    lapses: 0,
+  });
+  const seeded: PersistedState = {
+    version: 1,
+    completedAtomIds: [],
+    completedByDay: {},
+    lastActiveDay: null,
+    streakDays: 0,
+    position: null,
+    flags: [],
+    srsCards: { due: card('due', today), notDue: card('notDue', '2999-01-01') },
+  };
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(seeded));
+
+  function Probe() {
+    const session = useSession();
+    return <span data-testid="probe">{session.dueCards.map((c) => c.atomId).join(',')}</span>;
+  }
+  render(
+    <SessionProvider>
+      <Probe />
+    </SessionProvider>
+  );
+
+  await waitFor(() => assert.equal(screen.getByTestId('probe').textContent, 'due'));
 });
 
 test('a second grade of the same card builds on the first, not on a stale snapshot', () => {
