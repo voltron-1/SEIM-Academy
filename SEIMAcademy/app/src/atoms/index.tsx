@@ -3,6 +3,8 @@ import type { Atom, Difficulty } from '../content/types';
 import { Markdown } from './Markdown';
 import { Instructions as InstructionsAtom } from './Instructions';
 import { Flashcard as FlashcardAtom } from './Flashcard';
+import { Quiz as QuizAtom } from './Quiz';
+import { Matching as MatchingAtom } from './Matching';
 import type { SrsCard } from '../state/srs';
 import { str, list } from './payload';
 import './atoms.css';
@@ -72,27 +74,7 @@ function Flashcard({ atom, hint, srsCard, onGrade }: AtomProps) {
 }
 
 function Quiz({ atom, hint }: AtomProps) {
-  const choices = list(atom.payload, 'choices').filter((c): c is string => typeof c === 'string');
-  const answerIndex = typeof atom.payload.answer_index === 'number' ? atom.payload.answer_index : -1;
-  return (
-    <>
-      <p class="atom__prompt">{str(atom.payload, 'question')}</p>
-      <ol class="choices">
-        {choices.map((choice, i) => (
-          <li key={i} class="choices__item data">
-            {choice}
-          </li>
-        ))}
-      </ol>
-      <Reveal label="Show the answer" forceOpen={hint}>
-        <p>
-          <strong class="data">{choices[answerIndex] ?? '—'}</strong>
-        </p>
-        <p class="atom__aside">{str(atom.payload, 'rationale')}</p>
-      </Reveal>
-      <p class="atom__aside">Answering is Phase 3. Reading it through works now.</p>
-    </>
-  );
+  return <QuizAtom atom={atom} hint={hint} />;
 }
 
 function Instructions({ atom, nextDifficulty }: AtomProps) {
@@ -101,56 +83,32 @@ function Instructions({ atom, nextDifficulty }: AtomProps) {
 
 function Exercise({ atom, hint }: AtomProps) {
   const format = str(atom.payload, 'format');
+
+  if (format === 'match' || format === 'drag-classify') {
+    return <MatchingAtom atom={atom} hint={hint} />;
+  }
+
+  // lookup-drill has no Unit 3 issue behind it; it stays a reveal until its own unit lands.
   return (
     <>
       <Markdown body={atom.body} />
       <p class="atom__aside">
-        <span class="data">{format}</span> · interaction arrives in Phase 3. The material is
-        below so the lesson reads end to end.
+        <span class="data">{format}</span> · interaction arrives in a later unit. The material
+        is below so the lesson reads end to end.
       </p>
       <Reveal label="Show the pairs" forceOpen={hint}>
-        {format === 'match' && (
-          <ul class="pairs">
-            {list(atom.payload, 'pairs').map((p, i) => {
-              const pair = p as { left?: unknown; right?: unknown };
-              return (
-                <li key={i}>
-                  <span class="data">{String(pair.left ?? '')}</span>
-                  <span class="pairs__arrow" aria-hidden="true">→</span>
-                  <span>{String(pair.right ?? '')}</span>
-                </li>
-              );
-            })}
-          </ul>
-        )}
-        {format === 'drag-classify' && (
-          <ul class="pairs">
-            {list(atom.payload, 'items').map((it, i) => {
-              const item = it as { label?: unknown; bucket?: unknown };
-              return (
-                <li key={i}>
-                  <span>{String(item.label ?? '')}</span>
-                  <span class="pairs__arrow" aria-hidden="true">→</span>
-                  <span class="data">{String(item.bucket ?? '')}</span>
-                </li>
-              );
-            })}
-          </ul>
-        )}
-        {format === 'lookup-drill' && (
-          <ul class="pairs">
-            {list(atom.payload, 'prompts').map((p, i) => {
-              const prompt = p as { ask?: unknown; answer?: unknown };
-              return (
-                <li key={i}>
-                  <span class="data">{String(prompt.ask ?? '')}</span>
-                  <span class="pairs__arrow" aria-hidden="true">→</span>
-                  <span>{String(prompt.answer ?? '')}</span>
-                </li>
-              );
-            })}
-          </ul>
-        )}
+        <ul class="pairs">
+          {list(atom.payload, 'prompts').map((p, i) => {
+            const prompt = p as { ask?: unknown; answer?: unknown };
+            return (
+              <li key={i}>
+                <span class="data">{String(prompt.ask ?? '')}</span>
+                <span class="pairs__arrow" aria-hidden="true">→</span>
+                <span>{String(prompt.answer ?? '')}</span>
+              </li>
+            );
+          })}
+        </ul>
       </Reveal>
     </>
   );

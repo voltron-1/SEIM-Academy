@@ -108,6 +108,7 @@ export function LessonPlayer({ lessonId }: { lessonId: string }) {
       </p>
 
       <AtomView
+        key={atom.id}
         atom={atom}
         hint={hintAt === index}
         /* A harder exercise is announced by the atom before it, never discovered mid-struggle. */

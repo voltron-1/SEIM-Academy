@@ -1,0 +1,22 @@
+.feedback {
+  margin: var(--gap-lg) 0 0;
+  padding: var(--gap) var(--gap-lg);
+  border-left: 3px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--surface-raised);
+  max-width: var(--measure);
+}
+
+/* Muted, not alarming: the danger token is never used to flash a mistake. */
+.feedback--correct { border-left-color: var(--success); }
+.feedback--answer { border-left-color: var(--accent); }
+
+.feedback__headline {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin: 0;
+}
+
+.feedback__shape { flex: none; font-size: 0.9em; }
+.feedback__why { margin: var(--gap) 0 0; color: var(--text-muted); }
