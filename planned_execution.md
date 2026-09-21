@@ -15,19 +15,15 @@ Status markers: `[ ]` todo · `[~]` in-progress · `[x]` done · `[!]` blocked
 
 **Phase 3 — Core components** `[~]` **in progress** (opened 2026-09-11) —
 [#5](https://github.com/voltron-1/SEIM-Academy/issues/5), milestone *Phase 3 — Core
-components*. Running in four gated units; Units 1–3 are done.
+components*. All four gated units done (2026-09-21); the milestone stays open behind one
+deferred item.
 
-**Next unstarted item:** Unit 4 — the test-out check
-[#38](https://github.com/voltron-1/SEIM-Academy/issues/38) (3–5 generation-format questions
-per module; a pass skips ahead, anything else goes to the normal queue with no penalty and no
-failure record; gates on the module's `teaches` tags; the harder-exercise difficulty tag
-surfaces in the Instructions atom) **and** the cross-component keyboard/screen-reader smoke
-test [#39](https://github.com/voltron-1/SEIM-Academy/issues/39) across all five components —
-Instructions, Flashcard, Quiz, Matching, and the new test-out check.
-
-**Deferred out of Unit 2, not forgotten:** the Review route that actually *plays* the due
-queue [#118](https://github.com/voltron-1/SEIM-Academy/issues/118). The scheduler, the queue
-builder and the rail's due count all shipped; no view calls them yet.
+**Next unstarted item:** the Review route that actually *plays* the due queue
+[#118](https://github.com/voltron-1/SEIM-Academy/issues/118), deferred out of Unit 2 and
+still the only open item on the Phase 3 milestone. The scheduler, the queue builder and the
+rail's due count all shipped; no view calls them yet. Once #118 lands, close milestone
+*Phase 3 — Core components* and epic [#5](https://github.com/voltron-1/SEIM-Academy/issues/5),
+then open Phase 4.
 
 **Unit 1 settled the thing that would have blocked the exit check.** Phase 3 requires
 keyboard/screen-reader verification and nothing in Phases 1–2 could do it. The harness was
@@ -52,6 +48,37 @@ abstention — see [findings](findings/20260910-phase2-local-model-spike.md).
 ---
 
 ## LAST SESSION
+
+**2026-09-21** — **Phase 3 Unit 4 closed: Test-out check + cross-component a11y sweep**
+([#38](https://github.com/voltron-1/SEIM-Academy/issues/38),
+[#39](https://github.com/voltron-1/SEIM-Academy/issues/39), PR
+[#123](https://github.com/voltron-1/SEIM-Academy/pull/123), merged 2026-09-21). Every
+generated quiz atom is multiple-choice with no `teaches` tag, so test-out questions are
+drawn from the module's SRS-eligible flashcards instead — already tagged, and
+generation-format by construction. Selection is a deterministic greedy set-cover over
+`teaches` tags in `state/testout.ts`, same no-shuffle posture as `buildReviewQueue`. A pass
+skips the whole module; the bar is every question correct; a fail writes nothing anywhere —
+no SRS review, no `completedAtomIds`, no flag. The a11y sweep
+(`src/test/a11y-sweep.test.tsx`) drives all five core components — Instructions, Flashcard,
+Quiz, Matching, Test-out — with real keyboard interaction and asserts zero axe violations at
+rest and once settled, closing the keyboard/screen-reader verification Phase 3's exit check
+requires.
+
+**A parallel security-auditor + code-reviewer pass caught three more bugs before merge:**
+`next.lesson_order[0]!` could write a position pointing at a lesson that doesn't exist if a
+manifest module had an empty `lesson_order` — now falls back to the "nothing to skip to"
+screen. Test-out fetches every lesson in a module before selecting questions but was
+discarding `fetchJson`'s per-lesson stale flag, so a learner could pass and skip a module on
+cache-only content with no indication — now surfaced via the existing `StaleNotice`.
+`loadLesson`'s fetch URL was built from an unencoded manifest-derived id — encoded now as
+cheap insurance, even though the id isn't learner input.
+
+193 tests green; contrast, types, build and the 24 PWA checks all pass. Plan:
+[`plans/20260921-phase3-unit4-testout-a11y.md`](plans/20260921-phase3-unit4-testout-a11y.md).
+
+**Phase 3's four gated units are all done.** The milestone stays open behind
+[#118](https://github.com/voltron-1/SEIM-Academy/issues/118) (Review route), deferred out of
+Unit 2 and not yet picked back up.
 
 **2026-09-21** — **Phase 3 Unit 3 closed: Quiz + Matching/drag-classify**
 ([#36](https://github.com/voltron-1/SEIM-Academy/issues/36),
@@ -230,11 +257,13 @@ all 177 source files verified, curriculum map committed, content audit recorded.
       [#4](https://github.com/voltron-1/SEIM-Academy/issues/4) closed, milestone 15/15,
       PRs [#112](https://github.com/voltron-1/SEIM-Academy/pull/112)–[#115](https://github.com/voltron-1/SEIM-Academy/pull/115).
 - [~] **Phase 3 — Core components** — Instructions atom, Flashcard+SRS, MC/fill-blank,
-      matching/drag with keyboard equivalent, test-out check. *In progress since
-      2026-09-11; Units 1–3 of 4 done.* PRs
+      matching/drag with keyboard equivalent, test-out check. *All four units done
+      2026-09-21; milestone open behind deferred Review route*
+      [#118](https://github.com/voltron-1/SEIM-Academy/issues/118). PRs
       [#117](https://github.com/voltron-1/SEIM-Academy/pull/117),
       [#121](https://github.com/voltron-1/SEIM-Academy/pull/121),
-      [#122](https://github.com/voltron-1/SEIM-Academy/pull/122).
+      [#122](https://github.com/voltron-1/SEIM-Academy/pull/122),
+      [#123](https://github.com/voltron-1/SEIM-Academy/pull/123).
       [#5](https://github.com/voltron-1/SEIM-Academy/issues/5)
 - [ ] **Phase 4 — Tier 1 complete** — pipeline across ten Tier 1 modules; Capstone 1.
 - [ ] **Phase 5 — Advanced components** — calculators, SPL sandbox, structured editor,
