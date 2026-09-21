@@ -1,0 +1,82 @@
+.matching { display: flex; flex-direction: column; gap: var(--gap-lg); }
+
+.matching__status { min-height: 1.4em; margin: 0; color: var(--text-muted); }
+
+.matching__tray,
+.matching__buckets,
+.matching__bucketItems {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.matching__item {
+  padding: 8px 12px;
+  background: var(--surface-raised);
+  color: var(--text);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: border-color var(--motion-duration) var(--motion-ease), background var(--motion-duration) var(--motion-ease);
+}
+
+.matching__item:disabled { cursor: default; }
+
+/* Held state is carried by more than colour: the border widens and the label gets a
+   prefix via ::before, so it survives a colour-blind or greyscale view. */
+.matching__item--held {
+  border-color: var(--accent);
+  border-width: 2px;
+  background: var(--surface);
+}
+.matching__item--held::before { content: '✋ '; }
+
+.matching__buckets { flex-direction: column; align-items: stretch; }
+
+.matching__bucket {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--gap);
+  padding: 10px 14px;
+  background: var(--surface);
+  color: var(--text);
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  max-width: var(--measure);
+}
+
+.matching__bucket:disabled { cursor: default; }
+.matching__bucketCount { color: var(--text-muted); }
+
+.matching__bucketItems { padding-inline-start: 14px; margin-top: 4px; }
+.matching__bucketItems li { display: flex; align-items: center; gap: 6px; }
+
+.matching__remove {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  line-height: 1;
+  padding: 2px 6px;
+  cursor: pointer;
+}
+
+.matching__mark { margin-left: 8px; }
+.matching__mark--right { color: var(--success); }
+.matching__mark--wrong { color: var(--danger); }
+
+.matching__check {
+  align-self: flex-start;
+  padding: 8px 14px;
+  background: var(--surface-raised);
+  color: var(--text);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.matching__check:disabled { cursor: default; opacity: 0.6; }
