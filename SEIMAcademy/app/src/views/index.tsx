@@ -3,6 +3,8 @@ import { loadManifest, modulesForTier, ContentUnavailable } from '../content';
 import type { BuildManifest, ModuleReport } from '../content/types';
 import { useSession, DAILY_TARGET_ATOMS } from '../state/session';
 import { isOnline, watchConnectivity } from '../offline';
+import { MIN_TESTOUT_QUESTIONS } from '../state/testout';
+import { TestOut } from './TestOut';
 import './views.css';
 
 type Load =
@@ -102,11 +104,22 @@ function ModuleCard({ module }: { module: ModuleReport }) {
 export function Today() {
   const load = useManifest();
   const { atomsLeftToday, completedToday, position, startLesson, streakDays, flagCount } = useSession();
+  const [testingOut, setTestingOut] = useState(false);
 
   if (load.status === 'loading') return <p class="muted">Loading…</p>;
   if (load.status === 'error') return <Degraded reason={load.reason} retry={load.retry} />;
 
   const first = load.manifest.modules[0];
+
+  if (testingOut && first) {
+    return (
+      <>
+        <h1>Today</h1>
+        <TestOut module={first} manifest={load.manifest} onClose={() => setTestingOut(false)} />
+      </>
+    );
+  }
+
   return (
     <>
       {load.stale && <StaleNotice />}
@@ -121,17 +134,26 @@ export function Today() {
         <section class="panel">
           <p class="panel__kicker">{position ? 'Pick up where you left off' : 'Up next'}</p>
           <ModuleCard module={first} />
-          <button
-            type="button"
-            class="cta"
-            onClick={() =>
-              position
-                ? startLesson(position.lessonId, position.atomIndex)
-                : startLesson(first.lesson_order[0]!)
-            }
-          >
-            {position ? 'Resume' : 'Start'}
-          </button>
+          <div class="today__actions">
+            <button
+              type="button"
+              class="cta"
+              onClick={() =>
+                position
+                  ? startLesson(position.lessonId, position.atomIndex)
+                  : startLesson(first.lesson_order[0]!)
+              }
+            >
+              {position ? 'Resume' : 'Start'}
+            </button>
+            {/* Already know this material? A quick check skips it — no penalty either way if
+                you don't. */}
+            {first.stats.srs_eligible_cards >= MIN_TESTOUT_QUESTIONS && (
+              <button type="button" class="ghost" onClick={() => setTestingOut(true)}>
+                Test out of {first.title}
+              </button>
+            )}
+          </div>
           {position && (
             <p class="note">
               <code>{position.lessonId}</code>, atom{' '}

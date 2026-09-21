@@ -24,8 +24,13 @@ const deps = () => ({
 export const loadManifest = (): Promise<JsonResult<BuildManifest>> =>
   fetchJson<BuildManifest>(`${BASE}/build-manifest.json`, deps());
 
+/**
+ * `id` is manifest-derived, not learner input, but it still crosses a URL boundary — an id
+ * containing `../` would otherwise redirect the fetch outside `lessons/`. Encoding it is
+ * cheap insurance against a corrupted or tampered manifest, not a defence against a learner.
+ */
 export const loadLesson = (id: string): Promise<JsonResult<Lesson>> =>
-  fetchJson<Lesson>(`${BASE}/lessons/${id}.json`, deps());
+  fetchJson<Lesson>(`${BASE}/lessons/${encodeURIComponent(id)}.json`, deps());
 
 export const modulesForTier = (manifest: BuildManifest, tier: 1 | 2) =>
   manifest.modules.filter((m) => m.tier === tier);
