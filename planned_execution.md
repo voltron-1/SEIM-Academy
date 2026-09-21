@@ -15,17 +15,15 @@ Status markers: `[ ]` todo · `[~]` in-progress · `[x]` done · `[!]` blocked
 
 **Phase 3 — Core components** `[~]` **in progress** (opened 2026-09-11) —
 [#5](https://github.com/voltron-1/SEIM-Academy/issues/5), milestone *Phase 3 — Core
-components*. Running in four gated units; Units 1 and 2 are done.
+components*. Running in four gated units; Units 1–3 are done.
 
-**Next unstarted item:** Unit 3 — multiple-choice/fill-in-the-blank
-[#36](https://github.com/voltron-1/SEIM-Academy/issues/36) **and** matching/drag-classify
-[#37](https://github.com/voltron-1/SEIM-Academy/issues/37), which ship together. Inline
-feedback, never a separate results page; neutral, non-punitive wrong-answer copy. The drag
-interaction ships its **keyboard-operable equivalent in the same PR** — the accessibility
-baseline says day one, not as a later add-on — plus touch support.
-
-Then: the test-out check [#38](https://github.com/voltron-1/SEIM-Academy/issues/38) and the
-cross-component accessibility sweep [#39](https://github.com/voltron-1/SEIM-Academy/issues/39).
+**Next unstarted item:** Unit 4 — the test-out check
+[#38](https://github.com/voltron-1/SEIM-Academy/issues/38) (3–5 generation-format questions
+per module; a pass skips ahead, anything else goes to the normal queue with no penalty and no
+failure record; gates on the module's `teaches` tags; the harder-exercise difficulty tag
+surfaces in the Instructions atom) **and** the cross-component keyboard/screen-reader smoke
+test [#39](https://github.com/voltron-1/SEIM-Academy/issues/39) across all five components —
+Instructions, Flashcard, Quiz, Matching, and the new test-out check.
 
 **Deferred out of Unit 2, not forgotten:** the Review route that actually *plays* the due
 queue [#118](https://github.com/voltron-1/SEIM-Academy/issues/118). The scheduler, the queue
@@ -54,6 +52,36 @@ abstention — see [findings](findings/20260910-phase2-local-model-spike.md).
 ---
 
 ## LAST SESSION
+
+**2026-09-21** — **Phase 3 Unit 3 closed: Quiz + Matching/drag-classify**
+([#36](https://github.com/voltron-1/SEIM-Academy/issues/36),
+[#37](https://github.com/voltron-1/SEIM-Academy/issues/37), PR
+[#122](https://github.com/voltron-1/SEIM-Academy/pull/122), merged 2026-09-21). Quiz answers
+once with inline neutral-copy feedback and an always-shown rationale. Matching/drag-classify
+share one pure state machine (`state/placement.ts`) driven by three callers —
+`pointerdown`/`pointerup`, `Enter`/`Space`, and `Escape` to cancel — none of which is wired
+to the native `click` event, since a real click fires `pointerdown` then `click` on the same
+element and binding pick-up to both would toggle it straight back off. Plan:
+[`plans/20260914-phase3-unit3-quiz-matching.md`](plans/20260914-phase3-unit3-quiz-matching.md).
+
+**A parallel security-auditor + code-reviewer pass on the diff caught three real bugs before
+merge**, not after. Matching's hint mode disabled every control but never called
+`checkPlacements`, so the shell's Hint button revealed nothing — hint now grades whatever is
+on the board, including unplaced items. `AtomView` had no `key={atom.id}` in `Lesson.tsx`, so
+two matching (or quiz) atoms back to back reused the same component instance and the second
+one inherited the first's settled/answered state — the same *silent carry-over* shape as
+Unit 2's `commit()` bug, just at the render layer instead of the state layer. Drag-classify's
+`buckets` list also wasn't de-duplicated the way `match`'s already was, which would have
+rendered two indistinguishable drop targets sharing one item count.
+
+**Fieldset-only disabling isn't enough**, caught the same session in Quiz: `disabled` on a
+`<fieldset>` does not make `HTMLInputElement.disabled` true on its children — that IDL
+attribute reflects only the element's own attribute, not an inherited fieldset state. A test
+asserting `radio.disabled === true` after disabling the fieldset failed correctly; the fix
+disables each control directly, which also gives screen readers a more reliable signal than
+fieldset ancestry does.
+
+169 tests green; contrast, types, build and the 24 PWA checks all pass.
 
 **2026-09-13** — **Phase 3 Unit 2 closed: Flashcard + SRS**
 ([#35](https://github.com/voltron-1/SEIM-Academy/issues/35), PR
@@ -203,9 +231,10 @@ all 177 source files verified, curriculum map committed, content audit recorded.
       PRs [#112](https://github.com/voltron-1/SEIM-Academy/pull/112)–[#115](https://github.com/voltron-1/SEIM-Academy/pull/115).
 - [~] **Phase 3 — Core components** — Instructions atom, Flashcard+SRS, MC/fill-blank,
       matching/drag with keyboard equivalent, test-out check. *In progress since
-      2026-09-11; Units 1 and 2 of 4 done.* PRs
+      2026-09-11; Units 1–3 of 4 done.* PRs
       [#117](https://github.com/voltron-1/SEIM-Academy/pull/117),
-      [#121](https://github.com/voltron-1/SEIM-Academy/pull/121).
+      [#121](https://github.com/voltron-1/SEIM-Academy/pull/121),
+      [#122](https://github.com/voltron-1/SEIM-Academy/pull/122).
       [#5](https://github.com/voltron-1/SEIM-Academy/issues/5)
 - [ ] **Phase 4 — Tier 1 complete** — pipeline across ten Tier 1 modules; Capstone 1.
 - [ ] **Phase 5 — Advanced components** — calculators, SPL sandbox, structured editor,
