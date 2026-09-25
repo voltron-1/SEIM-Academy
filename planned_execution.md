@@ -13,21 +13,23 @@ Status markers: `[ ]` todo · `[~]` in-progress · `[x]` done · `[!]` blocked
 
 ## NEXT UP
 
-**Phase 3 — Core components** `[~]` **in progress** (opened 2026-09-11) —
-[#5](https://github.com/voltron-1/SEIM-Academy/issues/5), milestone *Phase 3 — Core
-components*. All four gated units done (2026-09-21); the milestone stays open behind one
-deferred item.
+**Phase 4 — Tier 1 complete** `[ ]` **not started** —
+[#6](https://github.com/voltron-1/SEIM-Academy/issues/6), milestone *Phase 4 — Tier 1
+complete*.
 
-**Next unstarted item:** the Review route that actually *plays* the due queue
-[#118](https://github.com/voltron-1/SEIM-Academy/issues/118), deferred out of Unit 2 and
-still the only open item on the Phase 3 milestone. The scheduler, the queue builder and the
-rail's due count all shipped; no view calls them yet. Once #118 lands, close milestone
-*Phase 3 — Core components* and epic [#5](https://github.com/voltron-1/SEIM-Academy/issues/5),
-then open Phase 4.
+**Next unstarted item:** [#40](https://github.com/voltron-1/SEIM-Academy/issues/40) — "Run
+pipeline: SOC orientation & what you're protecting," the first of ten Tier 1 modules.
+Sources: `README.md` + `Orientation/crown-jewels.md` (88 lines total) from
+`TonyPhipps/SIEM` @ `4adb971`. Needs a new pipeline profile (`prose-orientation`) —
+`event-id-tables` is table-shaped and not reusable for prose sources; see
+[`plans/20260925-phase3-closeout-phase4-unit1.md`](plans/20260925-phase3-closeout-phase4-unit1.md)
+for the design (gated, awaiting go-ahead to execute).
 
-**Unit 1 settled the thing that would have blocked the exit check.** Phase 3 requires
-keyboard/screen-reader verification and nothing in Phases 1–2 could do it. The harness was
-built before any component rather than after five of them.
+**Phase 3 — Core components closed 2026-09-25.** All 6 sub-issues (#34–#39) plus the
+deferred Review route ([#118](https://github.com/voltron-1/SEIM-Academy/issues/118), PR
+#124) done; epic #5 and milestone 4 closed same day. Tracking had drifted behind actual
+completion state — #118 merged 2026-09-21 but #5/milestone 4 stayed open with an unticked
+checklist until this session caught it.
 
 **What Phase 2 hands forward:**
 
@@ -48,6 +50,18 @@ abstention — see [findings](findings/20260910-phase2-local-model-spike.md).
 ---
 
 ## LAST SESSION
+
+**2026-09-25** — **Phase 3 tracking closeout.** Epic
+[#5](https://github.com/voltron-1/SEIM-Academy/issues/5) and milestone *Phase 3 — Core
+components* were still open despite all sub-issues and #118 being closed since
+2026-09-21 — caught during a routine "what's next" check when GitHub's native
+sub-issues badge (6/6, counting only #34–#39) read as 100% complete while #118 wasn't a
+tracked sub-issue at all and the epic's own body checklist was untouched. Ticked
+`execution.md` and #5's checklist against actual merged-PR evidence, closed #5 and
+milestone 4, moved NEXT UP to Phase 4 / [#40](https://github.com/voltron-1/SEIM-Academy/issues/40).
+Also fielded and resolved a scope question this session: confirmed the curriculum's
+content source stays `TonyPhipps/SIEM` (Phase 0 Decision 4), not the unrelated
+Suburban-SOC project.
 
 **2026-09-21** — **Phase 3 Unit 4 closed: Test-out check + cross-component a11y sweep**
 ([#38](https://github.com/voltron-1/SEIM-Academy/issues/38),

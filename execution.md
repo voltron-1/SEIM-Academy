@@ -115,7 +115,7 @@ Verify with `npm run verify` in `SEIMAcademy/app`: 20 contrast pairings, type-dr
 
 ## Phase 3 — Core components
 
-**Depends on:** Phase 2 | **Status:** **In progress (opened 2026-09-11)** | **Owner:** _unassigned_ | **Issue:** [#5](https://github.com/voltron-1/SEIM-Academy/issues/5)
+**Depends on:** Phase 2 | **Status:** **Done (closed 2026-09-25)** | **Owner:** _unassigned_ | **Issue:** [#5](https://github.com/voltron-1/SEIM-Academy/issues/5)
 
 **Decision taken at the phase gate 2026-09-11:** this phase's exit check needs
 keyboard/screen-reader verification, which nothing in Phases 1–2 could do — every test was
@@ -129,20 +129,20 @@ phase cannot end with five components and no way to check them. See
   - [x] SM-2 scheduler implementation — pure module, `src/state/srs.ts`
   - [x] Unit tests against known SM-2 interval sequences
   - [x] Enforced topic-diversity/interleaving window — never drops a due card
-  - Review route that *plays* the queue deliberately scoped out — [#118](https://github.com/voltron-1/SEIM-Academy/issues/118)
-- [ ] Multiple choice / fill-in-the-blank
-  - [ ] Immediate inline feedback (never a separate results page)
-  - [ ] Neutral, non-punitive wrong-answer copy (per anxiety-safe principle 3)
-- [ ] Matching / drag-classify
-  - [ ] Two-column drag interaction
-  - [ ] Keyboard-operable equivalent shipped in the same PR (not later)
-  - [ ] Touch support
-- [ ] Test-out check
-  - [ ] 3–5 generation-format questions per module
-  - [ ] Pass → skip ahead; anything else → normal queue, no penalty, no failure record
-  - [ ] Gates correctly on the module's `teaches` tags
+  - [x] Review route that *plays* the queue — [#118](https://github.com/voltron-1/SEIM-Academy/issues/118), PR [#124](https://github.com/voltron-1/SEIM-Academy/pull/124)
+- [x] Multiple choice / fill-in-the-blank — [#36](https://github.com/voltron-1/SEIM-Academy/issues/36), PR [#122](https://github.com/voltron-1/SEIM-Academy/pull/122)
+  - [x] Immediate inline feedback (never a separate results page)
+  - [x] Neutral, non-punitive wrong-answer copy (per anxiety-safe principle 3)
+- [x] Matching / drag-classify — [#37](https://github.com/voltron-1/SEIM-Academy/issues/37), PR [#122](https://github.com/voltron-1/SEIM-Academy/pull/122)
+  - [x] Two-column drag interaction
+  - [x] Keyboard-operable equivalent shipped in the same PR (not later)
+  - [x] Touch support
+- [x] Test-out check — [#38](https://github.com/voltron-1/SEIM-Academy/issues/38), PR [#123](https://github.com/voltron-1/SEIM-Academy/pull/123)
+  - [x] 3–5 generation-format questions per module
+  - [x] Pass → skip ahead; anything else → normal queue, no penalty, no failure record
+  - [x] Gates correctly on the module's `teaches` tags
 - [x] Difficulty tag surfaced in Instructions atom for a meaningfully harder exercise — [#34](https://github.com/voltron-1/SEIM-Academy/issues/34). Shape plus text, never colour alone.
-- [ ] Keyboard-only and screen-reader smoke test across all five components above
+- [x] Keyboard-only and screen-reader smoke test across all five components above — [#39](https://github.com/voltron-1/SEIM-Academy/issues/39), PR [#123](https://github.com/voltron-1/SEIM-Academy/pull/123)
 
 **Exit check:** all core components pass keyboard/screen-reader smoke tests; SRS unit tests pass; test-out correctly gates against tags.
 
