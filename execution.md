@@ -150,9 +150,11 @@ phase cannot end with five components and no way to check them. See
 
 ## Phase 4 — Tier 1 complete
 
-**Depends on:** Phases 1–3 | **Can run partially parallel with:** Phase 5, early Phase 7 | **Status:** Not started | **Owner:** _unassigned_
+**Depends on:** Phases 1–3 | **Can run partially parallel with:** Phase 5, early Phase 7 | **Status:** In progress | **Owner:** _unassigned_
 
-- [ ] Run pipeline: SOC orientation & what you're protecting
+- [x] Run pipeline: SOC orientation & what you're protecting — new `prose-orientation`
+      profile; 2 lessons (`t1-m01-orientation`, `t1-m01-resource-map`), 14 atoms from
+      `README.md` + `Orientation/crown-jewels.md`. #40
 - [ ] Run pipeline: Logging fundamentals
 - [ ] Run pipeline: Windows Event ID triage (pilot — already done in Phase 1, confirm integrated)
 - [ ] Run pipeline: Reading an alert / alarm algorithm vocabulary (Module 4)

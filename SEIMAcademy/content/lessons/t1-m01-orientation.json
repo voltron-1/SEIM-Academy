@@ -1,0 +1,160 @@
+{
+  "schema_version": "1.0.0",
+  "id": "t1-m01-orientation",
+  "tier": 1,
+  "module": "1",
+  "title": "SOC orientation: what you’re protecting",
+  "summary": "What a SIEM team’s resources are for, then 7 questions every SOC needs its own answers to — not looked up, worked out.",
+  "estimated_seconds": 255,
+  "teaches": [
+    "concept:soc-purpose"
+  ],
+  "requires": [],
+  "sources": [
+    {
+      "path": "Orientation/crown-jewels.md",
+      "heading": "Crown Jewels"
+    },
+    {
+      "path": "README.md"
+    }
+  ],
+  "generated": {
+    "generator": "build-content",
+    "generator_version": "1.0.0",
+    "source_repo": "TonyPhipps/SIEM",
+    "source_commit": "4adb971",
+    "source_license": "GPL-3.0",
+    "profile": "prose-orientation",
+    "content_hash": "c5b9aac64506939d6c124577e0e708ea38751f55b1abf7e4eb443ccf64e00dae"
+  },
+  "atoms": [
+    {
+      "id": "t1-m01-orientation-readme-intro-reading",
+      "type": "reading",
+      "title": "What these resources are for",
+      "body": "These resources are intended to guide a SIEM team to...\n\n- ... develop a workflow for content creation (and retirement) in the SIEM and other security tools.\n- ... illustrate detection coverage provided and highlight coverage gaps as goals to fill.\n- ... eliminate or add additional layers of coverage based on organizational needs.\n- Ensure proper logs are generated and recorded for sufficient detection, investigation, and compliance.",
+      "source": {
+        "path": "README.md"
+      },
+      "teaches": [
+        "concept:soc-purpose"
+      ],
+      "estimated_seconds": 45,
+      "graded": false,
+      "payload": {}
+    },
+    {
+      "id": "t1-m01-orientation-crown-jewels-predict-what-is-the-most-sensitive-data-and-wher",
+      "type": "predict",
+      "title": "Crown jewels: think before you look",
+      "body": "No single right answer — work this out against your own environment, not the source text.",
+      "source": {
+        "path": "Orientation/crown-jewels.md",
+        "heading": "Crown Jewels"
+      },
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "prompt": "What is the most sensitive data and where is it stored?",
+        "reveal": "This question is intentionally open-ended — the source names it as something a SOC team identifies for itself, not a fact to memorize. There is no canonical answer here; the point is to have actually tried answering it against a real environment before moving on."
+      }
+    },
+    {
+      "id": "t1-m01-orientation-crown-jewels-predict-which-are-the-most-sensitive-services-an",
+      "type": "predict",
+      "title": "Crown jewels: think before you look",
+      "body": "No single right answer — work this out against your own environment, not the source text.",
+      "source": {
+        "path": "Orientation/crown-jewels.md",
+        "heading": "Crown Jewels"
+      },
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "prompt": "Which are the most sensitive services and what infrastructure supports them?",
+        "reveal": "This question is intentionally open-ended — the source names it as something a SOC team identifies for itself, not a fact to memorize. There is no canonical answer here; the point is to have actually tried answering it against a real environment before moving on."
+      }
+    },
+    {
+      "id": "t1-m01-orientation-crown-jewels-predict-which-service-accounts-exist-to-support",
+      "type": "predict",
+      "title": "Crown jewels: think before you look",
+      "body": "No single right answer — work this out against your own environment, not the source text.",
+      "source": {
+        "path": "Orientation/crown-jewels.md",
+        "heading": "Crown Jewels"
+      },
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "prompt": "Which service accounts exist to support them?",
+        "reveal": "This question is intentionally open-ended — the source names it as something a SOC team identifies for itself, not a fact to memorize. There is no canonical answer here; the point is to have actually tried answering it against a real environment before moving on."
+      }
+    },
+    {
+      "id": "t1-m01-orientation-crown-jewels-predict-what-are-the-permitted-access-methods",
+      "type": "predict",
+      "title": "Crown jewels: think before you look",
+      "body": "No single right answer — work this out against your own environment, not the source text.",
+      "source": {
+        "path": "Orientation/crown-jewels.md",
+        "heading": "Crown Jewels"
+      },
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "prompt": "What are the permitted access methods?",
+        "reveal": "This question is intentionally open-ended — the source names it as something a SOC team identifies for itself, not a fact to memorize. There is no canonical answer here; the point is to have actually tried answering it against a real environment before moving on."
+      }
+    },
+    {
+      "id": "t1-m01-orientation-crown-jewels-predict-who-has-authority-to-access-these",
+      "type": "predict",
+      "title": "Crown jewels: think before you look",
+      "body": "No single right answer — work this out against your own environment, not the source text.",
+      "source": {
+        "path": "Orientation/crown-jewels.md",
+        "heading": "Crown Jewels"
+      },
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "prompt": "Who has authority to access these?",
+        "reveal": "This question is intentionally open-ended — the source names it as something a SOC team identifies for itself, not a fact to memorize. There is no canonical answer here; the point is to have actually tried answering it against a real environment before moving on."
+      }
+    },
+    {
+      "id": "t1-m01-orientation-crown-jewels-predict-what-logs-are-available-for-monitoring",
+      "type": "predict",
+      "title": "Crown jewels: think before you look",
+      "body": "No single right answer — work this out against your own environment, not the source text.",
+      "source": {
+        "path": "Orientation/crown-jewels.md",
+        "heading": "Crown Jewels"
+      },
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "prompt": "What logs are available for monitoring?",
+        "reveal": "This question is intentionally open-ended — the source names it as something a SOC team identifies for itself, not a fact to memorize. There is no canonical answer here; the point is to have actually tried answering it against a real environment before moving on."
+      }
+    },
+    {
+      "id": "t1-m01-orientation-crown-jewels-predict-which-people-would-cause-the-most-damage",
+      "type": "predict",
+      "title": "Crown jewels: think before you look",
+      "body": "No single right answer — work this out against your own environment, not the source text.",
+      "source": {
+        "path": "Orientation/crown-jewels.md",
+        "heading": "Crown Jewels"
+      },
+      "estimated_seconds": 30,
+      "graded": false,
+      "payload": {
+        "prompt": "Which people would cause the most damage if they were socially engineered or their accounts were compromised or abused?",
+        "reveal": "This question is intentionally open-ended — the source names it as something a SOC team identifies for itself, not a fact to memorize. There is no canonical answer here; the point is to have actually tried answering it against a real environment before moving on."
+      }
+    }
+  ]
+}

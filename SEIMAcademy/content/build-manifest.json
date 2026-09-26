@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "generator": "build-content",
   "generator_version": "1.0.0",
-  "generator_hash": "5fe1a072e4270471ce6f0736091f5f61ef55fa6425bdf63235a36a72060570b3",
+  "generator_hash": "19e623c966e7297d0abe2214ff52e282e425056a5f72ca5c36f8bc8803428116",
   "source_repo": "TonyPhipps/SIEM",
   "source_commit": "4adb971",
   "source_license": "GPL-3.0",
@@ -12,9 +12,31 @@
     "Lab/Generate-Suspicious-Activity.ps1": "0b92e95281c030ce451c14ccd55300bc9c7b5695f8d63962c9568fb3e7860eca",
     "Logging/Notable-Event-IDs-Forensics.md": "28b6f7c408664ab0c7229a639bc4d66f74dd4be29b6338a514175681dbe6a7dd",
     "Logging/Notable-Event-IDs-Risk.md": "4edee0cf7448a44a0b0ef86f6df001b700c56b8701f464732486ea4d645d8af4",
-    "Logging/Notable-Event-IDs-Sigma.md": "c7e8d6d9d69f079718d7222e69f1294562e561d4083fea149d571fbdaf341aea"
+    "Logging/Notable-Event-IDs-Sigma.md": "c7e8d6d9d69f079718d7222e69f1294562e561d4083fea149d571fbdaf341aea",
+    "Orientation/crown-jewels.md": "0d95d30332f474a30d1f995fbdea0269177ba3aa427b4d7af38e5b6b9aa57c45",
+    "README.md": "65fd807a3670e44fe1e524f674c8d0d54a002eac2992a401f8f1501489c2463e"
   },
   "modules": [
+    {
+      "id": "t1-m01",
+      "tier": 1,
+      "module": "1",
+      "title": "SOC orientation & what you're protecting",
+      "lesson_order": [
+        "t1-m01-orientation",
+        "t1-m01-resource-map"
+      ],
+      "exercise_data": [],
+      "stats": {
+        "lessons": 2,
+        "atoms": 14,
+        "source_rows": 0,
+        "lab_pairs": 0,
+        "lab_pairs_rejected": 0,
+        "srs_eligible_cards": 0,
+        "srs_card_budget": 80
+      }
+    },
     {
       "id": "t1-m03",
       "tier": 1,
@@ -103,6 +125,23 @@
     }
   ],
   "artifacts": {
+    "t1-m01-orientation": {
+      "kind": "lesson",
+      "file": "lessons/t1-m01-orientation.json",
+      "content_hash": "c5b9aac64506939d6c124577e0e708ea38751f55b1abf7e4eb443ccf64e00dae",
+      "depends_on": [
+        "Orientation/crown-jewels.md",
+        "README.md"
+      ]
+    },
+    "t1-m01-resource-map": {
+      "kind": "lesson",
+      "file": "lessons/t1-m01-resource-map.json",
+      "content_hash": "2cdfd1d9ea87549429ba2f177757ca5981a6a5fd3c4d1338212e4db5443f9036",
+      "depends_on": [
+        "README.md"
+      ]
+    },
     "t1-m03-action-to-event-e1007": {
       "kind": "lesson",
       "file": "lessons/t1-m03-action-to-event-e1007.json",

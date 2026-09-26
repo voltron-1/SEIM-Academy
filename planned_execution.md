@@ -13,17 +13,26 @@ Status markers: `[ ]` todo · `[~]` in-progress · `[x]` done · `[!]` blocked
 
 ## NEXT UP
 
-**Phase 4 — Tier 1 complete** `[ ]` **not started** —
+**Phase 4 — Tier 1 complete** `[~]` **in progress** —
 [#6](https://github.com/voltron-1/SEIM-Academy/issues/6), milestone *Phase 4 — Tier 1
 complete*.
 
-**Next unstarted item:** [#40](https://github.com/voltron-1/SEIM-Academy/issues/40) — "Run
-pipeline: SOC orientation & what you're protecting," the first of ten Tier 1 modules.
-Sources: `README.md` + `Orientation/crown-jewels.md` (88 lines total) from
-`TonyPhipps/SIEM` @ `4adb971`. Needs a new pipeline profile (`prose-orientation`) —
-`event-id-tables` is table-shaped and not reusable for prose sources; see
-[`plans/20260925-phase3-closeout-phase4-unit1.md`](plans/20260925-phase3-closeout-phase4-unit1.md)
-for the design (gated, awaiting go-ahead to execute).
+**Next unstarted item:** [#41](https://github.com/voltron-1/SEIM-Academy/issues/41) — "Run
+pipeline: Logging fundamentals," the second of ten Tier 1 modules. Sources:
+`Logging/Logging.md` + `Logging/Logging-Windows.md`, flashcard format, viability "Ready"
+per `curriculum-map.md`.
+
+**Module 1 done 2026-09-25** ([#40](https://github.com/voltron-1/SEIM-Academy/issues/40)) —
+"SOC orientation & what you're protecting." New `prose-orientation` pipeline profile
+(`SEIMAcademy/scripts/lib/profiles/prose-orientation.mjs`), since `event-id-tables` is
+table-shaped and not reusable for prose sources. 2 lessons, 14 atoms, from `README.md` +
+`Orientation/crown-jewels.md`. Citations are self-verifying — every quiz rationale's line
+number and the crown-jewels question count are derived from parsing the source at build
+time rather than typed as literals, so an upstream edit fails the build instead of shipping
+a stale claim (caught by security-auditor review pre-merge). `test-pipeline.mjs`'s
+manifest-validation and confirmed-cells fixtures, which hardcoded `modules[0]` assuming it
+was the only (event-id-tables) module, were fixed to target `t1-m03` by id now that
+`t1-m01` sorts first in play order.
 
 **Phase 3 — Core components closed 2026-09-25.** All 6 sub-issues (#34–#39) plus the
 deferred Review route ([#118](https://github.com/voltron-1/SEIM-Academy/issues/118), PR
@@ -50,6 +59,23 @@ abstention — see [findings](findings/20260910-phase2-local-model-spike.md).
 ---
 
 ## LAST SESSION
+
+**2026-09-25** — **Phase 4 Module 1 shipped: SOC orientation & what you're protecting**
+([#40](https://github.com/voltron-1/SEIM-Academy/issues/40)). Added a new `prose-orientation`
+pipeline profile for prose-shaped sources (`event-id-tables` only handles Event ID tables).
+Generated `t1-m01-orientation` (1 reading + 7 `predict` atoms from `Orientation/crown-jewels.md`'s
+open-ended questions — ungraded, no fabricated "correct" answer) and `t1-m01-resource-map`
+(2 reading + 4 quiz atoms mapping README's link list, honest distractors drawn from the
+other real section names). Full validator chain green: `validate-content.mjs` (66566
+assertions), `check-prereqs.mjs`, `test-pipeline.mjs` (131 assertions, after fixing two
+fixtures that assumed `modules[0]` was always the event-id-tables module),
+`verify-against-source.py`, and the app's `npm run verify` (206 tests, types, build, 24 PWA
+checks). A security-auditor pass caught a real gap pre-merge: the first draft's quiz
+citations and question count were hardcoded literals with no check against the actual
+source text; fixed by deriving them from `parseSections` at build time so an upstream edit
+now fails the build instead of shipping a stale claim. Source repo cloned locally to
+`/home/tjlam/projects/SIEM` (the pipeline's own default resolution path) instead of relying
+on the previous out-of-tree `/Source_Repos/SIEM` checkout.
 
 **2026-09-25** — **Phase 3 tracking closeout.** Epic
 [#5](https://github.com/voltron-1/SEIM-Academy/issues/5) and milestone *Phase 3 — Core

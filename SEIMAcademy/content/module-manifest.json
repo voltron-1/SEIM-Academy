@@ -5,6 +5,28 @@
   "source_license": "GPL-3.0",
   "modules": [
     {
+      "id": "t1-m01",
+      "tier": 1,
+      "module": "1",
+      "title": "SOC orientation & what you're protecting",
+      "profile": "prose-orientation",
+      "concepts": [
+        "concept:soc-purpose",
+        "concept:soc-resource-map"
+      ],
+      "options": {},
+      "sources": [
+        {
+          "path": "README.md",
+          "corpus": "readme"
+        },
+        {
+          "path": "Orientation/crown-jewels.md",
+          "corpus": "crown-jewels"
+        }
+      ]
+    },
+    {
       "id": "t1-m03",
       "tier": 1,
       "module": "3",
