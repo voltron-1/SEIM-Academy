@@ -60,9 +60,10 @@ const realSource = resolveSourceRepo(process.argv.slice(2));
 const work = mkdtempSync(path.join(tmpdir(), 'seim-pipeline-'));
 const srcCopy = path.join(work, 'src');
 mkdirSync(srcCopy, { recursive: true });
-for (const dir of ['Logging', 'Lab']) {
+for (const dir of ['Logging', 'Lab', 'Orientation']) {
   cpSync(path.join(realSource, dir), path.join(srcCopy, dir), { recursive: true });
 }
+cpSync(path.join(realSource, 'README.md'), path.join(srcCopy, 'README.md'));
 
 // --- 1. idempotency (section 6.9) --------------------------------------------------------
 {
@@ -319,10 +320,14 @@ for (const dir of ['Logging', 'Lab']) {
     assert('manifest-validation', r.out.includes(needle), `${label}: message lacked "${needle}" — got ${r.out.slice(0, 160)}`);
   };
 
+  // exercise_data and a ranged option (srs_card_budget) are event-id-tables-specific, so
+  // these two mutate t1-m03 by id rather than modules[0] -- a prose-orientation module has
+  // neither, and modules[0] is play-order-sorted, not profile-shape-sorted.
+  const eventIdModule = (m) => m.modules.find((mod) => mod.id === 't1-m03');
   expectFail('unknown profile', 'unknown profile', (m) => { m.modules[0].profile = 'not-a-profile'; });
-  expectFail('unknown exercise_data profile', 'unknown exercise_data profile', (m) => { m.modules[0].exercise_data[0].profile = 'nope'; });
+  expectFail('unknown exercise_data profile', 'unknown exercise_data profile', (m) => { eventIdModule(m).exercise_data[0].profile = 'nope'; });
   expectFail('unknown option', 'unknown option', (m) => { m.modules[0].options.made_up = 4; });
-  expectFail('budget above the ceiling', 'srs_card_budget', (m) => { m.modules[0].options.srs_card_budget = 1e9; });
+  expectFail('budget above the ceiling', 'srs_card_budget', (m) => { eventIdModule(m).options.srs_card_budget = 1e9; });
   expectFail('module id that is a path', 'module id', (m) => { m.modules[0].id = '../../escape'; });
   expectFail('modules out of play order', 'play order', (m) => {
     m.modules = [{ ...m.modules[0], id: 't2-m01', tier: 2, module: '1' }, m.modules[0]];
@@ -346,12 +351,12 @@ for (const dir of ['Logging', 'Lab']) {
   assert('confirmed-cells', !/WARN:.*mixes spaces and commas/.test(asShipped.out), 'a confirmed cell still warns on every build');
   assert('confirmed-cells', /8 15, 16, 33" split into 8, 15, 16, 33/.test(asShipped.out), 'confirmed split not reported as a note');
 
-  const unconfirmed = withManifest((m) => { delete m.modules[0].confirmed_cells; });
+  const unconfirmed = withManifest((m) => { delete m.modules.find((mod) => mod.id === 't1-m03').confirmed_cells; });
   assert('confirmed-cells', /WARN:.*mixes spaces and commas/.test(unconfirmed.out), 'an unconfirmed ambiguous cell did not warn');
 
   // The recorded answer disagreeing with the parse means one of them is wrong; shipping
   // either would be guessing, so the build must stop rather than pick a side.
-  const contradicted = withManifest((m) => { m.modules[0].confirmed_cells[0].event_ids = [815, 16, 33]; });
+  const contradicted = withManifest((m) => { m.modules.find((mod) => mod.id === 't1-m03').confirmed_cells[0].event_ids = [815, 16, 33]; });
   assert('confirmed-cells', contradicted.status !== 0, 'a contradicted confirmation still built');
   assert('confirmed-cells', /confirmed-cell-mismatch/.test(contradicted.out), `wrong failure: ${contradicted.out.slice(0, 160)}`);
 }
@@ -377,8 +382,9 @@ for (const dir of ['Logging', 'Lab']) {
     'a wholesale channel produced a fabricated Event ID card');
 
   const manifest = JSON.parse(readFileSync(path.join(out, 'build-manifest.json'), 'utf8'));
-  assert('wildcard-channels', manifest.modules[0].skipped_sections.length === 0,
-    `sections still dropped: ${JSON.stringify(manifest.modules[0].skipped_sections)}`);
+  const eventIdReport = manifest.modules.find((m) => m.id === 't1-m03');
+  assert('wildcard-channels', eventIdReport.skipped_sections.length === 0,
+    `sections still dropped: ${JSON.stringify(eventIdReport.skipped_sections)}`);
 }
 
 // ---------------------------------------------------------------------------------------

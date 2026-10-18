@@ -1,0 +1,182 @@
+{
+  "schema_version": "1.0.0",
+  "id": "t1-m01-resource-map",
+  "tier": 1,
+  "module": "1",
+  "title": "Resource map: where things live",
+  "summary": "A map of the knowledge base’s major sections, so the reader can find the right page fast instead of memorizing the contents.",
+  "estimated_seconds": 230,
+  "teaches": [
+    "concept:soc-resource-map"
+  ],
+  "requires": [],
+  "sources": [
+    {
+      "path": "README.md",
+      "heading": "Data Enrichment"
+    },
+    {
+      "path": "README.md",
+      "heading": "Detection and Compliance Matrix"
+    },
+    {
+      "path": "README.md",
+      "heading": "Hardening"
+    },
+    {
+      "path": "README.md",
+      "heading": "Lab"
+    }
+  ],
+  "generated": {
+    "generator": "build-content",
+    "generator_version": "1.0.0",
+    "source_repo": "TonyPhipps/SIEM",
+    "source_commit": "4adb971",
+    "source_license": "GPL-3.0",
+    "profile": "prose-orientation",
+    "content_hash": "2cdfd1d9ea87549429ba2f177757ca5981a6a5fd3c4d1338212e4db5443f9036"
+  },
+  "atoms": [
+    {
+      "id": "t1-m01-resource-map-hardening-reading",
+      "type": "reading",
+      "title": "Hardening",
+      "body": "Before detection comes prevention: DNS, email, general endpoint and network security, the Microsoft 365 surface (Auditing, Azure AD, Exchange, SharePoint/OneDrive, Teams), Active Directory, Windows DNS, Windows itself, network, remote access, vendor guidance and web security all have their own hardening page here — one destination per topic, not one giant document.",
+      "source": {
+        "path": "README.md",
+        "heading": "Hardening"
+      },
+      "teaches": [
+        "concept:soc-resource-map"
+      ],
+      "estimated_seconds": 45,
+      "graded": false,
+      "payload": {}
+    },
+    {
+      "id": "t1-m01-resource-map-detection-enrichment-lab-reading",
+      "type": "reading",
+      "title": "Detection & Compliance Matrix, Data Enrichment, Lab",
+      "body": "The Detection and Compliance Matrix links cases, adversaries, techniques, mitigations, detections, hunts and log sources together as one relational structure, with Detection Tactics, Detection Methods and Playbooks underneath it. Data Enrichment lists what turns a bare log field into something searchable — GeoIP/ASN, Levenshtein distance, Shannon entropy, WHOIS, reverse-DNS, certificate parsing and a few ready-made lookup tables. Lab is where all of it gets exercised, against a real Windows system, SIEM and attacking system.",
+      "source": {
+        "path": "README.md",
+        "heading": "Detection and Compliance Matrix"
+      },
+      "teaches": [
+        "concept:soc-resource-map"
+      ],
+      "estimated_seconds": 45,
+      "graded": false,
+      "payload": {}
+    },
+    {
+      "id": "t1-m01-resource-map-exchange-quiz",
+      "type": "quiz",
+      "title": "Where would you find it: Hardening",
+      "body": "Inline feedback, no results page.",
+      "source": {
+        "path": "README.md",
+        "heading": "Hardening"
+      },
+      "requires": [
+        "concept:soc-resource-map"
+      ],
+      "estimated_seconds": 35,
+      "graded": true,
+      "payload": {
+        "format": "multiple-choice",
+        "question": "Where would you find guidance on hardening Microsoft 365 Exchange?",
+        "choices": [
+          "Data Enrichment",
+          "Detection and Compliance Matrix",
+          "Hardening",
+          "Lab"
+        ],
+        "answer_index": 2,
+        "rationale": "README.md:28 lists Exchange under the Hardening section’s Microsoft 365 subgroup."
+      }
+    },
+    {
+      "id": "t1-m01-resource-map-matrix-quiz",
+      "type": "quiz",
+      "title": "Where would you find it: Detection and Compliance Matrix",
+      "body": "Inline feedback, no results page.",
+      "source": {
+        "path": "README.md",
+        "heading": "Detection and Compliance Matrix"
+      },
+      "requires": [
+        "concept:soc-resource-map"
+      ],
+      "estimated_seconds": 35,
+      "graded": true,
+      "payload": {
+        "format": "multiple-choice",
+        "question": "Where would you find the object-oriented structure that links cases, adversaries, techniques, mitigations, detections, hunts and log sources together?",
+        "choices": [
+          "Data Enrichment",
+          "Detection and Compliance Matrix",
+          "Hardening",
+          "Lab"
+        ],
+        "answer_index": 1,
+        "rationale": "README.md:41 describes the Detection and Compliance Matrix in exactly those terms."
+      }
+    },
+    {
+      "id": "t1-m01-resource-map-geoip-quiz",
+      "type": "quiz",
+      "title": "Where would you find it: Data Enrichment",
+      "body": "Inline feedback, no results page.",
+      "source": {
+        "path": "README.md",
+        "heading": "Data Enrichment"
+      },
+      "requires": [
+        "concept:soc-resource-map"
+      ],
+      "estimated_seconds": 35,
+      "graded": true,
+      "payload": {
+        "format": "multiple-choice",
+        "question": "Where would you find a GeoIP/ASN lookup for enriching an ingested log field?",
+        "choices": [
+          "Data Enrichment",
+          "Detection and Compliance Matrix",
+          "Hardening",
+          "Lab"
+        ],
+        "answer_index": 0,
+        "rationale": "README.md:60 lists GeoIP/ASN Lookup under Data Enrichment."
+      }
+    },
+    {
+      "id": "t1-m01-resource-map-lab-setup-quiz",
+      "type": "quiz",
+      "title": "Where would you find it: Lab",
+      "body": "Inline feedback, no results page.",
+      "source": {
+        "path": "README.md",
+        "heading": "Lab"
+      },
+      "requires": [
+        "concept:soc-resource-map"
+      ],
+      "estimated_seconds": 35,
+      "graded": true,
+      "payload": {
+        "format": "multiple-choice",
+        "question": "Where would you find instructions to set up a Windows system, a SIEM and an attacking system for detection research?",
+        "choices": [
+          "Data Enrichment",
+          "Detection and Compliance Matrix",
+          "Hardening",
+          "Lab"
+        ],
+        "answer_index": 3,
+        "rationale": "README.md:75 describes exactly that setup under the Lab section."
+      }
+    }
+  ]
+}

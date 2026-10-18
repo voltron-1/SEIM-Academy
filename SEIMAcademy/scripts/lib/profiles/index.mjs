@@ -16,5 +16,9 @@
  *   build(ctx)    -> { lessons, exerciseSets, dependsOn: Map<id, string[]>, moduleReport }
  */
 import * as eventIdTables from './event-id-tables.mjs';
+import * as proseOrientation from './prose-orientation.mjs';
 
-export const PROFILES = new Map([[eventIdTables.name, eventIdTables]]);
+export const PROFILES = new Map([
+  [eventIdTables.name, eventIdTables],
+  [proseOrientation.name, proseOrientation],
+]);
