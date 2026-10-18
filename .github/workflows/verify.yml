@@ -1,0 +1,59 @@
+# Runs the same gates as a local `npm run verify` plus the content pipeline checks,
+# so every PR shows a real build status instead of "no checks reported".
+name: verify
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: verify-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  content:
+    name: content pipeline
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: SEIMAcademy
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      # Node built-ins only; no install step needed.
+      - run: node scripts/validate-content.mjs
+      - run: node scripts/check-prereqs.mjs
+      # Not run here: scripts/test-pipeline.mjs. It rebuilds from the source knowledge
+      # base at the commit in content/build-manifest.json (source_commit 4adb971), and
+      # that commit is not on TonyPhipps/SIEM, so a runner cannot fetch it. Add it back
+      # (checkout of the source repo + SEIM_SOURCE_REPO) once that commit is hosted.
+
+  app:
+    name: app verify
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: SEIMAcademy/app
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: SEIMAcademy/app/package-lock.json
+      - run: npm ci
+      # contrast, schema types, tsc, tests, vite build, PWA static checks
+      - run: npm run verify
